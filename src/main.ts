@@ -8,7 +8,15 @@ import { initBadges } from "./native/badges";
 import { config } from "./native/config";
 import { initControlServer } from "./native/controlServer";
 import { initDiscordRpc } from "./native/discordRpc";
+import {
+  createDisplayMediaRequestHandler,
+  displayMediaHandlerOptions,
+  openScreenSettingsIfRequested,
+  screenPermissionGuidance,
+} from "./native/displayMedia";
+import { isTrustedNotificationCheck } from "./native/notificationPolicy";
 import { showScreenPicker } from "./native/screenPicker";
+import { hasConfiguredOrigin, isTrustedContents, isTrustedIpc } from "./native/rendererTrust";
 import {
   ProtocolUrlQueue,
   applyFirstLaunchAutostart,
@@ -78,7 +86,8 @@ if (acquiredLock) {
     });
 
     // Native file picker for audio files (entrance sounds / soundboard)
-    ipcMain.handle("dialog:openAudioFile", async () => {
+    ipcMain.handle("dialog:openAudioFile", async (event) => {
+      if (!isTrustedIpc(event, mainWindow, BUILD_URL)) throw new Error("Untrusted audio dialog caller");
       const result = await dialog.showOpenDialog({
         properties: ["openFile"],
         filters: [
@@ -88,53 +97,52 @@ if (acquiredLock) {
           },
         ],
       });
-      if (result.canceled) return null;
+      if (result.canceled || !isTrustedIpc(event, mainWindow, BUILD_URL)) return null;
       return result.filePaths[0];
     });
 
     // Grant media permissions for voice chat (microphone, camera, screen share)
-    session.defaultSession.setPermissionRequestHandler((_webContents, permission, callback) => {
+    session.defaultSession.setPermissionRequestHandler((contents, permission, callback, details) => {
       const allowed = ["media", "mediaKeySystem", "display-capture", "notifications"];
-      callback(allowed.includes(permission));
+      callback(allowed.includes(permission) &&
+        isTrustedContents(contents, mainWindow, BUILD_URL) &&
+        details.isMainFrame === true && hasConfiguredOrigin(details.requestingUrl, BUILD_URL));
     });
 
-    session.defaultSession.setPermissionCheckHandler((_webContents, permission) => {
-      const allowed = ["media", "mediaKeySystem", "display-capture", "notifications"];
-      return allowed.includes(permission);
-    });
-
-    // Handle screen sharing requests with a visual picker
-    // On Windows, use the OS native screen picker when available (added in Win10 22H2+).
-    // This bypasses our custom picker entirely on Windows, which avoids sandbox/data-URL
-    // IPC issues in the custom picker on Windows Chromium.
-    session.defaultSession.setDisplayMediaRequestHandler(async (_request, callback) => {
-      console.log('[mutiny] setDisplayMediaRequestHandler triggered');
-      try {
-        const selected = await showScreenPicker();
-        console.log('[mutiny] Screen picker result:', selected ? selected.id : 'cancelled');
-        if (selected) {
-          callback({ video: selected });
-        } else {
-          callback({});
-        }
-      } catch (err) {
-        console.error('[mutiny] Error in screen picker:', err);
-        callback({});
+    session.defaultSession.setPermissionCheckHandler((contents, permission, requestingOrigin, details) => {
+      if (permission === "notifications") {
+        return isTrustedNotificationCheck(contents, requestingOrigin, details, mainWindow, BUILD_URL);
       }
-    }, {
-      // useSystemPicker: let Windows use its native OS screen picker (Win10 22H2+ / Win11)
-      // When the system picker is used, the handler above is NOT called — the OS handles it.
-      // Falls back to our custom picker on older Windows or non-Windows platforms.
-      useSystemPicker: process.platform === 'win32',
+      const allowed = ["media", "mediaKeySystem", "display-capture"];
+      return allowed.includes(permission) &&
+        isTrustedContents(contents, mainWindow, BUILD_URL) &&
+        details.isMainFrame === true && hasConfiguredOrigin(requestingOrigin, BUILD_URL) &&
+        hasConfiguredOrigin(details.requestingUrl, BUILD_URL) &&
+        (details.securityOrigin === undefined || hasConfiguredOrigin(details.securityOrigin, BUILD_URL)) &&
+        (details.embeddingOrigin === undefined || hasConfiguredOrigin(details.embeddingOrigin, BUILD_URL));
     });
 
-    // Request microphone access on macOS
-    if (process.platform === "darwin") {
-      systemPreferences.askForMediaAccess("microphone");
-      systemPreferences.askForMediaAccess("camera");
-      // Also request screen recording permission on macOS
-      systemPreferences.getMediaAccessStatus("screen");
-    }
+    // Prefer the native picker on supported macOS versions. Electron falls
+    // back to this handler when the native picker is unavailable.
+    session.defaultSession.setDisplayMediaRequestHandler(
+      createDisplayMediaRequestHandler({
+        authorize: (request) => isTrustedIpc(
+          { sender: mainWindow?.webContents, senderFrame: request.frame }, mainWindow, BUILD_URL,
+        ) && hasConfiguredOrigin(request.securityOrigin, BUILD_URL),
+        platform: process.platform,
+        getScreenAccessStatus: () =>
+          systemPreferences.getMediaAccessStatus("screen"),
+        pickSource: showScreenPicker,
+        showPermissionGuidance: async (status) => {
+          const result = await dialog.showMessageBox(
+            mainWindow,
+            screenPermissionGuidance(status),
+          );
+          await openScreenSettingsIfRequested(status, result.response, shell.openExternal);
+        },
+      }),
+      displayMediaHandlerOptions(process.platform),
+    );
 
     // Apply the one-time autostart default before creating the first window.
     try {
@@ -158,7 +166,7 @@ if (acquiredLock) {
       protocolUrls.rendererReady(window),
     );
 
-    registerWindowControlHandlers(ipcMain, () => mainWindow);
+    registerWindowControlHandlers(ipcMain, () => mainWindow, (event) => isTrustedIpc(event, mainWindow, BUILD_URL));
     initBadges();
     initTray();
     initDiscordRpc();

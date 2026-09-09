@@ -74,6 +74,7 @@ jobs:
         run: pnpm run make
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: false
+          PLATFORM: ${{ matrix.platform }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -84,6 +85,7 @@ jobs:
             out/make/**/*.zip
             out/make/**/*.exe
             out/make/**/*.nupkg
+            out/make/**/RELEASES
           if-no-files-found: warn
           retention-days: 5
 
@@ -112,11 +114,15 @@ jobs:
           find artifacts -name "*.dmg" -exec cp {} release/ \;
           find artifacts -name "*.exe" -exec cp {} release/ \;
           find artifacts -name "*.nupkg" -exec cp {} release/ \;
+          find artifacts -name "RELEASES" -exec cp {} release/ \;
           # Create stable-named copies for /releases/latest/download/ URLs
           # These names are referenced by mutinyapp.gg landing page
           for f in release/Mutiny-darwin-arm64-*.zip; do [ -f "$f" ] && cp "$f" release/Mutiny-darwin-arm64.zip; done
           for f in release/Mutiny-win32-x64-*.zip; do [ -f "$f" ] && cp "$f" release/Mutiny-win32-x64.zip; done
-          for f in release/mutiny-desktop-setup.exe; do [ -f "$f" ] && cp "$f" release/Mutiny-setup.exe; done
+          test -f release/Mutiny-darwin-arm64.zip
+          test -f release/Mutiny-Setup.exe
+          test -f release/Mutiny-win32-x64.zip
+          test -s release/RELEASES
           (cd release && sha256sum ./* > SHA256SUMS.txt)
           ls -la release/
 

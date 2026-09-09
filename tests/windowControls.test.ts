@@ -3,12 +3,12 @@ import { describe, expect, it, vi } from "vitest";
 import { registerWindowControlHandlers } from "../src/native/windowControls";
 
 class FakeIpc {
-  listeners = new Map<string, Array<() => void>>();
-  on(name: string, listener: () => void) {
+  listeners = new Map<string, Array<(event: Electron.IpcMainEvent) => void>>();
+  on(name: string, listener: (event: Electron.IpcMainEvent) => void) {
     this.listeners.set(name, [...(this.listeners.get(name) ?? []), listener]);
   }
   emit(name: string) {
-    for (const listener of this.listeners.get(name) ?? []) listener();
+    for (const listener of this.listeners.get(name) ?? []) listener({} as Electron.IpcMainEvent);
   }
 }
 
@@ -19,8 +19,8 @@ describe("window control IPC", () => {
       minimize: vi.fn(), close: vi.fn(), maximize: vi.fn(), unmaximize: vi.fn(), isMaximized: vi.fn(() => false), isDestroyed: vi.fn(() => false),
     };
 
-    registerWindowControlHandlers(ipc, () => current);
-    registerWindowControlHandlers(ipc, () => current);
+    registerWindowControlHandlers(ipc, () => current, () => true);
+    registerWindowControlHandlers(ipc, () => current, () => true);
     expect(ipc.listeners.get("maximise")).toHaveLength(1);
 
     ipc.emit("maximise");

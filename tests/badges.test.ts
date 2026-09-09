@@ -3,8 +3,8 @@ import { describe, expect, it, vi } from "vitest";
 import { registerBadgeHandler } from "../src/native/badgesRegistration";
 
 class FakeIpc {
-  listeners = new Map<string, Array<(_event: unknown, count: number) => void>>();
-  on(name: string, listener: (_event: unknown, count: number) => void) {
+  listeners = new Map<string, Array<(_event: Electron.IpcMainEvent, count: number) => void>>();
+  on(name: string, listener: (_event: Electron.IpcMainEvent, count: number) => void) {
     this.listeners.set(name, [...(this.listeners.get(name) ?? []), listener]);
   }
 }
@@ -13,8 +13,8 @@ describe("badge IPC", () => {
   it("loads exactly one handler that forwards nonzero and clear counts", async () => {
     const ipc = new FakeIpc();
     const setBadge = vi.fn().mockResolvedValue(undefined);
-    registerBadgeHandler(ipc, setBadge);
-    registerBadgeHandler(ipc, setBadge);
+    registerBadgeHandler(ipc, setBadge, () => true);
+    registerBadgeHandler(ipc, setBadge, () => true);
     expect(ipc.listeners.get("setBadgeCount")).toHaveLength(1);
 
     const [listener] = ipc.listeners.get("setBadgeCount") ?? [];

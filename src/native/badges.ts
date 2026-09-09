@@ -2,7 +2,8 @@ import { NativeImage, app, ipcMain, nativeImage } from "electron";
 
 import { registerBadgeHandler } from "./badgesRegistration";
 import { badgePlan, normalizeBadgeCacheKey } from "./badgePolicy";
-import { mainWindow } from "./window";
+import { BUILD_URL, mainWindow } from "./window";
+import { isTrustedIpc } from "./rendererTrust";
 
 const nativeIcons: Record<number, NativeImage> = {};
 
@@ -45,5 +46,5 @@ export async function setBadgeCount(count: number): Promise<void> {
 }
 
 export function initBadges(): void {
-  registerBadgeHandler(ipcMain, setBadgeCount);
+  registerBadgeHandler(ipcMain, setBadgeCount, (event) => isTrustedIpc(event, mainWindow, BUILD_URL));
 }
