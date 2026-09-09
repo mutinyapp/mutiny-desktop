@@ -14,6 +14,7 @@ import {
   openScreenSettingsIfRequested,
   screenPermissionGuidance,
 } from "./native/displayMedia";
+import { isTrustedNotificationCheck } from "./native/notificationPolicy";
 import { showScreenPicker } from "./native/screenPicker";
 import { hasConfiguredOrigin, isTrustedContents, isTrustedIpc } from "./native/rendererTrust";
 import {
@@ -109,7 +110,10 @@ if (acquiredLock) {
     });
 
     session.defaultSession.setPermissionCheckHandler((contents, permission, requestingOrigin, details) => {
-      const allowed = ["media", "mediaKeySystem", "display-capture", "notifications"];
+      if (permission === "notifications") {
+        return isTrustedNotificationCheck(contents, requestingOrigin, details, mainWindow, BUILD_URL);
+      }
+      const allowed = ["media", "mediaKeySystem", "display-capture"];
       return allowed.includes(permission) &&
         isTrustedContents(contents, mainWindow, BUILD_URL) &&
         details.isMainFrame === true && hasConfiguredOrigin(requestingOrigin, BUILD_URL) &&

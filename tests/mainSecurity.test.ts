@@ -1,8 +1,9 @@
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 const f = vi.hoisted(() => {
   const frame = { url: "https://selfhost.example:8443/chat" };
-  const wc = { mainFrame: frame, isDestroyed: () => false, once: vi.fn(), on: vi.fn() };
-  return { frame, wc, window: { webContents: wc, isDestroyed: () => false },
+  const wc = { get mainFrame() { return frame; }, isDestroyed: (): boolean => false, once: vi.fn(), on: vi.fn() };
+  return { frame, wc, window: { get webContents() { return wc; }, isDestroyed: (): boolean => false },
+    hasOwner: true, buildUrl: new URL("https://selfhost.example:8443/chat"),
     appEvents: new Map(), handlers: new Map(), permissions: new Map(),
     dialog: vi.fn().mockResolvedValue({ canceled: true }), picker: vi.fn().mockResolvedValue(null) };
 });
@@ -21,7 +22,7 @@ vi.mock("update-electron-app", () => ({ updateElectronApp: vi.fn() }));
 vi.mock("electron-squirrel-startup", () => ({ default: false }));
 vi.mock("../src/native/autoLaunch", () => ({}));
 vi.mock("../src/native/config", () => ({ config: { hardwareAcceleration: true } }));
-vi.mock("../src/native/window", () => ({ BUILD_URL: new URL("https://selfhost.example:8443/chat"), mainWindow: f.window, createMainWindow: () => f.window }));
+vi.mock("../src/native/window", () => ({ BUILD_URL: f.buildUrl, get mainWindow() { return f.hasOwner ? f.window : undefined; }, createMainWindow: () => f.window }));
 vi.mock("../src/native/screenPicker", () => ({ showScreenPicker: f.picker }));
 vi.mock("../src/native/badges", () => ({ initBadges: vi.fn() }));
 vi.mock("../src/native/controlServer", () => ({ initControlServer: vi.fn() }));
@@ -29,7 +30,86 @@ vi.mock("../src/native/discordRpc", () => ({ initDiscordRpc: vi.fn() }));
 vi.mock("../src/native/tray", () => ({ initTray: vi.fn() }));
 vi.mock("../src/native/windowControls", () => ({ registerWindowControlHandlers: vi.fn() }));
 beforeAll(async () => { await import("../src/main"); await f.appEvents.get("ready")(); });
-beforeEach(() => { vi.clearAllMocks(); f.frame.url = "https://selfhost.example:8443/chat"; });
+beforeEach(() => {
+  vi.restoreAllMocks(); vi.clearAllMocks();
+  f.dialog.mockResolvedValue({ canceled: true }); f.picker.mockResolvedValue(null);
+  f.frame.url = "https://selfhost.example:8443/chat";
+  f.buildUrl.href = f.frame.url; f.hasOwner = true;
+});
+describe("Electron 38 origin-only notification production callback", () => {
+  const origin = "https://selfhost.example:8443/";
+  const details = () => ({ embeddingOrigin: origin, isMainFrame: false });
+  const check = (wc: unknown = null, requestingOrigin: unknown = origin, d: unknown = details(), permission = "notifications") =>
+    f.permissions.get("check")(wc, permission, requestingOrigin, d);
+
+  it("accepts the exact pinned GetPermissionStatus null-contents signature", () => {
+    expect(check()).toBe(true);
+    f.frame.url = `${origin}chat/another-route`;
+    expect(check(null, origin.slice(0, -1), { ...details(), embeddingOrigin: origin.slice(0, -1) })).toBe(true);
+  });
+  it.each([undefined, null, "", "null", "not a URL", "https://attacker.example/", "https://selfhost.example/",
+    "http://selfhost.example:8443/", "https://user@selfhost.example:8443/", " https://selfhost.example:8443/",
+    "https://selfhost.example:8443/chat", "https://selfhost.example:8443/?x", "https://selfhost.example:8443/#x", 42])(
+    "rejects malformed/untrusted/missing embedding origin %j", (embeddingOrigin) => {
+      expect(check(null, origin, { ...details(), embeddingOrigin })).toBe(false);
+    });
+  it.each([null, "", "null", "https://attacker.example/", "https://selfhost.example/", "https://user@selfhost.example:8443/",
+    " https://selfhost.example:8443/", "https://selfhost.example:8443/chat"])("rejects invalid requesting origin %j", (requestingOrigin) => {
+    expect(check(null, requestingOrigin)).toBe(false);
+  });
+  it("rejects conflicting optional media securityOrigin", () => {
+    expect(check(null, origin, { ...details(), securityOrigin: "https://attacker.example/" })).toBe(false);
+  });
+  it.each([null, {}, { embeddingOrigin: origin }, { embeddingOrigin: origin, isMainFrame: true },
+    { embeddingOrigin: origin, isMainFrame: false, requestingUrl: origin },
+    { embeddingOrigin: origin, isMainFrame: false, requestingUrl: "https://attacker.example/" }])(
+    "rejects absent/forged frame details %j", (d) => { expect(check(null, origin, d)).toBe(false); });
+  it.each([f.wc, {}, { mainFrame: { url: origin } }])("rejects non-null contents notification branches", (wc) => {
+    expect(check(wc)).toBe(false);
+    expect(check(wc, origin, { ...details(), isMainFrame: true, requestingUrl: f.frame.url })).toBe(false);
+  });
+  it.each(["media", "mediaKeySystem", "display-capture", "geolocation", "clipboard-read"])("does not grant null-contents %s", (permission) => {
+    expect(check(null, origin, details(), permission)).toBe(false);
+  });
+  it.each(["https://attacker.example/", "https://selfhost.example/chat", "about:blank", ""])("denies navigated owner %s", (url) => {
+    f.frame.url = url;
+    expect(check()).toBe(false);
+  });
+  it.each(["http://localhost:8080/base", "http://192.168.1.20:9000/chat", "https://selfhost.example:8443/mutiny"])(
+    "preserves configured self-host base path and port %s", (configured) => {
+      f.buildUrl.href = configured; f.frame.url = `${configured}/room`;
+      const securityOrigin = `${f.buildUrl.origin}/`;
+      expect(check(null, securityOrigin, { embeddingOrigin: securityOrigin, isMainFrame: false })).toBe(true);
+      expect(check(null, "https://app.mutinyapp.gg/", { embeddingOrigin: securityOrigin, isMainFrame: false })).toBe(false);
+    });
+  it("denies missing bound owner", () => {
+    f.hasOwner = false;
+    expect(check()).toBe(false);
+  });
+  it("denies destroyed owning window", () => {
+    vi.spyOn(f.window, "isDestroyed").mockReturnValue(true);
+    expect(check()).toBe(false);
+  });
+  it("denies destroyed owning renderer", () => {
+    vi.spyOn(f.wc, "isDestroyed").mockReturnValue(true);
+    expect(check()).toBe(false);
+  });
+  it("denies inaccessible owning contents without throwing", () => {
+    vi.spyOn(f.window, "webContents", "get").mockImplementation(() => { throw new Error("disposed"); });
+    expect(check()).toBe(false);
+  });
+  it("denies inaccessible owning frame", () => {
+    vi.spyOn(f.wc, "mainFrame", "get").mockImplementation(() => { throw new Error("disposed"); });
+    expect(check()).toBe(false);
+  });
+  it("does not extend origin-only authority to IPC or permission requests", async () => {
+    await expect(f.handlers.get("dialog:openAudioFile")({ sender: null, senderFrame: null })).rejects.toThrow();
+    const cb = vi.fn();
+    f.permissions.get("request")(null, "notifications", cb, details());
+    expect(cb).toHaveBeenCalledWith(false);
+  });
+});
+
 describe("production main native authority", () => {
   it.each(["securityOrigin", "embeddingOrigin"])("rejects conflicting check %s", (key) => {
     expect(f.permissions.get("check")(f.wc, "media", "https://selfhost.example:8443", {
