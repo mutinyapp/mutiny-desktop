@@ -15,6 +15,7 @@ import {
   screenPermissionGuidance,
 } from "./native/displayMedia";
 import { showScreenPicker } from "./native/screenPicker";
+import { hasConfiguredOrigin, isTrustedContents, isTrustedIpc } from "./native/rendererTrust";
 import {
   ProtocolUrlQueue,
   applyFirstLaunchAutostart,
@@ -84,7 +85,8 @@ if (acquiredLock) {
     });
 
     // Native file picker for audio files (entrance sounds / soundboard)
-    ipcMain.handle("dialog:openAudioFile", async () => {
+    ipcMain.handle("dialog:openAudioFile", async (event) => {
+      if (!isTrustedIpc(event, mainWindow, BUILD_URL)) throw new Error("Untrusted audio dialog caller");
       const result = await dialog.showOpenDialog({
         properties: ["openFile"],
         filters: [
@@ -94,25 +96,35 @@ if (acquiredLock) {
           },
         ],
       });
-      if (result.canceled) return null;
+      if (result.canceled || !isTrustedIpc(event, mainWindow, BUILD_URL)) return null;
       return result.filePaths[0];
     });
 
     // Grant media permissions for voice chat (microphone, camera, screen share)
-    session.defaultSession.setPermissionRequestHandler((_webContents, permission, callback) => {
+    session.defaultSession.setPermissionRequestHandler((contents, permission, callback, details) => {
       const allowed = ["media", "mediaKeySystem", "display-capture", "notifications"];
-      callback(allowed.includes(permission));
+      callback(allowed.includes(permission) &&
+        isTrustedContents(contents, mainWindow, BUILD_URL) &&
+        details.isMainFrame === true && hasConfiguredOrigin(details.requestingUrl, BUILD_URL));
     });
 
-    session.defaultSession.setPermissionCheckHandler((_webContents, permission) => {
+    session.defaultSession.setPermissionCheckHandler((contents, permission, requestingOrigin, details) => {
       const allowed = ["media", "mediaKeySystem", "display-capture", "notifications"];
-      return allowed.includes(permission);
+      return allowed.includes(permission) &&
+        isTrustedContents(contents, mainWindow, BUILD_URL) &&
+        details.isMainFrame === true && hasConfiguredOrigin(requestingOrigin, BUILD_URL) &&
+        hasConfiguredOrigin(details.requestingUrl, BUILD_URL) &&
+        (details.securityOrigin === undefined || hasConfiguredOrigin(details.securityOrigin, BUILD_URL)) &&
+        (details.embeddingOrigin === undefined || hasConfiguredOrigin(details.embeddingOrigin, BUILD_URL));
     });
 
     // Prefer the native picker on supported macOS versions. Electron falls
     // back to this handler when the native picker is unavailable.
     session.defaultSession.setDisplayMediaRequestHandler(
       createDisplayMediaRequestHandler({
+        authorize: (request) => isTrustedIpc(
+          { sender: mainWindow?.webContents, senderFrame: request.frame }, mainWindow, BUILD_URL,
+        ) && hasConfiguredOrigin(request.securityOrigin, BUILD_URL),
         platform: process.platform,
         getScreenAccessStatus: () =>
           systemPreferences.getMediaAccessStatus("screen"),
@@ -150,7 +162,7 @@ if (acquiredLock) {
       protocolUrls.rendererReady(window),
     );
 
-    registerWindowControlHandlers(ipcMain, () => mainWindow);
+    registerWindowControlHandlers(ipcMain, () => mainWindow, (event) => isTrustedIpc(event, mainWindow, BUILD_URL));
     initBadges();
     initTray();
     initDiscordRpc();

@@ -59,6 +59,7 @@ describe("display media request handling", () => {
       const showPermissionGuidance = vi.fn().mockResolvedValue(undefined);
       const callback = vi.fn();
       const handler = createDisplayMediaRequestHandler({
+        authorize: () => true,
         platform: "darwin",
         getScreenAccessStatus: () => status,
         pickSource,
@@ -77,6 +78,7 @@ describe("display media request handling", () => {
   it("returns the selected source exactly once", async () => {
     const callback = vi.fn();
     const handler = createDisplayMediaRequestHandler({
+        authorize: () => true,
       platform: "linux",
       getScreenAccessStatus: () => "unknown",
       pickSource: vi.fn().mockResolvedValue(source),
@@ -92,6 +94,7 @@ describe("display media request handling", () => {
   it("resolves cancellation exactly once", async () => {
     const callback = vi.fn();
     const handler = createDisplayMediaRequestHandler({
+        authorize: () => true,
       platform: "win32",
       getScreenAccessStatus: () => "unknown",
       pickSource: vi.fn().mockResolvedValue(null),
@@ -109,6 +112,7 @@ describe("display media request handling", () => {
     const reportError = vi.fn();
     const error = new Error("picker failed");
     const handler = createDisplayMediaRequestHandler({
+        authorize: () => true,
       platform: "linux",
       getScreenAccessStatus: () => "unknown",
       pickSource: vi.fn().mockRejectedValue(error),

@@ -4,7 +4,9 @@ import Store from "electron-store";
 import { configDefaults, configSchema } from "./configSchema";
 
 import { destroyDiscordRpc, initDiscordRpc } from "./discordRpc";
-import { mainWindow } from "./window";
+import { BUILD_URL, mainWindow } from "./window";
+import { isTrustedIpc } from "./rendererTrust";
+import { isConfigUpdate } from "./configIpcPolicy";
 import { usesCustomFrame } from "./windowOptions";
 
 const store = new Store({
@@ -153,8 +155,8 @@ class Config {
 
 export const config = new Config();
 
-ipcMain.on("config", (_, newConfig: Partial<DesktopConfig>) => {
-  console.info("Received new configuration", newConfig);
+ipcMain.on("config", (event, newConfig: unknown) => {
+  if (!isTrustedIpc(event, mainWindow, BUILD_URL) || !isConfigUpdate(newConfig)) return;
   Object.entries(newConfig).forEach(
     ([key, value]) => (config[key as keyof DesktopConfig] = value as never),
   );

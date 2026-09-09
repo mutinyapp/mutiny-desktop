@@ -13,6 +13,7 @@ type DisplayMediaRequest = Parameters<
 >[0];
 
 interface DisplayMediaDependencies {
+  authorize?: (request: DisplayMediaRequest) => boolean;
   platform: NodeJS.Platform;
   getScreenAccessStatus: () => ScreenAccessStatus;
   pickSource: () => Promise<Electron.DesktopCapturerSource | null>;
@@ -70,13 +71,14 @@ export function displayMediaHandlerOptions(
 }
 
 export function createDisplayMediaRequestHandler({
+  authorize = () => false,
   platform,
   getScreenAccessStatus,
   pickSource,
   showPermissionGuidance,
   reportError = (error) => console.error("[mutiny] Screen picker failed", error),
 }: DisplayMediaDependencies) {
-  return async (_request: DisplayMediaRequest, callback: DisplayMediaCallback) => {
+  return async (request: DisplayMediaRequest, callback: DisplayMediaCallback) => {
     let completed = false;
     const complete: DisplayMediaCallback = (streams) => {
       if (completed) return;
@@ -85,6 +87,7 @@ export function createDisplayMediaRequestHandler({
     };
 
     try {
+      if (!authorize(request)) { complete({}); return; }
       if (platform === "darwin") {
         const status = getScreenAccessStatus();
         if (status === "denied" || status === "restricted") {
@@ -95,7 +98,7 @@ export function createDisplayMediaRequestHandler({
       }
 
       const selected = await pickSource();
-      complete(selected ? { video: selected } : {});
+      complete(selected && authorize(request) ? { video: selected } : {});
     } catch (error) {
       reportError(error);
       complete({});
