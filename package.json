@@ -1,7 +1,7 @@
 {
   "name": "mutiny-desktop",
   "productName": "Mutiny",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Mutiny desktop chat client.",
   "main": ".vite/build/main.js",
   "repository": "warpapaya/mutiny-desktop",
