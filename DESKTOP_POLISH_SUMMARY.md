@@ -66,7 +66,7 @@ pnpm make  # Creates distributable packages
 
 ## Notes
 
-- **Auto-update URL**: Correctly pointing to `warpapaya/mutiny-desktop` on GitHub
+- **Auto-update URL**: Correctly pointing to `mutinyapp/mutiny-desktop` on GitHub
 - **Protocol handler**: The web app will need to emit `protocol-url` events if it wants to handle deep links
 - **No merge to main**: Changes are committed to `feat/desktop-polish` branch only
 - **Window customization**: The app uses a custom frame by default (can be toggled in settings)

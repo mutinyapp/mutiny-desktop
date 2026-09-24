@@ -41,7 +41,7 @@ const makers: ForgeConfig["makers"] = [
   new MakerSquirrel({
     name: STRINGS.name,
     authors: STRINGS.author,
-    iconUrl: `https://raw.githubusercontent.com/warpapaya/mutiny-desktop/v${PACKAGE_VERSION}/assets/desktop/icon.ico`,
+    iconUrl: `https://raw.githubusercontent.com/mutinyapp/mutiny-desktop/v${PACKAGE_VERSION}/assets/desktop/icon.ico`,
     // todo: loadingGif
     setupIcon: `${ASSET_DIR}/icon.ico`,
     description: STRINGS.description,
@@ -224,7 +224,7 @@ const config: ForgeConfig = {
   publishers: [
     new PublisherGithub({
       repository: {
-        owner: "warpapaya",
+        owner: "mutinyapp",
         name: "mutiny-desktop",
       },
     }),

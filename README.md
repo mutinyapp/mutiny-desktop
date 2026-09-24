@@ -4,9 +4,9 @@
 
 **A modern, open-source chat platform — built for communities that want independence.**
 
-[![Release](https://img.shields.io/github/v/release/warpapaya/mutiny-desktop?style=flat-square&color=7B2FBE)](https://github.com/warpapaya/mutiny-desktop/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/warpapaya/mutiny-desktop/total?style=flat-square&color=2EC4B6)](https://github.com/warpapaya/mutiny-desktop/releases)
-[![License](https://img.shields.io/github/license/warpapaya/mutiny-desktop?style=flat-square)](https://github.com/warpapaya/mutiny-desktop/blob/main/LICENSE)
+[![Release](https://img.shields.io/github/v/release/mutinyapp/mutiny-desktop?style=flat-square&color=7B2FBE)](https://github.com/mutinyapp/mutiny-desktop/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/mutinyapp/mutiny-desktop/total?style=flat-square&color=2EC4B6)](https://github.com/mutinyapp/mutiny-desktop/releases)
+[![License](https://img.shields.io/github/license/mutinyapp/mutiny-desktop?style=flat-square)](https://github.com/mutinyapp/mutiny-desktop/blob/main/LICENSE)
 
 [Download](#download) • [Features](#features) • [Development](#development) • [Contributing](#contributing)
 
@@ -20,10 +20,10 @@ Get the latest version for your platform:
 
 | Platform | Architecture | Link |
 |----------|-------------|------|
-| **macOS** | Apple Silicon (M1+) | [Download .zip](https://github.com/warpapaya/mutiny-desktop/releases/latest/download/Mutiny-darwin-arm64.zip) |
-| **Windows** | x64 | [Download Installer](https://github.com/warpapaya/mutiny-desktop/releases/latest/download/Mutiny-Setup.exe) |
+| **macOS** | Apple Silicon (M1+) | [Download .zip](https://github.com/mutinyapp/mutiny-desktop/releases/latest/download/Mutiny-darwin-arm64.zip) |
+| **Windows** | x64 | [Download Installer](https://github.com/mutinyapp/mutiny-desktop/releases/latest/download/Mutiny-Setup.exe) |
 
-Or visit the [Releases](https://github.com/warpapaya/mutiny-desktop/releases) page for all available builds.
+Or visit the [Releases](https://github.com/mutinyapp/mutiny-desktop/releases) page for all available builds.
 
 > **Auto-updates included** — once installed, Mutiny updates itself automatically in the background.
 
@@ -55,7 +55,7 @@ Or visit the [Releases](https://github.com/warpapaya/mutiny-desktop/releases) pa
 
 ```bash
 # Clone with submodules
-git clone --recursive https://github.com/warpapaya/mutiny-desktop
+git clone --recursive https://github.com/mutinyapp/mutiny-desktop
 cd mutiny-desktop
 
 # Install dependencies
@@ -85,7 +85,7 @@ git -c submodule."assets".update=checkout submodule update --init assets
 
 ## Architecture
 
-Mutiny Desktop is an [Electron](https://www.electronjs.org/) wrapper around the [Mutiny web client](https://github.com/warpapaya/mutiny), built with [Electron Forge](https://www.electronforge.io/).
+Mutiny Desktop is an [Electron](https://www.electronjs.org/) wrapper around the [Mutiny web client](https://github.com/mutinyapp/mutiny-web), built with [Electron Forge](https://www.electronforge.io/).
 
 ```
 src/
