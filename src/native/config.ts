@@ -4,7 +4,7 @@ import Store from "electron-store";
 import { configDefaults, configSchema } from "./configSchema";
 
 import { destroyDiscordRpc, initDiscordRpc } from "./discordRpc";
-import { BUILD_URL, mainWindow } from "./window";
+import { BUILD_URL, mainWindow, mainWindowCustomFrame } from "./window";
 import { isTrustedIpc } from "./rendererTrust";
 import { isConfigUpdate } from "./configIpcPolicy";
 import { usesCustomFrame } from "./windowOptions";
@@ -22,7 +22,11 @@ class Config {
     if (!mainWindow || mainWindow.isDestroyed()) return;
     mainWindow.webContents.send("config", {
       firstLaunch: this.firstLaunch,
-      customFrame: usesCustomFrame(process.platform, this.customFrame),
+      customFrame: usesCustomFrame(
+        process.platform,
+        this.customFrame,
+        mainWindowCustomFrame,
+      ),
       minimiseToTray: this.minimiseToTray,
       startMinimisedToTray: this.startMinimisedToTray,
       spellchecker: this.spellchecker,

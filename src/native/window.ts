@@ -18,6 +18,9 @@ import { updateTrayMenu } from "./tray";
 // global reference to main window
 export let mainWindow: BrowserWindow;
 
+// custom-frame setting the current main window was created with
+export let mainWindowCustomFrame: boolean | undefined;
+
 // currently in-use build
 export const BUILD_URL = new URL(
   app.commandLine.hasSwitch("force-server")
@@ -37,10 +40,13 @@ const windowIcon = nativeImage.createFromDataURL(windowIconAsset);
  * Create the main application window
  */
 export function createMainWindow(options: { startMinimised?: boolean } = {}) {
+  // chrome is fixed for the window's lifetime; the renderer mirrors this
+  mainWindowCustomFrame = config.customFrame;
+
   // create the window
   mainWindow = new BrowserWindow({
     show: !options.startMinimised,
-    ...mainWindowOptions(process.platform, config.customFrame),
+    ...mainWindowOptions(process.platform, mainWindowCustomFrame),
     width: 1280,
     height: 720,
     backgroundColor: "#191919",
