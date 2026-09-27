@@ -1,7 +1,7 @@
 {
   "name": "mutiny-desktop",
   "productName": "Mutiny",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Mutiny desktop chat client.",
   "main": ".vite/build/main.js",
   "repository": "mutinyapp/mutiny-desktop",

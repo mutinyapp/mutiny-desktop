@@ -37,7 +37,7 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - name: Canonical make (Mac ad-hoc QA ONLY; Windows unsigned)
-        run: pnpm run make -- --platform=${{ matrix.platform }} --arch=${{ matrix.arch }}
+        run: pnpm run make --platform=${{ matrix.platform }} --arch=${{ matrix.arch }}
         env:
           PLATFORM: ${{ matrix.platform }}
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
