@@ -1,19 +1,14 @@
 import { join } from "node:path";
 
-import {
-  BrowserWindow,
-  Menu,
-  MenuItem,
-  app,
-  nativeImage,
-} from "electron";
+import { BrowserWindow, Menu, app, clipboard, nativeImage } from "electron";
 
 import windowIconAsset from "../../assets/desktop/icon.png?asset";
 
 import { config } from "./config";
+import { buildContextMenuTemplate } from "./contextMenuPolicy";
 import { shouldRestoreMaximised } from "./startup";
-import { mainWindowOptions } from "./windowOptions";
 import { updateTrayMenu } from "./tray";
+import { mainWindowOptions } from "./windowOptions";
 
 // global reference to main window
 export let mainWindow: BrowserWindow;
@@ -77,9 +72,12 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
   // load the entrypoint
   mainWindow.loadURL(BUILD_URL.toString());
 
-  mainWindow.webContents.on("did-fail-load", (_event, code, description, url) => {
-    console.error(`[LOAD FAIL] ${url} — ${code}: ${description}`);
-  });
+  mainWindow.webContents.on(
+    "did-fail-load",
+    (_event, code, description, url) => {
+      console.error(`[LOAD FAIL] ${url} — ${code}: ${description}`);
+    },
+  );
   mainWindow.webContents.on("did-finish-load", () => {
     console.log("[LOAD OK] Page finished loading");
   });
@@ -129,46 +127,34 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
   // send the config
   mainWindow.webContents.on("did-finish-load", () => config.sync());
 
-  // configure spellchecker context menu
+  // context menu: registering this listener replaces Chromium's default menu,
+  // so clipboard/link/image/spelling items are built by contextMenuPolicy.
   mainWindow.webContents.on("context-menu", (_, params) => {
-    const menu = new Menu();
-
-    // add all suggestions
-    for (const suggestion of params.dictionarySuggestions) {
-      menu.append(
-        new MenuItem({
-          label: suggestion,
-          click: () => mainWindow.webContents.replaceMisspelling(suggestion),
-        }),
-      );
-    }
-
-    // allow users to add the misspelled word to the dictionary
-    if (params.misspelledWord) {
-      menu.append(
-        new MenuItem({
-          label: "Add to dictionary",
-          click: () =>
-            mainWindow.webContents.session.addWordToSpellCheckerDictionary(
-              params.misspelledWord,
-            ),
-        }),
-      );
-    }
-
-    // add an option to toggle spellchecker
-    menu.append(
-      new MenuItem({
-        label: "Toggle spellcheck",
-        click() {
+    const template = buildContextMenuTemplate(params, (action) => {
+      switch (action.kind) {
+        case "replaceMisspelling":
+          mainWindow.webContents.replaceMisspelling(action.suggestion);
+          break;
+        case "addToDictionary":
+          mainWindow.webContents.session.addWordToSpellCheckerDictionary(
+            action.word,
+          );
+          break;
+        case "copyLink":
+          clipboard.writeText(action.url);
+          break;
+        case "copyImage":
+          mainWindow.webContents.copyImageAt(action.x, action.y);
+          break;
+        case "toggleSpellcheck":
           config.spellchecker = !config.spellchecker;
-        },
-      }),
-    );
+          break;
+      }
+    });
 
-    // show menu if we've generated enough entries
-    if (menu.items.length > 0) {
-      menu.popup();
+    // don't show an empty menu
+    if (template.length > 0) {
+      Menu.buildFromTemplate(template).popup({ window: mainWindow });
     }
   });
 
