@@ -5,6 +5,7 @@ import started from "electron-squirrel-startup";
 
 import "./native/autoLaunch";
 import { initBadges } from "./native/badges";
+import { RENDERER_CONTENT_SECURITY_POLICY } from "./native/contentSecurityPolicy";
 import { config } from "./native/config";
 import { initControlServer } from "./native/controlServer";
 import { initDiscordRpc } from "./native/discordRpc";
@@ -78,9 +79,7 @@ if (acquiredLock) {
           ...details.responseHeaders,
           "Cross-Origin-Opener-Policy": ["same-origin"],
           "Cross-Origin-Embedder-Policy": ["require-corp"],
-          "Content-Security-Policy": [
-            "default-src 'self' 'unsafe-inline' data: https://app.mutinyapp.gg https://*.mutinyapp.gg; media-src 'self' blob: data: https:; connect-src 'self' wss: https:;",
-          ],
+          "Content-Security-Policy": [RENDERER_CONTENT_SECURITY_POLICY],
         },
       });
     });

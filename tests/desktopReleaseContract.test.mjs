@@ -7,7 +7,7 @@ describe("desktop release integration", () => {
   it("bumps both package metadata and npm root lock metadata", () => {
     const pkg = JSON.parse(read("package.json"));
     const lock = JSON.parse(read("package-lock.json"));
-    expect(pkg.version).toBe("1.2.6");
+    expect(pkg.version).toBe("1.2.7");
     expect(lock.version).toBe(pkg.version);
     expect(lock.packages[""].version).toBe(pkg.version);
   });
