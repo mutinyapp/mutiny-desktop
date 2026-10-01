@@ -14,6 +14,7 @@ const window = vi.hoisted(() => ({
 vi.mock("../src/native/window", () => ({ mainWindow: window }));
 
 import { createControlServer } from "../src/native/controlServer";
+import { voiceControlScript } from "../src/native/voiceControl";
 
 const token = "test-token";
 let server: ReturnType<typeof createControlServer>;
@@ -77,7 +78,14 @@ describe("Stream Deck HTTP server", () => {
     expect(response.status).toBe(503);
   });
 
-  it.each(["/toggle-mute", "/mute", "/toggle-deafen", "/deafen", "/disconnect", "/leave"])("executes an authorized %s command exactly once and reports its result", async (path) => {
+  it.each([
+    ["/toggle-mute", "toggleMute"],
+    ["/mute", "toggleMute"],
+    ["/toggle-deafen", "toggleDeafen"],
+    ["/deafen", "toggleDeafen"],
+    ["/disconnect", "disconnect"],
+    ["/leave", "disconnect"],
+  ] as const)("executes an authorized %s command exactly once and reports its result", async (path, action) => {
     window.isDestroyed.mockReturnValue(false);
     const response = await fetch(`${baseUrl}${path}`, {
       method: "POST", headers: { Authorization: `Bearer ${token}` },
@@ -86,6 +94,7 @@ describe("Stream Deck HTTP server", () => {
     expect(response.headers.get("cache-control")).toBe("no-store");
     await expect(response.json()).resolves.toEqual({ ok: true, result: "clicked:aria" });
     expect(window.webContents.executeJavaScript).toHaveBeenCalledTimes(1);
+    expect(window.webContents.executeJavaScript).toHaveBeenCalledWith(voiceControlScript(action));
     expect(window.focus).not.toHaveBeenCalled();
   });
 
