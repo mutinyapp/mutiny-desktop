@@ -1,0 +1,5 @@
+{
+  "command": "T17_PORT=49206 T17_PROOF=\"$PWD/proof/T17/v4/runtime\" T17_ENGINE_PROBE=deferred node proof/T17/run-electron-runtime.mjs",
+  "exit": 1,
+  "receipt": "proof/T17/v4/runtime/engine-deferred.json"
+}

@@ -1,0 +1,391 @@
+{
+  "base": "db249a04ae66fef949d3f1de92ea81d795a99929",
+  "changedPathCount": 77,
+  "files": [
+    {
+      "path": "proof/T17/electron-frame-lifecycle-entry.ts",
+      "sha256": "a663859d1af32b4dd13dd89754fdc31a74124f9f99eaf1535aa0234de18d65a1",
+      "bytes": 3345
+    },
+    {
+      "path": "proof/T17/electron-runtime-entry.ts",
+      "sha256": "21068f687f7b6289191d9d46082e6711d3e6b91a161756e3b447400b26b56606",
+      "bytes": 13535
+    },
+    {
+      "path": "proof/T17/run-electron-runtime.mjs",
+      "sha256": "171c7c3e1b92982651a663d60824d1343079881e3a870d9c43b57291e512d203",
+      "bytes": 4136
+    },
+    {
+      "path": "proof/T17/v4-CONTRACT-DELTA.md",
+      "sha256": "ba2a361d5a0397b856ac7f0e9caa5e40be12ece1015116f0b9c5106e5d1ef4bf",
+      "bytes": 9752
+    },
+    {
+      "path": "proof/T17/v4-PR-BODY.md",
+      "sha256": "40c9d8ff7e960d3a60ab37e01e17b22f8f042043025d486b4a57006944f864fc",
+      "bytes": 5001
+    },
+    {
+      "path": "proof/T17/v4/electron-authoritative-sources.json",
+      "sha256": "d8db4868069503894fb7ca618065aac119ca0a5d4ed99e11a42819a6d2faccfc",
+      "bytes": 20091
+    },
+    {
+      "path": "proof/T17/v4/emission-controls.json",
+      "sha256": "2e07da8c3196d6d3db4f3e5a8920bd8fe7acfacc208688b91d9e69050014f209",
+      "bytes": 1061
+    },
+    {
+      "path": "proof/T17/v4/emission.json",
+      "sha256": "aaf07628c24172578df30b8a85bc29c3927fb876e6fcee65e9130c49ab134c87",
+      "bytes": 120
+    },
+    {
+      "path": "proof/T17/v4/emission.log",
+      "sha256": "812f49b8b69ae47a5eda8f77afe38d904a529f62bdbc3f25aee7a23b2f3d6396",
+      "bytes": 1214
+    },
+    {
+      "path": "proof/T17/v4/engine-deferred.json",
+      "sha256": "b146686f40ec5b510afe9b032bdb5a7c38b892c56d74e8eb9fed35f70e321e29",
+      "bytes": 211
+    },
+    {
+      "path": "proof/T17/v4/engine-deferred.log",
+      "sha256": "89147ad514c22b3dc8a5eb574e21819690a7f09c856203ee3649df52353e7832",
+      "bytes": 2145
+    },
+    {
+      "path": "proof/T17/v4/engine-sync.json",
+      "sha256": "501c94ab5a75a1b9e457b41ff78921eede83dbe706554103f250ae550744767e",
+      "bytes": 203
+    },
+    {
+      "path": "proof/T17/v4/engine-sync.log",
+      "sha256": "f83f5d2f4ece071a4febd80d5ee02cefa77f7c5446fec5b1f2dca67bdcb7b943",
+      "bytes": 2146
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation.log",
+      "sha256": "ffdf8f3206ce4dd960f41a3d6ad6991c57ca7cd7e97f50bd153bbc0ff665c43b",
+      "bytes": 59961
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-cdp-only-captions.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-cdp-only-offline.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-cdp-only-runtime.json",
+      "sha256": "09f2a5f2291123ed1fdfa675c7d1fbae4737b1ab686cc15da5bce5400d0d6efd",
+      "bytes": 8092
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-crash-only-crash.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-crash-only-runtime-failure.txt",
+      "sha256": "07baecfa776f25c44213b4af66da98b0ac79a1b8db09d29cdd43bbed9de8724d",
+      "bytes": 306
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-crash-only-runtime.json",
+      "sha256": "b463a0317c4b0929edeec5d7474917034ce822b4140c9c3c5e4d59510fc549ac",
+      "bytes": 4727
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-full-v3-crash.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-full-v3-offline.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-full-v3-runtime-failure.txt",
+      "sha256": "07baecfa776f25c44213b4af66da98b0ac79a1b8db09d29cdd43bbed9de8724d",
+      "bytes": 306
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-full-v3-runtime.json",
+      "sha256": "d1fce0d621a5ec3b8a150a14db964f61561bec8dddafa0cb74e3a0ebbb0ae806",
+      "bytes": 11905
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-full-v3-server.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-no-crash-no-cdp-captions.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-no-crash-no-cdp-runtime.json",
+      "sha256": "a11cda5d4dd7e0a9639cac4c7f80b0857d01abd68ee222ab6d758e33a8d9c6b9",
+      "bytes": 6428
+    },
+    {
+      "path": "proof/T17/v4/initial-isolation/darwin-no-crash-no-cdp-server.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/isolation-summary.json",
+      "sha256": "5e0ac9a5cabc02aecf18efd3ff688bf548cac3b007077d19da466a4ca37ad9b8",
+      "bytes": 11819
+    },
+    {
+      "path": "proof/T17/v4/isolation.log",
+      "sha256": "04834cf19bb12fbe53c232d900e2d6ca602a7b29431542e7daf02a77466bf684",
+      "bytes": 171340
+    },
+    {
+      "path": "proof/T17/v4/lint.json",
+      "sha256": "3890d85f838d38ef5dde706d9fd9d8a28232461f1ac861ab2833d291feb7d7d4",
+      "bytes": 86
+    },
+    {
+      "path": "proof/T17/v4/lint.log",
+      "sha256": "bcbc6d82396e34445fdc5fd6e5186fcab2163ef09135a3b80caf34a1278a7a2a",
+      "bytes": 101
+    },
+    {
+      "path": "proof/T17/v4/resource-release.json",
+      "sha256": "51921c44859b39690ff13731bae83114b57c688b8500668a2c49dc2315ceb977",
+      "bytes": 497
+    },
+    {
+      "path": "proof/T17/v4/run-gate.py",
+      "sha256": "7dcb87f7d5859a320753a26bd1e178f69013462f2ff937bddb8b851d22e00552",
+      "bytes": 634
+    },
+    {
+      "path": "proof/T17/v4/runtime.json",
+      "sha256": "a56a47cbfb71a37f58dc4f4a5c7ec8918f6b29e3f1ebb71b47f7633ecf242952",
+      "bytes": 117
+    },
+    {
+      "path": "proof/T17/v4/runtime.log",
+      "sha256": "6add6a6b576ddd000558a461219612771eb9ff416a069c1156a2213092104a47",
+      "bytes": 186670
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-cdp-only-captions.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-cdp-only-offline.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-cdp-only-runtime.json",
+      "sha256": "f0cfb4713b03c663d1e77d6d8667dcff5e0caba6c86fe6813964afe0174b06e4",
+      "bytes": 10588
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-crash-only-captions.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-crash-only-crash.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-crash-only-runtime-failure.txt",
+      "sha256": "12fb0cb427aa951317e51768b0e6759c9e01dc785962f9b4c8c16d7f49f24246",
+      "bytes": 667
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-crash-only-runtime.json",
+      "sha256": "6b6cb20f4074e243b247a1fdc9f45179ab94de8e6a04c54316e3becdb636d371",
+      "bytes": 8356
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-full-v3-captions.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-full-v3-crash.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-full-v3-offline.png",
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34",
+      "bytes": 53417
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-full-v3-runtime-failure.txt",
+      "sha256": "12fb0cb427aa951317e51768b0e6759c9e01dc785962f9b4c8c16d7f49f24246",
+      "bytes": 667
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-full-v3-runtime.json",
+      "sha256": "62f7d542b1b2b6e3cb192b45e3611d62fbcc1f1a639202fa490e12fdbe6984bf",
+      "bytes": 16583
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-full-v3-server.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-no-crash-no-cdp-captions.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-no-crash-no-cdp-runtime.json",
+      "sha256": "df3db5290c5cc2677275f503a88b959b78e5a353916e3401f30bcf51373ebb48",
+      "bytes": 9165
+    },
+    {
+      "path": "proof/T17/v4/runtime/darwin-no-crash-no-cdp-server.png",
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa",
+      "bytes": 54953
+    },
+    {
+      "path": "proof/T17/v4/runtime/engine-deferred.json",
+      "sha256": "f7d1853d25cff0251c525a5dea35f7ea4134f20142b73691b21aa1bdce58cd7a",
+      "bytes": 600
+    },
+    {
+      "path": "proof/T17/v4/runtime/engine-sync.json",
+      "sha256": "622ba6ca79c1c135aca7da25fd1d8d5bd4b7d916780b7d353418f61ea256487f",
+      "bytes": 601
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-cdp-only-captions.png",
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2",
+      "bytes": 54674
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-cdp-only-offline.png",
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90",
+      "bytes": 54624
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-cdp-only-runtime.json",
+      "sha256": "3f17931c2d2485df8b7d1a28dc2a951a3ad58beb74799266ed3ceac9dd77c084",
+      "bytes": 10593
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-crash-only-captions.png",
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46",
+      "bytes": 56187
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-crash-only-crash.png",
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e",
+      "bytes": 56134
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-crash-only-runtime-failure.txt",
+      "sha256": "12fb0cb427aa951317e51768b0e6759c9e01dc785962f9b4c8c16d7f49f24246",
+      "bytes": 667
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-crash-only-runtime.json",
+      "sha256": "6b6cb20f4074e243b247a1fdc9f45179ab94de8e6a04c54316e3becdb636d371",
+      "bytes": 8356
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-full-v3-captions.png",
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2",
+      "bytes": 54674
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-full-v3-crash.png",
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e",
+      "bytes": 56134
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-full-v3-offline.png",
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90",
+      "bytes": 54624
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-full-v3-runtime-failure.txt",
+      "sha256": "12fb0cb427aa951317e51768b0e6759c9e01dc785962f9b4c8c16d7f49f24246",
+      "bytes": 667
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-full-v3-runtime.json",
+      "sha256": "b64cb1603337593576242350a66f18fffadf33dae598a37fa535966d73995700",
+      "bytes": 16583
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-full-v3-server.png",
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e",
+      "bytes": 56134
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-no-crash-no-cdp-captions.png",
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46",
+      "bytes": 56187
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-no-crash-no-cdp-runtime.json",
+      "sha256": "aae8eb0a1468685a851b713da292b9d7a8955ac21f98d6ed396185ea1c958d1b",
+      "bytes": 9170
+    },
+    {
+      "path": "proof/T17/v4/runtime/win32-no-crash-no-cdp-server.png",
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e",
+      "bytes": 56134
+    },
+    {
+      "path": "proof/T17/v4/test.json",
+      "sha256": "5a5b1c01ed6e16beb8baa9cae4ef45531d39845fd97238ab9bc7e206beff4fa0",
+      "bytes": 87
+    },
+    {
+      "path": "proof/T17/v4/test.log",
+      "sha256": "35f909c3c28d296465898dbb8745db6f62814452c8da424f79285da767bcbdeb",
+      "bytes": 3873
+    },
+    {
+      "path": "proof/T17/v4/typecheck.json",
+      "sha256": "dd10324ba6097b16f4ec578adf3d9a7e4d219e19615c74eeabaf49f91cda7644",
+      "bytes": 90
+    },
+    {
+      "path": "proof/T17/v4/typecheck.log",
+      "sha256": "81c6ccdb6be87aba6407e15a66a58379414dd6925fb6a752c5b1af3b8716a7c1",
+      "bytes": 95
+    },
+    {
+      "path": "proof/T17/v4/workflow-scope-audit.json",
+      "sha256": "700ce0936a5b4e8f4a05152fb8838465fe099eff8b9ab7e297c58abe62f00fab",
+      "bytes": 3106
+    },
+    {
+      "path": "tests/offlineRecovery.test.ts",
+      "sha256": "0e29dbd83928558f6f7df21e50cffc974d4ad83a674a28f167df46d79c10fc9a",
+      "bytes": 11289
+    },
+    {
+      "path": "proof/T17/v4/changed-files.json",
+      "sha256": null,
+      "note": "Self-listing manifest; no self-referential hash."
+    }
+  ]
+}

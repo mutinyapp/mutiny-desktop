@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-10-02T20:36:53.055788+00:00",
+  "port": 49206,
+  "bindSucceeded": true,
+  "ownedHarnessProcesses": [],
+  "removedOwnedScratchTrees": [
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-EBxkLF",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-ParfY0",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-jG80Bb"
+  ],
+  "controllerPort49205Touched": false,
+  "elapsedSincePreflightSeconds": 1443.1
+}

@@ -61,5 +61,38 @@ describe("exact offline caption authority", () => {
   it("does not authorize the exact file without main-owned activation", () => { window.webContents.mainFrame.url = local(); expect(isOfflineCaptionIpc(event(),window)).toBe(false); });
   it.each(["file:///isolated-test/.vite/build/else.html", "file:///isolated-test/.vite/build/offline.html.bak", `${local()}#x`, `${local()}&extra=1`, local("arbitrary"), local("tls"), local().replace("offline.html","OFFLINE.html"), local().replace("offline","%6fffline"), local().replace("dns","%64ns"), "null", "data:text/html,offline", "about:blank"])("rejects URL variant %s", url => { fail(); window.webContents.mainFrame.url = url; expect(isOfflineCaptionIpc(event(),window)).toBe(false); });
   it.each(["other contents","subframe","destroyed window","destroyed contents","detached frame","missing window"])("rejects %s", mode => { fail(); const e = { ...event() }; if(mode === "other contents") e.sender = {} as Electron.WebContents; if(mode === "subframe") e.senderFrame = {url:local()} as Electron.WebFrameMain; if(mode === "destroyed window") window.destroyed=true; if(mode === "destroyed contents") window.webContents.destroyed=true; if(mode === "detached frame") window.webContents.mainFrame.detached=true; expect(isOfflineCaptionIpc(e,mode === "missing window" ? undefined : window)).toBe(false); });
+  it("authorizes a newly resolved current frame after a crash replaced the old frame", () => {
+    fail();
+    const stale = event();
+    const oldFrame = window.webContents.mainFrame;
+    oldFrame.detached = true;
+    window.webContents.mainFrame = {url:local("server"),detached:false};
+    window.webContents.emit("render-process-gone",{}, {reason:"crashed"});
+    expect(isOfflineCaptionIpc(event(),window)).toBe(true);
+    expect(isOfflineCaptionIpc(stale,window)).toBe(false);
+  });
+  it("refuses a stale attached frame with the identical owned file URL", () => {
+    fail();
+    const stale = event();
+    window.webContents.mainFrame = {url:local(),detached:false};
+    expect(isOfflineCaptionIpc(stale,window)).toBe(false);
+    expect(isOfflineCaptionIpc(event(),window)).toBe(true);
+  });
+  it("does not bypass a sticky detached flag even when current identity and URL match", () => {
+    fail();
+    window.webContents.mainFrame.detached = true;
+    window.webContents.emit("render-process-gone",{}, {reason:"crashed"});
+    expect(window.webContents.mainFrame.url).toBe(local("server"));
+    expect(isOfflineCaptionIpc(event(),window)).toBe(false);
+  });
+  it("refuses the previous owner after another window activates the same bundled file", () => {
+    fail();
+    const current = new Window();
+    const disposeCurrent = installOfflineRecovery(current as unknown as Electron.BrowserWindow,target,file);
+    current.webContents.emit("did-fail-load",{},-105,"failure",target.href,true);
+    expect(isOfflineCaptionIpc(event(),current)).toBe(false);
+    expect(isOfflineCaptionIpc(event(current),current)).toBe(true);
+    disposeCurrent();
+  });
   it("never changes general IPC, contents, or configured-origin trust", () => { fail(); expect(isOfflineCaptionIpc(event(),window)).toBe(true); expect(isTrustedIpc(event(),window,target)).toBe(false); expect(isTrustedContents(window.webContents,window,target)).toBe(false); expect(hasConfiguredOrigin(local(),target)).toBe(false); });
 });

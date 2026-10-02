@@ -1,0 +1,67 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.20 building for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-ParfY0/.vite/build/offline.html                       4.93 kB │ gzip: 2.05 kB
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-ParfY0/.vite/build/electron-frame-lifecycle-entry.js  2.42 kB │ gzip: 1.27 kB
+✓ built in 69ms
+{
+  "electron": "38.1.2",
+  "deferred": true,
+  "port": 49206,
+  "before": {
+    "detached": false,
+    "destroyed": false,
+    "url": "http://127.0.0.1:49206/",
+    "processId": 4,
+    "routingId": 1
+  },
+  "current": {
+    "detached": true,
+    "destroyed": false,
+    "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-ParfY0/.vite/build/offline.html?error=server",
+    "processId": 5,
+    "routingId": 1
+  },
+  "sameWrapper": true,
+  "byIdSame": true,
+  "byTokenSame": true,
+  "imports": "Electron + node only; no product modules",
+  "expectedDetached": false
+}
+
+AssertionError [ERR_ASSERTION]: current newly loaded main frame must not remain detached after crash
+
+true !== false
+
+    at S (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-ParfY0/.vite/build/electron-frame-lifecycle-entry.js:2:44) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: true,
+  expected: false,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Removed owned harness build, user-data and cache directories.
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Native Electron frame lifecycle regression must pass
+
+1 !== 0
+
+    at file:///Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/run-electron-runtime.mjs:30:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3
