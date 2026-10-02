@@ -1,0 +1,32 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T17
+
+ ❯ tests/offlineTrustBoundary.test.ts (6 tests | 3 failed) 10ms
+   × T17 existing caption-control trust boundary > T17 requires bundled file controls for minimise 6ms
+     → expected "spy" to be called once, but got 0 times
+   × T17 existing caption-control trust boundary > T17 requires bundled file controls for maximise 1ms
+     → expected "spy" to be called once, but got 0 times
+   × T17 existing caption-control trust boundary > T17 requires bundled file controls for close 1ms
+     → expected "spy" to be called once, but got 0 times
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/offlineTrustBoundary.test.ts > T17 existing caption-control trust boundary > T17 requires bundled file controls for minimise
+ FAIL  tests/offlineTrustBoundary.test.ts > T17 existing caption-control trust boundary > T17 requires bundled file controls for maximise
+ FAIL  tests/offlineTrustBoundary.test.ts > T17 existing caption-control trust boundary > T17 requires bundled file controls for close
+AssertionError: expected "spy" to be called once, but got 0 times
+ ❯ tests/offlineTrustBoundary.test.ts:45:28
+     43|     );
+     44|     listeners.get(channel)?.(event);
+     45|     expect(window[method]).toHaveBeenCalledOnce();
+       |                            ^
+     46|   });
+     47| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 3 passed (6)
+   Start at  10:09:12
+   Duration  892ms (transform 111ms, setup 0ms, collect 108ms, tests 10ms, environment 0ms, prepare 169ms)
+
