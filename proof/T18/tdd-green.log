@@ -1,0 +1,14 @@
+Command: pnpm exec vitest run tests/windowCapabilities.test.ts tests/preloadCapabilities.test.ts
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T18
+
+ ✓ tests/preloadCapabilities.test.ts (12 tests) 126ms
+ ✓ tests/windowCapabilities.test.ts (42 tests) 263ms
+
+ Test Files  2 passed (2)
+      Tests  54 passed (54)
+   Start at  10:55:23
+   Duration  765ms (transform 255ms, setup 0ms, collect 254ms, tests 389ms, environment 1ms, prepare 245ms)
+
+
+Exit code: 0
