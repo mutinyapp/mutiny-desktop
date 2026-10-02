@@ -1,39 +1,39 @@
 ## Task
-T17 — **BLOCKED; draft evidence PR, not an implementation or acceptance claim.**
-Baseline: `b341130ec1584049c306ecc02f649e52622dba9e`.
+T17-v2 — **BLOCKED; diagnostic draft, not offline-recovery implementation.**
+Contract: `/Users/friday/Projects/mutiny-ui-review-20261002/devplan/tasks/T17-v2.md`.
+Accepted main: `ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1` (T18 included).
 
 ## Summary
-- Preserve the existing security boundary and product source unchanged.
-- Add six characterization tests for existing caption IPC: three bundled-file refusals and three configured-origin positive controls.
-- Preserve the RED requirement probe (3 failed / 3 passed) plus exact baseline/candidate gate logs.
-- Request a narrow approved contract delta before implementing bundled offline recovery.
+- Verified the sole released T17 worktree/branch clean at the predecessor PR head `23695ec12e53e822659527fcae5d6fa5f05c73e3`.
+- Reconciled accepted main by ordinary merge; no rebase, force-push or merge into main.
+- Preserved the six existing trust-boundary tests and RED caption requirement evidence unchanged. The caption-only exception is approved by decision 7; its old blocker is superseded.
+- Found and executed a separate build-asset scope blocker before implementing product behavior. Product source equals accepted main.
 
-## Contract delta — approval required
-`src/main.ts:168` authorizes caption IPC using `isTrustedIpc`; `rendererTrust.ts:7-13,16-34` deliberately rejects `file:` renderers, and `windowControls.ts:22-32` consequently performs no caption action. Merely reusing the preload bridge cannot make offline caption buttons work.
+## Exact new CONTRACT DELTA — approval required
+The contracted emitted bundled `offline.html` cannot be delivered by the current allowed source/asset paths alone: Forge's Vite main build is a library, which always inlines HTML URL imports; its packager excludes all files outside `.vite`, and public copying is disabled. The real installed-config probe emits **1 JS / 0 HTML files** with a `data:` URL and fails the required HTML-file assertion.
 
-Request permission to modify **only the caption-handler registration in `src/main.ts`**, plus a new helper under the already allowed `src/native/offline*` paths, to allow the exact main-process-owned bundled offline document in the current main window/main frame for the existing three caption actions only. Keep shared renderer trust and all config/autostart/badge/dialog/media/notification/display-capture authorization unchanged. No generic file trust, new broad bridge, duplicate IPC workaround, or security exception has been implemented.
+Request **`vite.main.config.ts` only for a narrow offline-asset emission plugin**, emitting byte-identical `assets/desktop/offline/offline.html` into `.vite/build/offline.html` in the existing main build. No other options/configs/workflows/dependencies/signing/publication changes. All T17-v2 trust and behavior requirements stay unchanged. No plugin or security exception was implemented.
 
-Full exact-source evidence, negative-test requirements and proposed scope: [`proof/T17/CONTRACT-DELTA.md`](proof/T17/CONTRACT-DELTA.md).
-The generated-color follow-up is **T26**, not the frozen packet's T25 typo; no canonical packet edits.
+Full evidence and precise proposal: [`proof/T17/v2-CONTRACT-DELTA.md`](proof/T17/v2-CONTRACT-DELTA.md).
+Predecessor evidence remains [`proof/T17/CONTRACT-DELTA.md`](proof/T17/CONTRACT-DELTA.md), explicitly superseded for its caption-approval hold.
 
-## Gate results
-Dependency setup: `pnpm install --frozen-lockfile --ignore-scripts` → exit 0.
-
-| Command | Baseline | Evidence candidate |
+## Gates — diagnostic, not recovery acceptance
+| Command | Exit | Count/result |
 | --- | --- | --- |
-| `pnpm typecheck` | exit 0 | exit 0 |
-| `pnpm test` | exit 0; 21 files / 191 tests passed | exit 0; 22 files / 197 tests passed |
-| `pnpm lint` | exit 0 | exit 0 |
+| `ELECTRON_SKIP_BINARY_DOWNLOAD=1 pnpm install --frozen-lockfile --ignore-scripts` | 0 | dependency setup; no lifecycle scripts |
+| `pnpm exec vitest run --exclude tests/offlineTrustBoundary.test.ts` | 0 | 23 files / 245 main tests pass |
+| G-D1 `pnpm typecheck` | 0 | pass |
+| G-D2 `pnpm test` | 0 | 24 files / 251 tests pass (245 main + 6 predecessor diagnostics; 0 new feature tests) |
+| G-D3 `pnpm lint` | 0 | pass |
+| `TMPDIR=/Users/friday/.hermes/profiles/friday/cache/scratch node proof/T17/check-asset-emission.mjs` | 1 | expected RED: 1 failed emitted-HTML assertion; JS contains inline data URL |
 
-No preexisting failures. Green characterization tests are **not offline feature acceptance**.
+Receipts/logs: [`proof/T17/v2-gates.json`](proof/T17/v2-gates.json) and `v2-*.log`.
+Workflow source + invoked scripts + all 4 live active entries audited before push/PR update: [`proof/T17/v2-workflow-audit.json`](proof/T17/v2-workflow-audit.json). Current automatic PR workflow has no public writer; publisher/candidate workflows are dispatch-only and were not dispatched. No workflow settings changed.
 
-RED counterexample: `pnpm exec vitest run tests/offlineTrustBoundary.test.ts`, against saved `proof/T17/red-caption-requirement.test.ts.txt`, → exit 1; 3 caption requirements failed, 3 configured-origin controls passed. The source snapshot and transcript preserve the unmet requirement; the committed test explicitly characterizes current denial.
+## Screenshot / runtime
+**None.** No offline UI, emitted product asset, or isolated repo-Electron runtime was implemented or accepted. The HTML file under `proof/T17/` is solely a diagnostic fixture, not a product page.
 
-## Proof artifacts / screenshots
-`proof/T17/` contains baseline/candidate logs and gate receipts, RED source/transcript and the contract delta.
-**No screenshots, bundled build or Electron runtime proof:** implementation is blocked pending authorization approval. Nothing installed or packaged was launched.
+## Remaining / risks
+All offline feature acceptance remains open: error policy/classes, Retry, visibility-aware backoff and cleanup, caption-only authorization and negative cases, no successful-app reconnect reload, real crash/recovery and platform controls, token-colored rendering, emitted asset/runtime screenshot. Green gates/CI here do not satisfy T17.
 
-## Remaining
-All product implementation/acceptance remains open: bundled offline page, error classes, explicit Retry, visibility-aware 5/15/30/60-second backoff, crash recovery, actual safe caption controls, token colors, built-asset reachability and Windows/Linux runtime proof.
-
-No production access, installed Mutiny launch, shared process termination, packaging, signing, notarization, publishing, merge, secrets or auth/security changes were performed.
+No production access/deployment, installed Mutiny launch, process kill, local package/sign/notarization, publishing, main merge, credential/DNS change, canonical contract/STATUS/token edit, or skill/memory change. No owned runtime/preview remains; desktop slot released. Resume under an approved successor with the exact build-config exception.

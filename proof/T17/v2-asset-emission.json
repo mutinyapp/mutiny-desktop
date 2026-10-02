@@ -1,0 +1,12 @@
+{
+  "command": "TMPDIR=/Users/friday/.hermes/profiles/friday/cache/scratch node proof/T17/check-asset-emission.mjs",
+  "exit": 1,
+  "emitted_html": false,
+  "emitted_files": [
+    "asset-emission-probe-entry.js"
+  ],
+  "inline_data_url": true,
+  "acceptance_assertions_failed": 1,
+  "runtime_run": false,
+  "package_run": false
+}
