@@ -1,0 +1,410 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T18
+
+ ❯ tests/preloadCapabilities.test.ts (12 tests | 9 failed) 141ms
+   × preload read-only capability handshake > fetches from main before the first legacy config push 92ms
+     → native.getCapabilities is not a function
+   × preload read-only capability handshake > waits for delayed IPC rather than synthesizing an uninitialized cache snapshot 8ms
+     → native.getCapabilities is not a function
+   × preload read-only capability handshake > propagates a rejected handshake instead of claiming false capabilities 6ms
+     → native.getCapabilities is not a function
+   × preload read-only capability handshake > requests a fresh snapshot on every call instead of caching stale window state 5ms
+     → native.getCapabilities is not a function
+   × preload read-only capability handshake > subscribes without invoking state changes and never exposes the Electron event 6ms
+     → native.onCapabilitiesChanged is not a function
+   × preload read-only capability handshake > removes only this subscription and leaves other consumers active 6ms
+     → native.onCapabilitiesChanged is not a function
+   × preload read-only capability handshake > supports independent subscriptions using the same callback 3ms
+     → native.onCapabilitiesChanged is not a function
+   × backward-compatible preload bridges > keeps legacy synchronous get() and config pushes working after the new handshake 3ms
+     → native.getCapabilities is not a function
+   × backward-compatible preload bridges > does not remove unrelated protocol listeners when capabilities are unsubscribed 2ms
+     → native.onCapabilitiesChanged is not a function
+ ❯ tests/windowCapabilities.test.ts (42 tests | 32 failed) 246ms
+   × capability handshake through the real main-window setup > answers before did-finish-load without reading or syncing the legacy renderer cache 88ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > is read-only and returns independent live snapshots on every request 7ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > reports actual frame true rather than the pending preference 10ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > reports actual frame false rather than the pending preference 4ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > installs exactly one handler and reads the replacement main window 4ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > rejects other WebContents 7ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > rejects same-origin subframe 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > rejects stale frame 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > rejects missing frame 2ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > rejects origin-only notification signature 4ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://attacker.example/chat 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL http://app.mutinyapp.gg/chat 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://app.mutinyapp.gg:8443/chat 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://user@ app.mutinyapp.gg/chat 5ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://user@app.mutinyapp.gg/chat 4ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL about:blank 2ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL  2ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL not a URL 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL file:///bundled/offline.html 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies an untrusted current main-frame URL data:text/html,offline 4ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin http://localhost:8080/base 5ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin https://selfhost.example:8443/mutiny 5ms
+     → Missing capability handler
+   × capability handshake through the real main-window setup > denies destroyed window 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies destroyed contents 4ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > denies destroyed detached frame 3ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+   × capability handshake through the real main-window setup > allows a fresh trusted frame after a same-origin reload, not the replaced frame 3ms
+     → Missing capability handler
+   × capability change events from main-window state > emits the live snapshot once on maximize 3ms
+     → expected "spy" to be called once, but got 0 times
+   × capability change events from main-window state > emits the live snapshot once on unmaximize 3ms
+     → expected "spy" to be called once, but got 0 times
+   × capability change events from main-window state > emits the live snapshot once on enter-full-screen 2ms
+     → expected "spy" to be called once, but got 0 times
+   × capability change events from main-window state > emits the live snapshot once on leave-full-screen 3ms
+     → expected "spy" to be called once, but got 0 times
+   × capability change events from main-window state > sends to the current frame after reload rather than a cached frame 6ms
+     → expected "spy" to be called once, but got 0 times
+   × capability change events from main-window state > emits the actual frame while a restart-dependent preference is pending 3ms
+     → expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received:
+
+
+
+Number of calls: 0
+
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 41 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > fetches from main before the first legacy config push
+TypeError: native.getCapabilities is not a function
+ ❯ tests/preloadCapabilities.test.ts:60:25
+     58|   it("fetches from main before the first legacy config push", async ()…
+     59|     expect(config.get()).toBeUndefined();
+     60|     expect(await native.getCapabilities()).toEqual(capabilities);
+       |                         ^
+     61|     expect(f.invoke).toHaveBeenCalledWith("native:getCapabilities");
+     62|     expect(f.send).not.toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > waits for delayed IPC rather than synthesizing an uninitialized cache snapshot
+TypeError: native.getCapabilities is not a function
+ ❯ tests/preloadCapabilities.test.ts:68:28
+     66|     f.invoke.mockReturnValueOnce(new Promise<Capabilities>((done) => {…
+     67|     const settled = vi.fn();
+     68|     const pending = native.getCapabilities().then(settled);
+       |                            ^
+     69|     await Promise.resolve();
+     70|     expect(settled).not.toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > propagates a rejected handshake instead of claiming false capabilities
+TypeError: native.getCapabilities is not a function
+ ❯ tests/preloadCapabilities.test.ts:78:25
+     76|   it("propagates a rejected handshake instead of claiming false capabi…
+     77|     f.invoke.mockRejectedValueOnce(new Error("Untrusted capabilities c…
+     78|     await expect(native.getCapabilities()).rejects.toThrow("Untrusted …
+       |                         ^
+     79|   });
+     80|   it("requests a fresh snapshot on every call instead of caching stale…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > requests a fresh snapshot on every call instead of caching stale window state
+TypeError: native.getCapabilities is not a function
+ ❯ tests/preloadCapabilities.test.ts:81:25
+     79|   });
+     80|   it("requests a fresh snapshot on every call instead of caching stale…
+     81|     expect(await native.getCapabilities()).toEqual(capabilities);
+       |                         ^
+     82|     f.invoke.mockResolvedValueOnce({ ...capabilities, maximized: true,…
+     83|     expect(await native.getCapabilities()).toEqual({ ...capabilities, …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > subscribes without invoking state changes and never exposes the Electron event
+TypeError: native.onCapabilitiesChanged is not a function
+ ❯ tests/preloadCapabilities.test.ts:88:12
+     86|   it("subscribes without invoking state changes and never exposes the …
+     87|     const callback = vi.fn();
+     88|     native.onCapabilitiesChanged(callback);
+       |            ^
+     89|     const event = { sender: "privileged renderer internals" };
+     90|     deliver("native:capabilitiesChanged", capabilities, event);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > removes only this subscription and leaves other consumers active
+TypeError: native.onCapabilitiesChanged is not a function
+ ❯ tests/preloadCapabilities.test.ts:97:32
+     95|   it("removes only this subscription and leaves other consumers active…
+     96|     const first = vi.fn(), second = vi.fn();
+     97|     const unsubscribe = native.onCapabilitiesChanged(first);
+       |                                ^
+     98|     native.onCapabilitiesChanged(second);
+     99|     unsubscribe(); unsubscribe();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > preload read-only capability handshake > supports independent subscriptions using the same callback
+TypeError: native.onCapabilitiesChanged is not a function
+ ❯ tests/preloadCapabilities.test.ts:107:26
+    105|   it("supports independent subscriptions using the same callback", () …
+    106|     const callback = vi.fn();
+    107|     const first = native.onCapabilitiesChanged(callback);
+       |                          ^
+    108|     native.onCapabilitiesChanged(callback);
+    109|     first();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > backward-compatible preload bridges > keeps legacy synchronous get() and config pushes working after the new handshake
+TypeError: native.getCapabilities is not a function
+ ❯ tests/preloadCapabilities.test.ts:117:18
+    115| describe("backward-compatible preload bridges", () => {
+    116|   it("keeps legacy synchronous get() and config pushes working after t…
+    117|     await native.getCapabilities();
+       |                  ^
+    118|     const data: DesktopConfig = { firstLaunch: false, customFrame: tru…
+    119|       minimiseToTray: true, startMinimisedToTray: false, spellchecker:…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/41]⎯
+
+ FAIL  tests/preloadCapabilities.test.ts > backward-compatible preload bridges > does not remove unrelated protocol listeners when capabilities are unsubscribed
+TypeError: native.onCapabilitiesChanged is not a function
+ ❯ tests/preloadCapabilities.test.ts:144:32
+    142|     const callback = vi.fn();
+    143|     native.onProtocolUrl(callback);
+    144|     const unsubscribe = native.onCapabilitiesChanged(vi.fn());
+       |                                ^
+    145|     unsubscribe();
+    146|     expect(f.listeners.get("protocol-url").size).toBe(2);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > answers before did-finish-load without reading or syncing the legacy renderer cache
+Error: Missing capability handler
+ ❯ read tests/windowCapabilities.test.ts:68:23
+     66| function read(event = trusted()) {
+     67|   const handler = f.handlers.get("native:getCapabilities");
+     68|   if (!handler) throw new Error("Missing capability handler");
+       |                       ^
+     69|   return handler(event);
+     70| }
+ ❯ tests/windowCapabilities.test.ts:92:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > is read-only and returns independent live snapshots on every request
+Error: Missing capability handler
+ ❯ read tests/windowCapabilities.test.ts:68:23
+     66| function read(event = trusted()) {
+     67|   const handler = f.handlers.get("native:getCapabilities");
+     68|   if (!handler) throw new Error("Missing capability handler");
+       |                       ^
+     69|   return handler(event);
+     70| }
+ ❯ tests/windowCapabilities.test.ts:98:19
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > reports actual frame true rather than the pending preference
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > reports actual frame false rather than the pending preference
+Error: Missing capability handler
+ ❯ read tests/windowCapabilities.test.ts:68:23
+     66| function read(event = trusted()) {
+     67|   const handler = f.handlers.get("native:getCapabilities");
+     68|   if (!handler) throw new Error("Missing capability handler");
+       |                       ^
+     69|   return handler(event);
+     70| }
+ ❯ tests/windowCapabilities.test.ts:109:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > installs exactly one handler and reads the replacement main window
+Error: Missing capability handler
+ ❯ read tests/windowCapabilities.test.ts:68:23
+     66| function read(event = trusted()) {
+     67|   const handler = f.handlers.get("native:getCapabilities");
+     68|   if (!handler) throw new Error("Missing capability handler");
+       |                       ^
+     69|   return handler(event);
+     70| }
+ ❯ tests/windowCapabilities.test.ts:117:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > rejects other WebContents
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > rejects same-origin subframe
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > rejects stale frame
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > rejects missing frame
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > rejects origin-only notification signature
+AssertionError: expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+
+- Expected:
+/Untrusted/
+
++ Received:
+"Missing capability handler"
+
+ ❯ tests/windowCapabilities.test.ts:132:64
+    130|     ["origin-only notification signature", () => ({ sender: null as un…
+    131|   ])("rejects %s", (_label, event) => {
+    132|     expect(() => read(event() as Electron.IpcMainInvokeEvent)).toThrow…
+       |                                                                ^
+    133|   });
+    134|   it.each([
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://attacker.example/chat
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL http://app.mutinyapp.gg/chat
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://app.mutinyapp.gg:8443/chat
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://user@ app.mutinyapp.gg/chat
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL https://user@app.mutinyapp.gg/chat
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL about:blank
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL not a URL
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL file:///bundled/offline.html
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies an untrusted current main-frame URL data:text/html,offline
+AssertionError: expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+
+- Expected:
+/Untrusted/
+
++ Received:
+"Missing capability handler"
+
+ ❯ tests/windowCapabilities.test.ts:141:26
+    139|   ])("denies an untrusted current main-frame URL %s", (url) => {
+    140|     window.webContents.mainFrame.url = url;
+    141|     expect(() => read()).toThrow(/Untrusted/);
+       |                          ^
+    142|   });
+    143|   it.each(["http://localhost:8080/base", "https://selfhost.example:844…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin http://localhost:8080/base
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin https://selfhost.example:8443/mutiny
+Error: Missing capability handler
+ ❯ read tests/windowCapabilities.test.ts:68:23
+     66| function read(event = trusted()) {
+     67|   const handler = f.handlers.get("native:getCapabilities");
+     68|   if (!handler) throw new Error("Missing capability handler");
+       |                       ^
+     69|   return handler(event);
+     70| }
+ ❯ tests/windowCapabilities.test.ts:147:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies destroyed window
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies destroyed contents
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > denies destroyed detached frame
+AssertionError: expected [Function] to throw error matching /Untrusted/ but got 'Missing capability handler'
+
+- Expected:
+/Untrusted/
+
++ Received:
+"Missing capability handler"
+
+ ❯ tests/windowCapabilities.test.ts:156:26
+    154|     if (target === "contents") window.webContents.destroyed = true;
+    155|     if (target === "detached frame") window.webContents.mainFrame.deta…
+    156|     expect(() => read()).toThrow(/Untrusted/);
+       |                          ^
+    157|   });
+    158|   it("allows a fresh trusted frame after a same-origin reload, not the…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > allows a fresh trusted frame after a same-origin reload, not the replaced frame
+Error: Missing capability handler
+ ❯ read tests/windowCapabilities.test.ts:68:23
+     66| function read(event = trusted()) {
+     67|   const handler = f.handlers.get("native:getCapabilities");
+     68|   if (!handler) throw new Error("Missing capability handler");
+       |                       ^
+     69|   return handler(event);
+     70| }
+ ❯ tests/windowCapabilities.test.ts:162:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on maximize
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on unmaximize
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on enter-full-screen
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on leave-full-screen
+AssertionError: expected "spy" to be called once, but got 0 times
+ ❯ tests/windowCapabilities.test.ts:174:47
+    172|     window.maximized = maximized; window.fullscreen = fullscreen;
+    173|     window.emit(event);
+    174|     expect(window.webContents.mainFrame.send).toHaveBeenCalledOnce();
+       |                                               ^
+    175|     expect(window.webContents.mainFrame.send).toHaveBeenCalledWith(
+    176|       "native:capabilitiesChanged", { ...snapshot(), maximized, fullsc…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > sends to the current frame after reload rather than a cached frame
+AssertionError: expected "spy" to be called once, but got 0 times
+ ❯ tests/windowCapabilities.test.ts:185:47
+    183|     window.emit("enter-full-screen");
+    184|     expect(old.send).not.toHaveBeenCalled();
+    185|     expect(window.webContents.mainFrame.send).toHaveBeenCalledOnce();
+       |                                               ^
+    186|   });
+    187|   it.each(["about:blank", "file:///bundled/offline.html", "data:text/h…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/41]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the actual frame while a restart-dependent preference is pending
+AssertionError: expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received:
+
+
+
+Number of calls: 0
+
+ ❯ tests/windowCapabilities.test.ts:222:47
+    220|     f.config.customFrame = false;
+    221|     window.emit("enter-full-screen");
+    222|     expect(window.webContents.mainFrame.send).toHaveBeenCalledWith("na…
+       |                                               ^
+    223|   });
+    224| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/41]⎯
+
+ Test Files  2 failed (2)
+      Tests  41 failed | 13 passed (54)
+   Start at  10:53:28
+   Duration  796ms (transform 296ms, setup 0ms, collect 230ms, tests 387ms, environment 1ms, prepare 256ms)
+
+
+Exit code: 1

@@ -1,0 +1,7 @@
+Command: pnpm typecheck
+
+> mutiny-desktop@1.2.7 typecheck /Users/friday/Projects/mutiny-rebuild/wt/T18
+> tsc --noEmit
+
+
+Exit code: 0

@@ -1,11 +1,13 @@
 import { join } from "node:path";
 
-import { BrowserWindow, Menu, app, clipboard, nativeImage } from "electron";
+import { BrowserWindow, Menu, app, clipboard, ipcMain, nativeImage } from "electron";
 
 import windowIconAsset from "../../assets/desktop/icon.png?asset";
 
+import type { NativeCapabilities } from "../world/capabilities";
 import { config } from "./config";
 import { buildContextMenuTemplate } from "./contextMenuPolicy";
+import { isTrustedIpc } from "./rendererTrust";
 import { shouldRestoreMaximised } from "./startup";
 import { updateTrayMenu } from "./tray";
 import { mainWindowOptions } from "./windowOptions";
@@ -25,6 +27,19 @@ export const BUILD_URL = new URL(
 
 // internal window state
 let shouldQuit = false;
+let capabilitiesHandlerRegistered = false;
+
+function capabilitiesSnapshot(window: BrowserWindow, customFrame: boolean): NativeCapabilities {
+  return {
+    version: 1,
+    platform: process.platform,
+    customFrame,
+    maximized: window.isMaximized(),
+    fullscreen: window.isFullScreen(),
+    // No appearance bridge is implemented in this shell yet.
+    appearanceBridge: false,
+  };
+}
 
 // load the window icon
 const windowIcon = nativeImage.createFromDataURL(windowIconAsset);
@@ -53,6 +68,44 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
       nodeIntegration: false,
       spellcheck: config.spellchecker,
     },
+  });
+
+  // Install before loading the renderer. Keep one handler across window
+  // recreation, but resolve its authority and state from the current owner.
+  if (!capabilitiesHandlerRegistered) {
+    ipcMain.handle("native:getCapabilities", (event): NativeCapabilities => {
+      if (!isTrustedIpc(event, mainWindow, BUILD_URL) || event.senderFrame.detached) {
+        throw new Error("Untrusted capabilities caller");
+      }
+      return capabilitiesSnapshot(mainWindow, mainWindowCustomFrame);
+    });
+    capabilitiesHandlerRegistered = true;
+  }
+
+  // Capture this window's actual chrome, never a restart-pending preference.
+  const window = mainWindow;
+  const customFrame = mainWindowCustomFrame;
+  const notifyCapabilities = () => {
+    try {
+      const frame = window.webContents.mainFrame;
+      if (frame.detached || !isTrustedIpc(
+        { sender: window.webContents, senderFrame: frame }, mainWindow, BUILD_URL,
+      )) return;
+      frame.send("native:capabilitiesChanged", capabilitiesSnapshot(window, customFrame));
+    } catch {
+      // A frame can disappear during navigation or teardown. The next trusted
+      // document obtains a fresh snapshot through getCapabilities().
+    }
+  };
+  window.on("maximize", notifyCapabilities);
+  window.on("unmaximize", notifyCapabilities);
+  window.on("enter-full-screen", notifyCapabilities);
+  window.on("leave-full-screen", notifyCapabilities);
+  window.once("closed", () => {
+    window.removeListener("maximize", notifyCapabilities);
+    window.removeListener("unmaximize", notifyCapabilities);
+    window.removeListener("enter-full-screen", notifyCapabilities);
+    window.removeListener("leave-full-screen", notifyCapabilities);
   });
 
   // hide the options
