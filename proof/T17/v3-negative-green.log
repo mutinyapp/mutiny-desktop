@@ -1,0 +1,36 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T17
+
+ ✓ tests/offlineScope.test.ts (3 tests) 8ms
+ ✓ tests/offlinePolicy.test.ts (27 tests) 9ms
+ ✓ tests/offlineTrustBoundary.test.ts (6 tests) 9ms
+ ✓ tests/offlineCaptionRequirements.test.ts (6 tests) 10ms
+ ✓ tests/nativeIpcSecurity.test.ts (22 tests) 27ms
+ ✓ tests/mainSecurity.test.ts (80 tests) 354ms
+ ✓ tests/offlineRecovery.test.ts (46 tests) 72ms
+stderr | tests/offlineEmission.test.mjs
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ ❯ tests/offlineEmission.test.mjs (1 test | 1 failed) 243ms
+   × bundled offline emission through the real main config > emits the authored HTML byte-identically at .vite/build/offline.html 242ms
+     → Cannot read properties of undefined (reading 'filter')
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/offlineEmission.test.mjs > bundled offline emission through the real main config > emits the authored HTML byte-identically at .vite/build/offline.html
+TypeError: Cannot read properties of undefined (reading 'filter')
+ ❯ tests/offlineEmission.test.mjs:19:28
+     17|       const result = await build({...config,configFile:false,logLevel:…
+     18|       expect(readFileSync(join(out,"offline.html"))).toEqual(readFileS…
+     19|       expect(result.output.filter(o=>o.type==="asset"&&o.fileName.ends…
+       |                            ^
+     20|     } finally { rmSync(dir,{recursive:true,force:true}); }
+     21|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed | 7 passed (8)
+      Tests  1 failed | 190 passed (191)
+   Start at  15:18:40
+   Duration  1.24s (transform 843ms, setup 0ms, collect 1.71s, tests 730ms, environment 2ms, prepare 1.65s)
+

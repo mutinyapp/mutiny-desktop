@@ -1,0 +1,20 @@
+{
+  "status": "blocked-runtime",
+  "receipts": [
+    {
+      "command": "pnpm typecheck",
+      "exit": 0,
+      "log": "v3-typecheck.log"
+    },
+    {
+      "command": "pnpm test",
+      "exit": 0,
+      "log": "v3-test.log"
+    },
+    {
+      "command": "pnpm lint",
+      "exit": 0,
+      "log": "v3-lint.log"
+    }
+  ]
+}

@@ -28,6 +28,7 @@ import {
 import { initTray } from "./native/tray";
 import { BUILD_URL, createMainWindow, mainWindow } from "./native/window";
 import { registerWindowControlHandlers } from "./native/windowControls";
+import { isOfflineCaptionIpc } from "./native/offlineRecovery";
 
 // Squirrel-specific logic
 // create/remove shortcuts on Windows when installing / uninstalling
@@ -165,7 +166,9 @@ if (acquiredLock) {
       protocolUrls.rendererReady(window),
     );
 
-    registerWindowControlHandlers(ipcMain, () => mainWindow, (event) => isTrustedIpc(event, mainWindow, BUILD_URL));
+    registerWindowControlHandlers(ipcMain, () => mainWindow, (event) =>
+      isTrustedIpc(event, mainWindow, BUILD_URL) || isOfflineCaptionIpc(event, mainWindow),
+    );
     initBadges();
     initTray();
     initDiscordRpc();

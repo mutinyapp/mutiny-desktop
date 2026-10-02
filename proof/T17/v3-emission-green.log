@@ -1,0 +1,35 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+{
+  "vite": "5.4.20",
+  "forge": "7.9.0",
+  "library": {
+    "entry": "proof/T17/asset-emission-probe-entry.mjs",
+    "formats": [
+      "cjs"
+    ]
+  },
+  "copyPublicDir": false,
+  "outputDirectory": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-emission-probe-7HK2ob"
+}
+vite v5.4.20 building for production...
+transforming...
+✓ 2 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-emission-probe-7HK2ob/offline.html                   4.93 kB │ gzip: 2.06 kB
+../../../../.hermes/profiles/friday/cache/scratch/T17-emission-probe-7HK2ob/asset-emission-probe-entry.js  0.32 kB │ gzip: 0.29 kB
+✓ built in 60ms
+{
+  "emittedFiles": [
+    "asset-emission-probe-entry.js",
+    "offline.html"
+  ],
+  "inlineDataURL": true,
+  "chunks": [
+    {
+      "fileName": "asset-emission-probe-entry.js",
+      "code": "\"use strict\";Object.defineProperty(exports,Symbol.toStringTag,{value:\"Module\"});const e=\"data:text/html;base64,PCFkb2N0eXBlIGh0bWw+PG1ldGEgY2hhcnNldD0idXRmLTgiPjx0aXRsZT5UMTcgZW1pc3Npb24gcHJvYmUsIG5vdCBwcm9kdWN0IFVJPC90aXRsZT48cD5CdW5kbGVkLWZpbGUgYWNjZXB0YW5jZSBwcm9iZSBvbmx5LjwvcD4K\",c=e;exports.bundledDocumentURL=c;\n"
+    }
+  ]
+}
+Removed owned diagnostic build directory. No package/sign/runtime step executed.

@@ -1,0 +1,26 @@
+{
+  "frozenHead": "3030a92b2eb6c69465effddddffaccf48da504eb",
+  "main": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "receipts": [
+    {
+      "command": "ELECTRON_SKIP_BINARY_DOWNLOAD=1 pnpm install --frozen-lockfile --ignore-scripts",
+      "exit": 0,
+      "log": "v3-install.log"
+    },
+    {
+      "command": "node proof/T17/check-asset-emission.mjs",
+      "exit": 1,
+      "log": "v3-emission-red.log"
+    },
+    {
+      "command": "pnpm exec vitest run tests/offlineCaptionRequirements.test.ts",
+      "exit": 1,
+      "log": "v3-caption-red.log"
+    },
+    {
+      "command": "pnpm exec vitest run --exclude tests/offlineTrustBoundary.test.ts --exclude tests/offlineCaptionRequirements.test.ts",
+      "exit": 0,
+      "log": "v3-main-inventory.log"
+    }
+  ]
+}

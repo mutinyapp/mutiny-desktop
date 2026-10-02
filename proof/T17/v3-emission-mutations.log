@@ -1,0 +1,37 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+{
+  "sourceSHA256": "3ffbc9f52722bdef3ea9891aacaddbcd9177cb64d52f5034d3a5978877ddc6b0",
+  "authoredSHA256": "33aba3c676f65b56a45ffcc3dde2a16c75846636717ca280087940f00c0ed712",
+  "authoredBytes": 4933,
+  "controls": [
+    {
+      "mutation": "clean",
+      "buildExit": 0,
+      "assertionExit": 0,
+      "verdict": "passed",
+      "failure": null
+    },
+    {
+      "mutation": "omit-emission",
+      "buildExit": 0,
+      "assertionExit": 1,
+      "verdict": "failed",
+      "failure": "exact emitted filename missing"
+    },
+    {
+      "mutation": "wrong-filename",
+      "buildExit": 0,
+      "assertionExit": 1,
+      "verdict": "failed",
+      "failure": "exact emitted filename missing"
+    },
+    {
+      "mutation": "truncate-bytes",
+      "buildExit": 0,
+      "assertionExit": 1,
+      "verdict": "failed",
+      "failure": "emitted HTML differs from authored bytes\n+ actual - expected\n\n+ Buffer(4932) [Uint8Array] [\n- Buffer(4933) [Uint8Array] [\n-   60,\n    33,\n    100,\n    111,\n    99,\n    116,\n"
+    }
+  ],
+  "sourceUnchanged": true
+}

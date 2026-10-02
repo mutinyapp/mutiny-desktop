@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; font-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>Mutiny — Connection interrupted</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #23202f; color: #fffdfa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+    .chrome { height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding-left: 16px; -webkit-app-region: drag; }
+    body.mac .chrome { padding-left: 92px; }
+    .chrome span { font-size: 13px; font-weight: 600; color: #aaa5b5; }
+    #captions { display: flex; }
+    #captions[hidden] { display: none; }
+    button { font: inherit; cursor: pointer; -webkit-app-region: no-drag; border: 0; transition: background-color 100ms; }
+    #captions button { width: 48px; height: 44px; color: #fffdfa; background: transparent; font-size: 19px; }
+    #captions button:hover { background: #3b3845; }
+    #captions #close:hover { background: #d33d4b; }
+    button:focus-visible { outline: 2px solid #a899ff; outline-offset: -3px; }
+    main { flex: 1; margin: 0 8px 8px; padding: 28px 24px; background: #171522; border-radius: 16px; display: grid; place-items: center; }
+    .message { max-width: 460px; width: 100%; text-align: center; }
+    .wordmark { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 36px; }
+    .class { display: inline-block; border: 1px solid #4a4657; border-radius: 999px; padding: 6px 14px; color: #a899ff; font-size: 13px; }
+    h1 { font-size: 26px; line-height: 1.25; margin: 18px 0 12px; }
+    p { color: #aaa5b5; font-size: 15px; line-height: 1.6; margin: 0; }
+    #retry { display: block; margin: 24px auto 18px; min-height: 44px; min-width: 120px; border-radius: 8px; padding: 10px 24px; background: #7657ff; color: #ffffff; font-weight: 600; }
+    #retry:hover { background: #7657ff; }
+    .note { font-size: 12px; }
+    @media (max-height: 480px) { .wordmark { font-size: 28px; margin-bottom: 12px; } main { padding: 16px; } h1 { font-size: 20px; margin: 12px 0 8px; } #retry { margin: 12px auto; } }
+    @media (prefers-reduced-motion: reduce) { button { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="chrome"><span>Mutiny</span><nav id="captions" aria-label="Window controls" hidden><button id="minimise" aria-label="Minimise window">−</button><button id="maximise" aria-label="Maximise or restore window">□</button><button id="close" aria-label="Close window">×</button></nav></header>
+  <main><section class="message" aria-labelledby="heading"><div class="wordmark" aria-label="Mutiny">mutiny</div><div id="error-class" class="class">Server</div><h1 id="heading">Connection interrupted</h1><p id="description">Mutiny couldn’t load. Please try again.</p><button id="retry">Retry</button><p class="note">We’ll retry automatically while this window is visible.</p></section></main>
+  <script>
+    const messages = {
+      offline: ["Offline", "You appear to be offline. Check your connection, then try again."],
+      dns: ["DNS", "We couldn’t find your Mutiny server. Check your connection, then try again."],
+      tls: ["TLS", "We couldn’t establish a secure connection to your Mutiny server."],
+      server: ["Server", "Mutiny couldn’t load. The server may be unavailable. Please try again."]
+    };
+    const error = new URL(location.href).searchParams.get("error");
+    const message = Object.hasOwn(messages, error) ? messages[error] : messages.server;
+    document.getElementById("error-class").textContent = message[0];
+    document.getElementById("description").textContent = message[1];
+    document.body.classList.toggle("mac", window.native?.platform === "darwin");
+    const captions = document.getElementById("captions");
+    // Reuse only the existing caption methods. No new preload or IPC bridge.
+    for (const action of ["minimise", "maximise", "close"]) {
+      document.getElementById(action).addEventListener("click", () => window.native?.[action]());
+    }
+    function chrome() {
+      const config = window.desktopConfig?.get();
+      captions.hidden = window.native?.platform === "darwin" || config?.customFrame === false;
+      if (!config) requestAnimationFrame(chrome);
+    }
+    if (["win32", "linux"].includes(window.native?.platform)) chrome();
+    document.getElementById("retry").addEventListener("click", () => {
+      // A same-file navigation intent is intercepted, never loaded. Main owns target.
+      location.href = location.href + "&retry=1";
+    });
+  </script>
+</body>
+</html>

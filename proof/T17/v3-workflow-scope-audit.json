@@ -1,0 +1,98 @@
+{
+  "observedAt": "2026-10-02T19:32:19.325626+00:00",
+  "predecessor": "3030a92b2eb6c69465effddddffaccf48da504eb",
+  "acceptedMain": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "workflowTotal": 4,
+  "workflows": [
+    {
+      "id": 256356989,
+      "path": ".github/workflows/brand-check.yml",
+      "name": "Brand Regression Check",
+      "state": "active"
+    },
+    {
+      "id": 232715138,
+      "path": ".github/workflows/build.yml",
+      "name": "Build (Electron \u2014 deprecated)",
+      "state": "active"
+    },
+    {
+      "id": 354451875,
+      "path": ".github/workflows/desktop-candidate.yml",
+      "name": "Desktop candidate (nonpublishing QA)",
+      "state": "active"
+    },
+    {
+      "id": 234166913,
+      "path": ".github/workflows/release.yml",
+      "name": "Build and Release (Electron \u2014 deprecated)",
+      "state": "active"
+    }
+  ],
+  "auditedFiles": [
+    {
+      "path": ".github/workflows/build.yml",
+      "sha256": "c6dcdfcaaeac4bafed3d0eaacc765d7a9bd04f4be021f92b7d88f048b72f5720",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "e26a0148ec17966390c169e04518841f329c5f8b1b95471c84fbb36ebbb2a331",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": ".github/workflows/desktop-candidate.yml",
+      "sha256": "fdec92be8a7d5fc4d568fb6529b07d7313b4c4d4cbdab3840c4a918f72acb62a",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "371209b5f514015a94f47ab64af8618b144eed7313d22a88f4a796ef2d9cfee6",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": "forge.config.ts",
+      "sha256": "cc7e9481e16ab5a086b7984ac6817a913699a8e6685df750a92761b44b3bf22e",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": "vite.main.config.ts",
+      "sha256": "3ffbc9f52722bdef3ea9891aacaddbcd9177cb64d52f5034d3a5978877ddc6b0",
+      "equalsPreviouslyAudited": false
+    },
+    {
+      "path": "scripts/macos-sign.mjs",
+      "sha256": "cd690ab71d05e21da0c1073dcbb4bd72934c87b47f75d40207508088449d2950",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": "scripts/macos-signing-verification.mjs",
+      "sha256": "53d724af70f4d75312f2c168b0c4018006845ef1e4104bb139601b2f34eda369",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": "scripts/macos-notarize.mjs",
+      "sha256": "5010824abf3204496ea267fd7e0141aa593fa6842e2ae109b1942682f2b8b2c8",
+      "equalsPreviouslyAudited": true
+    },
+    {
+      "path": "scripts/stage-desktop-candidate.mjs",
+      "sha256": "792c20d5ded02d789f902e9578460dcb4614c258750a7d14bf504e103b67b657",
+      "equalsPreviouslyAudited": true
+    }
+  ],
+  "brandCurrentSourceAbsent": true,
+  "safeAutomaticEvents": [
+    "pull_request build.yml: lint/typecheck/test/Linux package; postPackage returns before signing on Linux"
+  ],
+  "pushTriggers": [],
+  "dispatchNotAuthorized": [
+    "release.yml",
+    "desktop-candidate.yml"
+  ],
+  "automaticPublicWriter": false,
+  "sharedRendererTrustByteIdentical": true,
+  "sharedRendererTrustSHA256": "69b53f58c05c06826969d95aa3fae196f47510a2b8ec91f5f0058681b4b08e90",
+  "mainChangesExactlyCaptionImportAndRegistration": true,
+  "localPackagingSigningPublicationExecuted": false
+}

@@ -1,0 +1,90 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.20 building for production...
+transforming...
+✓ 6 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/offline.html               4.93 kB │ gzip: 2.05 kB
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/electron-runtime-entry.js  9.60 kB │ gzip: 3.80 kB
+✓ built in 101ms
+vite v5.4.20 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/preload.js  1.06 kB │ gzip: 0.47 kB
+✓ built in 16ms
+vite v5.4.20 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/preload-win.js  1.05 kB │ gzip: 0.48 kB
+✓ built in 14ms
+
+(electron) 'console-message' arguments are deprecated and will be removed. Please use Event<WebContentsConsoleMessageEventParams> object instead.
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- 'darwin'
+
+    at we (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/electron-runtime-entry.js:1:6894) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: 'darwin',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+{
+  "consoleMessages": [
+    {
+      "level": 3,
+      "message": "Unable to load preload script: /Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/preload.js"
+    },
+    {
+      "level": 3,
+      "message": "SyntaxError: Cannot use import statement outside a module"
+    },
+    {
+      "level": 2,
+      "message": "%cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security\n  Policy set or a policy with \"unsafe-eval\" enabled. This exposes users of\n  this app to unnecessary security risks.\n\nFor more information and help, consult\nhttps://electronjs.org/docs/tutorial/security.\nThis warning will not show up\nonce the app is packaged."
+    },
+    {
+      "level": 3,
+      "message": "Unable to load preload script: /Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/preload.js"
+    },
+    {
+      "level": 3,
+      "message": "SyntaxError: Cannot use import statement outside a module"
+    }
+  ],
+  "failures": [],
+  "requests": [
+    "http://127.0.0.1:49205/app?configured=1",
+    "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/offline.html?error=server"
+  ],
+  "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6flMVC/.vite/build/offline.html?error=server"
+}
+
+Removed owned harness build, user-data and cache directories.
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Electron darwin harness exits cleanly
+
+1 !== 0
+
+    at file:///Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/run-electron-runtime.mjs:33:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3
