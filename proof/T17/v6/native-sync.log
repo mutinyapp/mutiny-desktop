@@ -1,0 +1,36 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.20 building for production...
+transforming...
+✓ 1 modules transformed.
+rendering chunks...
+computing gzip size...
+../tmp/T17-real-electron-yFSDcP/.vite/build/offline.html                       4.93 kB │ gzip: 2.05 kB
+../tmp/T17-real-electron-yFSDcP/.vite/build/electron-frame-lifecycle-entry.js  2.45 kB │ gzip: 1.29 kB
+✓ built in 62ms
+{
+  "electron": "44.5.1",
+  "deferred": false,
+  "port": 49272,
+  "before": {
+    "detached": false,
+    "destroyed": false,
+    "url": "http://127.0.0.1:49272/",
+    "processId": 4,
+    "routingId": 1
+  },
+  "current": {
+    "detached": false,
+    "destroyed": false,
+    "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp/T17-real-electron-yFSDcP/.vite/build/offline.html?error=server",
+    "processId": 5,
+    "routingId": 1
+  },
+  "sameWrapper": true,
+  "byIdSame": true,
+  "byTokenSame": true,
+  "imports": "Electron + node only; no product modules",
+  "expectedDetached": false
+}
+
+
+Removed owned harness build, user-data and cache directories.

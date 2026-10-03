@@ -1,0 +1,4 @@
+
+> mutiny-desktop@1.2.7 lint /Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined
+> eslint --ext .ts,.tsx .
+

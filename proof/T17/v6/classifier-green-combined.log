@@ -1,0 +1,11 @@
+
+ RUN  v2.1.9 /Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined
+
+ ✓ proof/T17/v6/classifier-v44.test.mjs (5 tests) 3ms
+ ✓ proof/T17/runtime-result.test.mjs (16 tests) 6ms
+
+ Test Files  2 passed (2)
+      Tests  21 passed (21)
+   Start at  00:14:59
+   Duration  518ms (transform 43ms, setup 0ms, collect 63ms, tests 9ms, environment 1ms, prepare 321ms)
+

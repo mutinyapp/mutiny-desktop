@@ -1,0 +1,64 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T17
+
+ ❯ proof/T17/v6/classifier-v44.test.mjs (5 tests | 4 failed) 11ms
+   × crash-only: Electron44 never waives detached refusal 7ms
+     → Expected values to be strictly equal:
++ actual - expected
+
++ 'KNOWN-GAP'
+- 'FAIL'
+
+   × full-v3: Electron44 never waives detached refusal 1ms
+     → Expected values to be strictly equal:
++ actual - expected
+
++ 'KNOWN-GAP'
+- 'FAIL'
+
+   × crash-retry-hosted: Electron44 never waives detached refusal 1ms
+     → Expected values to be strictly equal:
++ actual - expected
+
++ 'KNOWN-GAP'
+- 'FAIL'
+
+   × crash-native-os: Electron44 never waives detached refusal 1ms
+     → Expected values to be strictly equal:
++ actual - expected
+
++ 'KNOWN-GAP'
+- 'FAIL'
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  proof/T17/v6/classifier-v44.test.mjs > crash-only: Electron44 never waives detached refusal
+ FAIL  proof/T17/v6/classifier-v44.test.mjs > full-v3: Electron44 never waives detached refusal
+ FAIL  proof/T17/v6/classifier-v44.test.mjs > crash-retry-hosted: Electron44 never waives detached refusal
+ FAIL  proof/T17/v6/classifier-v44.test.mjs > crash-native-os: Electron44 never waives detached refusal
+AssertionError: Expected values to be strictly equal:
++ actual - expected
+
++ 'KNOWN-GAP'
+- 'FAIL'
+
+
+Expected: "FAIL"
+Received: "KNOWN-GAP"
+
+ ❯ proof/T17/v6/classifier-v44.test.mjs:7:10
+      5| for(const scenario of ["crash-only","full-v3","crash-retry-hosted","cr…
+      6|   const result=classifyScenario({electron:"44.5.1",scenario,hardFailur…
+      7|   assert.equal(result.result,"FAIL"); assert.equal(result.exit,1); ass…
+       |          ^
+      8| });
+      9| test("exact Electron38 diagnostic exception stays bounded",()=>{
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 1 passed (5)
+   Start at  23:57:04
+   Duration  782ms (transform 136ms, setup 0ms, collect 51ms, tests 11ms, environment 0ms, prepare 351ms)
+
