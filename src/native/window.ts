@@ -194,7 +194,9 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
           );
           break;
         case "copyLink":
-          clipboard.writeText(action.url);
+          void clipboard.writeText(action.url).catch((error) => {
+            console.error("Failed to copy link:", error);
+          });
           break;
         case "copyImage":
           mainWindow.webContents.copyImageAt(action.x, action.y);

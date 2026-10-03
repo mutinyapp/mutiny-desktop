@@ -1,0 +1,26 @@
+{
+  "name": "baseline-npm-ci-dry",
+  "argv": [
+    "npm",
+    "ci",
+    "--prefix",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline",
+    "--ignore-scripts",
+    "--dry-run",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline",
+  "startedUTC": "2026-10-03T03:01:36.230173+00:00",
+  "elapsedSeconds": 0.813,
+  "exit": 1,
+  "log": "baseline-npm-ci-dry.log",
+  "logSHA256": "4d39c437d9af2326402a455d01b07637fff056594664b0c62568d336f0f29370",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

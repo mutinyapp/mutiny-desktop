@@ -1,0 +1,149 @@
+
+> mutiny-desktop@1.2.7 test /Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline
+> vitest run tests/macosSigningContract.test.mjs --reporter=default --reporter=json --outputFile=/Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/receipts/baseline-commonjs-tests.json
+
+
+ RUN  v2.1.9 /Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline
+
+ ❯ tests/macosSigningContract.test.mjs (16 tests | 7 failed) 25755ms
+   × macOS release contract > uses the unique team-pinned identity hash, timestamp, helper profiles, and inside-out order 1265ms
+     → expected 'macOS signing blocked: expected exact…' to be '' // Object.is equality
+   × macOS release contract > post-verifies every signed object for signature, authority, team, runtime, and timestamp 1182ms
+     → expected 1 to be +0 // Object.is equality
+   × macOS release contract > fails closed when Mach-O inspection fails 1191ms
+     → expected 'macOS signing blocked: expected exact…' to contain '/Users/friday/.hermes/profiles/friday…'
+   ✓ macOS release contract > rejects ambiguous, missing, or wrong-team Developer ID records 2388ms
+   ✓ macOS release contract > rejects missing, extra, relative, file, symlink, non-app, and malformed app arguments 526ms
+   × macOS release contract > fails tool lookup and traversal before identity lookup or signing, then stops on sign failure 1394ms
+     → expected -1 to be greater than 0
+   ✓ macOS release contract > rejects malformed exact-line metadata with every fixture isolating one invariant 13220ms
+   × macOS notarization orchestration > submits before stapling and assessment, uses absolute paths, and cleans staging 1342ms
+     → expected 1 to be +0 // Object.is equality
+   × macOS notarization orchestration > rejects wrong-team, ad-hoc, modified, malformed, and wrong-entitlement apps before archive 1274ms
+     → the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   × macOS notarization orchestration > stops after each failed notarization stage and always cleans staging 1287ms
+     → expected undefined to be defined
+   ✓ macOS notarization orchestration > rejects unsafe arguments and profile option injection before creating staging 383ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS release contract > uses the unique team-pinned identity hash, timestamp, helper profiles, and inside-out order
+AssertionError: expected 'macOS signing blocked: expected exact…' to be '' // Object.is equality
+
+- Expected
++ Received
+
++ macOS signing blocked: expected exactly one valid Developer ID Application identity for team VF5SMXSV89; found 0
++
+
+ ❯ tests/macosSigningContract.test.mjs:266:27
+    264|     const fixture = signedFixture();
+    265|     const { result, calls } = fixture.run();
+    266|     expect(result.stderr).toBe("");
+       |                           ^
+    267|     expect(result.status).toBe(0);
+    268| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS release contract > post-verifies every signed object for signature, authority, team, runtime, and timestamp
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ tests/macosSigningContract.test.mjs:313:27
+    311|   it("post-verifies every signed object for signature, authority, team…
+    312|     const { result, calls } = signedFixture().run();
+    313|     expect(result.status).toBe(0);
+       |                           ^
+    314|     const signCount = calls.filter(({ tool, args }) => tool === "codes…
+    315|       .length;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS release contract > fails closed when Mach-O inspection fails
+AssertionError: expected 'macOS signing blocked: expected exact…' to contain '/Users/friday/.hermes/profiles/friday…'
+
+- Expected
++ Received
+
+- /Users/friday/.hermes/profiles/friday/cache/scratch/E44/commonjs-control/tmp/mutiny-sign-test-ctvNsY/Mutiny.app/Contents/MacOS/mutiny-desktop
++ macOS signing blocked: expected exactly one valid Developer ID Application identity for team VF5SMXSV89; found 0
++
+
+ ❯ tests/macosSigningContract.test.mjs:341:27
+    339|     const { result, calls } = fixture.run({ FAKE_FILE_FAIL: failedPath…
+    340|     expect(result.status).not.toBe(0);
+    341|     expect(result.stderr).toContain(failedPath);
+       |                           ^
+    342|     expect(calls.find(({ tool, args }) => tool === "file" && args.at(-…
+    343|       "-b",
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS release contract > fails tool lookup and traversal before identity lookup or signing, then stops on sign failure
+AssertionError: expected -1 to be greater than 0
+ ❯ tests/macosSigningContract.test.mjs:432:23
+    430|       ({ tool, args }) => tool === "codesign" && args.includes("--sign…
+    431|     );
+    432|     expect(firstSign).toBeGreaterThan(0);
+       |                       ^
+    433|     expect(signFailure.calls.slice(0, firstSign).some(({ tool }) => to…
+    434|     expect(signFailure.calls.slice(0, firstSign).filter(({ tool }) => …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS notarization orchestration > submits before stapling and assessment, uses absolute paths, and cleans staging
+AssertionError: expected 1 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ tests/macosSigningContract.test.mjs:465:27
+    463|     const { app } = makeApp(directory);
+    464|     const { result, calls } = runScript(notaryScript, [app], {}, direc…
+    465|     expect(result.status).toBe(0);
+       |                           ^
+    466|     const operations = calls.filter(({ tool }) => ["ditto", "xcrun", "…
+    467|     expect(operations.map(({ tool, args }) => `${tool}:${args.slice(0,…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS notarization orchestration > rejects wrong-team, ad-hoc, modified, malformed, and wrong-entitlement apps before archive
+AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+ ❯ tests/macosSigningContract.test.mjs:502:35
+    500|       expect(calls.some(({ tool }) => tool === "ditto")).toBe(false);
+    501|       const firstCodesign = calls.find(({ tool }) => tool === "codesig…
+    502|       expect(firstCodesign?.args).toContain("--deep");
+       |                                   ^
+    503|     }
+    504|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/7]⎯
+
+ FAIL  tests/macosSigningContract.test.mjs > macOS notarization orchestration > stops after each failed notarization stage and always cleans staging
+AssertionError: expected undefined to be defined
+ ❯ tests/macosSigningContract.test.mjs:529:21
+    527|       }
+    528|       const ditto = calls.find(({ tool }) => tool === "ditto");
+    529|       expect(ditto).toBeDefined();
+       |                     ^
+    530|       expect(existsSync(ditto.args.at(-1))).toBe(false);
+    531|       expect(existsSync(dirname(ditto.args.at(-1)))).toBe(false);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/7]⎯
+
+ Test Files  1 failed (1)
+      Tests  7 failed | 9 passed (16)
+   Start at  22:56:28
+   Duration  26.20s (transform 71ms, setup 0ms, collect 61ms, tests 25.75s, environment 0ms, prepare 126ms)
+
+JSON report written to /Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/receipts/baseline-commonjs-tests.json
+ ELIFECYCLE  Test failed. See above for more details.

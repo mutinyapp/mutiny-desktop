@@ -1,0 +1,23 @@
+{
+  "name": "baseline-all",
+  "argv": [
+    "pnpm",
+    "test",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=/Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/receipts/baseline-tests.json"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline",
+  "startedUTC": "2026-10-03T02:42:03.358033+00:00",
+  "elapsedSeconds": 66.342,
+  "exit": 0,
+  "log": "baseline-all.log",
+  "logSHA256": "3ee6ea85cbbe7e7dacd758171020d9c0ba30c36cf22537aaa4d304550c6d3d93",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

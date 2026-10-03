@@ -1,0 +1,25 @@
+{
+  "name": "npm10-identity",
+  "argv": [
+    "npm",
+    "exec",
+    "--yes",
+    "--package=npm@10.9.4",
+    "--",
+    "npm",
+    "--version"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:08:00.666495+00:00",
+  "elapsedSeconds": 1.746,
+  "exit": 0,
+  "log": "npm10-identity.log",
+  "logSHA256": "d2bc4f980036666ea142e3fb14aa0d3b29d5336e7351ca82129240337592f12d",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

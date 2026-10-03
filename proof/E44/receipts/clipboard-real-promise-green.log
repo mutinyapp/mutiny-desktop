@@ -1,0 +1,14 @@
+
+> mutiny-desktop@1.2.7 test /Users/friday/Projects/mutiny-rebuild/wt/E44
+> vitest run proof/E44/clipboard.test.ts
+
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/E44
+
+ ✓ proof/E44/clipboard.test.ts (2 tests) 75ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  23:06:06
+   Duration  588ms (transform 101ms, setup 0ms, collect 55ms, tests 75ms, environment 0ms, prepare 145ms)
+

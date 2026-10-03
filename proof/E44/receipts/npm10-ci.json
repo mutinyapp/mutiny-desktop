@@ -1,0 +1,30 @@
+{
+  "name": "npm10-ci",
+  "argv": [
+    "npm",
+    "exec",
+    "--yes",
+    "--package=npm@10.9.4",
+    "--",
+    "npm",
+    "ci",
+    "--prefix",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/npm-verify",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/npm-verify",
+  "startedUTC": "2026-10-03T03:02:17.346060+00:00",
+  "elapsedSeconds": 14.67,
+  "exit": 0,
+  "log": "npm10-ci.log",
+  "logSHA256": "7c428b893a179ac8a328749706a1d855e454c9c48ab7e92aa63fb144eab9877e",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

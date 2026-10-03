@@ -1,0 +1,23 @@
+{
+  "name": "G-D2-final",
+  "argv": [
+    "pnpm",
+    "test",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=proof/E44/receipts/candidate-tests-final.json"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:09:21.391475+00:00",
+  "elapsedSeconds": 62.746,
+  "exit": 0,
+  "log": "G-D2-final.log",
+  "logSHA256": "577bc4ef5851cc383d2010551debec189ebe2778313db83a9fcca484864e1e8b",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

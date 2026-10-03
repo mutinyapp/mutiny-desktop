@@ -1,0 +1,20 @@
+{
+  "name": "G-D3",
+  "argv": [
+    "pnpm",
+    "lint"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T02:54:03.136398+00:00",
+  "elapsedSeconds": 5.712,
+  "exit": 1,
+  "log": "G-D3.log",
+  "logSHA256": "26863b68d7250a873884a72cde48ae998c3b9b572496f4dbcf22f1c82f70e2f8",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

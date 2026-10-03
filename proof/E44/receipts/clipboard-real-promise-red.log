@@ -1,0 +1,45 @@
+
+> mutiny-desktop@1.2.7 test /Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline
+> vitest run proof/E44/clipboard.test.ts
+
+
+ RUN  v2.1.9 /Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline
+
+ ❯ proof/E44/clipboard.test.ts (2 tests | 2 failed) 97ms
+   × Copy Link handles Electron 44 clipboard rejection without an unhandled promise 88ms
+     → expected "error" to be called once, but got 0 times
+   × Copy Link preserves the exact link and completes a successful asynchronous write 8ms
+     → expected "catch" to be called once, but got 0 times
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  proof/E44/clipboard.test.ts > Copy Link handles Electron 44 clipboard rejection without an unhandled promise
+AssertionError: expected "error" to be called once, but got 0 times
+ ❯ proof/E44/clipboard.test.ts:36:15
+     34|   expect(f.writeText).toHaveBeenCalledOnce();
+     35|   expect(f.writeText).toHaveBeenCalledWith("https://example.test/link"…
+     36|   expect(log).toHaveBeenCalledOnce();
+       |               ^
+     37|   expect(log).toHaveBeenCalledWith("Failed to copy link:", error);
+     38| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  proof/E44/clipboard.test.ts > Copy Link preserves the exact link and completes a successful asynchronous write
+AssertionError: expected "catch" to be called once, but got 0 times
+ ❯ proof/E44/clipboard.test.ts:49:18
+     47|   expect(f.writeText).toHaveBeenCalledOnce();
+     48|   expect(f.writeText).toHaveBeenCalledWith(url);
+     49|   expect(caught).toHaveBeenCalledOnce();
+       |                  ^
+     50|   expect(log).not.toHaveBeenCalled();
+     51| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  23:06:04
+   Duration  551ms (transform 126ms, setup 0ms, collect 58ms, tests 97ms, environment 0ms, prepare 141ms)
+
+ ELIFECYCLE  Test failed. See above for more details.
