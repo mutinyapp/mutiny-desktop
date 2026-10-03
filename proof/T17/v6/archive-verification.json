@@ -1,0 +1,8 @@
+{
+  "tree": "302c6804e2baf28da27ce82a6610d6be504e61b8",
+  "archiveSHA256": "d6d523040c37f39d39a5838bdf0a5edb020d8cacad94d61938ce920769d5f526",
+  "archiveBytes": 10519030,
+  "verifiedFileCount": 577,
+  "allGitBlobsAndSymlinksMatch": true,
+  "scope": "Source-only archive. No dependencies, executable runtime, caches or generated build."
+}

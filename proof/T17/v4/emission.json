@@ -1,0 +1,8 @@
+{
+  "command": [
+    "node",
+    "proof/T17/check-emission-mutations.mjs"
+  ],
+  "exit": 0,
+  "elapsedSeconds": 0.338
+}

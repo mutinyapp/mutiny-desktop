@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: all native caption actions must work on the fallback
++ actual - expected
+
++ [
++   'maximise: AssertionError [ERR_ASSERTION]: maximise sender must be authorized before native action',
++   'maximise: AssertionError [ERR_ASSERTION]: maximise sender must be authorized before native action',
++   'minimise: AssertionError [ERR_ASSERTION]: minimise sender must be authorized before native action',
++   'close: AssertionError [ERR_ASSERTION]: close sender must be authorized before native action'
++ ]
+- []
+
+    at ke (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-jG80Bb/.vite/build/electron-runtime-entry.js:1:11042)

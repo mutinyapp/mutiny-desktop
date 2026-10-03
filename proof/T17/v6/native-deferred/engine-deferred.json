@@ -1,0 +1,24 @@
+{
+  "electron": "44.5.1",
+  "deferred": true,
+  "port": 49273,
+  "before": {
+    "detached": false,
+    "destroyed": false,
+    "url": "http://127.0.0.1:49273/",
+    "processId": 4,
+    "routingId": 1
+  },
+  "current": {
+    "detached": false,
+    "destroyed": false,
+    "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp/T17-real-electron-07xRw8/.vite/build/offline.html?error=server",
+    "processId": 5,
+    "routingId": 1
+  },
+  "sameWrapper": true,
+  "byIdSame": true,
+  "byTokenSame": true,
+  "imports": "Electron + node only; no product modules",
+  "expectedDetached": false
+}

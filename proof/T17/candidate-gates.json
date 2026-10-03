@@ -1,0 +1,14 @@
+[
+  {
+    "command": "pnpm typecheck",
+    "exit_code": 0
+  },
+  {
+    "command": "pnpm test",
+    "exit_code": 0
+  },
+  {
+    "command": "pnpm lint",
+    "exit_code": 0
+  }
+]

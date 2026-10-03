@@ -1,0 +1,4 @@
+{
+  "command": "pnpm lint",
+  "exit": 0
+}

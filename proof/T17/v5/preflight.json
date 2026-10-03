@@ -1,0 +1,18 @@
+{
+  "frozen": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "branch": "rebuild/T17-offline-recovery",
+  "worktree": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+  "timeObserved": "2026-10-02T22:40:12-0400",
+  "localHead": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "trackingOrigin": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "actualRemoteBranch": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "main": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "gitStatusPorcelain": "",
+  "pr": "https://github.com/mutinyapp/mutiny-desktop/pull/39",
+  "prHead": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "prDraft": true,
+  "node": "22.23.3",
+  "pnpm": "10.18.1",
+  "architecture": "x86_64",
+  "scope": "proof/T17 only; no product or trust/preload/build/dependency/workflow edits"
+}

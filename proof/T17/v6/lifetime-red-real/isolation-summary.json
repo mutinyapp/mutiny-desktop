@@ -1,0 +1,1653 @@
+{
+  "port": 49270,
+  "emittedSHA256": "33aba3c676f65b56a45ffcc3dde2a16c75846636717ca280087940f00c0ed712",
+  "scenarioCount": 4,
+  "passCount": 0,
+  "knownGapCount": 0,
+  "failCount": 4,
+  "captionAttemptCount": 16,
+  "results": [
+    {
+      "mode": "darwin",
+      "scenario": "crash-retry-hosted",
+      "exit": 1,
+      "passed": false,
+      "result": "FAIL",
+      "knownGapCount": 0,
+      "hardFailures": [
+        "TypeError: Object has been destroyed",
+        "caption action inventory mismatch"
+      ],
+      "characterization": {},
+      "authorization": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        }
+      ],
+      "captionActions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "minimise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "close",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ],
+      "retryIntents": []
+    },
+    {
+      "mode": "darwin",
+      "scenario": "crash-native-os",
+      "exit": 1,
+      "passed": false,
+      "result": "FAIL",
+      "knownGapCount": 0,
+      "hardFailures": [
+        "TypeError: Object has been destroyed"
+      ],
+      "characterization": {},
+      "authorization": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        }
+      ],
+      "captionActions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "minimise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "close",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ],
+      "retryIntents": []
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-retry-hosted",
+      "exit": 1,
+      "passed": false,
+      "result": "FAIL",
+      "knownGapCount": 0,
+      "hardFailures": [
+        "TypeError: Object has been destroyed",
+        "caption action inventory mismatch"
+      ],
+      "characterization": {},
+      "authorization": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        }
+      ],
+      "captionActions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "minimise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "close",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ],
+      "retryIntents": []
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-native-os",
+      "exit": 1,
+      "passed": false,
+      "result": "FAIL",
+      "knownGapCount": 0,
+      "hardFailures": [
+        "TypeError: Object has been destroyed"
+      ],
+      "characterization": {},
+      "authorization": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "byIdSame": true,
+          "byTokenSame": true,
+          "byId": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "byToken": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "sender": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          },
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        }
+      ],
+      "captionActions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "maximise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "minimise",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": {
+            "action": "close",
+            "document": "offline",
+            "byIdSame": true,
+            "byTokenSame": true,
+            "byId": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "byToken": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "hosted": false,
+            "offline": true,
+            "self": true,
+            "sameContents": true,
+            "sameFrame": true,
+            "detached": false,
+            "sender": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            },
+            "current": {
+              "id": 1,
+              "detached": false,
+              "destroyed": false,
+              "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/offline.html?error=server",
+              "processId": 5,
+              "routingId": 1
+            }
+          },
+          "native": true,
+          "error": null,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ],
+      "retryIntents": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T17
+
+ ✓ tests/offlinePolicy.test.ts (27 tests) 13ms
+ ✓ tests/offlineCaptionRequirements.test.ts (6 tests) 15ms
+ ✓ tests/offlineRecovery.test.ts (46 tests) 62ms
+
+ Test Files  3 passed (3)
+      Tests  79 passed (79)
+   Start at  15:15:35
+   Duration  952ms (transform 165ms, setup 0ms, collect 310ms, tests 90ms, environment 1ms, prepare 753ms)
+

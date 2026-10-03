@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: retained v4 clean caption result is PASS
+ok 1 - retained v4 clean caption result is PASS
+  ---
+  duration_ms: 2.525225
+  type: 'test'
+  ...
+# Subtest: exact crash-only caption refusal is explicitly KNOWN-GAP
+ok 2 - exact crash-only caption refusal is explicitly KNOWN-GAP
+  ---
+  duration_ms: 0.26145
+  type: 'test'
+  ...
+# Subtest: full-v3 exact caption refusal is explicitly KNOWN-GAP
+ok 3 - full-v3 exact caption refusal is explicitly KNOWN-GAP
+  ---
+  duration_ms: 0.210074
+  type: 'test'
+  ...
+# Subtest: Retry broken is hard failure, never KNOWN-GAP
+ok 4 - Retry broken is hard failure, never KNOWN-GAP
+  ---
+  duration_ms: 0.135423
+  type: 'test'
+  ...
+# Subtest: fallback missing is hard failure, never KNOWN-GAP
+ok 5 - fallback missing is hard failure, never KNOWN-GAP
+  ---
+  duration_ms: 0.101373
+  type: 'test'
+  ...
+# Subtest: OS close broken is hard failure, never KNOWN-GAP
+ok 6 - OS close broken is hard failure, never KNOWN-GAP
+  ---
+  duration_ms: 0.092014
+  type: 'test'
+  ...
+# Subtest: no-crash-no-cdp refusal is hard-required
+ok 7 - no-crash-no-cdp refusal is hard-required
+  ---
+  duration_ms: 0.119709
+  type: 'test'
+  ...
+# Subtest: cdp-only refusal is hard-required
+ok 8 - cdp-only refusal is hard-required
+  ---
+  duration_ms: 0.081297
+  type: 'test'
+  ...
+# Subtest: crash refusal with sameContents=false is not the documented gap
+ok 9 - crash refusal with sameContents=false is not the documented gap
+  ---
+  duration_ms: 0.354267
+  type: 'test'
+  ...
+# Subtest: crash refusal with sameFrame=false is not the documented gap
+ok 10 - crash refusal with sameFrame=false is not the documented gap
+  ---
+  duration_ms: 0.324973
+  type: 'test'
+  ...
+# Subtest: crash refusal with detached=false is not the documented gap
+ok 11 - crash refusal with detached=false is not the documented gap
+  ---
+  duration_ms: 0.210627
+  type: 'test'
+  ...
+# Subtest: authorized caption with absent native effect is hard failure
+ok 12 - authorized caption with absent native effect is hard failure
+  ---
+  duration_ms: 0.143602
+  type: 'test'
+  ...
+# Subtest: missing caption IPC is hard failure
+ok 13 - missing caption IPC is hard failure
+  ---
+  duration_ms: 0.113529
+  type: 'test'
+  ...
+# Subtest: known refusal with an unexpected native effect is hard failure
+ok 14 - known refusal with an unexpected native effect is hard failure
+  ---
+  duration_ms: 0.102416
+  type: 'test'
+  ...
+# Subtest: missing action inventory is hard failure
+ok 15 - missing action inventory is hard failure
+  ---
+  duration_ms: 0.099586
+  type: 'test'
+  ...
+# Subtest: restored hosted-page caption refusal is outside the offline known gap
+ok 16 - restored hosted-page caption refusal is outside the offline known gap
+  ---
+  duration_ms: 0.117921
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 114.167266

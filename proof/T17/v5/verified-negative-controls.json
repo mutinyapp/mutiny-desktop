@@ -1,0 +1,4 @@
+{
+  "command": "node proof/T17/check-runtime-negative-controls.mjs",
+  "exit": 0
+}

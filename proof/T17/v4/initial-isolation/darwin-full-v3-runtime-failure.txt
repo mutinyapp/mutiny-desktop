@@ -1,0 +1,3 @@
+Error: Timed out: native maximize
+    at f (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-PEQv8p/.vite/build/electron-runtime-entry.js:1:4618)
+    at async Re (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-PEQv8p/.vite/build/electron-runtime-entry.js:1:9868)

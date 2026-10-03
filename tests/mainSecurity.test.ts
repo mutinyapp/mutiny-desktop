@@ -167,3 +167,25 @@ describe("production main native authority", () => {
     expect(f.dialog).toHaveBeenCalledOnce();
   });
 });
+
+describe("offline caption exception never grants production privileges", () => {
+  const offline = "file:///isolated-test/.vite/build/offline.html?error=dns";
+  it.each(["media", "mediaKeySystem", "display-capture", "notifications", "geolocation", "clipboard-read"])("denies offline %s requests and checks", permission => {
+    f.frame.url = offline;
+    const cb = vi.fn();
+    f.permissions.get("request")(f.wc, permission, cb, {isMainFrame:true, requestingUrl:offline});
+    expect(cb).toHaveBeenCalledWith(false);
+    expect(f.permissions.get("check")(f.wc, permission, "null", {isMainFrame:true, requestingUrl:offline})).toBe(false);
+    expect(f.permissions.get("check")(null, permission, f.buildUrl.origin, {isMainFrame:false, embeddingOrigin:f.buildUrl.origin})).toBe(false);
+  });
+  it("denies offline audio-file dialogs", async () => {
+    f.frame.url = offline;
+    await expect(f.handlers.get("dialog:openAudioFile")({sender:f.wc,senderFrame:f.frame})).rejects.toThrow();
+    expect(f.dialog).not.toHaveBeenCalled();
+  });
+  it("denies offline display picking", async () => {
+    f.frame.url = offline; const cb = vi.fn();
+    await f.permissions.get("display")({frame:f.frame,securityOrigin:"null"},cb);
+    expect(cb).toHaveBeenCalledWith({}); expect(f.picker).not.toHaveBeenCalled();
+  });
+});

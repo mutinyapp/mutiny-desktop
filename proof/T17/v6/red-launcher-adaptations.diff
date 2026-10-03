@@ -1,0 +1,49 @@
+diff --git a/proof/T17/electron-runtime-entry.ts b/proof/T17/electron-runtime-entry.ts
+index 5849cbd..60c620d 100644
+--- a/proof/T17/electron-runtime-entry.ts
++++ b/proof/T17/electron-runtime-entry.ts
+@@ -14,8 +14,8 @@ import { classifyScenario } from "./runtime-result.mjs";
+ const proof = process.env.T17_PROOF;
+ const mode = process.env.T17_PLATFORM || "darwin";
+ const scenario = process.env.T17_SCENARIO || "full-v3";
+-const port = Number(process.env.T17_PORT || "49206");
+-assert.ok([49206,49207,49208,49209].includes(port), "v5 assigned T17 ports only");
++const port = Number(process.env.T17_PORT || "49270");
++assert.ok([49270,49271,49272,49273,49274,49275,49276,49277,49278,49279].includes(port), "v6 assigned T17 ports only");
+ const prefix = `${mode}-${scenario}`;
+ const authorization: unknown[] = [];
+ const frameStates: unknown[] = [];
+@@ -72,7 +72,8 @@ async function shot(name: string) { const image=await window.webContents.capture
+ let dispose: ()=>void;
+ async function run() {
+   await app.whenReady();
+-  assert.equal(process.versions.electron,"38.1.2","v5 characterization is pinned to Electron 38.1.2");
++  assert.equal(process.versions.electron,"44.5.1","combined validation requires Electron 44.5.1");
++  assert.equal(process.versions.modules,"149");
+   await new Promise<void>((resolve,reject)=>{server.once("error",reject);server.listen(port,"127.0.0.1",resolve);});
+   const configured = new URL(`http://127.0.0.1:${port}/app?configured=1`);
+   window=new BrowserWindow({ ...mainWindowOptions(process.platform,true), width:900,height:600,show:true,backgroundColor:"#23202f",webPreferences:{preload:join(__dirname, mode === "darwin" ? "preload.js" : "preload-win.js"),contextIsolation:true,nodeIntegration:false,sandbox:true,partition:`T17-${prefix}`} });
+diff --git a/proof/T17/run-electron-runtime.mjs b/proof/T17/run-electron-runtime.mjs
+index c36bd64..000c7a2 100644
+--- a/proof/T17/run-electron-runtime.mjs
++++ b/proof/T17/run-electron-runtime.mjs
+@@ -16,8 +16,8 @@ const dir=mkdtempSync(join(scratch,"T17-real-electron-"));
+ const out=join(dir,".vite/build");
+ const proof=process.env.T17_PROOF || join(root,"proof/T17/v5/runtime");
+ mkdirSync(proof,{recursive:true});
+-const port=Number(process.env.T17_PORT || "49206");
+-assert.ok([49206,49207,49208,49209].includes(port),"v5 assigned T17 ports only");
++const port=Number(process.env.T17_PORT || "49270");
++assert.ok([49270,49271,49272,49273,49274,49275,49276,49277,49278,49279].includes(port),"v6 assigned T17 ports only");
+ process.env.T17_PORT=String(port);
+ const entry=process.env.T17_ENGINE_PROBE ? "electron-frame-lifecycle-entry" : "electron-runtime-entry";
+ const env=(entry,target)=>({root,mode:"production",command:"build",forgeConfig:{renderer:[]},forgeConfigSelf:{entry,target}});
+@@ -38,7 +38,7 @@ try {
+     const config=preloadConfig(env("src/preload.ts","preload"),preload.config);
+     await build({...config,configFile:false,define:{...config.define,...(mode === "win32" ? {"process.platform":JSON.stringify("win32")} : {})},build:{...config.build,outDir:out,rollupOptions:{...config.build.rollupOptions,output:{...config.build.rollupOptions.output,entryFileNames:mode === "darwin"?"preload.js":"preload-win.js"}}}});
+   }
+-  const electron=require("electron");
++  const electron=process.env.T17_ELECTRON || require("electron");
+   const results=[];
+   const modes=process.env.T17_MODES ? process.env.T17_MODES.split(",") : ["darwin","win32"];
+   const scenarios=process.env.T17_SCENARIOS ? process.env.T17_SCENARIOS.split(",") : ["no-crash-no-cdp","crash-only","cdp-only","full-v3","crash-retry-hosted","crash-native-os","no-crash-retry-hosted"];

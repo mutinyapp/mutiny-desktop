@@ -1,0 +1,589 @@
+{
+  "frozen": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "protectedCount": 109,
+  "invariance": [
+    {
+      "path": ".eslintrc.json",
+      "bytes": 437,
+      "sha256": "78ce7ecef4e51d0788299f63787e633684bfae0475fad0d69c80eeaf61985e42"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "bytes": 1310,
+      "sha256": "c6dcdfcaaeac4bafed3d0eaacc765d7a9bd04f4be021f92b7d88f048b72f5720"
+    },
+    {
+      "path": ".github/workflows/desktop-candidate.yml",
+      "bytes": 1793,
+      "sha256": "fdec92be8a7d5fc4d568fb6529b07d7313b4c4d4cbdab3840c4a918f72acb62a"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 4339,
+      "sha256": "e26a0148ec17966390c169e04518841f329c5f8b1b95471c84fbb36ebbb2a331"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1220,
+      "sha256": "65118f2964f5c98a7ddcc4a6420f45bed45c04f8eebac7d5dbf147acf91ca605"
+    },
+    {
+      "path": ".prettierrc",
+      "bytes": 270,
+      "sha256": "72a2d01d2618c3cf3f573accaea3440d9ababc73cb0fe4677033c9e9c2146e6a"
+    },
+    {
+      "path": ".release-please-manifest.json",
+      "bytes": 19,
+      "sha256": "152a66a00a786ae80d92573bc0893368382cd7985a88613ab38a0455f4a415a7"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 520,
+      "sha256": "32391e4aaeabc6b2a7fe6dfb2e23995df00babc5942e5b2f172895e4745595e0"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1348,
+      "sha256": "7425ba5e2a4bfe16cc5f136365c7a839fb2d173779223b5de4fce040ae8cf939"
+    },
+    {
+      "path": "DESKTOP_POLISH_SUMMARY.md",
+      "bytes": 3720,
+      "sha256": "e1246f3edbb946525690b7325da14b0e5f2d5c93e679bef13b4e1d97e09d1fc3"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34463,
+      "sha256": "6e6f0b6c2a89f9132768bf1596bd4db32267e9d0493d869d82bada688206d2b3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3927,
+      "sha256": "36ce7b11ab586bbb904a701a082c49a35cd8b5163a9e8de5543339871710c83c"
+    },
+    {
+      "path": "assets/desktop/icon-source.png",
+      "bytes": 1120366,
+      "sha256": "a0d3c36855d43d284b260e82cd165bbb11f1826a0964eb2e58468a39fbababde"
+    },
+    {
+      "path": "assets/desktop/icon.icns",
+      "bytes": 2061541,
+      "sha256": "6de540f2e6269105768455d9dde2e3af677b100442c304e47364616fbbf276d2"
+    },
+    {
+      "path": "assets/desktop/icon.ico",
+      "bytes": 99497,
+      "sha256": "e9a364aff9e3dbc07588ad484dc5db44747d3eef0a77b368b2164a7d4acd7421"
+    },
+    {
+      "path": "assets/desktop/icon.png",
+      "bytes": 253605,
+      "sha256": "0a1c2f4f6d463276ecdb217bb0e00f92f2202971deec74a724a31a13ef6d70fd"
+    },
+    {
+      "path": "assets/desktop/offline/offline.html",
+      "bytes": 4933,
+      "sha256": "33aba3c676f65b56a45ffcc3dde2a16c75846636717ca280087940f00c0ed712"
+    },
+    {
+      "path": "default.nix",
+      "bytes": 578,
+      "sha256": "254d6ba7250be29cf70987f06b8258cf4fc55194aef342a735395d96a2cb8d20"
+    },
+    {
+      "path": "docs/macos-signing-release.md",
+      "bytes": 5233,
+      "sha256": "197b707c46ba6e2dcd34357eddc6e1a84919dffc93c615579ada353226ccfd62"
+    },
+    {
+      "path": "entitlements.mac.gpu.plist",
+      "bytes": 247,
+      "sha256": "6e07752e0fc84df8618efe7e0eed7d22350def388b45bae282675614d423d559"
+    },
+    {
+      "path": "entitlements.mac.helper.plist",
+      "bytes": 247,
+      "sha256": "6e07752e0fc84df8618efe7e0eed7d22350def388b45bae282675614d423d559"
+    },
+    {
+      "path": "entitlements.mac.plist",
+      "bytes": 372,
+      "sha256": "043d0f1d5b6dc6216c41862f95ca77da5192d9845c7229afe37f5ad2c7f75880"
+    },
+    {
+      "path": "entitlements.mac.plugin.plist",
+      "bytes": 346,
+      "sha256": "89c253308d9e596ff29c05297ffc778405e8237ea33117269438e86dd90a4f0b"
+    },
+    {
+      "path": "entitlements.mac.renderer.plist",
+      "bytes": 247,
+      "sha256": "6e07752e0fc84df8618efe7e0eed7d22350def388b45bae282675614d423d559"
+    },
+    {
+      "path": "forge.config.ts",
+      "bytes": 7590,
+      "sha256": "cc7e9481e16ab5a086b7984ac6817a913699a8e6685df750a92761b44b3bf22e"
+    },
+    {
+      "path": "forge.env.d.ts",
+      "bytes": 69,
+      "sha256": "f4da57531720d926daa76f2f08943ab64a0e793af938bcb9de6bf8e9d9537639"
+    },
+    {
+      "path": "index.html",
+      "bytes": 246,
+      "sha256": "316a906071ea74d567e52d74e1cd9949de29bfe54e42c7f3d30340a42f2b88a4"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 444231,
+      "sha256": "ac1b394239de6ed225c5bbf4e223488aa78f4b1e93653db797c80baaaf45657e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2644,
+      "sha256": "371209b5f514015a94f47ab64af8618b144eed7313d22a88f4a796ef2d9cfee6"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "bytes": 225320,
+      "sha256": "40b1780b359e79be71b115a816c6de46bddd253d56062d4b14816c9232ddb5c0"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "bytes": 113,
+      "sha256": "318da683d868a6db9616d8e1365f79a26eb7fe68475a9370d78f0f08df11955a"
+    },
+    {
+      "path": "release-please-config.json",
+      "bytes": 384,
+      "sha256": "970a2250bf762c3a6b82ce427af41dd329b589a2afcef03b9261513aab8f682c"
+    },
+    {
+      "path": "scripts/generate-desktop-icons.py",
+      "bytes": 2652,
+      "sha256": "8fc60a994de9264ceb1d13461552ff6ba476b8c5a387082e481e7bd5e7adbc1f"
+    },
+    {
+      "path": "scripts/macos-notarize.mjs",
+      "bytes": 2113,
+      "sha256": "5010824abf3204496ea267fd7e0141aa593fa6842e2ae109b1942682f2b8b2c8"
+    },
+    {
+      "path": "scripts/macos-sign.mjs",
+      "bytes": 3109,
+      "sha256": "cd690ab71d05e21da0c1073dcbb4bd72934c87b47f75d40207508088449d2950"
+    },
+    {
+      "path": "scripts/macos-signing-verification.mjs",
+      "bytes": 11926,
+      "sha256": "53d724af70f4d75312f2c168b0c4018006845ef1e4104bb139601b2f34eda369"
+    },
+    {
+      "path": "scripts/stage-desktop-candidate.mjs",
+      "bytes": 3119,
+      "sha256": "792c20d5ded02d789f902e9578460dcb4614c258750a7d14bf504e103b67b657"
+    },
+    {
+      "path": "scripts/streamdeck/README.md",
+      "bytes": 1528,
+      "sha256": "f938a321f6f7e1459b2a4e5ca1b749f1a48310e3882ee5ad84f6f3035fac2013"
+    },
+    {
+      "path": "scripts/streamdeck/mutiny-control.ps1",
+      "bytes": 1382,
+      "sha256": "bb0b8dbecd6140ac9f6c444b2225e651ba41a5e45f0ace13b223e2d769dca2af"
+    },
+    {
+      "path": "src/assets.d.ts",
+      "bytes": 83,
+      "sha256": "f41a91f1e7329561b130092394c01e7551b9b2ca1c45c673e5a962813dece37f"
+    },
+    {
+      "path": "src/config.d.ts",
+      "bytes": 271,
+      "sha256": "f546722d04f79cebff6d86697957ceb81776dc32bc95ad9e13209075866b1b5c"
+    },
+    {
+      "path": "src/index.css",
+      "bytes": 170,
+      "sha256": "d5ca21956d7e06b48bb3c221fb2095a9585df4167cfac2e937e18d2953ebf344"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 8657,
+      "sha256": "02409b2b7fcf3c560585910a65589f5dc43983f3bbc747ad2d63a892e956f2cf"
+    },
+    {
+      "path": "src/native/autoLaunch.ts",
+      "bytes": 2060,
+      "sha256": "8805c7e4f31c5ddc01857e96b414b37bcc8c3234e262ea6383d39345d502bf71"
+    },
+    {
+      "path": "src/native/badgePolicy.ts",
+      "bytes": 677,
+      "sha256": "ca933db413477a213bfdadd9ed68e02a57c0a75d4223ec2b1bd6c0cc28f3e369"
+    },
+    {
+      "path": "src/native/badges.ts",
+      "bytes": 1790,
+      "sha256": "667ea3c323d46065c29dc8d1ea433aada16ef5c36c7b99ad7a6f294c418b6273"
+    },
+    {
+      "path": "src/native/badgesRegistration.ts",
+      "bytes": 544,
+      "sha256": "7c9ab2d52470760845aef94ddabd1215876f98b93a03f03cd9770c2d351e62ac"
+    },
+    {
+      "path": "src/native/config.ts",
+      "bytes": 4017,
+      "sha256": "0c9acb5d2fc97c937e4138462e8e28383e39e5193b4932697256baf222b98aea"
+    },
+    {
+      "path": "src/native/configIpcPolicy.ts",
+      "bytes": 1172,
+      "sha256": "b4be9a4aa0513cb91bbedba07907d5772dcf7e2a83d8c146a7adbbf685cc7eec"
+    },
+    {
+      "path": "src/native/configSchema.ts",
+      "bytes": 923,
+      "sha256": "d8c114571c32177d8188f05bec2cfdd68afe1f6728327de2fb7da3448ca92d61"
+    },
+    {
+      "path": "src/native/contentSecurityPolicy.ts",
+      "bytes": 963,
+      "sha256": "b6ea6b9659fe59df34e7bef76724cd64731f6655d1f4f31ff3d53e01e5024273"
+    },
+    {
+      "path": "src/native/contextMenuPolicy.ts",
+      "bytes": 5789,
+      "sha256": "a8b13a90ea752fc188be078b9c7b403cab439b8d9cad082d92d48076e1a0ebf0"
+    },
+    {
+      "path": "src/native/controlPolicy.ts",
+      "bytes": 1568,
+      "sha256": "8029b24452a74de7952157f3d8ce53199ef9b49e079ce4736c6c9738ed7ea6b5"
+    },
+    {
+      "path": "src/native/controlServer.ts",
+      "bytes": 3701,
+      "sha256": "5d209bcb18283e39230d6c94ed3927dc8c6a3bd74e78ff05ad12213aa8c8a510"
+    },
+    {
+      "path": "src/native/discordRpc.ts",
+      "bytes": 917,
+      "sha256": "fe39df966e1627d25e388e5d27a647b635c33a626d8d93b2ef124582815927f3"
+    },
+    {
+      "path": "src/native/displayMedia.ts",
+      "bytes": 3367,
+      "sha256": "ec19d11c099997b96ac7cc3f26efc2468eb7b804563eacc5e31bce184b7c6276"
+    },
+    {
+      "path": "src/native/notificationPolicy.ts",
+      "bytes": 1568,
+      "sha256": "b9e7d4e5c36ff31fb2753ffcfcdcaf1e26822f3dccc58c9492e60a482342fee8"
+    },
+    {
+      "path": "src/native/offlinePolicy.ts",
+      "bytes": 679,
+      "sha256": "954d6db9b8973558038eaa380a2b45e8618f7d7a76dc7e329774099d3ee2b9ea"
+    },
+    {
+      "path": "src/native/offlineRecovery.ts",
+      "bytes": 5714,
+      "sha256": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7"
+    },
+    {
+      "path": "src/native/rendererTrust.ts",
+      "bytes": 1342,
+      "sha256": "69b53f58c05c06826969d95aa3fae196f47510a2b8ec91f5f0058681b4b08e90"
+    },
+    {
+      "path": "src/native/screenPicker.ts",
+      "bytes": 5194,
+      "sha256": "bf3ca7a1fb9c628862efddcf3df4f16edad1f3ce1882bbec28c720f2aaaa57ad"
+    },
+    {
+      "path": "src/native/screenPickerResult.ts",
+      "bytes": 4006,
+      "sha256": "6c4682ed49409e869697c30b069da42dd1c782210609a5a2328b6a4ad3a55e6d"
+    },
+    {
+      "path": "src/native/startup.ts",
+      "bytes": 4337,
+      "sha256": "7c3c99aa7517a66003a6c3ed939ac137d56ac16ea37e76475281163be1764798"
+    },
+    {
+      "path": "src/native/tray.ts",
+      "bytes": 1664,
+      "sha256": "0ce60bda6a264fd537558cb56d02b7e6c9f99ca2f685dc38466207a19b702312"
+    },
+    {
+      "path": "src/native/voiceControl.ts",
+      "bytes": 1973,
+      "sha256": "f4b27405a8e055d2f52467ebfb504b9e9a9310ed1dba37c88085bd4b7257944d"
+    },
+    {
+      "path": "src/native/window.ts",
+      "bytes": 7742,
+      "sha256": "3a8a31a7046896ea6cd86745a2dcdfff9fa425a206a43fddac0f41755ce207ea"
+    },
+    {
+      "path": "src/native/windowControls.ts",
+      "bytes": 1036,
+      "sha256": "c1fe785499d9c592b3d4bdb3aaa4ad9c7a80ba4330315a56a59ab8750f275e79"
+    },
+    {
+      "path": "src/native/windowOptions.ts",
+      "bytes": 1499,
+      "sha256": "22d8458675dc623ad5380b21056dbc4c52503a28853a424ac3cfddd544003472"
+    },
+    {
+      "path": "src/pickerPreload.ts",
+      "bytes": 413,
+      "sha256": "eb0328a94c7d6c5c6c45250ba2f6127fcee2225afeb15d56c83c30f72063cfe0"
+    },
+    {
+      "path": "src/preload.ts",
+      "bytes": 50,
+      "sha256": "a4758349b079ef8ec3019165497c0ef5d86adacc6dbbc6990f60f0e24508b745"
+    },
+    {
+      "path": "src/renderer.ts",
+      "bytes": 953,
+      "sha256": "7488cd789540a73743681e9be77bf0b4f2733cee5016bca4b5a35cb2d79c7b90"
+    },
+    {
+      "path": "src/world/capabilities.ts",
+      "bytes": 262,
+      "sha256": "85cb0df9220ec1822fe2654eb9842ec81ab25ca2b6b27091745d979ede1fc445"
+    },
+    {
+      "path": "src/world/config.ts",
+      "bytes": 496,
+      "sha256": "306ca5b08c6c212d4bbea39fae25149de092b4325ae014af6f5ff8580e9e667c"
+    },
+    {
+      "path": "src/world/window.ts",
+      "bytes": 1600,
+      "sha256": "aee804c54388337c569566ba0b2ec94114bdb3ba93837cbbbfe0c147e8bb83a2"
+    },
+    {
+      "path": "strings.ts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/badgePolicy.test.ts",
+      "bytes": 883,
+      "sha256": "790d671114f77df289d2229e68d08a4747fde1315d61f91509dcbfc383353287"
+    },
+    {
+      "path": "tests/badges.test.ts",
+      "bytes": 1162,
+      "sha256": "4b4626f329cb4bd9ebfbc11da8605f88ff4b9fab45a21c1f9f3de19910d23ab5"
+    },
+    {
+      "path": "tests/buildWorkflow.test.ts",
+      "bytes": 545,
+      "sha256": "2f816e4b0614ec9599e9c9a023000366a8375feaa95e61dc37ae4ef01a183ca0"
+    },
+    {
+      "path": "tests/candidateStaging.test.mjs",
+      "bytes": 2206,
+      "sha256": "c7fc99e557f484aa01167aa3df3837f81c578c18848886cab8dbd500c044b8b6"
+    },
+    {
+      "path": "tests/configSchema.test.ts",
+      "bytes": 368,
+      "sha256": "1a614990985ed1d57c5e8ff050b0442d866565066600ecd0225d834d6fc0740f"
+    },
+    {
+      "path": "tests/contentSecurityPolicy.test.ts",
+      "bytes": 1540,
+      "sha256": "022a6bcaca18ed25fe3f9a8618cb4528112bc8ce2af5a93effbd84925e164d21"
+    },
+    {
+      "path": "tests/contextMenuPolicy.test.ts",
+      "bytes": 7288,
+      "sha256": "1fa99cfab5fb601b6b62ab2a425b6a351cb01c6463faa2a56161492383df9bc0"
+    },
+    {
+      "path": "tests/controlPolicy.test.ts",
+      "bytes": 1417,
+      "sha256": "88747769e37d6271c5fc9d5785d36e4bd65086d5f7789b944a4ba2d4bc419d49"
+    },
+    {
+      "path": "tests/controlServer.test.ts",
+      "bytes": 2341,
+      "sha256": "0352ce93739847fb7dd335ddd8bfa216a981121149527167fa41731f602dad5b"
+    },
+    {
+      "path": "tests/desktopReleaseContract.test.mjs",
+      "bytes": 2169,
+      "sha256": "8c4b3683ee07b18e392f058b95910c52a09d9034e75ab4ef54b04dee7a36e2ce"
+    },
+    {
+      "path": "tests/displayMedia.test.ts",
+      "bytes": 4766,
+      "sha256": "8e11a3c6b24b51d3bf9a46b648645ca3cf8b0522b0e38133fc334539321b0ab3"
+    },
+    {
+      "path": "tests/macosSigningContract.test.mjs",
+      "bytes": 22605,
+      "sha256": "7c2cfcaee19a8435b17cf535f562946307f9bed3c24032cf47a0aeceaf163f30"
+    },
+    {
+      "path": "tests/mainSecurity.test.ts",
+      "bytes": 11861,
+      "sha256": "b3b0eb3d0ed08cf331ded92b8fe283a128fcb2c5d1f51f658578b27636fa3270"
+    },
+    {
+      "path": "tests/mutationGuards.test.ts",
+      "bytes": 1113,
+      "sha256": "0545eb1cff89ef7a7a7129397ba721508115c879177e8c22cbfb1ebf2284c91d"
+    },
+    {
+      "path": "tests/nativeIpcSecurity.test.ts",
+      "bytes": 5365,
+      "sha256": "262a5de713737686f08b2c4c179c55d72ba7c8b114441f77dc48fe25405720d7"
+    },
+    {
+      "path": "tests/offlineCaptionRequirements.test.ts",
+      "bytes": 2608,
+      "sha256": "aa31801fd4e0f4046af045a55d75db75d314877adec23a92ae8afaaa008b6dd0"
+    },
+    {
+      "path": "tests/offlineEmission.test.mjs",
+      "bytes": 1673,
+      "sha256": "98898e629d7cbd13eafe07a4d5042804aa58df43c5f22ef76ef25f8576afde47"
+    },
+    {
+      "path": "tests/offlinePolicy.test.ts",
+      "bytes": 964,
+      "sha256": "fa2af51ed35e3ffee3e0d4c5b5b25897f360595777e2f23a84e00b727555721c"
+    },
+    {
+      "path": "tests/offlineRecovery.test.ts",
+      "bytes": 11289,
+      "sha256": "0e29dbd83928558f6f7df21e50cffc974d4ad83a674a28f167df46d79c10fc9a"
+    },
+    {
+      "path": "tests/offlineScope.test.ts",
+      "bytes": 1697,
+      "sha256": "7f96a4bf06379a066af743dffe4ec955b3a086790417a12a3a75217702f1f35b"
+    },
+    {
+      "path": "tests/offlineTrustBoundary.test.ts",
+      "bytes": 2128,
+      "sha256": "1e61aa489447ae1b9d844aacffa5ab22e2a71fffa4e195f00f05c3147ad44e6e"
+    },
+    {
+      "path": "tests/preloadCapabilities.test.ts",
+      "bytes": 6900,
+      "sha256": "85261f95056b65c28b63fd4f677c73e035068683fc06ebd5646ccc3289704be6"
+    },
+    {
+      "path": "tests/screenPicker.test.ts",
+      "bytes": 5730,
+      "sha256": "4cd3ac503df2e3f5430a7980577328f1b18bf830f1cad60a7df3e6904a32bf63"
+    },
+    {
+      "path": "tests/startup.test.ts",
+      "bytes": 5006,
+      "sha256": "a330f2a4b39ff63a7668da6593ccaceefa010f147b9240a86e683f200db2e45f"
+    },
+    {
+      "path": "tests/streamdeckScript.test.ts",
+      "bytes": 827,
+      "sha256": "e8e5a8c1779fe490956f20f075eb87548844caa8385bb1c717e295a7cf0a70f6"
+    },
+    {
+      "path": "tests/voiceControl.test.ts",
+      "bytes": 2370,
+      "sha256": "0ce39cf061e39f8f2faf3826df83c72a3ee991ba2845b027363f738083374231"
+    },
+    {
+      "path": "tests/windowCapabilities.test.ts",
+      "bytes": 9806,
+      "sha256": "6b3f01b1a29f31d889870c7cd5c3630387aed47b782d635ae80f235e08901439"
+    },
+    {
+      "path": "tests/windowControls.test.ts",
+      "bytes": 1276,
+      "sha256": "54a7c9043b4a93bbe2d5f16ffd7b643a7e39ba680f56ca02e8e5b3909541a735"
+    },
+    {
+      "path": "tests/windowOptions.test.ts",
+      "bytes": 2413,
+      "sha256": "587feeed420f559dd11bd0d917fd43d2c277136b778b694a65ab27e7e0c7bbff"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 311,
+      "sha256": "1ca59fbd12041123c471e8ca6dcc8676824b82464071b574b9c929c9275c3a26"
+    },
+    {
+      "path": "vite.main.config.ts",
+      "bytes": 412,
+      "sha256": "3ffbc9f52722bdef3ea9891aacaddbcd9177cb64d52f5034d3a5978877ddc6b0"
+    },
+    {
+      "path": "vite.preload.config.ts",
+      "bytes": 100,
+      "sha256": "4e8b1a29f78aceaad0a11ad3e9975dcafb62b86032c39c6f039d860e4cefcd8c"
+    },
+    {
+      "path": "vite.renderer.config.ts",
+      "bytes": 100,
+      "sha256": "4e8b1a29f78aceaad0a11ad3e9975dcafb62b86032c39c6f039d860e4cefcd8c"
+    },
+    {
+      "path": "vitest.config.mjs",
+      "bytes": 406,
+      "sha256": "48b884bc2faccd065a122b36989e8cdd80864cac0702cacf23b16538bd8115aa"
+    }
+  ],
+  "workflowTotal": 4,
+  "workflows": [
+    {
+      "id": 256356989,
+      "name": "Brand Regression Check",
+      "path": ".github/workflows/brand-check.yml",
+      "state": "active"
+    },
+    {
+      "id": 232715138,
+      "name": "Build (Electron — deprecated)",
+      "path": ".github/workflows/build.yml",
+      "state": "active"
+    },
+    {
+      "id": 354451875,
+      "name": "Desktop candidate (nonpublishing QA)",
+      "path": ".github/workflows/desktop-candidate.yml",
+      "state": "active"
+    },
+    {
+      "id": 234166913,
+      "name": "Build and Release (Electron — deprecated)",
+      "path": ".github/workflows/release.yml",
+      "state": "active"
+    }
+  ],
+  "brandCurrentSourceAbsent": true,
+  "automaticEvents": [
+    "pull_request: build.yml; lint/typecheck/test/Linux package"
+  ],
+  "automaticPublicWriter": false,
+  "dispatchNotAuthorized": [
+    "release.yml",
+    "desktop-candidate.yml"
+  ],
+  "ciWatchedOrPolled": false,
+  "productOrWorkflowChanges": false
+}

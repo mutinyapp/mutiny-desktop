@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "pnpm",
+    "test",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/unit-results.json"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+  "environment": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+    "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+    "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+  },
+  "overrides": {},
+  "exit": 0,
+  "started": 1791000201.4762602,
+  "elapsedSeconds": 62.53598380088806,
+  "logSHA256": "962a80541fca3dff691a038dfcb070dc8e6318b77c993e6c691af233914f35b8"
+}

@@ -1,0 +1,16 @@
+{
+  "t17Frozen": "4324db1e43654fa464c5259cb47caa7f7fabfdf1",
+  "e44": "1dc22d3e90a6f8766cbee04102e35b845ea1359f",
+  "reviewedCombinedTree": "446b1b0acf2e4fc19065b9a071f8d6a9f3c1b590",
+  "validatedSourceTree": "302c6804e2baf28da27ce82a6610d6be504e61b8",
+  "conflicts": [],
+  "sourceProofPaths": [
+    "proof/T17/electron-runtime-entry.ts",
+    "proof/T17/run-electron-runtime.mjs",
+    "proof/T17/runtime-result.mjs",
+    "proof/T17/electron-frame-lifecycle-entry.ts",
+    "proof/T17/check-runtime-negative-controls.mjs",
+    "proof/T17/v6/classifier-v44.test.mjs"
+  ],
+  "materialization": "git merge-tree --write-tree frozen-T17 exact-E44; git read-tree --reset -u automatic tree; copy only candidate proof sources; git add proof sources; git write-tree. No merge commit or branch integration."
+}

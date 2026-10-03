@@ -1,0 +1,4 @@
+{
+  "command": "pnpm test",
+  "exit": 0
+}

@@ -1,0 +1,4 @@
+{
+  "command": "T17_PORT=49206 T17_PROOF=\"$PWD/proof/T17/v5/runtime-verified\" node proof/T17/run-electron-runtime.mjs",
+  "exit": 1
+}

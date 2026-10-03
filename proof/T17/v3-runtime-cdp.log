@@ -1,0 +1,72 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.20 building for production...
+transforming...
+✓ 6 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/offline.html                4.93 kB │ gzip: 2.05 kB
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/electron-runtime-entry.js  10.16 kB │ gzip: 3.97 kB
+✓ built in 98ms
+vite v5.4.20 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/preload.js  1.25 kB │ gzip: 0.49 kB
+✓ built in 15ms
+vite v5.4.20 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/preload-win.js  1.25 kB │ gzip: 0.49 kB
+✓ built in 15ms
+
+(node:22059) electron: Failed to load URL: http://127.0.0.1:49205/app?configured=1 with error: ERR_INTERNET_DISCONNECTED
+(Use `Electron --trace-warnings ...` to show where the warning was created)
+Error: Timed out: native maximize
+    at h (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/electron-runtime-entry.js:1:4161)
+    at async we (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/electron-runtime-entry.js:1:8596)
+{
+  "consoleMessages": [],
+  "failures": [
+    {
+      "code": -106,
+      "description": "ERR_INTERNET_DISCONNECTED",
+      "url": "http://127.0.0.1:49205/app?configured=1",
+      "main": true
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:49205/app?configured=1",
+    "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/offline.html?error=server",
+    "http://127.0.0.1:49205/app?configured=1",
+    "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/offline.html?error=server",
+    "http://127.0.0.1:49205/app?configured=1",
+    "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/offline.html?error=server",
+    "http://127.0.0.1:49205/app?configured=1",
+    "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/offline.html?error=offline"
+  ],
+  "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-6PL19R/.vite/build/offline.html?error=offline"
+}
+
+Removed owned harness build, user-data and cache directories.
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Electron darwin harness exits cleanly
+
+1 !== 0
+
+    at file:///Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/run-electron-runtime.mjs:33:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

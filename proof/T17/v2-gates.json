@@ -1,0 +1,67 @@
+{
+  "status": "blocked",
+  "product_head_at_gate": "f055d617707f69b14274d1ee5ce903be65b435c8",
+  "product_source_matches_main": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "setup": {
+    "command": "ELECTRON_SKIP_BINARY_DOWNLOAD=1 pnpm install --frozen-lockfile --ignore-scripts",
+    "exit": 0,
+    "log": "v2-install.log"
+  },
+  "main_inventory": {
+    "command": "pnpm exec vitest run --exclude tests/offlineTrustBoundary.test.ts",
+    "exit": 0,
+    "files": 23,
+    "tests": 245,
+    "log": "v2-main-inventory.log"
+  },
+  "added_feature_tests": 0,
+  "predecessor_characterization_tests": 6,
+  "gates": [
+    {
+      "name": "v2-typecheck",
+      "command": "pnpm typecheck",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch"
+      },
+      "exit": 0,
+      "test_count": null,
+      "test_files": null,
+      "log": "v2-typecheck.log"
+    },
+    {
+      "name": "v2-test",
+      "command": "pnpm test",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch"
+      },
+      "exit": 0,
+      "test_count": 251,
+      "test_files": 24,
+      "log": "v2-test.log"
+    },
+    {
+      "name": "v2-lint",
+      "command": "pnpm lint",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch"
+      },
+      "exit": 0,
+      "test_count": null,
+      "test_files": null,
+      "log": "v2-lint.log"
+    }
+  ],
+  "emission_counterexample": {
+    "command": "TMPDIR=/Users/friday/.hermes/profiles/friday/cache/scratch node proof/T17/check-asset-emission.mjs",
+    "exit": 1,
+    "failed_assertions": 1,
+    "emitted_files": [
+      "asset-emission-probe-entry.js"
+    ],
+    "html_asset": false,
+    "inline_data_url": true,
+    "log": "v2-asset-emission.log"
+  },
+  "runtime_executed": false,
+  "screenshot": null
+}

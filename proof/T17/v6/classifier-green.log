@@ -1,0 +1,11 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T17
+
+ ✓ proof/T17/v6/classifier-v44.test.mjs (5 tests) 4ms
+ ✓ proof/T17/runtime-result.test.mjs (16 tests) 9ms
+
+ Test Files  2 passed (2)
+      Tests  21 passed (21)
+   Start at  23:59:36
+   Duration  486ms (transform 52ms, setup 0ms, collect 71ms, tests 13ms, environment 1ms, prepare 300ms)
+

@@ -1,0 +1,17 @@
+Lockfile is up to date, resolution step is skipped
+Packages: +788
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 0, reused 0, downloaded 1, added 0
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/store/v10
+  Virtual store is at:             node_modules/.pnpm
+ WARN  The git-hosted package fetched from "https://codeload.github.com/devsnek/node-register-scheme/tar.gz/e7cc9a63a1f512565da44cb57316d9fb10750e17" has to be built but the build scripts were ignored.
+Progress: resolved 0, reused 0, downloaded 110, added 108
+Progress: resolved 0, reused 0, downloaded 214, added 225
+Progress: resolved 0, reused 0, downloaded 361, added 384
+ WARN  The git-hosted package fetched from "https://codeload.github.com/electron/node-gyp/tar.gz/06b29aafb7708acef8b3669835c8a7857ebc92d2" has to be built but the build scripts were ignored.
+Progress: resolved 0, reused 0, downloaded 489, added 514
+Progress: resolved 0, reused 0, downloaded 739, added 781
+Progress: resolved 0, reused 0, downloaded 742, added 788, done
+
+Done in 7s using pnpm v10.18.1

@@ -1,0 +1,2 @@
+TypeError: Object has been destroyed
+    at De (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2pHlIo/.vite/build/electron-runtime-entry.js:1:14684)

@@ -1,0 +1,37 @@
+{
+  "ownDirs": [
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-y3q9BE",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-MheZ7M",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-2zAgPz",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-ZQCxHQ",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-lCcbMz",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-gjSQxs",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-YBdY49"
+  ],
+  "removed": true,
+  "remainingOwnedProcesses": [],
+  "ports": [
+    {
+      "port": 49206,
+      "bind": true,
+      "closed": true
+    },
+    {
+      "port": 49207,
+      "bind": true,
+      "closed": true
+    },
+    {
+      "port": 49208,
+      "bind": true,
+      "closed": true
+    },
+    {
+      "port": 49209,
+      "bind": true,
+      "closed": true
+    }
+  ],
+  "sharedProcessesKilled": false
+}

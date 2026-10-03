@@ -1,0 +1,59 @@
+import { describe, expect, it, vi } from "vitest";
+
+import { isTrustedIpc } from "../src/native/rendererTrust";
+import { registerWindowControlHandlers } from "../src/native/windowControls";
+
+const configured = new URL("https://app.mutinyapp.gg");
+
+function fixture(url: string) {
+  const frame = { url };
+  const contents = { mainFrame: frame, isDestroyed: () => false };
+  const window = {
+    webContents: contents,
+    isDestroyed: () => false,
+    minimize: vi.fn(),
+    maximize: vi.fn(),
+    unmaximize: vi.fn(),
+    close: vi.fn(),
+    isMaximized: () => false,
+  };
+  const listeners = new Map<string, (event: Electron.IpcMainEvent) => void>();
+  const ipc = {
+    on: (channel: string, listener: (event: Electron.IpcMainEvent) => void) => {
+      listeners.set(channel, listener);
+    },
+  };
+  registerWindowControlHandlers(ipc, () => window, (event) =>
+    isTrustedIpc(event, window, configured),
+  );
+  const event = { sender: contents, senderFrame: frame } as unknown as Electron.IpcMainEvent;
+  return { window, event, listeners };
+}
+
+// Characterization of the frozen boundary, not offline-recovery acceptance.
+// This documents why T17 needs explicit approval for the proposed narrow delta.
+describe("T17 existing caption-control trust boundary", () => {
+  it.each([
+    ["minimise", "minimize"],
+    ["maximise", "maximize"],
+    ["close", "close"],
+  ] as const)("rejects bundled file renderer for %s", (channel, method) => {
+    const { window, event, listeners } = fixture(
+      "file:///isolated-test/.vite/build/offline.html",
+    );
+    expect(isTrustedIpc(event, window, configured)).toBe(false);
+    listeners.get(channel)?.(event);
+    expect(window[method]).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ["minimise", "minimize"],
+    ["maximise", "maximize"],
+    ["close", "close"],
+  ] as const)("allows configured main renderer for %s", (channel, method) => {
+    const { window, event, listeners } = fixture(configured.toString());
+    expect(isTrustedIpc(event, window, configured)).toBe(true);
+    listeners.get(channel)?.(event);
+    expect(window[method]).toHaveBeenCalledOnce();
+  });
+});

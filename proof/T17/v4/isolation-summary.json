@@ -1,0 +1,500 @@
+{
+  "frozenBase": "db249a04ae66fef949d3f1de92ea81d795a99929",
+  "result": "BLOCKED_CONTRACT_DELTA",
+  "scenarioCount": 8,
+  "passCount": 4,
+  "failCount": 4,
+  "cases": [
+    {
+      "presentation": "darwin",
+      "scenario": "no-crash-no-cdp",
+      "exit": 0,
+      "passed": true,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "maximize",
+        "unmaximize",
+        "minimize",
+        "restore",
+        "close",
+        "closed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/darwin-no-crash-no-cdp-runtime.json"
+    },
+    {
+      "presentation": "darwin",
+      "scenario": "crash-only",
+      "exit": 1,
+      "passed": false,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "renderer:killed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/darwin-crash-only-runtime.json"
+    },
+    {
+      "presentation": "darwin",
+      "scenario": "cdp-only",
+      "exit": 0,
+      "passed": true,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "maximize",
+        "unmaximize",
+        "minimize",
+        "restore",
+        "close",
+        "closed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/darwin-cdp-only-runtime.json"
+    },
+    {
+      "presentation": "darwin",
+      "scenario": "full-v3",
+      "exit": 1,
+      "passed": false,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "renderer:killed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/darwin-full-v3-runtime.json"
+    },
+    {
+      "presentation": "win32",
+      "scenario": "no-crash-no-cdp",
+      "exit": 0,
+      "passed": true,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "maximize",
+        "unmaximize",
+        "minimize",
+        "restore",
+        "close",
+        "closed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/win32-no-crash-no-cdp-runtime.json"
+    },
+    {
+      "presentation": "win32",
+      "scenario": "crash-only",
+      "exit": 1,
+      "passed": false,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "renderer:killed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/win32-crash-only-runtime.json"
+    },
+    {
+      "presentation": "win32",
+      "scenario": "cdp-only",
+      "exit": 0,
+      "passed": true,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "maximize",
+        "unmaximize",
+        "minimize",
+        "restore",
+        "close",
+        "closed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": false,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/win32-cdp-only-runtime.json"
+    },
+    {
+      "presentation": "win32",
+      "scenario": "full-v3",
+      "exit": 1,
+      "passed": false,
+      "captionIpcCounts": {
+        "minimise": 1,
+        "maximise": 2,
+        "close": 1
+      },
+      "nativeEvents": [
+        "renderer:killed"
+      ],
+      "authorization": [
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        },
+        {
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "detached": true,
+          "byIdSame": true,
+          "byTokenSame": true
+        }
+      ],
+      "receipt": "proof/T17/v4/runtime/win32-full-v3-runtime.json"
+    }
+  ],
+  "engineControls": [
+    {
+      "probe": "sync",
+      "exit": 1,
+      "receipt": "proof/T17/v4/runtime/engine-sync.json"
+    },
+    {
+      "probe": "deferred",
+      "exit": 1,
+      "receipt": "proof/T17/v4/runtime/engine-deferred.json"
+    }
+  ],
+  "unitTests": 349,
+  "unitFiles": 29,
+  "productFilesModified": []
+}

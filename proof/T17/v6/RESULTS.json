@@ -1,0 +1,551 @@
+{
+  "verdict": "WRITER_LOCAL_COMBINED_PASS_PENDING_INDEPENDENT_ACCEPTANCE",
+  "authority": "Proof-only successor. Draft remains draft; no merge or CI-watching authority. Runtime44 prerequisite must be integrated separately by controller.",
+  "frozen": {
+    "t17Frozen": "4324db1e43654fa464c5259cb47caa7f7fabfdf1",
+    "e44": "1dc22d3e90a6f8766cbee04102e35b845ea1359f",
+    "reviewedCombinedTree": "446b1b0acf2e4fc19065b9a071f8d6a9f3c1b590",
+    "validatedSourceTree": "302c6804e2baf28da27ce82a6610d6be504e61b8",
+    "conflicts": [],
+    "sourceProofPaths": [
+      "proof/T17/electron-runtime-entry.ts",
+      "proof/T17/run-electron-runtime.mjs",
+      "proof/T17/runtime-result.mjs",
+      "proof/T17/electron-frame-lifecycle-entry.ts",
+      "proof/T17/check-runtime-negative-controls.mjs",
+      "proof/T17/v6/classifier-v44.test.mjs"
+    ],
+    "materialization": "git merge-tree --write-tree frozen-T17 exact-E44; git read-tree --reset -u automatic tree; copy only candidate proof sources; git add proof sources; git write-tree. No merge commit or branch integration."
+  },
+  "actualRuntime": {
+    "electron": "44.5.1",
+    "modules": "149",
+    "host": "macOS15.7.3-x64",
+    "node": "22.23.3",
+    "pnpm": "10.18.1"
+  },
+  "runtime": {
+    "scenarioCount": 14,
+    "passCount": 14,
+    "knownGapCount": 0,
+    "failCount": 0,
+    "captionAttemptCount": 64
+  },
+  "units": {
+    "files": 32,
+    "passed": 372,
+    "failed": 0,
+    "pending": 0
+  },
+  "typecheckExit": 0,
+  "lintExit": 0,
+  "runtimeNegativeControls": {
+    "cleanExits": [
+      0,
+      0,
+      0
+    ],
+    "mutantExits": [
+      1,
+      1,
+      1
+    ],
+    "namedFailuresMatched": true,
+    "candidateProductUnchanged": true
+  },
+  "emissionControls": {
+    "cleanExit": 0,
+    "mutantAssertionExits": [
+      1,
+      1,
+      1
+    ],
+    "authoredBytes": 4933,
+    "authoredSHA256": "33aba3c676f65b56a45ffcc3dde2a16c75846636717ca280087940f00c0ed712"
+  },
+  "proofSources": [
+    "proof/T17/electron-runtime-entry.ts",
+    "proof/T17/run-electron-runtime.mjs",
+    "proof/T17/runtime-result.mjs",
+    "proof/T17/electron-frame-lifecycle-entry.ts",
+    "proof/T17/check-runtime-negative-controls.mjs",
+    "proof/T17/v6/classifier-v44.test.mjs"
+  ],
+  "immutableProductPaths": 109,
+  "immutableV5Files": 227,
+  "archive": {
+    "tree": "302c6804e2baf28da27ce82a6610d6be504e61b8",
+    "archiveSHA256": "d6d523040c37f39d39a5838bdf0a5edb020d8cacad94d61938ce920769d5f526",
+    "archiveBytes": 10519030,
+    "verifiedFileCount": 577,
+    "allGitBlobsAndSymlinksMatch": true,
+    "scope": "Source-only archive. No dependencies, executable runtime, caches or generated build."
+  },
+  "baseline38": "Diagnostic only: aggregate exit1; both post-crash manual-Retry cases FAIL; native-OS cases keep only the exact caption KNOWN-GAP.38 is not recovered. All v5 RED bytes remain unchanged.",
+  "issues": [
+    "First Electron44 override setup attempt failed before runtime receipts (ENOENT); retained lifetime-red.log is setup failure, not RED. Explicit binary selection fixed launch; subsequent lifetime-red-real gives four named destroyed-owner failures.",
+    "Initial focused classifier commands generated203-byte ignored Vitest cache in writer node_modules; cache removed, final focused control rerun in disposable combined scratch."
+  ],
+  "cleanup": {
+    "completedAt": "2026-10-03T04:15:47.155344+00:00",
+    "scratchRoot": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6",
+    "rootRemoved": true,
+    "removedFileCount": 42950,
+    "ownedProcessesBefore": [],
+    "ownedProcessCountAfter": 0,
+    "processesKilled": 0,
+    "portsBindBefore": [
+      49270,
+      49271,
+      49272,
+      49273,
+      49274,
+      49275,
+      49276,
+      49277,
+      49278,
+      49279
+    ],
+    "portsBindAfter": [
+      49270,
+      49271,
+      49272,
+      49273,
+      49274,
+      49275,
+      49276,
+      49277,
+      49278,
+      49279
+    ],
+    "productSourceRecheckedBeforeDisposal": true,
+    "writerIgnoredCacheCleanup": [
+      {
+        "path": "/Users/friday/Projects/mutiny-rebuild/wt/T17/node_modules/.vite/vitest/results.json",
+        "bytes": 203,
+        "SHA256": "95574c456009dfdaa11b10030067b6e8350b9ae12aeb1c56eb0994cdcf4d0840",
+        "reason": "Initial focused classifier RED/GREEN ran in writer tree and generated ignored Vitest cache. Final matched classifier rerun uses combined scratch. Task-created cache removed, no product file affected."
+      }
+    ],
+    "remainingOwnedUserDataBuildCacheDirectories": [],
+    "installedMutinyTouched": false,
+    "productMainLaunched": false,
+    "productionSigningNotarizationReleasePerformed": false,
+    "branchIntegrationPerformed": false
+  },
+  "platformGaps": [
+    "win32 presentation is macOS runtime, not physical/native Windows acceptance",
+    "BrowserWindow minimize/restore/close is main/OS-method proof, not physical taskbar/keyboard input",
+    "No installed Mutiny, macOS arm64/Windows/Linux final-tree runtime/packaging, physical capture/audio/TCC, signed notifications, updater/rollback, signing, notarization or release proof"
+  ],
+  "commands": [
+    {
+      "name": "install",
+      "argv": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--ignore-scripts",
+        "--store-dir",
+        "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/store"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1790999633.151925,
+      "elapsedSeconds": 7.723373889923096,
+      "logSHA256": "4d1de1e33c279c205331740643a09ea1686df5f630000f869308eedf5cf76d2b"
+    },
+    {
+      "name": "classifier-red",
+      "argv": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "proof/T17/v6/classifier-v44.test.mjs"
+      ],
+      "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 1,
+      "started": 1790999823.1318588,
+      "elapsedSeconds": 2.0567009449005127,
+      "logSHA256": "ec7feaf4aa4b1843de9caf196594cd0e0f004f17cb03b4e9bd12c81fe5fe615a"
+    },
+    {
+      "name": "classifier-green",
+      "argv": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "proof/T17/v6/classifier-v44.test.mjs",
+        "proof/T17/runtime-result.test.mjs"
+      ],
+      "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1790999975.116392,
+      "elapsedSeconds": 1.691343069076538,
+      "logSHA256": "0f5781daacfa600f7a127ffd62d242a76b81d69c3c6c121e3a99ea8a65a434ba"
+    },
+    {
+      "name": "classifier-green-combined",
+      "argv": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "proof/T17/v6/classifier-v44.test.mjs",
+        "proof/T17/runtime-result.test.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1791000898.485396,
+      "elapsedSeconds": 1.6113479137420654,
+      "logSHA256": "a6b9b52d895375ae9c9fa35feb484c7bc3c03dbef68f28f2b56bf56e2c08f3c5"
+    },
+    {
+      "name": "lifetime-red",
+      "argv": [
+        "node",
+        "proof/T17/run-electron-runtime.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "ELECTRON_OVERRIDE_DIST_PATH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist",
+        "T17_PORT": "49270",
+        "T17_SCENARIOS": "crash-retry-hosted,crash-native-os",
+        "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/lifetime-red"
+      },
+      "exit": 1,
+      "started": 1790999750.576543,
+      "elapsedSeconds": 1.550704002380371,
+      "logSHA256": "78fb998114163aeffdb6e4d3542f1ba49cb003bf6b73ddc7352b8e8f9c7e1d36"
+    },
+    {
+      "name": "lifetime-red-real",
+      "argv": [
+        "node",
+        "proof/T17/run-electron-runtime.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+        "T17_PORT": "49270",
+        "T17_SCENARIOS": "crash-retry-hosted,crash-native-os",
+        "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/lifetime-red-real"
+      },
+      "exit": 1,
+      "started": 1790999803.931349,
+      "elapsedSeconds": 15.405944108963013,
+      "logSHA256": "eef02cc9d3d8d78f56600b6bc8d0bf27a6c0701ae5157eeae3986827ced5365a"
+    },
+    {
+      "name": "typecheck",
+      "argv": [
+        "pnpm",
+        "typecheck"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1791000197.031133,
+      "elapsedSeconds": 4.0301830768585205,
+      "logSHA256": "73b566ada73438589f8bb990c3f8c87d2a5b9e10f92e2fad838eb3fa0c8c28d0"
+    },
+    {
+      "name": "units",
+      "argv": [
+        "pnpm",
+        "test",
+        "--reporter=default",
+        "--reporter=json",
+        "--outputFile=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/unit-results.json"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1791000201.4762602,
+      "elapsedSeconds": 62.53598380088806,
+      "logSHA256": "962a80541fca3dff691a038dfcb070dc8e6318b77c993e6c691af233914f35b8"
+    },
+    {
+      "name": "lint",
+      "argv": [
+        "pnpm",
+        "lint"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1791000264.146816,
+      "elapsedSeconds": 5.865642070770264,
+      "logSHA256": "66ddd8c718fc5c82ee424b98954e6cb64337a9d8bf0d62e034b2800f30a13b96"
+    },
+    {
+      "name": "runtime14",
+      "argv": [
+        "node",
+        "proof/T17/run-electron-runtime.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+        "T17_PORT": "49270",
+        "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/runtime14"
+      },
+      "exit": 0,
+      "started": 1791000096.2984471,
+      "elapsedSeconds": 100.40777778625488,
+      "logSHA256": "391eb697c590631335b7ef7f78c7331cc0072d14ade4eb7bd6ffddbf3dbbd4af"
+    },
+    {
+      "name": "negative-controls",
+      "argv": [
+        "node",
+        "proof/T17/check-runtime-negative-controls.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+        "T17_NEGATIVE_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/negative-controls"
+      },
+      "exit": 0,
+      "started": 1791000294.160924,
+      "elapsedSeconds": 67.10048508644104,
+      "logSHA256": "d8c9b38bde81e8426b14e24f318f9609809813e129392e580133ac1e87a66fc1"
+    },
+    {
+      "name": "emission",
+      "argv": [
+        "node",
+        "proof/T17/check-emission-mutations.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_EMISSION_RECEIPT": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/emission-controls.json"
+      },
+      "exit": 0,
+      "started": 1791000270.2990441,
+      "elapsedSeconds": 0.4133026599884033,
+      "logSHA256": "812f49b8b69ae47a5eda8f77afe38d904a529f62bdbc3f25aee7a23b2f3d6396"
+    },
+    {
+      "name": "native-sync",
+      "argv": [
+        "node",
+        "proof/T17/run-electron-runtime.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+        "T17_PORT": "49272",
+        "T17_ENGINE_PROBE": "sync",
+        "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/native-sync"
+      },
+      "exit": 0,
+      "started": 1791000694.862807,
+      "elapsedSeconds": 1.069601058959961,
+      "logSHA256": "d889327217d79bb210c2157a8e836b983b169d72c10884b89edb92d60b53a8e6"
+    },
+    {
+      "name": "native-deferred",
+      "argv": [
+        "node",
+        "proof/T17/run-electron-runtime.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+        "T17_PORT": "49273",
+        "T17_ENGINE_PROBE": "deferred",
+        "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/native-deferred"
+      },
+      "exit": 0,
+      "started": 1791000696.2408378,
+      "elapsedSeconds": 0.9778141975402832,
+      "logSHA256": "bdba96f837605eb7b49d54aaaa6c3a90704363ff8725e1256fa1e4c3f8e4781f"
+    },
+    {
+      "name": "lock-scope",
+      "argv": [
+        "node",
+        "proof/E44/verify-lock-scope.mjs"
+      ],
+      "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1791000697.3898282,
+      "elapsedSeconds": 0.35649585723876953,
+      "logSHA256": "ed3361f85432e8d0ad6a6de68a12e5ae46bbde3c9840029ca905c8e53f7b8012"
+    },
+    {
+      "name": "baseline38",
+      "argv": [
+        "node",
+        "proof/T17/run-electron-runtime.mjs"
+      ],
+      "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {
+        "T17_PORT": "49270",
+        "T17_SCENARIOS": "crash-retry-hosted,crash-native-os",
+        "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/baseline38"
+      },
+      "exit": 1,
+      "started": 1791000533.871787,
+      "elapsedSeconds": 28.1302011013031,
+      "logSHA256": "211a24d2fb4baafd0763fc2dde909268ec57acaea30ab7d7b31ada0ea82a0be0"
+    },
+    {
+      "name": "integrity",
+      "argv": [
+        "python3",
+        "proof/T17/v6/verify.py"
+      ],
+      "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+      "environment": {
+        "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+        "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+        "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+        "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+        "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+        "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+      },
+      "overrides": {},
+      "exit": 0,
+      "started": 1791000824.589262,
+      "elapsedSeconds": 0.33806610107421875,
+      "logSHA256": "baac4c952ff23e183b06d227d3df83242f5a35fed26261aa39cfd96855240bb0"
+    }
+  ]
+}

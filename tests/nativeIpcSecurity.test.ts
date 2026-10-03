@@ -44,6 +44,7 @@ function listener(map: Map<string, (...args: unknown[]) => unknown>, name: strin
 const originalPrototype = Object.getPrototypeOf(config);
 beforeEach(() => {
   vi.restoreAllMocks(); vi.clearAllMocks();
+  fake.frame.url = "https://app.mutinyapp.gg/channels";
   Object.setPrototypeOf(config, originalPrototype);
   for (const key of Object.keys(config)) Reflect.deleteProperty(config, key);
 });
@@ -72,6 +73,18 @@ describe("config IPC boundary", () => {
     vi.spyOn(config, "sync").mockImplementation(() => undefined);
     listener(fake.on, "config")(trusted(), { minimiseToTray: false });
     expect(fake.set).toHaveBeenCalledWith("minimiseToTray", false);
+  });
+});
+describe("offline page has no config or autostart authority", () => {
+  it("rejects a valid config mutation from the bundled file", () => {
+    fake.frame.url = "file:///isolated-test/.vite/build/offline.html?error=dns";
+    listener(fake.on, "config")(trusted(), { minimiseToTray: false });
+    expect(fake.set).not.toHaveBeenCalled();
+  });
+  it.each(["autostart:get", "autostart:set"])("rejects bundled %s", async channel => {
+    fake.frame.url = "file:///isolated-test/.vite/build/offline.html?error=dns";
+    await expect(listener(fake.handle, channel)(trusted(), true)).rejects.toThrow();
+    expect(fake.setLoginItemSettings).not.toHaveBeenCalled(); expect(fake.disable).not.toHaveBeenCalled();
   });
 });
 describe("autostart IPC boundary", () => {

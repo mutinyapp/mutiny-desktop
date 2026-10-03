@@ -1,0 +1,107 @@
+{
+  "workflowTotal": 4,
+  "workflows": [
+    {
+      "id": 256356989,
+      "name": "Brand Regression Check",
+      "path": ".github/workflows/brand-check.yml",
+      "state": "active"
+    },
+    {
+      "id": 232715138,
+      "name": "Build (Electron \u2014 deprecated)",
+      "path": ".github/workflows/build.yml",
+      "state": "active"
+    },
+    {
+      "id": 354451875,
+      "name": "Desktop candidate (nonpublishing QA)",
+      "path": ".github/workflows/desktop-candidate.yml",
+      "state": "active"
+    },
+    {
+      "id": 234166913,
+      "name": "Build and Release (Electron \u2014 deprecated)",
+      "path": ".github/workflows/release.yml",
+      "state": "active"
+    }
+  ],
+  "auditedFiles": [
+    {
+      "path": ".github/workflows/build.yml",
+      "sha256": "c6dcdfcaaeac4bafed3d0eaacc765d7a9bd04f4be021f92b7d88f048b72f5720",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "e26a0148ec17966390c169e04518841f329c5f8b1b95471c84fbb36ebbb2a331",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": ".github/workflows/desktop-candidate.yml",
+      "sha256": "fdec92be8a7d5fc4d568fb6529b07d7313b4c4d4cbdab3840c4a918f72acb62a",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "371209b5f514015a94f47ab64af8618b144eed7313d22a88f4a796ef2d9cfee6",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "forge.config.ts",
+      "sha256": "cc7e9481e16ab5a086b7984ac6817a913699a8e6685df750a92761b44b3bf22e",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "vite.main.config.ts",
+      "sha256": "3ffbc9f52722bdef3ea9891aacaddbcd9177cb64d52f5034d3a5978877ddc6b0",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "scripts/macos-sign.mjs",
+      "sha256": "cd690ab71d05e21da0c1073dcbb4bd72934c87b47f75d40207508088449d2950",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "scripts/macos-signing-verification.mjs",
+      "sha256": "53d724af70f4d75312f2c168b0c4018006845ef1e4104bb139601b2f34eda369",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "scripts/macos-notarize.mjs",
+      "sha256": "5010824abf3204496ea267fd7e0141aa593fa6842e2ae109b1942682f2b8b2c8",
+      "equalsFrozenV3": true
+    },
+    {
+      "path": "scripts/stage-desktop-candidate.mjs",
+      "sha256": "792c20d5ded02d789f902e9578460dcb4614c258750a7d14bf504e103b67b657",
+      "equalsFrozenV3": true
+    }
+  ],
+  "protectedFilesByteIdenticalToFrozenV3": [
+    "src/native/rendererTrust.ts",
+    "src/native/offlineRecovery.ts",
+    "src/main.ts",
+    "vite.preload.config.ts",
+    "forge.config.ts",
+    "package.json",
+    "pnpm-lock.yaml"
+  ],
+  "brandCurrentSourceAbsent": true,
+  "automaticPublicWriter": false,
+  "automaticEvents": [
+    "pull_request: build.yml; lint/typecheck/test/Linux package"
+  ],
+  "dispatchNotAuthorized": [
+    "release.yml",
+    "desktop-candidate.yml"
+  ],
+  "workflowChanges": false,
+  "ciWatchedOrPolled": false,
+  "sourceChangedOnly": [
+    "tests/offlineRecovery.test.ts",
+    "proof/T17/**"
+  ],
+  "portUsed": 49206,
+  "controllerPort49205Untouched": true
+}

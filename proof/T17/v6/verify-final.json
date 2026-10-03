@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "proof/T17/v6/verify.py"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+  "exit": 0,
+  "started": 1791001192.238206,
+  "elapsedSeconds": 0.439939022064209,
+  "logSHA256": "baac4c952ff23e183b06d227d3df83242f5a35fed26261aa39cfd96855240bb0",
+  "scratchStillRemoved": true
+}

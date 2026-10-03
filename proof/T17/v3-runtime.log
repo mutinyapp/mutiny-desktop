@@ -1,0 +1,60 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.20 building for production...
+transforming...
+✓ 6 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-g95KpU/.vite/build/offline.html               4.93 kB │ gzip: 2.05 kB
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-g95KpU/.vite/build/electron-runtime-entry.js  9.48 kB │ gzip: 3.78 kB
+✓ built in 119ms
+vite v5.4.20 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-g95KpU/.vite/build/preload.js  1.06 kB │ gzip: 0.47 kB
+✓ built in 41ms
+vite v5.4.20 building for production...
+transforming...
+✓ 4 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../.hermes/profiles/friday/cache/scratch/T17-real-electron-g95KpU/.vite/build/preload-win.js  1.05 kB │ gzip: 0.48 kB
+✓ built in 20ms
+
+(electron) 'console-message' arguments are deprecated and will be removed. Please use Event<WebContentsConsoleMessageEventParams> object instead.
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- 'darwin'
+
+    at we (/Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-g95KpU/.vite/build/electron-runtime-entry.js:1:6892) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: 'darwin',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Removed owned harness build, user-data and cache directories.
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Electron darwin harness exits cleanly
+
+1 !== 0
+
+    at file:///Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/run-electron-runtime.mjs:33:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

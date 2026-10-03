@@ -8,6 +8,7 @@ import type { NativeCapabilities } from "../world/capabilities";
 import { config } from "./config";
 import { buildContextMenuTemplate } from "./contextMenuPolicy";
 import { isTrustedIpc } from "./rendererTrust";
+import { installOfflineRecovery } from "./offlineRecovery";
 import { shouldRestoreMaximised } from "./startup";
 import { updateTrayMenu } from "./tray";
 import { mainWindowOptions } from "./windowOptions";
@@ -28,6 +29,7 @@ export const BUILD_URL = new URL(
 // internal window state
 let shouldQuit = false;
 let capabilitiesHandlerRegistered = false;
+let disposeOfflineRecovery: (() => void) | undefined;
 
 function capabilitiesSnapshot(window: BrowserWindow, customFrame: boolean): NativeCapabilities {
   return {
@@ -122,8 +124,12 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
     mainWindow.maximize();
   }
 
-  // load the entrypoint
-  mainWindow.loadURL(BUILD_URL.toString());
+  // Install recovery before loading so even the first failure has local controls.
+  disposeOfflineRecovery?.();
+  disposeOfflineRecovery = installOfflineRecovery(mainWindow, BUILD_URL, join(__dirname, "offline.html"));
+  void Promise.resolve(mainWindow.loadURL(BUILD_URL.toString())).catch(() => {
+    // Recovery handles main-frame failures; cancelled (-3) loads are ignored.
+  });
 
   mainWindow.webContents.on(
     "did-fail-load",
