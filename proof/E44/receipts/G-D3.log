@@ -1,0 +1,12 @@
+
+> mutiny-desktop@1.2.7 lint /Users/friday/Projects/mutiny-rebuild/wt/E44
+> eslint --ext .ts,.tsx .
+
+
+/Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/clipboard.test.ts
+  29:67  error  Unexpected empty arrow function  @typescript-eslint/no-empty-function
+  41:67  error  Unexpected empty arrow function  @typescript-eslint/no-empty-function
+
+✖ 2 problems (2 errors, 0 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.

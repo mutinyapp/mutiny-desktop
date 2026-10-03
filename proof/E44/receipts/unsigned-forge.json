@@ -1,0 +1,41 @@
+{
+  "platform": "darwin",
+  "arch": "x64",
+  "output": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp/E44-forge-lVCMHS/package",
+  "signedByHarness": false,
+  "launched": false,
+  "argv": [
+    "pnpm",
+    "exec",
+    "electron-forge",
+    "package",
+    "--platform=darwin",
+    "--arch=x64"
+  ],
+  "exit": 0,
+  "signal": null,
+  "error": null,
+  "abi": "149",
+  "forge": "7.9.0",
+  "rebuild": "3.7.2",
+  "nodeABI": "3.94.0",
+  "forgeSourceHash": "2ba6530be4ef683dfe7a421bdb5a3fd9d954726bcdb56c553d0be6a8c1bf1f00",
+  "info": {
+    "minimumOS": "13.0",
+    "audioCaptureUsage": "Mutiny needs system audio access for screen sharing."
+  },
+  "fuseWire": {
+    "0": 48,
+    "1": 49,
+    "2": 48,
+    "3": 48,
+    "4": 49,
+    "5": 49,
+    "6": 48,
+    "7": 49,
+    "8": 49,
+    "version": "1"
+  },
+  "asarSHA256": "b1bdee4d40f696cc8d3e9493089a7f2707849099b9aafc415ab02a5555073a8e",
+  "removedOwnedOutput": true
+}

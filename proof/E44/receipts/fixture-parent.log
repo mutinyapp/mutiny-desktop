@@ -1,0 +1,18 @@
+[
+  {
+    "type": "commonjs",
+    "status": 0,
+    "stdout": "",
+    "stderr": "",
+    "execPath": "/Users/friday/.hermes/node/bin/node",
+    "node": "22.23.3"
+  },
+  {
+    "type": "neutral",
+    "status": 0,
+    "stdout": "{\"argv\":[\"/Users/friday/.hermes/node/bin/node\",\"/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp/E44-fixture-parent-jih1a1/neutral/security\",\"find-identity\",\"-v\",\"-p\",\"codesigning\"],\"tool\":\"security\"}\n",
+    "stderr": "",
+    "execPath": "/Users/friday/.hermes/node/bin/node",
+    "node": "22.23.3"
+  }
+]

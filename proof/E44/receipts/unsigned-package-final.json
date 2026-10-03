@@ -1,0 +1,20 @@
+{
+  "name": "unsigned-package-final",
+  "argv": [
+    "node",
+    "proof/E44/run-unsigned-package.mjs"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:09:10.953157+00:00",
+  "elapsedSeconds": 8.16,
+  "exit": 0,
+  "log": "unsigned-package-final.log",
+  "logSHA256": "f4c9a4926c592673cfd9e6b9f47b6ef61e54aa3750ddd210d612c152c635483f",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

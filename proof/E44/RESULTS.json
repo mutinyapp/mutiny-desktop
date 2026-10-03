@@ -1,0 +1,52 @@
+{
+  "base": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "productFiles": [
+    "forge.config.ts",
+    "package-lock.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "src/native/window.ts",
+    "tests/macosSigningContract.test.mjs"
+  ],
+  "frozenProductScope": true,
+  "baselineTests": 245,
+  "candidateTests": 247,
+  "addedTests": 2,
+  "requiredGateExits": {
+    "G-D1-final": 0,
+    "G-D2-final": 0,
+    "G-D3-final": 0,
+    "native-probe-final": 0,
+    "unsigned-package-final": 0,
+    "lock-scope-final": 0,
+    "frozen-install": 0,
+    "npm10-ci": 0,
+    "npm-ABI": 0
+  },
+  "nativeProbeModes": [
+    "sync",
+    "deferred"
+  ],
+  "electron": "44.5.1",
+  "ABI": "149",
+  "packageDeleted": true,
+  "ownedPortsFree": [
+    49270,
+    49271,
+    49272,
+    49273,
+    49274,
+    49275,
+    49276,
+    49277,
+    49278,
+    49279
+  ],
+  "securityScan": "no secret/shell/eval findings in added product lines",
+  "host": {
+    "macOS": "15.7.3",
+    "machine": "x86_64",
+    "node": "v22.23.3",
+    "pnpm": "10.18.1"
+  }
+}

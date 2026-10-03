@@ -1,0 +1,21 @@
+{
+  "name": "clipboard-real-promise-red",
+  "argv": [
+    "pnpm",
+    "test",
+    "proof/E44/clipboard.test.ts"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline",
+  "startedUTC": "2026-10-03T03:06:03.513414+00:00",
+  "elapsedSeconds": 1.822,
+  "exit": 1,
+  "log": "clipboard-real-promise-red.log",
+  "logSHA256": "dd52e05e8f11e0c7d922e91c039d36745da08df02bdbaddfee2d6c952b969e2d",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

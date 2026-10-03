@@ -1,0 +1,53 @@
+❯ Checking your system
+❯ Checking package manager version
+✔ Found pnpm@10.18.1
+✔ Checking your system
+[?25h
+error: unknown option '--out=/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp/E44-forge-6ulRIC/package'
+
+{
+  "platform": "darwin",
+  "arch": "x64",
+  "output": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp/E44-forge-6ulRIC/package",
+  "signedByHarness": false,
+  "launched": false,
+  "argv": [
+    "pnpm",
+    "exec",
+    "electron-forge",
+    "package",
+    "--platform=darwin",
+    "--arch=x64",
+    "--out=/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp/E44-forge-6ulRIC/package"
+  ],
+  "exit": 1,
+  "signal": null,
+  "error": null,
+  "abi": "149",
+  "forge": "7.9.0",
+  "rebuild": "3.7.2",
+  "nodeABI": "3.94.0",
+  "forgeSourceHash": "2ba6530be4ef683dfe7a421bdb5a3fd9d954726bcdb56c553d0be6a8c1bf1f00",
+  "removedOwnedOutput": true
+}
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: unsigned Forge package must succeed
+
+1 !== 0
+
+    at file:///Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/run-unsigned-package.mjs:62:10
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

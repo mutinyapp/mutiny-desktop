@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "_id": "node-abi@4.35.0",
+    "bugs": {
+      "url": "https://github.com/electron/node-abi/issues"
+    },
+    "dist": {
+      "shasum": "2eb8e04075745e2dd6594769c499828c29113446",
+      "tarball": "https://registry.npmjs.org/node-abi/-/node-abi-4.35.0.tgz",
+      "fileCount": 6,
+      "integrity": "sha512-ymk4aIzxdPopw2giv8Fs1Ec6vybGkjmyxUwVqhkI4MCy2tVfXdkOGGWieWVjL0THgH+7a8lRdevyupoYj3Js/Q==",
+      "signatures": [
+        {
+          "sig": "MEUCIDvwEaqPiBl87AKAsWD2ipSrwy5IcJIpF7apcb8TJ1ykAiEArd26Z/2j8x/liOITg6gpDttZ4sVMJt5e/rPhFYmFrlY=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+          "sig": "MEQCIFhIaxpej7OffH6G8Zkjm/ZwWPeo4eaZeDApsRVSuITPAiAwnxogt+HrEJVe/eWTzMxo2UaolOPWjGVw3UsGXNRFdQ=="
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/node-abi@4.35.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 18895
+    },
+    "name": "node-abi",
+    "type": "module",
+    "author": {
+      "name": "Lukas Geiger"
+    },
+    "engines": {
+      "node": ">=22.12.0"
+    },
+    "exports": "./index.js",
+    "gitHead": "0dc0449b3c0e8c0d12e7422e40ba3e41a71f2ff9",
+    "license": "MIT",
+    "scripts": {
+      "lint": "oxfmt --check . && oxlint",
+      "test": "node --test test/index.js",
+      "prepare": "husky",
+      "lint:fix": "oxfmt --write . && oxlint --fix",
+      "update-abi-registry": "node --unhandled-rejections=strict scripts/update-abi-registry.js"
+    },
+    "version": "4.35.0",
+    "_npmUser": {
+      "name": "GitHub Actions",
+      "email": "npm-oidc-no-reply@github.com",
+      "trustedPublisher": {
+        "id": "github",
+        "oidcConfigId": "oidc:7df14f95-576c-4fc3-be14-cd6821e52dd4"
+      }
+    },
+    "homepage": "https://github.com/electron/node-abi#readme",
+    "keywords": [
+      "abi",
+      "electron",
+      "node",
+      "node_module_version",
+      "v8"
+    ],
+    "repository": {
+      "url": "git+https://github.com/electron/node-abi.git",
+      "type": "git"
+    },
+    "_npmVersion": "11.6.2",
+    "description": "Get the Node ABI for a given target and runtime, and vice versa.",
+    "directories": {},
+    "lint-staged": {
+      "*.{js,mjs,cjs}": [
+        "oxfmt --write",
+        "oxlint"
+      ],
+      "*.{json,css,html}": [
+        "oxfmt --write"
+      ]
+    },
+    "maintainers": [
+      {
+        "name": "electron-cfa",
+        "email": "info+cfa-npm@electronjs.org"
+      }
+    ],
+    "_nodeVersion": "24.10.0",
+    "dependencies": {
+      "semver": "^7.6.3"
+    },
+    "publishConfig": {
+      "provenance": true
+    },
+    "_hasShrinkwrap": false,
+    "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+    "devDependencies": {
+      "husky": "^9.1.7",
+      "oxfmt": "^0.44.0",
+      "oxlint": "^1.59.0",
+      "lint-staged": "^16.4.0"
+    },
+    "_npmOperationalInternal": {
+      "host": "s3://npm-registry-packages-npm-production",
+      "tmp": "tmp/node-abi_4.35.0_1787944404349_0.5945669054198233"
+    }
+  },
+  "electron44": [
+    {
+      "abi": "149",
+      "future": false,
+      "lts": false,
+      "runtime": "electron",
+      "target": "44.0.0-alpha.1"
+    }
+  ]
+}

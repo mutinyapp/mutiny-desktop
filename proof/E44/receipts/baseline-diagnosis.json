@@ -1,0 +1,53 @@
+{
+  "baseline": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "sourceMatches": [
+    {
+      "file": "package.json",
+      "baseSHA256": "371209b5f514015a94f47ab64af8618b144eed7313d22a88f4a796ef2d9cfee6",
+      "baselineSHA256": "371209b5f514015a94f47ab64af8618b144eed7313d22a88f4a796ef2d9cfee6",
+      "same": true
+    },
+    {
+      "file": "pnpm-lock.yaml",
+      "baseSHA256": "40b1780b359e79be71b115a816c6de46bddd253d56062d4b14816c9232ddb5c0",
+      "baselineSHA256": "40b1780b359e79be71b115a816c6de46bddd253d56062d4b14816c9232ddb5c0",
+      "same": true
+    },
+    {
+      "file": "tests/macosSigningContract.test.mjs",
+      "baseSHA256": "7c2cfcaee19a8435b17cf535f562946307f9bed3c24032cf47a0aeceaf163f30",
+      "baselineSHA256": "7c2cfcaee19a8435b17cf535f562946307f9bed3c24032cf47a0aeceaf163f30",
+      "same": true
+    },
+    {
+      "file": "scripts/macos-sign.mjs",
+      "baseSHA256": "cd690ab71d05e21da0c1073dcbb4bd72934c87b47f75d40207508088449d2950",
+      "baselineSHA256": "cd690ab71d05e21da0c1073dcbb4bd72934c87b47f75d40207508088449d2950",
+      "same": true
+    },
+    {
+      "file": "scripts/macos-notarize.mjs",
+      "baseSHA256": "5010824abf3204496ea267fd7e0141aa593fa6842e2ae109b1942682f2b8b2c8",
+      "baselineSHA256": "5010824abf3204496ea267fd7e0141aa593fa6842e2ae109b1942682f2b8b2c8",
+      "same": true
+    },
+    {
+      "file": "scripts/macos-signing-verification.mjs",
+      "baseSHA256": "53d724af70f4d75312f2c168b0c4018006845ef1e4104bb139601b2f34eda369",
+      "baselineSHA256": "53d724af70f4d75312f2c168b0c4018006845ef1e4104bb139601b2f34eda369",
+      "same": true
+    }
+  ],
+  "failedNamesSameAsSpike": [
+    "macOS notarization orchestration rejects wrong-team, ad-hoc, modified, malformed, and wrong-entitlement apps before archive",
+    "macOS notarization orchestration stops after each failed notarization stage and always cleans staging",
+    "macOS notarization orchestration submits before stapling and assessment, uses absolute paths, and cleans staging",
+    "macOS release contract fails closed when Mach-O inspection fails",
+    "macOS release contract fails tool lookup and traversal before identity lookup or signing, then stops on sign failure",
+    "macOS release contract post-verifies every signed object for signature, authority, team, runtime, and timestamp",
+    "macOS release contract uses the unique team-pinned identity hash, timestamp, helper profiles, and inside-out order"
+  ],
+  "commonjsFailureCount": 7,
+  "neutralPassedCount": 245,
+  "finding": "Parent package type:commonjs suppresses fixture extensionless ESM symlink body on this Node 22.23.3 host. Neutral task-owned TMPDIR fixes only environment."
+}

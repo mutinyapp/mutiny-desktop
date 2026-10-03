@@ -196,8 +196,8 @@ function signedFixture(overrides = {}) {
 
 describe("macOS release contract", () => {
   it("pins the resolved Electron release and stable bundle identifiers", () => {
-    expect(packageJson.devDependencies.electron).toBe("38.1.2");
-    expect(lockfile).toContain("electron@38.1.2:");
+    expect(packageJson.devDependencies.electron).toBe("44.5.1");
+    expect(lockfile).toContain("electron@44.5.1:");
     expect(lockfile).toContain("'@electron/osx-sign@1.3.3':");
     expect(configSource).toContain('appBundleId: "com.electron.mutiny"');
     expect(configSource).toContain('helperBundleId: "com.electron.mutiny.helper"');

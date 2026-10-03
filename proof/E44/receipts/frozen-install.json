@@ -1,0 +1,24 @@
+{
+  "name": "frozen-install",
+  "argv": [
+    "pnpm",
+    "install",
+    "--frozen-lockfile",
+    "--ignore-scripts",
+    "--store-dir",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/pnpm-store"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:02:14.758636+00:00",
+  "elapsedSeconds": 2.131,
+  "exit": 0,
+  "log": "frozen-install.log",
+  "logSHA256": "9baca6913b444e31bbffe97f4aad69b1fb84aadcbc3894d9a9cb88ea1cd2edcb",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

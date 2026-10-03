@@ -1,0 +1,24 @@
+{
+  "name": "baseline-commonjs-signing",
+  "argv": [
+    "pnpm",
+    "test",
+    "tests/macosSigningContract.test.mjs",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=/Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/receipts/baseline-commonjs-tests.json"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/baseline",
+  "startedUTC": "2026-10-03T02:56:26.916291+00:00",
+  "elapsedSeconds": 27.661,
+  "exit": 1,
+  "log": "baseline-commonjs-signing.log",
+  "logSHA256": "53c6c90235d2ae43c2b82377c328215ef6f1ba8488845de1303f70d332045d66",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/commonjs-control/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "clipboard-red",
+  "argv": [
+    "pnpm",
+    "test",
+    "proof/E44/clipboard.test.ts"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T02:45:36.677278+00:00",
+  "elapsedSeconds": 3.631,
+  "exit": 1,
+  "log": "clipboard-red.log",
+  "logSHA256": "0a4ec5acdda0a1fa39d3cf5b2c4166299e0caf0cbc7baf4735c79fc88c3710ac",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

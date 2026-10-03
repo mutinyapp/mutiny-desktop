@@ -1,0 +1,20 @@
+{
+  "name": "native-probe",
+  "argv": [
+    "node",
+    "proof/E44/run-native-probe.mjs"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T02:52:48.584209+00:00",
+  "elapsedSeconds": 4.791,
+  "exit": 0,
+  "log": "native-probe.log",
+  "logSHA256": "97ca48066269c6ff71d5a4ea4db40762f1f70feeeb430f53c0f05eb5690d1f8c",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

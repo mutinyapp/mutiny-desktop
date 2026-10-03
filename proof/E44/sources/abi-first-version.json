@@ -1,0 +1,125 @@
+[
+  {
+    "version": "3.90.0",
+    "e44": [],
+    "dist": {
+      "shasum": "5aca953aa58deb903738adf14a33fb79a32c48f3",
+      "tarball": "https://registry.npmjs.org/node-abi/-/node-abi-3.90.0.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-pZNQT7UnYlMwMBy5N1lV5X/YLTbZM5ncytN3xL7CHEzhDN8uVe0u55yaPUJICIJjaCW8NrM5BFdqr7HLweStNA==",
+      "signatures": [
+        {
+          "sig": "MEUCIQDM09jKABrXnjP/P0B1nGrg5biqCzFDPbPxZqGI67oorAIgQW4RLUYoAFMY/KjaB2v+OoWM95dprrGjIqY1omX2KVE=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/node-abi@3.90.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 18030
+    }
+  },
+  {
+    "version": "3.91.0",
+    "e44": [],
+    "dist": {
+      "shasum": "c9f019be10c73a4ce06a3f1d517ad54b213548a8",
+      "tarball": "https://registry.npmjs.org/node-abi/-/node-abi-3.91.0.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-B+S7X/GS3Un6wMICtnsNjQD7oSpVBQrZftHE6GZ1Fe9/k3XOOoqbM5DZZ0GO4x3YiSCQfrM28yj1ppplwgIsfg==",
+      "signatures": [
+        {
+          "sig": "MEYCIQDL/Ldnp3n8fhQyjbvqCQIZo6kfD+A3wnmBsF+iHuD0mwIhAIEKJ3+TgZbffwC+bNEYW1Q/pdEKE4xpTCyBWJU+KJEF",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/node-abi@3.91.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 18031
+    }
+  },
+  {
+    "version": "3.92.0",
+    "e44": [],
+    "dist": {
+      "shasum": "18e2214677499b8dda81ffcd095afc763d5a9802",
+      "tarball": "https://registry.npmjs.org/node-abi/-/node-abi-3.92.0.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-KdHvFWZjEKDf0cakgFjebl371GPsISX2oZHcuyKqM7DtogIsHrqKeLTo8wBHxaXRAQlY2PsPlZmfo+9ZCxEREQ==",
+      "signatures": [
+        {
+          "sig": "MEUCIQC+KLWtaIgG84BOujLvl4xyxjBTVqzTRsQqhMKn5YTqwQIgdblta3fHAXDDjlWfeksdcYhjecT0ALkVzOCPWLMLThM=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/node-abi@3.92.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 18154
+    }
+  },
+  {
+    "version": "3.93.0",
+    "e44": [],
+    "dist": {
+      "shasum": "1c6cbeab38648654f89e5aa36c6f04c7d2f6ad1b",
+      "tarball": "https://registry.npmjs.org/node-abi/-/node-abi-3.93.0.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-Cu6yUpX5Iavugm8BeX7c0wgU9CvOqfd1yM6A1d2q2ZMjym7GjpASv2GdRcTq3Fx+Sb5OgBkEEpw4VnAbY6Y5RA==",
+      "signatures": [
+        {
+          "sig": "MEUCIQDqmB1tN4kQqmQORDCrkn4YkwyDe7SowktawQHFotrHAAIgfTyl14w1HEQ2zqOc6p5fpTw7shPQ6vVUb7ptbUHRnBw=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/node-abi@3.93.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 18155
+    }
+  },
+  {
+    "version": "3.94.0",
+    "e44": [
+      {
+        "abi": "149",
+        "future": true,
+        "lts": false,
+        "runtime": "electron",
+        "target": "44.0.0-alpha.1"
+      }
+    ],
+    "dist": {
+      "shasum": "007181ed0d1b56ae9670ea6c084d2bf83538405f",
+      "tarball": "https://registry.npmjs.org/node-abi/-/node-abi-3.94.0.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-W5ZNO5KRPB5TkYmGVD9F6YqhsglXJzE6etpbmT+f6EQElhiX/UTG551cnsRGvLG3fyZEg9HwaDmNmj5nwJ4z9g==",
+      "signatures": [
+        {
+          "sig": "MEQCIAT1Wyszx+R5jEECq3J6JUOgTbxmYkrv13uJjqGNuxRhAiA7RqIQnUW9xS5+3ZT81GccbBwNVwDA55j3GfIJ30MDOw==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/node-abi@3.94.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 18278
+    }
+  }
+]

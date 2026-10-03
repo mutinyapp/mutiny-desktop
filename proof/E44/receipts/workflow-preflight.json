@@ -1,0 +1,53 @@
+{
+  "total_count": 4,
+  "workflows": [
+    {
+      "id": 256356989,
+      "node_id": "W_kwDORNUttM4PR7J9",
+      "name": "Brand Regression Check",
+      "path": ".github/workflows/brand-check.yml",
+      "state": "active",
+      "created_at": "2026-04-04T22:07:29.000-04:00",
+      "updated_at": "2026-04-04T22:07:29.000-04:00",
+      "url": "https://api.github.com/repos/mutinyapp/mutiny-desktop/actions/workflows/256356989",
+      "html_url": "https://github.com/mutinyapp/mutiny-desktop/blob/main/.github/workflows/brand-check.yml",
+      "badge_url": "https://github.com/mutinyapp/mutiny-desktop/workflows/Brand%20Regression%20Check/badge.svg"
+    },
+    {
+      "id": 232715138,
+      "node_id": "W_kwDORNUttM4N3vOC",
+      "name": "Build (Electron \u2014 deprecated)",
+      "path": ".github/workflows/build.yml",
+      "state": "active",
+      "created_at": "2026-02-10T15:17:44.000-05:00",
+      "updated_at": "2026-07-09T21:45:01.000-04:00",
+      "url": "https://api.github.com/repos/mutinyapp/mutiny-desktop/actions/workflows/232715138",
+      "html_url": "https://github.com/mutinyapp/mutiny-desktop/blob/main/.github/workflows/build.yml",
+      "badge_url": "https://github.com/mutinyapp/mutiny-desktop/workflows/Build%20(Electron%20%E2%80%94%20deprecated)/badge.svg"
+    },
+    {
+      "id": 354451875,
+      "node_id": "W_kwDORNUttM4VIIGj",
+      "name": "Desktop candidate (nonpublishing QA)",
+      "path": ".github/workflows/desktop-candidate.yml",
+      "state": "active",
+      "created_at": "2026-09-09T19:10:05.000-04:00",
+      "updated_at": "2026-09-09T19:10:05.000-04:00",
+      "url": "https://api.github.com/repos/mutinyapp/mutiny-desktop/actions/workflows/354451875",
+      "html_url": "https://github.com/mutinyapp/mutiny-desktop/blob/main/.github/workflows/desktop-candidate.yml",
+      "badge_url": "https://github.com/mutinyapp/mutiny-desktop/workflows/Desktop%20candidate%20(nonpublishing%20QA)/badge.svg"
+    },
+    {
+      "id": 234166913,
+      "node_id": "W_kwDORNUttM4N9RqB",
+      "name": "Build and Release (Electron \u2014 deprecated)",
+      "path": ".github/workflows/release.yml",
+      "state": "active",
+      "created_at": "2026-02-13T20:14:08.000-05:00",
+      "updated_at": "2026-07-09T23:13:26.000-04:00",
+      "url": "https://api.github.com/repos/mutinyapp/mutiny-desktop/actions/workflows/234166913",
+      "html_url": "https://github.com/mutinyapp/mutiny-desktop/blob/main/.github/workflows/release.yml",
+      "badge_url": "https://github.com/mutinyapp/mutiny-desktop/workflows/Build%20and%20Release%20(Electron%20%E2%80%94%20deprecated)/badge.svg"
+    }
+  ]
+}

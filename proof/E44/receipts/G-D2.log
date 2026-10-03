@@ -1,0 +1,50 @@
+
+> mutiny-desktop@1.2.7 test /Users/friday/Projects/mutiny-rebuild/wt/E44
+> vitest run --reporter=default --reporter=json --outputFile=proof/E44/receipts/candidate-tests.json
+
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/E44
+
+ ✓ tests/contextMenuPolicy.test.ts (9 tests) 18ms
+ ✓ tests/screenPicker.test.ts (7 tests) 20ms
+ ✓ tests/displayMedia.test.ts (10 tests) 17ms
+ ✓ tests/startup.test.ts (12 tests) 17ms
+ ✓ tests/windowOptions.test.ts (6 tests) 10ms
+ ✓ proof/E44/clipboard.test.ts (2 tests) 50ms
+ ✓ tests/voiceControl.test.ts (8 tests) 13ms
+ ✓ tests/desktopReleaseContract.test.mjs (3 tests) 16ms
+ ✓ tests/mainSecurity.test.ts (72 tests) 204ms
+ ✓ tests/nativeIpcSecurity.test.ts (22 tests) 26ms
+ ✓ tests/preloadCapabilities.test.ts (12 tests) 221ms
+ ✓ tests/controlServer.test.ts (5 tests) 75ms
+ ✓ tests/windowCapabilities.test.ts (42 tests) 516ms
+ ✓ tests/contentSecurityPolicy.test.ts (4 tests) 7ms
+ ✓ tests/windowControls.test.ts (1 test) 8ms
+ ✓ tests/controlPolicy.test.ts (5 tests) 9ms
+ ✓ tests/badges.test.ts (1 test) 21ms
+ ✓ tests/mutationGuards.test.ts (2 tests) 9ms
+ ✓ tests/badgePolicy.test.ts (3 tests) 9ms
+ ✓ tests/candidateStaging.test.mjs (1 test) 705ms
+   ✓ candidate artifact staging (synthetic packaging unit test, not runtime proof) > copies every asset byte, validates real RELEASES format against nupkg, and rejects tampering/missing manifest 703ms
+ ✓ tests/streamdeckScript.test.ts (2 tests) 8ms
+ ✓ tests/buildWorkflow.test.ts (1 test) 9ms
+ ✓ tests/configSchema.test.ts (1 test) 4ms
+ ✓ tests/macosSigningContract.test.mjs (16 tests) 64191ms
+   ✓ macOS release contract > uses the unique team-pinned identity hash, timestamp, helper profiles, and inside-out order 5050ms
+   ✓ macOS release contract > post-verifies every signed object for signature, authority, team, runtime, and timestamp 4508ms
+   ✓ macOS release contract > fails closed when Mach-O inspection fails 1238ms
+   ✓ macOS release contract > rejects ambiguous, missing, or wrong-team Developer ID records 2551ms
+   ✓ macOS release contract > rejects missing, extra, relative, file, symlink, non-app, and malformed app arguments 538ms
+   ✓ macOS release contract > fails tool lookup and traversal before identity lookup or signing, then stops on sign failure 1459ms
+   ✓ macOS release contract > rejects malformed exact-line metadata with every fixture isolating one invariant 26401ms
+   ✓ macOS notarization orchestration > submits before stapling and assessment, uses absolute paths, and cleans staging 2826ms
+   ✓ macOS notarization orchestration > rejects wrong-team, ad-hoc, modified, malformed, and wrong-entitlement apps before archive 6005ms
+   ✓ macOS notarization orchestration > stops after each failed notarization stage and always cleans staging 12919ms
+   ✓ macOS notarization orchestration > rejects unsafe arguments and profile option injection before creating staging 353ms
+
+ Test Files  24 passed (24)
+      Tests  247 passed (247)
+   Start at  22:52:58
+   Duration  64.77s (transform 1.29s, setup 0ms, collect 2.12s, tests 66.18s, environment 7ms, prepare 3.80s)
+
+JSON report written to /Users/friday/Projects/mutiny-rebuild/wt/E44/proof/E44/receipts/candidate-tests.json

@@ -1,0 +1,20 @@
+{
+  "name": "acceptance",
+  "argv": [
+    "python3",
+    "proof/E44/verify-result.py"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:12:08.705703+00:00",
+  "elapsedSeconds": 0.91,
+  "exit": 0,
+  "log": "acceptance.log",
+  "logSHA256": "70af392c203b13ea389966509038b1f99228608356cae4a6e7d722c875adf1ec",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

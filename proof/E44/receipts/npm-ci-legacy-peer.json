@@ -1,0 +1,26 @@
+{
+  "name": "npm-ci-legacy-peer",
+  "argv": [
+    "npm",
+    "ci",
+    "--prefix",
+    "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/npm-verify",
+    "--ignore-scripts",
+    "--legacy-peer-deps",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/npm-verify",
+  "startedUTC": "2026-10-03T03:01:37.113199+00:00",
+  "elapsedSeconds": 0.837,
+  "exit": 1,
+  "log": "npm-ci-legacy-peer.log",
+  "logSHA256": "be1a39042d83b799937c66214c7db64562c8715a142785fd1b7cfb8ad19d2fb5",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

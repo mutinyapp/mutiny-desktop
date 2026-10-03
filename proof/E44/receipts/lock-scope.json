@@ -1,0 +1,51 @@
+{
+  "base": "ec76ff76991bda4173bb8dcc4c35cfadc73b6bc1",
+  "npmChanged": [
+    "",
+    "node_modules/@electron-internal/extract-zip",
+    "node_modules/electron",
+    "node_modules/electron/node_modules/@electron/get",
+    "node_modules/electron/node_modules/@types/node",
+    "node_modules/electron/node_modules/env-paths",
+    "node_modules/electron/node_modules/fs-extra",
+    "node_modules/electron/node_modules/jsonfile",
+    "node_modules/electron/node_modules/semver",
+    "node_modules/electron/node_modules/undici-types",
+    "node_modules/electron/node_modules/universalify",
+    "node_modules/node-abi",
+    "node_modules/undici"
+  ],
+  "pnpmPackages": [
+    "@electron-internal/extract-zip@1.0.5",
+    "@electron/get@2.0.3",
+    "@electron/get@5.1.0",
+    "@types/node@24.19.1",
+    "electron@38.1.2",
+    "electron@44.5.1",
+    "node-abi@3.77.0",
+    "node-abi@3.94.0",
+    "undici-types@7.24.6",
+    "undici@7.30.0"
+  ],
+  "pnpmSnapshots": [
+    "@electron-internal/extract-zip@1.0.5",
+    "@electron/get@2.0.3",
+    "@electron/get@5.1.0",
+    "@electron/rebuild@3.7.2",
+    "@types/node@24.19.1",
+    "electron@38.1.2",
+    "electron@44.5.1",
+    "node-abi@3.77.0",
+    "node-abi@3.94.0",
+    "undici-types@7.24.6",
+    "undici@7.30.0"
+  ],
+  "exactElectron": "44.5.1",
+  "minimalSeam": "node-abi 3.94.0 only; Forge/rebuild unchanged",
+  "unrelatedDiffs": 0,
+  "hashes": {
+    "package.json": "a34e4f8d5f2e649c73561557b6bb165b473bc6ca75cedf5efd6b2d758120210c",
+    "pnpm-lock.yaml": "6511ee85794d77b00c3599f308543063ca7f2517dc968e40568996a85a35203e",
+    "package-lock.json": "5157dcfb69b40eabb01c0baeb31c4a7796e0773a70932b220c734b583f78a8ec"
+  }
+}

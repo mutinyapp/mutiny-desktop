@@ -1,0 +1,21 @@
+{
+  "name": "npm-ABI",
+  "argv": [
+    "node",
+    "-e",
+    "const {createRequire}=require(\"module\"); const r=createRequire(process.env.E44_SCRATCH+\"/npm-verify/package.json\"); const b=createRequire(r.resolve(\"@electron/rebuild\")); const receipt={electron:r(\"electron/package.json\").version,nodeABI:b(\"node-abi/package.json\").version,abi:b(\"node-abi\").getAbi(\"44.5.1\",\"electron\"),rebuild:r(\"@electron/rebuild/package.json\").version}; require(\"node:assert/strict\").deepEqual(receipt,{electron:\"44.5.1\",nodeABI:\"3.94.0\",abi:\"149\",rebuild:\"3.7.2\"}); console.log(JSON.stringify(receipt,null,2));"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:08:02.482396+00:00",
+  "elapsedSeconds": 0.117,
+  "exit": 0,
+  "log": "npm-ABI.log",
+  "logSHA256": "da90ee228d3b3006c6f0b7d0add2ca0ee7792feed8755e9c8b06cdac73fce956",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

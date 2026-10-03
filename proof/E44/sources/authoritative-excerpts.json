@@ -1,0 +1,154 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/electron/electron/v44.5.1/docs/breaking-changes.md",
+    "sha256": "6dc1720af67d04b313be5eb757314a783f5233f520e6db0dd06ffa1c9d7d5a92",
+    "excerpts": [
+      {
+        "line": 61,
+        "excerpt": "  if (webContents) console.log(webContents.id)\n})\n```\n\n### Removed: macOS 12 support\n\nmacOS 12 (Monterey) is no longer supported by [Chromium](https://chromium-review.googlesource.com/c/chromium/src/+/7907086).\n\nOlder versions of Electron will continue to run on Monterey, but macOS 13 (Ventura)\nor later will be required to run Electron v44.0.0 and higher.\n\n### Behavior Changed: ANGLE is statically linked on all platforms\n\nANGLE is now [statically linked](https://issues.chromium.org/issues/40268378)\ninto the Electron binary on all platforms, matching upstream Chromium. The `libEGL.(so|dylib|dll)`\nand `libGLESv2.(so|dylib|dll)` libraries are no longer shipped in the distribution."
+      },
+      {
+        "line": 63,
+        "excerpt": "```\n\n### Removed: macOS 12 support\n\nmacOS 12 (Monterey) is no longer supported by [Chromium](https://chromium-review.googlesource.com/c/chromium/src/+/7907086).\n\nOlder versions of Electron will continue to run on Monterey, but macOS 13 (Ventura)\nor later will be required to run Electron v44.0.0 and higher.\n\n### Behavior Changed: ANGLE is statically linked on all platforms\n\nANGLE is now [statically linked](https://issues.chromium.org/issues/40268378)\ninto the Electron binary on all platforms, matching upstream Chromium. The `libEGL.(so|dylib|dll)`\nand `libGLESv2.(so|dylib|dll)` libraries are no longer shipped in the distribution.\n\nApps that replaced or managed their own ANGLE versions by swapping out these"
+      },
+      {
+        "line": 374,
+        "excerpt": "[`app.setLoginItemSettings()`](https://www.electronjs.org/docs/latest/api/app#appsetloginitemsettingssettings-macos-windows)\nand the fields `openAsHidden`, `wasOpenedAsHidden` and `restoreState` from the return value of\n[`app.getLoginItemSettings()`](https://www.electronjs.org/docs/latest/api/app#appgetloginitemsettingsoptions-macos-windows).\n\nThese only worked on macOS 12 and below. Support for macOS 12 has been dropped.\n\n## Breaking API Changes (43.0)\n\n### Behavior Changed: Rounded corners on Linux\n\nFrameless windows default to rounded corners on Linux if the desktop environment supports client-side decorations. This can be configured using the existing `roundedCorners` option on `BrowserWindow`,\nwhich is now supported on Linux and defaults to `true` on all platforms.\n\n### Behavior Changed: WCO respects the native title bar layout on Linux\n\nFrameless windows with Window Controls Overlay (WCO) now adopt the native title bar layout and user settings on Linux. For example, controls will appear on the left side of the frame on RTL systems, and only the close button will be visible by default on GNOME. Depending on the user's desktop environment and configuration, buttons can appear on the left or right side of the frame (or both). To account for all possibilities, use the CSS variables `env(titlebar-area-x, 0px)` and `env(titlebar-area-width, 100%)` to constrain your app's title bar content to a safe area."
+      },
+      {
+        "line": 630,
+        "excerpt": "### Removed: macOS 11 support\n\nmacOS 11 (Big Sur) is no longer supported by [Chromium](https://chromium-review.googlesource.com/c/chromium/src/+/6594615).\n\nOlder versions of Electron will continue to run on Big Sur, but macOS 12 (Monterey)\nor later will be required to run Electron v38.0.0 and higher.\n\n### Removed: `plugin-crashed` event\n\nThe `plugin-crashed` event has been removed from `webContents`.\n\n### Deprecated: `webFrame.routingId` property\n\nThe `routingId` property will be removed from `webFrame` objects.\n\nYou should use `webFrame.frameToken` instead."
+      },
+      {
+        "line": 100,
+        "excerpt": "* `BaseWindow.setProgressBar(progress)` and `BrowserWindow.setProgressBar(progress)` _Windows_ _macOS_.\n\n### Removed: Windows 32-bit (ia32) and Linux 32-bit ARM (armv7l) support\n\nElectron no longer publishes prebuilt binaries for 32-bit platforms: Windows x86\n(`win32-ia32`) and Linux ARM (`linux-armv7l`). All related release artifacts\n(`chromedriver`, `mksnapshot`, `ffmpeg`, and the Windows x86 `node.lib` on the\nElectron headers CDN) are no longer published either.\n"
+      },
+      {
+        "line": 103,
+        "excerpt": "\nElectron no longer publishes prebuilt binaries for 32-bit platforms: Windows x86\n(`win32-ia32`) and Linux ARM (`linux-armv7l`). All related release artifacts\n(`chromedriver`, `mksnapshot`, `ffmpeg`, and the Windows x86 `node.lib` on the\nElectron headers CDN) are no longer published either.\n\nOlder versions of Electron will continue to support these platforms, but Electron\nv44.0.0 and higher will only be published for 64-bit platforms.\n"
+      },
+      {
+        "line": 1900,
+        "excerpt": "## Breaking API Changes (19.0)\n\n### Removed: IA32 Linux binaries\n\nThis is a result of Chromium 102.0.4999.0 dropping support for IA32 Linux.\nThis concludes the [removal of support for IA32 Linux](#removed-ia32-linux-support).\n\n## Breaking API Changes (18.0)\n"
+      },
+      {
+        "line": 1902,
+        "excerpt": "### Removed: IA32 Linux binaries\n\nThis is a result of Chromium 102.0.4999.0 dropping support for IA32 Linux.\nThis concludes the [removal of support for IA32 Linux](#removed-ia32-linux-support).\n\n## Breaking API Changes (18.0)\n\n### Removed: `nativeWindowOpen`\n"
+      },
+      {
+        "line": 1903,
+        "excerpt": "\nThis is a result of Chromium 102.0.4999.0 dropping support for IA32 Linux.\nThis concludes the [removal of support for IA32 Linux](#removed-ia32-linux-support).\n\n## Breaking API Changes (18.0)\n\n### Removed: `nativeWindowOpen`\n\nPrior to Electron 15, `window.open` was by default shimmed to use"
+      },
+      {
+        "line": 3085,
+        "excerpt": "See the [native module guide](./tutorial/using-native-node-modules.md) for more.\n\n### Removed: IA32 Linux support\n\nElectron 18 will no longer run on 32-bit Linux systems. See [discontinuing support for 32-bit Linux](https://www.electronjs.org/blog/linux-32bit-support) for more information.\n\n## Breaking API Changes (3.0)\n\nThe following list includes the breaking API changes in Electron 3.0."
+      },
+      {
+        "line": 100,
+        "excerpt": "* `BaseWindow.setProgressBar(progress)` and `BrowserWindow.setProgressBar(progress)` _Windows_ _macOS_.\n\n### Removed: Windows 32-bit (ia32) and Linux 32-bit ARM (armv7l) support\n\nElectron no longer publishes prebuilt binaries for 32-bit platforms: Windows x86\n(`win32-ia32`) and Linux ARM (`linux-armv7l`). All related release artifacts\n(`chromedriver`, `mksnapshot`, `ffmpeg`, and the Windows x86 `node.lib` on the\nElectron headers CDN) are no longer published either.\n"
+      },
+      {
+        "line": 103,
+        "excerpt": "\nElectron no longer publishes prebuilt binaries for 32-bit platforms: Windows x86\n(`win32-ia32`) and Linux ARM (`linux-armv7l`). All related release artifacts\n(`chromedriver`, `mksnapshot`, `ffmpeg`, and the Windows x86 `node.lib` on the\nElectron headers CDN) are no longer published either.\n\nOlder versions of Electron will continue to support these platforms, but Electron\nv44.0.0 and higher will only be published for 64-bit platforms.\n"
+      },
+      {
+        "line": 3368,
+        "excerpt": "Each Electron release includes two identical ARM builds with slightly different\nfilenames, like `electron-v1.7.3-linux-arm.zip` and\n`electron-v1.7.3-linux-armv7l.zip`. The asset with the `v7l` prefix was added\nto clarify to users which ARM version it supports, and to disambiguate it from\nfuture armv6l and arm64 assets that may be produced.\n\nThe file _without the prefix_ is still being published to avoid breaking any\nsetups that may be consuming it. Starting at 2.0, the unprefixed file will\nno longer be published."
+      },
+      {
+        "line": 455,
+        "excerpt": "## Breaking API Changes (42.0)\n\n### Behavior Changed: macOS notifications now use `UNNotification` API\n\nElectron has migrated from the deprecated `NSUserNotification` API to the\n[`UNNotification`](https://developer.apple.com/documentation/usernotifications)\nAPI on macOS. The new API requires that an application be code-signed in order\nfor notifications to be displayed. If an application is not code-signed,\nnotifications will emit a `failed` event on the `Notification` object."
+      },
+      {
+        "line": 458,
+        "excerpt": "\nElectron has migrated from the deprecated `NSUserNotification` API to the\n[`UNNotification`](https://developer.apple.com/documentation/usernotifications)\nAPI on macOS. The new API requires that an application be code-signed in order\nfor notifications to be displayed. If an application is not code-signed,\nnotifications will emit a `failed` event on the `Notification` object.\n\n### Behavior Changed: Offscreen rendering will use `1.0` as default device scale factor.\n"
+      },
+      {
+        "line": 471,
+        "excerpt": "for more consistent output sizes.\n\n### Behavior Changed: `electron` no longer downloads itself via `postinstall` script\n\nPreviously, the `electron` npm package would download the Electron binary from the repository's\nGitHub Releases in the package's `postinstall` script.\n\nWith recent supply chain security attacks against the npm ecosystem with `postinstall` scripts as a\ncommon attack vector, Electron will now download itself dynamically the first time that its main"
+      },
+      {
+        "line": 474,
+        "excerpt": "\nPreviously, the `electron` npm package would download the Electron binary from the repository's\nGitHub Releases in the package's `postinstall` script.\n\nWith recent supply chain security attacks against the npm ecosystem with `postinstall` scripts as a\ncommon attack vector, Electron will now download itself dynamically the first time that its main\n`bin` script is run (e.g. via `npx electron`). With this change, you can now use Electron with the\nnpm `--ignore-scripts` flag. See [RFC #22](https://github.com/electron/rfcs/pull/22) for more context.\n"
+      },
+      {
+        "line": 476,
+        "excerpt": "GitHub Releases in the package's `postinstall` script.\n\nWith recent supply chain security attacks against the npm ecosystem with `postinstall` scripts as a\ncommon attack vector, Electron will now download itself dynamically the first time that its main\n`bin` script is run (e.g. via `npx electron`). With this change, you can now use Electron with the\nnpm `--ignore-scripts` flag. See [RFC #22](https://github.com/electron/rfcs/pull/22) for more context.\n\n```sh\n# won't install binary to `node_modules/electron`"
+      },
+      {
+        "line": 493,
+        "excerpt": "\nIf you need to download the Electron binary on-demand, you can now call the `install-electron` script,\nwhich contains the exact same code from the former `postinstall` script.\n\n```sh\nnpm install electron --save-dev --ignore-scripts\nnpx install-electron --no\n```\n"
+      },
+      {
+        "line": 512,
+        "excerpt": "\nThis also means the `ELECTRON_SKIP_BINARY_DOWNLOAD` environment variable is no\nlonger supported, as its primary purpose was to prevent the `postinstall` script from running.\n\n### Removed: `quotas` object from `Session.clearStorageData(options)`\n\nWhen calling `Session.clearStorageData(options)`, the `options.quotas` object is no longer supported because it has been\n[removed](https://chromium-review.googlesource.com/c/chromium/src/+/7596126)\nfrom upstream Chromium."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/electron/v44.5.1/docs/api/clipboard.md",
+    "sha256": "33216c63516128abc0bee0f05e25eac7f34721b418c54aaebc3b1c26be425b63",
+    "excerpts": [
+      {
+        "line": 85,
+        "excerpt": "```js\nconst { clipboard } = require('electron')\n\nasync function run() {\n  await clipboard.selection.writeText('Example string')\n  console.log(await clipboard.selection.readText())\n}\n\nrun()\n```\n\n## Methods\n\nThe `clipboard` module has the following methods.\n\n### `clipboard.readText()`"
+      },
+      {
+        "line": 107,
+        "excerpt": "```js\nconst { clipboard } = require('electron')\n\nasync function readText() {\n  await clipboard.writeText('hello i am a bit of text!')\n  const text = await clipboard.readText()\n  console.log(text)\n  // 'hello i am a bit of text!'\n}\n\nreadText()\n```\n\n### `clipboard.writeText(text)`\n\n* `text` string"
+      },
+      {
+        "line": 116,
+        "excerpt": "\nreadText()\n```\n\n### `clipboard.writeText(text)`\n\n* `text` string\n\nReturns `Promise<void>` - A promise that resolves once the text has been\nwritten to the clipboard. Modeled after the W3C\n[`navigator.clipboard.writeText`](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)\nAPI.\n\n```js\nconst { clipboard } = require('electron')\n"
+      },
+      {
+        "line": 122,
+        "excerpt": "* `text` string\n\nReturns `Promise<void>` - A promise that resolves once the text has been\nwritten to the clipboard. Modeled after the W3C\n[`navigator.clipboard.writeText`](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText)\nAPI.\n\n```js\nconst { clipboard } = require('electron')\n\nasync function writeClipboardText() {\n  await clipboard.writeText('hello i am a bit of text!')\n}\n\nwriteClipboardText()\n```"
+      },
+      {
+        "line": 129,
+        "excerpt": "```js\nconst { clipboard } = require('electron')\n\nasync function writeClipboardText() {\n  await clipboard.writeText('hello i am a bit of text!')\n}\n\nwriteClipboardText()\n```\n\n### `clipboard.read()`\n\nReturns `Promise<ClipboardItem[]>` - A promise that resolves with an array of\n[ClipboardItem](clipboard-item.md) objects containing the clipboard's\ncontents.\n"
+      },
+      {
+        "line": 223,
+        "excerpt": "\nA `Clipboard` property \u2014 a `Clipboard` object on Linux that\noperates against the selection clipboard instead of the system clipboard,\nand `undefined` on all other platforms. It exposes the same `read`,\n`write`, `readText`, `writeText`, `has`, and `clear` methods as the\ntop-level `clipboard` module."
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/electron/v44.5.1/docs/api/desktop-capturer.md",
+    "sha256": "fc692096d692407e932155f550aab4a72f87446aadc56a18c25a918742450859",
+    "excerpts": [
+      {
+        "line": 115,
+        "excerpt": "Returns `Promise<DesktopCapturerSource[]>` - Resolves with an array of [`DesktopCapturerSource`](structures/desktop-capturer-source.md) objects, each `DesktopCapturerSource` represents a screen or an individual window that can be captured.\n\n> [!NOTE]\n<!-- markdownlint-disable-next-line MD032 -->\n> * Capturing audio requires `NSAudioCaptureUsageDescription` Info.plist key on macOS 14.2 Sonoma and higher - [read more](#macos-versions-142-or-higher).\n> * Capturing the screen contents requires user consent on macOS 10.15 Catalina or higher, which can detected by [`systemPreferences.getMediaAccessStatus`][].\n\n[`navigator.mediaDevices.getUserMedia`]: https://developer.mozilla.org/en/docs/Web/API/MediaDevices/getUserMedia\n[`systemPreferences.getMediaAccessStatus`]: system-preferences.md#systempreferencesgetmediaaccessstatusmediatype-windows-macos\n\n## Caveats\n\n### Linux\n\n`desktopCapturer.getSources(options)` only returns a single source on Linux when using Pipewire.\n"
+      },
+      {
+        "line": 131,
+        "excerpt": "PipeWire supports a single capture for both screens and windows. If you request the window and screen type, the selected source will be returned as a window capture.\n\n### macOS versions 14.2 or higher\n\n`NSAudioCaptureUsageDescription` Info.plist key must be added in order for audio to be captured by\n`desktopCapturer`. If instead you are running Electron from another program like a terminal or IDE\nthen that parent program must contain the Info.plist key.\n\nThis is in order to facillitate use of Apple's new [CoreAudio Tap API](https://developer.apple.com/documentation/CoreAudio/capturing-system-audio-with-core-audio-taps#Configure-the-sample-code-project) by Chromium.\n\n> [!WARNING]\n> Failure of `desktopCapturer` to start an audio stream due to `NSAudioCaptureUsageDescription`\n> permission not present will still create a dead audio stream however no warnings or errors are\n> displayed.\n\nAs of Electron `v39.0.0-beta.4`, Chromium [made Apple's new `CoreAudio Tap API` the default](https://source.chromium.org/chromium/chromium/src/+/ad17e8f8b93d5f34891b06085d373a668918255e)"
+      },
+      {
+        "line": 138,
+        "excerpt": "\nThis is in order to facillitate use of Apple's new [CoreAudio Tap API](https://developer.apple.com/documentation/CoreAudio/capturing-system-audio-with-core-audio-taps#Configure-the-sample-code-project) by Chromium.\n\n> [!WARNING]\n> Failure of `desktopCapturer` to start an audio stream due to `NSAudioCaptureUsageDescription`\n> permission not present will still create a dead audio stream however no warnings or errors are\n> displayed.\n\nAs of Electron `v39.0.0-beta.4`, Chromium [made Apple's new `CoreAudio Tap API` the default](https://source.chromium.org/chromium/chromium/src/+/ad17e8f8b93d5f34891b06085d373a668918255e)\nfor desktop audio capture. There is no fallback to the older `Screen & System Audio Recording`\npermissions system even if [CoreAudio Tap API](https://developer.apple.com/documentation/CoreAudio/capturing-system-audio-with-core-audio-taps) stream creation fails.\n\nIf you need to continue using `Screen & System Audio Recording` permissions for `desktopCapturer`\non macOS versions 14.2 and later, you can apply a Chromium feature flag to force use of that older\npermissions system:\n"
+      }
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/electron/electron/v44.5.1/docs/tutorial/fuses.md",
+    "sha256": "6c8a3545df38bfa09ba522f524db52e693516a5c07130e0cf1c54094cc3910a0",
+    "excerpts": [
+      {
+        "line": 151,
+        "excerpt": "* `file://` protocol pages can use service workers\n* `file://` protocol pages have universal access granted to child frames also running on `file://`\n  protocols regardless of sandbox settings\n\n### `wasmTrapHandlers`\n\n**Default:** Enabled\n\n**@electron/fuses:** `FuseV1Options.WasmTrapHandlers`\n\nThe `wasmTrapHandlers` fuse controls whether V8 will use signal handlers to trap Out of Bounds memory\naccess from WebAssembly. The feature works by surrounding the WebAssembly memory with large guard regions\nand then installing a signal handler that traps attempt to access memory in the guard region. The feature\nis only supported on the following 64-bit systems:\n\n* Linux, macOS, Windows - x86_64"
+      },
+      {
+        "line": 155,
+        "excerpt": "### `wasmTrapHandlers`\n\n**Default:** Enabled\n\n**@electron/fuses:** `FuseV1Options.WasmTrapHandlers`\n\nThe `wasmTrapHandlers` fuse controls whether V8 will use signal handlers to trap Out of Bounds memory\naccess from WebAssembly. The feature works by surrounding the WebAssembly memory with large guard regions\nand then installing a signal handler that traps attempt to access memory in the guard region. The feature\nis only supported on the following 64-bit systems:\n\n* Linux, macOS, Windows - x86_64\n* Linux, macOS - aarch64\n\n```text\n| Guard Pages | WASM heap | Guard Pages |"
+      },
+      {
+        "line": 157,
+        "excerpt": "**Default:** Enabled\n\n**@electron/fuses:** `FuseV1Options.WasmTrapHandlers`\n\nThe `wasmTrapHandlers` fuse controls whether V8 will use signal handlers to trap Out of Bounds memory\naccess from WebAssembly. The feature works by surrounding the WebAssembly memory with large guard regions\nand then installing a signal handler that traps attempt to access memory in the guard region. The feature\nis only supported on the following 64-bit systems:\n\n* Linux, macOS, Windows - x86_64\n* Linux, macOS - aarch64\n\n```text\n| Guard Pages | WASM heap | Guard Pages |\n|-----8GB-----|           |-----8GB-----|\n```"
+      }
+    ]
+  }
+]

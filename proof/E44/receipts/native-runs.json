@@ -1,0 +1,16 @@
+[
+  {
+    "mode": "sync",
+    "port": 49270,
+    "exit": 0,
+    "signal": null,
+    "error": null
+  },
+  {
+    "mode": "deferred",
+    "port": 49271,
+    "exit": 0,
+    "signal": null,
+    "error": null
+  }
+]

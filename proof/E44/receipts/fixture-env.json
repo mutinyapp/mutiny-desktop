@@ -1,0 +1,20 @@
+{
+  "name": "fixture-env",
+  "argv": [
+    "node",
+    "proof/E44/fixture-environment.mjs"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T02:45:36.125879+00:00",
+  "elapsedSeconds": 0.474,
+  "exit": 0,
+  "log": "fixture-env.log",
+  "logSHA256": "0aa1cdb5815187dfbbd6d6a8277d4d691f92448ae7fd330cd4c8e45121af208a",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}

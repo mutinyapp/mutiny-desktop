@@ -1,0 +1,38 @@
+❯ Checking your system
+❯ Checking package manager version
+✔ Found pnpm@10.18.1
+✔ Checking your system
+[?25h❯ Preparing to package application
+✔ Preparing to package application
+❯ Running packaging hooks
+❯ Running generateAssets hook
+✔ Running generateAssets hook
+❯ Running prePackage hook
+❯ [plugin-vite] Building production Vite bundles
+❯ Building main and preload targets...
+❯ Building renderer targets...
+✔ Building renderer targets...
+❯ Building src/main.ts target
+❯ Building src/preload.ts target
+❯ Building src/pickerPreload.ts target
+✔ Building src/pickerPreload.ts target
+✔ Building src/preload.ts target
+✔ Building src/main.ts target
+✔ Building main and preload targets...
+✔ [plugin-vite] Building production Vite bundles
+✔ Running prePackage hook
+✔ Running packaging hooks
+❯ Packaging application
+› Determining targets...
+❯ Packaging for x64 on darwin
+❯ Copying files
+❯ Preparing native dependencies
+❯ Finalizing package
+✔ Copying files
+✔ Preparing native dependencies
+✔ Finalizing package
+✔ Packaging for x64 on darwin
+✔ Packaging application
+❯ Running postPackage hook
+✔ Running postPackage hook
+[?25h

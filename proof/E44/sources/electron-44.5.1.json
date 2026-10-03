@@ -1,0 +1,77 @@
+{
+  "name": "electron",
+  "version": "44.5.1",
+  "keywords": [
+    "electron"
+  ],
+  "author": {
+    "name": "Electron Community"
+  },
+  "license": "MIT",
+  "_id": "electron@44.5.1",
+  "maintainers": [
+    {
+      "name": "electronhq",
+      "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+      "name": "electron-nightly",
+      "email": "info+nightly-npm@electronjs.org"
+    }
+  ],
+  "homepage": "https://github.com/electron/electron#readme",
+  "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+  },
+  "bin": {
+    "electron": "cli.js",
+    "install-electron": "install.js"
+  },
+  "dist": {
+    "shasum": "6a1d94f24886ce61a16946b4a9c688e61cec2e40",
+    "tarball": "https://registry.npmjs.org/electron/-/electron-44.5.1.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-lx7AYoFIiyvEvgvpyWO9kOC60xtNPpiPZAth6Fmg9NutzpCAMLwpUlaBY2EXfZyIgUdzEmLMj9KvK0Vrokl1yQ==",
+    "signatures": [
+      {
+        "sig": "MEUCIHRf+aWqzuLdMa3M3W1HQOVSNF9Skd7Agyt/DdzcFLR+AiEAwShJ2GycT7gwqX1+ReFQrUtT0gu8rp2EulpJSejDRk4=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      },
+      {
+        "sig": "MEUCIAg/II01EBSFOtZMQwMYVssiKvSJ/FwLcpE/G64pErWmAiEAu6rGZxWnj3vxCQ3w7abPU7xeRyM3jCjtoVqeRyhN77o=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "unpackedSize": 1165665
+  },
+  "main": "index.js",
+  "_from": "file:/tmp/npm-publish-gbNlPC/electron-44.5.1.tgz",
+  "types": "electron.d.ts",
+  "engines": {
+    "node": ">= 22.12.0"
+  },
+  "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+  },
+  "_resolved": "/tmp/npm-publish-gbNlPC/electron-44.5.1.tgz",
+  "_integrity": "sha512-lx7AYoFIiyvEvgvpyWO9kOC60xtNPpiPZAth6Fmg9NutzpCAMLwpUlaBY2EXfZyIgUdzEmLMj9KvK0Vrokl1yQ==",
+  "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+  },
+  "_npmVersion": "10.9.9",
+  "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+  "directories": {},
+  "_nodeVersion": "22.23.3",
+  "dependencies": {
+    "@types/node": "^24.9.0",
+    "@electron/get": "^5.0.0",
+    "@electron-internal/extract-zip": "^1.0.1"
+  },
+  "_hasShrinkwrap": false,
+  "_npmOperationalInternal": {
+    "tmp": "tmp/electron_44.5.1_1790751555868_0.718576291051207",
+    "host": "s3://npm-registry-packages-npm-production"
+  }
+}

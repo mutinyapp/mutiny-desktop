@@ -1,0 +1,20 @@
+{
+  "name": "lock-scope-final",
+  "argv": [
+    "node",
+    "proof/E44/verify-lock-scope.mjs"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/E44",
+  "startedUTC": "2026-10-03T03:06:07.430352+00:00",
+  "elapsedSeconds": 0.203,
+  "exit": 0,
+  "log": "lock-scope-final.log",
+  "logSHA256": "ed3361f85432e8d0ad6a6de68a12e5ae46bbde3c9840029ca905c8e53f7b8012",
+  "env": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/tmp",
+    "NODE_OPTIONS": null,
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/electron",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache/npm",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/E44/cache"
+  }
+}
