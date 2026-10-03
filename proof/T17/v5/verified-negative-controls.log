@@ -1,0 +1,104 @@
+{
+  "controlCount": 3,
+  "cleanExits": [
+    0,
+    0,
+    0
+  ],
+  "mutantExits": [
+    1,
+    1,
+    1
+  ],
+  "results": [
+    {
+      "name": "retry",
+      "scenario": "no-crash-retry-hosted",
+      "mutationPath": "src/native/offlineRecovery.ts",
+      "executions": [
+        {
+          "command": "T17_PORT=49207 T17_MODES=darwin T17_SCENARIOS=no-crash-retry-hosted T17_PROOF=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v5/negative-controls/retry-clean node proof/T17/run-electron-runtime.mjs",
+          "exit": 0,
+          "result": "PASS",
+          "hardFailures": [],
+          "logSHA256": "003c2702e10f3d5d92d8dee4e8ea52347c99b4cbe35d536d7e52ccb12619c8ba",
+          "sourceSHA256": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7"
+        },
+        {
+          "command": "T17_PORT=49207 T17_MODES=darwin T17_SCENARIOS=no-crash-retry-hosted T17_PROOF=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v5/negative-controls/retry-mutant node proof/T17/run-electron-runtime.mjs",
+          "exit": 1,
+          "result": "FAIL",
+          "hardFailures": [
+            "no-crash-retry-hosted: Retry button did not recover configured HTTP 200 app (automatic retry paused)"
+          ],
+          "logSHA256": "a66100f9983fb2e7fd0085012b83b70eb9e64d0579d372a6f61cdc26c1fefa65",
+          "sourceSHA256": "50b2330dcc44f0594eb10697aeb7b13f4a8503cfcb22b6ee60cc2cca66ca6d15"
+        }
+      ]
+    },
+    {
+      "name": "fallback",
+      "scenario": "no-crash-no-cdp",
+      "mutationPath": "src/native/offlineRecovery.ts",
+      "executions": [
+        {
+          "command": "T17_PORT=49207 T17_MODES=darwin T17_SCENARIOS=no-crash-no-cdp T17_PROOF=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v5/negative-controls/fallback-clean node proof/T17/run-electron-runtime.mjs",
+          "exit": 0,
+          "result": "PASS",
+          "hardFailures": [],
+          "logSHA256": "ef6a683f18695a59ed04b811c1e3247c1e1cb5e8cd032a9dddb8c69e1153d419",
+          "sourceSHA256": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7"
+        },
+        {
+          "command": "T17_PORT=49207 T17_MODES=darwin T17_SCENARIOS=no-crash-no-cdp T17_PROOF=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v5/negative-controls/fallback-mutant node proof/T17/run-electron-runtime.mjs",
+          "exit": 1,
+          "result": "FAIL",
+          "hardFailures": [
+            "Error: Timed out: real HTTP failure -> emitted offline page",
+            "caption action inventory mismatch"
+          ],
+          "logSHA256": "7e2cb8b74847bbdc197b30f990b924bdc51e12b21de6942fb351f98a1c8569e8",
+          "sourceSHA256": "ff585188a31bec9d8cbcf5ef67d3ec17f9a6516344079abc52944b01ff6687c5"
+        }
+      ]
+    },
+    {
+      "name": "no-crash-captions",
+      "scenario": "no-crash-no-cdp",
+      "mutationPath": "src/native/windowControls.ts",
+      "executions": [
+        {
+          "command": "T17_PORT=49207 T17_MODES=darwin T17_SCENARIOS=no-crash-no-cdp T17_PROOF=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v5/negative-controls/no-crash-captions-clean node proof/T17/run-electron-runtime.mjs",
+          "exit": 0,
+          "result": "PASS",
+          "hardFailures": [],
+          "logSHA256": "c3a3dd38241fcf951122078d53a6cb73007e566fb1bc9fe3cf5d16e95c83fa95",
+          "sourceSHA256": "c1fe785499d9c592b3d4bdb3aaa4ad9c7a80ba4330315a56a59ab8750f275e79"
+        },
+        {
+          "command": "T17_PORT=49207 T17_MODES=darwin T17_SCENARIOS=no-crash-no-cdp T17_PROOF=/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v5/negative-controls/no-crash-captions-mutant node proof/T17/run-electron-runtime.mjs",
+          "exit": 1,
+          "result": "FAIL",
+          "hardFailures": [
+            "offline/maximise: Error: Timed out: native maximize",
+            "offline/maximise: AssertionError [ERR_ASSERTION]: maximise real native event must occur",
+            "offline/minimise: Error: Timed out: native minimize",
+            "offline/close: caption-authorization-refused"
+          ],
+          "logSHA256": "7f68acfb9627795e8e9659e1ada39e580850d1b7dfac3906e533f561f2283fbb",
+          "sourceSHA256": "db939d60d5868f9bb7b5d7726cb097e8a77dc88ad66801ac3141a847541a9b6d"
+        }
+      ]
+    }
+  ],
+  "protectedBefore": {
+    "src/native/offlineRecovery.ts": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7",
+    "src/native/windowControls.ts": "c1fe785499d9c592b3d4bdb3aaa4ad9c7a80ba4330315a56a59ab8750f275e79"
+  },
+  "protectedAfter": {
+    "src/native/offlineRecovery.ts": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7",
+    "src/native/windowControls.ts": "c1fe785499d9c592b3d4bdb3aaa4ad9c7a80ba4330315a56a59ab8750f275e79"
+  },
+  "sourceUnchanged": true,
+  "port": 49207
+}

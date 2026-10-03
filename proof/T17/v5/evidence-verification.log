@@ -1,0 +1,43 @@
+{
+  "verified": true,
+  "scenarioCount": 14,
+  "passCount": 6,
+  "knownGapCount": 6,
+  "failCount": 2,
+  "captionAttemptCount": 64,
+  "tests": 365,
+  "negativeCleanExits": [
+    0,
+    0,
+    0
+  ],
+  "negativeMutantExits": [
+    1,
+    1,
+    1
+  ],
+  "protectedCount": 109,
+  "workflowTotal": 4,
+  "ports": [
+    {
+      "port": 49206,
+      "bind": true,
+      "closed": true
+    },
+    {
+      "port": 49207,
+      "bind": true,
+      "closed": true
+    },
+    {
+      "port": 49208,
+      "bind": true,
+      "closed": true
+    },
+    {
+      "port": 49209,
+      "bind": true,
+      "closed": true
+    }
+  ]
+}

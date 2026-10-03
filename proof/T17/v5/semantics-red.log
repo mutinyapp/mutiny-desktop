@@ -1,0 +1,150 @@
+TAP version 13
+# Subtest: retained v4 clean caption result is PASS
+ok 1 - retained v4 clean caption result is PASS
+  ---
+  duration_ms: 1.699853
+  type: 'test'
+  ...
+# Subtest: exact crash-only caption refusal is explicitly KNOWN-GAP
+not ok 2 - exact crash-only caption refusal is explicitly KNOWN-GAP
+  ---
+  duration_ms: 1.008014
+  type: 'test'
+  location: '/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/runtime-result.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'FAIL'
+    - 'KNOWN-GAP'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'KNOWN-GAP'
+  actual: 'FAIL'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/runtime-result.test.mjs:8:76)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: full-v3 exact caption refusal is explicitly KNOWN-GAP
+not ok 3 - full-v3 exact caption refusal is explicitly KNOWN-GAP
+  ---
+  duration_ms: 0.198308
+  type: 'test'
+  location: '/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/runtime-result.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'FAIL'
+    - 'KNOWN-GAP'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'KNOWN-GAP'
+  actual: 'FAIL'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/runtime-result.test.mjs:9:73)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: Retry broken is hard failure, never KNOWN-GAP
+ok 4 - Retry broken is hard failure, never KNOWN-GAP
+  ---
+  duration_ms: 0.17141
+  type: 'test'
+  ...
+# Subtest: fallback missing is hard failure, never KNOWN-GAP
+ok 5 - fallback missing is hard failure, never KNOWN-GAP
+  ---
+  duration_ms: 0.106277
+  type: 'test'
+  ...
+# Subtest: OS close broken is hard failure, never KNOWN-GAP
+ok 6 - OS close broken is hard failure, never KNOWN-GAP
+  ---
+  duration_ms: 0.083015
+  type: 'test'
+  ...
+# Subtest: no-crash-no-cdp refusal is hard-required
+ok 7 - no-crash-no-cdp refusal is hard-required
+  ---
+  duration_ms: 0.253374
+  type: 'test'
+  ...
+# Subtest: cdp-only refusal is hard-required
+ok 8 - cdp-only refusal is hard-required
+  ---
+  duration_ms: 0.160272
+  type: 'test'
+  ...
+# Subtest: crash refusal with sameContents=false is not the documented gap
+ok 9 - crash refusal with sameContents=false is not the documented gap
+  ---
+  duration_ms: 0.894066
+  type: 'test'
+  ...
+# Subtest: crash refusal with sameFrame=false is not the documented gap
+ok 10 - crash refusal with sameFrame=false is not the documented gap
+  ---
+  duration_ms: 0.454724
+  type: 'test'
+  ...
+# Subtest: crash refusal with detached=false is not the documented gap
+ok 11 - crash refusal with detached=false is not the documented gap
+  ---
+  duration_ms: 0.168251
+  type: 'test'
+  ...
+# Subtest: authorized caption with absent native effect is hard failure
+ok 12 - authorized caption with absent native effect is hard failure
+  ---
+  duration_ms: 0.114768
+  type: 'test'
+  ...
+# Subtest: missing caption IPC is hard failure
+ok 13 - missing caption IPC is hard failure
+  ---
+  duration_ms: 0.085984
+  type: 'test'
+  ...
+# Subtest: known refusal with an unexpected native effect is hard failure
+ok 14 - known refusal with an unexpected native effect is hard failure
+  ---
+  duration_ms: 0.088838
+  type: 'test'
+  ...
+# Subtest: missing action inventory is hard failure
+ok 15 - missing action inventory is hard failure
+  ---
+  duration_ms: 0.073347
+  type: 'test'
+  ...
+# Subtest: restored hosted-page caption refusal is outside the offline known gap
+ok 16 - restored hosted-page caption refusal is outside the offline known gap
+  ---
+  duration_ms: 0.093994
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 14
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 123.480167

@@ -1,7 +1,7 @@
 {
   "frozen": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
-  "fileCountExcludingManifest": 210,
-  "byteCountExcludingManifest": 8112889,
+  "fileCountExcludingManifest": 234,
+  "byteCountExcludingManifest": 8433500,
   "files": [
     {
       "path": "proof/T17/check-emission-mutations.mjs",
@@ -54,9 +54,19 @@
       "sha256": "9bdccca3e298d928ec400eabc70594e25bfab2a7f01b58168404e81f1a588410"
     },
     {
+      "path": "proof/T17/v5/emission.log",
+      "bytes": 1203,
+      "sha256": "c3deb95eeabf3f2f0cc3a689b54d395330c2450976cfe597ba393ac8a608056f"
+    },
+    {
       "path": "proof/T17/v5/evidence-verification.json",
       "bytes": 70,
       "sha256": "e00f1883165e54f9fbc8d1a5dcabce213b25c50802245d97586b274aae83bfb8"
+    },
+    {
+      "path": "proof/T17/v5/evidence-verification.log",
+      "bytes": 615,
+      "sha256": "a6151bd3a2312b9df1545e17f2834818838021212bcaee4e2ca7772300c79d75"
     },
     {
       "path": "proof/T17/v5/final-lint.json",
@@ -64,14 +74,29 @@
       "sha256": "26dcff3c188432781e0b0a1c42bb1886eba14cdf8a82fb0d5cc16231271df0e2"
     },
     {
+      "path": "proof/T17/v5/final-lint.log",
+      "bytes": 98,
+      "sha256": "cbdd9f389817d15ede7a35a02aa405caa3a3427d5947443e1257374b5e480555"
+    },
+    {
       "path": "proof/T17/v5/final-runtime.json",
       "bytes": 133,
       "sha256": "4025ba489cf43efc18567e1e77b585f41acb70c5562ef71aacbebca24bc16ae2"
     },
     {
+      "path": "proof/T17/v5/final-runtime.log",
+      "bytes": 49911,
+      "sha256": "a1c38f77ff63f02d4c0994b34318527c548adbebbbc320137e91dd3ede5005e1"
+    },
+    {
       "path": "proof/T17/v5/final-test.json",
       "bytes": 120,
       "sha256": "2fe05ecdfd0984a92cc91fb45fcc1e077b69edbb1555cf6b55e7bbdba1d53655"
+    },
+    {
+      "path": "proof/T17/v5/final-test.log",
+      "bytes": 3742,
+      "sha256": "e2f88af1a3b0a4a0b6a62f13aac0d44fc81f1b9d4b885bb3a65ad77c8ffc97df"
     },
     {
       "path": "proof/T17/v5/final-tests.json",
@@ -84,9 +109,24 @@
       "sha256": "cb0939b1ab64452105d41d4eb2e8d917c329a5414bd54ea165c10c5e3d390cb0"
     },
     {
+      "path": "proof/T17/v5/final-typecheck.log",
+      "bytes": 92,
+      "sha256": "432c834e69b3c75a2958435ad0db9e90e0c2b9fa9d2b3a3aa3b30e524bb8b5b4"
+    },
+    {
       "path": "proof/T17/v5/lint.json",
       "bytes": 42,
       "sha256": "26dcff3c188432781e0b0a1c42bb1886eba14cdf8a82fb0d5cc16231271df0e2"
+    },
+    {
+      "path": "proof/T17/v5/lint.log",
+      "bytes": 412,
+      "sha256": "a14703fc00abbb3a08f9d9dbab6aaa10f1153e79e7ac96bdb136cad8335505a2"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-clean.log",
+      "bytes": 22977,
+      "sha256": "ef6a683f18695a59ed04b811c1e3247c1e1cb5e8cd032a9dddb8c69e1153d419"
     },
     {
       "path": "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-captions.png",
@@ -109,6 +149,11 @@
       "sha256": "02656e47d28d1546c5b7ca4c7a82e5acf5c46b0b1ad3156c942b1d4bd8b3e726"
     },
     {
+      "path": "proof/T17/v5/negative-controls/fallback-mutant.log",
+      "bytes": 16013,
+      "sha256": "7e2cb8b74847bbdc197b30f990b924bdc51e12b21de6942fb351f98a1c8569e8"
+    },
+    {
       "path": "proof/T17/v5/negative-controls/fallback-mutant/darwin-no-crash-no-cdp-runtime-failure.txt",
       "bytes": 332,
       "sha256": "1b38353c62babad273e9b6e32060ad8ce93a68d95a1370d96af0a083d7d9b50e"
@@ -122,6 +167,11 @@
       "path": "proof/T17/v5/negative-controls/fallback-mutant/isolation-summary.json",
       "bytes": 656,
       "sha256": "66a9ecc90fff34fb7b0ea9d32b99bd5de9f39d4413d6ca6484fe120fc5c955e8"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-clean.log",
+      "bytes": 22977,
+      "sha256": "c3a3dd38241fcf951122078d53a6cb73007e566fb1bc9fe3cf5d16e95c83fa95"
     },
     {
       "path": "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-captions.png",
@@ -142,6 +192,11 @@
       "path": "proof/T17/v5/negative-controls/no-crash-captions-clean/isolation-summary.json",
       "bytes": 14533,
       "sha256": "9d4e3ee02f913bce4de8a94921313eba511c744965de8ba788c1d0fa6e46ed8c"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-mutant.log",
+      "bytes": 27823,
+      "sha256": "7f68acfb9627795e8e9659e1ada39e580850d1b7dfac3906e533f561f2283fbb"
     },
     {
       "path": "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-captions.png",
@@ -169,6 +224,11 @@
       "sha256": "a04399f7b46f1cbfd570fdc8ac323be070116b7aeaea6431097cda95c4bc577b"
     },
     {
+      "path": "proof/T17/v5/negative-controls/retry-clean.log",
+      "bytes": 22964,
+      "sha256": "003c2702e10f3d5d92d8dee4e8ea52347c99b4cbe35d536d7e52ccb12619c8ba"
+    },
+    {
       "path": "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-hosted-captions.png",
       "bytes": 27107,
       "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
@@ -192,6 +252,11 @@
       "path": "proof/T17/v5/negative-controls/retry-clean/isolation-summary.json",
       "bytes": 14469,
       "sha256": "a9078c83a56a439b5c104d8230f9b452922b7bc89d8deb43b37df65e719bbec4"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-mutant.log",
+      "bytes": 23834,
+      "sha256": "a66100f9983fb2e7fd0085012b83b70eb9e64d0579d372a6f61cdc26c1fefa65"
     },
     {
       "path": "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-hosted-captions.png",
@@ -499,6 +564,11 @@
       "sha256": "f767348626e5b2836077ec13077481a8eb92453952847a2efbdd3a5e3ae0dbb9"
     },
     {
+      "path": "proof/T17/v5/runtime-negative-controls.log",
+      "bytes": 4796,
+      "sha256": "04410c36951460603b93bee2385091842c3117052814823d0566e2b941e715b1"
+    },
+    {
       "path": "proof/T17/v5/runtime-verified/darwin-cdp-only-captions.png",
       "bytes": 53417,
       "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
@@ -769,6 +839,11 @@
       "sha256": "27257ffbed678e10dd3bc42d1935159cb4ba7f346e235dfa813615e737cefc6b"
     },
     {
+      "path": "proof/T17/v5/runtime.log",
+      "bytes": 49911,
+      "sha256": "fbbce07e4672a7a424d1ec13ce005fcdca569c4143ad41a04899bfc416d24665"
+    },
+    {
       "path": "proof/T17/v5/runtime/darwin-cdp-only-captions.png",
       "bytes": 53417,
       "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
@@ -999,14 +1074,29 @@
       "sha256": "1bbc6e82cc2af2b1fb2ad2d9a2a80f44e558fe3ba5a72a6165a8589b76742558"
     },
     {
+      "path": "proof/T17/v5/semantics-green.log",
+      "bytes": 2887,
+      "sha256": "3dd9f1980ada2e242413417bf4147053aed3cdbab013163a4cee721467e2dd46"
+    },
+    {
       "path": "proof/T17/v5/semantics-red.json",
       "bytes": 78,
       "sha256": "077087c3590cbfa9b6ab5b5683b828fff267ea09af74ba623d823f8cdaf1cff6"
     },
     {
+      "path": "proof/T17/v5/semantics-red.log",
+      "bytes": 4625,
+      "sha256": "b56ca1fdd8ba13db60a277535c5aec5536d49f438118e799d5b91980e699dcfd"
+    },
+    {
       "path": "proof/T17/v5/test.json",
       "bytes": 114,
       "sha256": "3f180738c436b2867ca34c4776d113c3d0cb95ce66cf3129567e5397c4d05db7"
+    },
+    {
+      "path": "proof/T17/v5/test.log",
+      "bytes": 7042,
+      "sha256": "46d6f5d217fae5c05d6ac41004731d7b50967eb55b52baa264e9e88a994f9562"
     },
     {
       "path": "proof/T17/v5/tests.json",
@@ -1019,9 +1109,19 @@
       "sha256": "cb0939b1ab64452105d41d4eb2e8d917c329a5414bd54ea165c10c5e3d390cb0"
     },
     {
+      "path": "proof/T17/v5/typecheck.log",
+      "bytes": 92,
+      "sha256": "432c834e69b3c75a2958435ad0db9e90e0c2b9fa9d2b3a3aa3b30e524bb8b5b4"
+    },
+    {
       "path": "proof/T17/v5/verified-lint.json",
       "bytes": 42,
       "sha256": "26dcff3c188432781e0b0a1c42bb1886eba14cdf8a82fb0d5cc16231271df0e2"
+    },
+    {
+      "path": "proof/T17/v5/verified-lint.log",
+      "bytes": 98,
+      "sha256": "cbdd9f389817d15ede7a35a02aa405caa3a3427d5947443e1257374b5e480555"
     },
     {
       "path": "proof/T17/v5/verified-negative-controls.json",
@@ -1029,9 +1129,19 @@
       "sha256": "f767348626e5b2836077ec13077481a8eb92453952847a2efbdd3a5e3ae0dbb9"
     },
     {
+      "path": "proof/T17/v5/verified-negative-controls.log",
+      "bytes": 4795,
+      "sha256": "13235c8088f44c32a6ba9a890c6eac9392b5c2bced41a1b1b2a7763b872c3756"
+    },
+    {
       "path": "proof/T17/v5/verified-runtime.json",
       "bytes": 136,
       "sha256": "993cfec7dbdb889c4e9827c514b1cda4502cdd68910d3ee40669c46d1f0ad3a9"
+    },
+    {
+      "path": "proof/T17/v5/verified-runtime.log",
+      "bytes": 49911,
+      "sha256": "dae33ecbd2b6a9f8b0a6c9ee2d293003c2bfabf6003c910053c395d31e69ff0d"
     },
     {
       "path": "proof/T17/v5/verified-test.json",
@@ -1039,9 +1149,19 @@
       "sha256": "2b4d1ac1bb54675b50f2378488f9853cf7928917ee1cfbba0a6fc0599f46e69c"
     },
     {
+      "path": "proof/T17/v5/verified-test.log",
+      "bytes": 3701,
+      "sha256": "953bc4b7bcda478d9fe8a161dcd1c82f1f1cffdd02d8b5ace803ce226867db9e"
+    },
+    {
       "path": "proof/T17/v5/verified-typecheck.json",
       "bytes": 47,
       "sha256": "cb0939b1ab64452105d41d4eb2e8d917c329a5414bd54ea165c10c5e3d390cb0"
+    },
+    {
+      "path": "proof/T17/v5/verified-typecheck.log",
+      "bytes": 92,
+      "sha256": "432c834e69b3c75a2958435ad0db9e90e0c2b9fa9d2b3a3aa3b30e524bb8b5b4"
     },
     {
       "path": "proof/T17/v5/workflow-scope-audit.json",
