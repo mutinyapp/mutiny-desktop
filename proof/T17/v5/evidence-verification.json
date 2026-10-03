@@ -1,0 +1,4 @@
+{
+  "command": "node proof/T17/verify-v5-evidence.mjs",
+  "exit": 0
+}

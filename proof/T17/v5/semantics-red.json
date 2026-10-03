@@ -1,0 +1,4 @@
+{
+  "command": "node --test proof/T17/runtime-result.test.mjs",
+  "exit": 1
+}

@@ -1,0 +1,4 @@
+{
+  "command": "T17_EMISSION_RECEIPT=\"$PWD/proof/T17/v5/emission-controls.json\" node proof/T17/check-emission-mutations.mjs",
+  "exit": 0
+}

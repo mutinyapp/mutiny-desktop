@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import { test } from "vitest";
+import { classifyScenario } from "./runtime-result.mjs";
+const sticky = {hosted:false,offline:false,self:false,sameContents:true,sameFrame:true,detached:true};
+const refused = () => ["maximise","maximise","minimise","close"].map(action=>({action,document:"offline",delivered:true,tuple:{...sticky},native:false,error:"caption-authorization-refused"}));
+const good = () => refused().map(action=>({...action,tuple:{...sticky,offline:true,self:true,detached:false},native:true,error:null}));
+test("retained v4 clean caption result is PASS",()=>assert.equal(classifyScenario({scenario:"no-crash-no-cdp",hardFailures:[],captionActions:good()}).result,"PASS"));
+test("exact crash-only caption refusal is explicitly KNOWN-GAP",()=>assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[],captionActions:refused()}).result,"KNOWN-GAP"));
+test("full-v3 exact caption refusal is explicitly KNOWN-GAP",()=>assert.equal(classifyScenario({scenario:"full-v3",hardFailures:[],captionActions:refused()}).result,"KNOWN-GAP"));
+for (const label of ["Retry broken","fallback missing","OS close broken"]) test(`${label} is hard failure, never KNOWN-GAP`,()=>assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[label],captionActions:refused()}).exit,1));
+for (const scenario of ["no-crash-no-cdp","cdp-only"]) test(`${scenario} refusal is hard-required`,()=>assert.equal(classifyScenario({scenario,hardFailures:[],captionActions:refused()}).exit,1));
+for (const key of ["sameContents","sameFrame","detached"]) test(`crash refusal with ${key}=false is not the documented gap`,()=>{const actions=refused();actions[0].tuple[key]=false;assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[],captionActions:actions}).exit,1);});
+test("authorized caption with absent native effect is hard failure",()=>{const actions=good();actions[0].native=false;actions[0].error="native action missing";assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[],captionActions:actions}).exit,1);});
+test("missing caption IPC is hard failure",()=>{const actions=refused();actions[0].delivered=false;assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[],captionActions:actions}).exit,1);});
+test("known refusal with an unexpected native effect is hard failure",()=>{const actions=refused();actions[0].native=true;assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[],captionActions:actions}).exit,1);});
+test("missing action inventory is hard failure",()=>assert.equal(classifyScenario({scenario:"crash-only",hardFailures:[],captionActions:refused().slice(1)}).exit,1));
+test("restored hosted-page caption refusal is outside the offline known gap",()=>{const actions=refused().map(action=>({...action,document:"hosted-restored"}));assert.equal(classifyScenario({scenario:"crash-retry-hosted",hardFailures:[],captionActions:actions}).exit,1);});

@@ -39,5 +39,5 @@ for(const mutation of ["clean","omit-emission","wrong-filename","truncate-bytes"
 }
 assert.equal(hash(readFileSync(join(root,"vite.main.config.ts"))),before);
 const receipt={sourceSHA256:before,authoredSHA256:hash(authored),authoredBytes:authored.length,controls,sourceUnchanged:true};
-writeFileSync(join(root,"proof/T17/v3-emission-mutations.json"),JSON.stringify(receipt,null,2)+"\n");
+writeFileSync(process.env.T17_EMISSION_RECEIPT || join(root,"proof/T17/v3-emission-mutations.json"),JSON.stringify(receipt,null,2)+"\n");
 console.log(JSON.stringify(receipt,null,2));

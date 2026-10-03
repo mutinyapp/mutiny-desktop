@@ -1,0 +1,4 @@
+{
+  "command": "T17_PORT=49206 node proof/T17/run-electron-runtime.mjs",
+  "exit": 1
+}

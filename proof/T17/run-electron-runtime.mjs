@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { build, loadConfigFromFile } from "vite";
@@ -14,7 +14,11 @@ const {getConfig:preloadConfig}=require(join(plugin,"vite.preload.config.js"));
 const scratch="/Users/friday/.hermes/profiles/friday/cache/scratch";
 const dir=mkdtempSync(join(scratch,"T17-real-electron-"));
 const out=join(dir,".vite/build");
-const proof=process.env.T17_PROOF || join(root,"proof/T17");
+const proof=process.env.T17_PROOF || join(root,"proof/T17/v5/runtime");
+mkdirSync(proof,{recursive:true});
+const port=Number(process.env.T17_PORT || "49206");
+assert.ok([49206,49207,49208,49209].includes(port),"v5 assigned T17 ports only");
+process.env.T17_PORT=String(port);
 const entry=process.env.T17_ENGINE_PROBE ? "electron-frame-lifecycle-entry" : "electron-runtime-entry";
 const env=(entry,target)=>({root,mode:"production",command:"build",forgeConfig:{renderer:[]},forgeConfigSelf:{entry,target}});
 try {
@@ -37,16 +41,19 @@ try {
   const electron=require("electron");
   const results=[];
   const modes=process.env.T17_MODES ? process.env.T17_MODES.split(",") : ["darwin","win32"];
-  const scenarios=process.env.T17_SCENARIOS ? process.env.T17_SCENARIOS.split(",") : ["no-crash-no-cdp","crash-only","cdp-only","full-v3"];
+  const scenarios=process.env.T17_SCENARIOS ? process.env.T17_SCENARIOS.split(",") : ["no-crash-no-cdp","crash-only","cdp-only","full-v3","crash-retry-hosted","crash-native-os","no-crash-retry-hosted"];
   for(const mode of modes) for (const scenario of scenarios) {
     assert.ok(["darwin","win32"].includes(mode));
-    assert.ok(["no-crash-no-cdp","crash-only","cdp-only","full-v3"].includes(scenario));
+    assert.ok(["no-crash-no-cdp","crash-only","cdp-only","full-v3","crash-retry-hosted","crash-native-os","no-crash-retry-hosted"].includes(scenario));
+    rmSync(join(proof,`${mode}-${scenario}-runtime.json`),{force:true});
     const result=spawnSync(electron,[join(out,"electron-runtime-entry.js")],{cwd:root,encoding:"utf8",timeout:120000,env:{...process.env,T17_PROOF:proof,T17_PLATFORM:mode,T17_SCENARIO:scenario,T17_USER_DATA:join(dir,`user-data-${mode}-${scenario}`)}});
     console.log(result.stdout); console.error(result.stderr);
     const receipt=JSON.parse(readFileSync(join(proof,`${mode}-${scenario}-runtime.json`)));
-    results.push({mode,scenario,exit:result.status,passed:receipt.passed});
+    results.push({mode,scenario,exit:result.status,passed:receipt.passed,result:receipt.result,knownGapCount:receipt.knownGaps?.length||0,hardFailures:receipt.hardFailures,characterization:receipt.characterization,authorization:receipt.authorization,captionActions:receipt.captionActions,retryIntents:receipt.retryIntents});
     console.log(JSON.stringify({mode,scenario,exit:result.status,emittedSHA256:createHash("sha256").update(authored).digest("hex"),receipt},null,2));
   }
-  assert.ok(results.every(result=>result.exit === 0 && result.passed),`All isolated Electron scenarios must pass: ${JSON.stringify(results)}`);
+  const summary={port,emittedSHA256:createHash("sha256").update(authored).digest("hex"),scenarioCount:results.length,passCount:results.filter(r=>r.result === "PASS").length,knownGapCount:results.filter(r=>r.result === "KNOWN-GAP").length,failCount:results.filter(r=>r.result === "FAIL").length,captionAttemptCount:results.reduce((n,r)=>n+(r.captionActions?.length||0),0),results};
+  writeFileSync(join(proof,"isolation-summary.json"),JSON.stringify(summary,null,2)+"\n");
+  assert.ok(results.every(result=>result.exit === 0 && result.passed && ["PASS","KNOWN-GAP"].includes(result.result)),`Non-gap Electron requirements failed: ${JSON.stringify(results.map(({mode,scenario,exit,result,hardFailures})=>({mode,scenario,exit,result,hardFailures})))}`);
   }
 } finally { rmSync(dir,{recursive:true,force:true}); console.log("Removed owned harness build, user-data and cache directories."); }

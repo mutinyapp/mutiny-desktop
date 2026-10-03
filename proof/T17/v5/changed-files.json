@@ -1,0 +1,1057 @@
+{
+  "frozen": "c6f0b0306b81dd1028f5c87e4791417061b67ca0",
+  "fileCountExcludingManifest": 210,
+  "byteCountExcludingManifest": 8112889,
+  "files": [
+    {
+      "path": "proof/T17/check-emission-mutations.mjs",
+      "bytes": 2904,
+      "sha256": "6458da111619953a654135a9692847664091e0cb1f53c0551aa19613eb44e16b"
+    },
+    {
+      "path": "proof/T17/check-runtime-negative-controls.mjs",
+      "bytes": 4418,
+      "sha256": "1e97d7e6fd89aecb7b9630bfb0331a39e3f1ccd04513b31fc9cabf3f7b96802a"
+    },
+    {
+      "path": "proof/T17/electron-runtime-entry.ts",
+      "bytes": 20173,
+      "sha256": "d5801cd888c7e99bedec7a753050bf09209d43dedb92a1859fb7217bd1cd88ea"
+    },
+    {
+      "path": "proof/T17/run-electron-runtime.mjs",
+      "bytes": 5432,
+      "sha256": "1cb771046f82a72cb8ddba3b3465180dacb9c67e3e6d4f7fa270a85b78804752"
+    },
+    {
+      "path": "proof/T17/runtime-result.mjs",
+      "bytes": 1179,
+      "sha256": "269f76228afaefbd4b148aff00692d2552d862d7ef6179b165e74b215e85917b"
+    },
+    {
+      "path": "proof/T17/runtime-result.test.mjs",
+      "bytes": 2955,
+      "sha256": "d5302356f1a59152defe5283a29c0ebb5f85b91c51392a98dcfbff874b5b5bd2"
+    },
+    {
+      "path": "proof/T17/v5-CONTRACT-DELTA.md",
+      "bytes": 13107,
+      "sha256": "ea45374b00b46f30effe7b3d4d52b114d43fd2e0b6994cc0e8d660551dbebdbe"
+    },
+    {
+      "path": "proof/T17/v5/characterization-summary.json",
+      "bytes": 38823,
+      "sha256": "7272a1709eb974f46dab8aff610b13a0039cdcd75ef50f5c18389862e3d33880"
+    },
+    {
+      "path": "proof/T17/v5/emission-controls.json",
+      "bytes": 1061,
+      "sha256": "2e07da8c3196d6d3db4f3e5a8920bd8fe7acfacc208688b91d9e69050014f209"
+    },
+    {
+      "path": "proof/T17/v5/emission.json",
+      "bytes": 142,
+      "sha256": "9bdccca3e298d928ec400eabc70594e25bfab2a7f01b58168404e81f1a588410"
+    },
+    {
+      "path": "proof/T17/v5/evidence-verification.json",
+      "bytes": 70,
+      "sha256": "e00f1883165e54f9fbc8d1a5dcabce213b25c50802245d97586b274aae83bfb8"
+    },
+    {
+      "path": "proof/T17/v5/final-lint.json",
+      "bytes": 42,
+      "sha256": "26dcff3c188432781e0b0a1c42bb1886eba14cdf8a82fb0d5cc16231271df0e2"
+    },
+    {
+      "path": "proof/T17/v5/final-runtime.json",
+      "bytes": 133,
+      "sha256": "4025ba489cf43efc18567e1e77b585f41acb70c5562ef71aacbebca24bc16ae2"
+    },
+    {
+      "path": "proof/T17/v5/final-test.json",
+      "bytes": 120,
+      "sha256": "2fe05ecdfd0984a92cc91fb45fcc1e077b69edbb1555cf6b55e7bbdba1d53655"
+    },
+    {
+      "path": "proof/T17/v5/final-tests.json",
+      "bytes": 117218,
+      "sha256": "f886e5e6d2353ccf1c36d87238e8ccbdd1596126c5df15ca2074c9d316093f54"
+    },
+    {
+      "path": "proof/T17/v5/final-typecheck.json",
+      "bytes": 47,
+      "sha256": "cb0939b1ab64452105d41d4eb2e8d917c329a5414bd54ea165c10c5e3d390cb0"
+    },
+    {
+      "path": "proof/T17/v5/lint.json",
+      "bytes": 42,
+      "sha256": "26dcff3c188432781e0b0a1c42bb1886eba14cdf8a82fb0d5cc16231271df0e2"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 16325,
+      "sha256": "7f3ba51a46017ee304c07cd875f3ccaac6b8e3dce58051dd546d8fa97df7742b"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-clean/isolation-summary.json",
+      "bytes": 14533,
+      "sha256": "02656e47d28d1546c5b7ca4c7a82e5acf5c46b0b1ad3156c942b1d4bd8b3e726"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-mutant/darwin-no-crash-no-cdp-runtime-failure.txt",
+      "bytes": 332,
+      "sha256": "1b38353c62babad273e9b6e32060ad8ce93a68d95a1370d96af0a083d7d9b50e"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-mutant/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 6386,
+      "sha256": "b985e6aef54e3fb255877c750b69e0f5f43263441f52e81449c3b33c7181ce79"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/fallback-mutant/isolation-summary.json",
+      "bytes": 656,
+      "sha256": "66a9ecc90fff34fb7b0ea9d32b99bd5de9f39d4413d6ca6484fe120fc5c955e8"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 16325,
+      "sha256": "d08dd0fb18ad9e4621de54878fc84650166278f63a3507e8209535a3a9b010b0"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-clean/isolation-summary.json",
+      "bytes": 14533,
+      "sha256": "9d4e3ee02f913bce4de8a94921313eba511c744965de8ba788c1d0fa6e46ed8c"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 19866,
+      "sha256": "0d1b13dbe66670ab3ef5a6384a54ac7ca9f5326e8d469bb108e6140202345598"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/no-crash-captions-mutant/isolation-summary.json",
+      "bytes": 14828,
+      "sha256": "ad6bb5a373e02afdce0ef1c56058729be884c794dba8d1615cfa2364005d9e12"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/results.json",
+      "bytes": 4796,
+      "sha256": "a04399f7b46f1cbfd570fdc8ac323be070116b7aeaea6431097cda95c4bc577b"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-runtime.json",
+      "bytes": 17320,
+      "sha256": "58c57672fbc83d93d377a9aa4391e9ad3da105b1e3945b24aea6281bda5f491d"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-clean/isolation-summary.json",
+      "bytes": 14469,
+      "sha256": "a9078c83a56a439b5c104d8230f9b452922b7bc89d8deb43b37df65e719bbec4"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-runtime.json",
+      "bytes": 17389,
+      "sha256": "61ab43847f7db2b50dbf95b4eaeadb94cd514ea40ea8c799e5615415dde152bb"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/negative-controls/retry-mutant/isolation-summary.json",
+      "bytes": 14538,
+      "sha256": "1d52432ec18bbfb15fc9ef50b9fdcf05a5c90df4ebe242be0eb4208ce6f48a7c"
+    },
+    {
+      "path": "proof/T17/v5/preflight.json",
+      "bytes": 782,
+      "sha256": "9a4caa5b8af46cff8e0c64efbad715c032e300763030e8a161f0077f0c752d95"
+    },
+    {
+      "path": "proof/T17/v5/resource-release.json",
+      "bytes": 1097,
+      "sha256": "f72acaf3aaa191336859907c63ede9177e598f7b97b1b0d401b8152864fe475b"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-cdp-only-captions.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-cdp-only-offline.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-cdp-only-runtime.json",
+      "bytes": 17764,
+      "sha256": "bc7483792925fc3ba9e6ab54308c6244e19ddc5e67f1e5660e494bc40adb248c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-native-os-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-native-os-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-native-os-runtime.json",
+      "bytes": 23790,
+      "sha256": "243fbd813b2326dc267e84b8461c40071779c42701897850de81cd6e4c7a44e0"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-only-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-only-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-only-runtime.json",
+      "bytes": 23393,
+      "sha256": "2c3bd0d1309d4fb813b8d126dd314c65ecf37cff70f28928d06fbc2125e206c5"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-runtime.json",
+      "bytes": 36913,
+      "sha256": "36797ee5ce723348ccfac62a8fbbf56ae08c25c86323d08d8ff91c899165c808"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-full-v3-captions.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-full-v3-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-full-v3-offline.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-full-v3-runtime.json",
+      "bytes": 33078,
+      "sha256": "d1f582cedcd390d705ed2e19e3da0fb84f5c84ddfd73f3ece6560a02514d0d17"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-full-v3-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-no-cdp-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 16325,
+      "sha256": "2c02c95bfbf94c137468917e8dbe56b16c97051fe62fc57289d7f9af107cdf0c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-no-cdp-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-runtime.json",
+      "bytes": 17324,
+      "sha256": "68f29c095e42d8cdf4da09cf5ff7f6bd946b7f9549e5b73a48c85918f49f3979"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/isolation-summary.json",
+      "bytes": 231737,
+      "sha256": "f60eeb20c5f1c66dd233cef2b230d59dd1ea704281bc1ed0a8400fa75e960003"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-cdp-only-captions.png",
+      "bytes": 54674,
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-cdp-only-offline.png",
+      "bytes": 54624,
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-cdp-only-runtime.json",
+      "bytes": 17769,
+      "sha256": "948a02557dd3b4eaffc8b28307df30e6d3de8e25008a1e19a3b16b8937349752"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-native-os-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-native-os-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-native-os-runtime.json",
+      "bytes": 23795,
+      "sha256": "1c70fc6d8c3014051b0678eb3738c7b31b044775fdb219e3949b249733e3ad0d"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-only-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-only-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-only-runtime.json",
+      "bytes": 23398,
+      "sha256": "e9e8830d26beb6e0d24c8eb9814e57d9088aecb90e71c6ad4f47fc2430942076"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-retry-hosted-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-retry-hosted-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27969,
+      "sha256": "a781557eddd7da36588a15fc21676daedfe6ce7fee6cf30e2f1c1cc3fd5c8e08"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-crash-retry-hosted-runtime.json",
+      "bytes": 36911,
+      "sha256": "73b5f62b66ea11c51626ffa12dbc3082d319923d4ab6e7513b5e33fa532f6d36"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-full-v3-captions.png",
+      "bytes": 54674,
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-full-v3-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-full-v3-offline.png",
+      "bytes": 54624,
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-full-v3-runtime.json",
+      "bytes": 33083,
+      "sha256": "f9a5ef3d3475217944cd5daf33f8f2c1a8b829141dc58fbd745b014a1f8d9f89"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-full-v3-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-no-cdp-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-no-cdp-runtime.json",
+      "bytes": 16330,
+      "sha256": "ac49a1fe146df343cdefa9016b93e7cbb71f89a482075230124dd5e7494076f1"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-no-cdp-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27969,
+      "sha256": "a781557eddd7da36588a15fc21676daedfe6ce7fee6cf30e2f1c1cc3fd5c8e08"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-runtime.json",
+      "bytes": 17322,
+      "sha256": "d34fbf5d354dfe0afcd0c182f0285f8b47fa6d48408e16fb9db81f2f601d4cab"
+    },
+    {
+      "path": "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-negative-controls.json",
+      "bytes": 83,
+      "sha256": "f767348626e5b2836077ec13077481a8eb92453952847a2efbdd3a5e3ae0dbb9"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-cdp-only-captions.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-cdp-only-offline.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-cdp-only-runtime.json",
+      "bytes": 17764,
+      "sha256": "e8c16c82a45ac7f313102619c44663693d33d77ca6760118701105513303ac95"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-native-os-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-native-os-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-native-os-runtime.json",
+      "bytes": 23790,
+      "sha256": "77bfa2080d202978fe139fb56e1f527f0e66a53656fbc77a53cdddfbefbd1841"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-only-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-only-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-only-runtime.json",
+      "bytes": 23393,
+      "sha256": "589bdc75742d74b13aab8ea692e859e22866fc0066c2feaf4c4fe9f892f77b17"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-runtime.json",
+      "bytes": 36913,
+      "sha256": "2ad55c2981da1d8b27d8c0b2dbb2d3353a39a15112a5e2f8bba5e273d78099b9"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-full-v3-captions.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-full-v3-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-full-v3-offline.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-full-v3-runtime.json",
+      "bytes": 33076,
+      "sha256": "e9bbca28368a8b1991e00079f6ebe53192d2de9a5e4f5d557f5e9aa27b66195e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-full-v3-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-no-cdp-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 16325,
+      "sha256": "0280c5ffca16473ab829ff68cdc884fbbf3d0cf81451183b0477085020436e95"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-no-cdp-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-runtime.json",
+      "bytes": 17320,
+      "sha256": "0707154ef7f1e640c7a3ea4812633b3348d1956b55f00624be0d1d482f23bc09"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/isolation-summary.json",
+      "bytes": 231725,
+      "sha256": "91b8af35bb3e2d6497c65f6d3c00f8119ba1c2e81ebc34160e2ab236947e3c0f"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-cdp-only-captions.png",
+      "bytes": 54674,
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-cdp-only-offline.png",
+      "bytes": 54624,
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-cdp-only-runtime.json",
+      "bytes": 17769,
+      "sha256": "d0138c5eee78146638b469f128b17c965b2a7a570fd5684fe71593077ab57d05"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-native-os-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-native-os-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-native-os-runtime.json",
+      "bytes": 23795,
+      "sha256": "513f7a193aa8063f5545b7c01230da92371616a10a7bcb4951b252444482cc64"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-only-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-only-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-only-runtime.json",
+      "bytes": 23398,
+      "sha256": "3df8a1514738eab09f6f98a5599ae6b71262721ec33731056528fe4fdc6f4e3a"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27969,
+      "sha256": "a781557eddd7da36588a15fc21676daedfe6ce7fee6cf30e2f1c1cc3fd5c8e08"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-runtime.json",
+      "bytes": 36911,
+      "sha256": "1639ec557ced4d009f856c7049b2a5f6f2229c4739847b3aeaeefdea55cf8ffa"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-full-v3-captions.png",
+      "bytes": 54674,
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-full-v3-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-full-v3-offline.png",
+      "bytes": 54624,
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-full-v3-runtime.json",
+      "bytes": 33081,
+      "sha256": "f62f4c80fa2de0e33f45f92bab75a3d2ff28156777c380c8b99155c3bf7e4ffc"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-full-v3-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-no-cdp-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-no-cdp-runtime.json",
+      "bytes": 16330,
+      "sha256": "a6e86abff10cb8a32c610ad51b52a6ac5d00300d1c9ea20581b0a06c052cc8b9"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-no-cdp-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27969,
+      "sha256": "a781557eddd7da36588a15fc21676daedfe6ce7fee6cf30e2f1c1cc3fd5c8e08"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-runtime.json",
+      "bytes": 17318,
+      "sha256": "eff3dc9b5842cc437c640f3e89c5de4b3c54e5074a3faa872f4c2c9facd8c1ef"
+    },
+    {
+      "path": "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime.json",
+      "bytes": 87,
+      "sha256": "27257ffbed678e10dd3bc42d1935159cb4ba7f346e235dfa813615e737cefc6b"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-cdp-only-captions.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-cdp-only-offline.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-cdp-only-runtime.json",
+      "bytes": 17764,
+      "sha256": "7128eb4e4b86126ab4cfd35357863b87e8dd352adb45eee97140b1257edf6b20"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-native-os-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-native-os-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-native-os-runtime.json",
+      "bytes": 23790,
+      "sha256": "cfb0821e6628d919c2087ba8b93fb04e4a18b1b3818ee14aec493f60b20eebdc"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-only-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-only-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-only-runtime.json",
+      "bytes": 23393,
+      "sha256": "83f8ee9661b2e0aa19c677257e590ec3337ab115c5ae47d51f79e640dc3b5d59"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-retry-hosted-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-retry-hosted-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-crash-retry-hosted-runtime.json",
+      "bytes": 36904,
+      "sha256": "6658521749264758e56bcf220881906790f699248a1b14fd1f3854939d036d3b"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-full-v3-captions.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-full-v3-crash.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-full-v3-offline.png",
+      "bytes": 53417,
+      "sha256": "8a3ced3384cac472122c617b8be58933a9219226929d92dad1d1faa430ff2c34"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-full-v3-runtime.json",
+      "bytes": 33078,
+      "sha256": "9f8815e4d8c156da9b3ea5e06a3f50466c70c531fa72d6ba95c3422cd422e65f"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-full-v3-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-no-crash-no-cdp-captions.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-no-crash-no-cdp-runtime.json",
+      "bytes": 16325,
+      "sha256": "9091a6b57821bdb5add9c5d8ed23ba53af9ea6db0ec47769aee746249ddca642"
+    },
+    {
+      "path": "proof/T17/v5/runtime/darwin-no-crash-no-cdp-server.png",
+      "bytes": 54953,
+      "sha256": "15f36ed6955025ddd2c52aa640a04df0411faef2d6832e7961c30536cc93c3aa"
+    },
+    {
+      "path": "proof/T17/v5/runtime/isolation-summary.json",
+      "bytes": 203242,
+      "sha256": "00695b45d7a1f9616e13dfb5f8d36e06c5aafa432cae9f3e46e1108d9ec8e388"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-cdp-only-captions.png",
+      "bytes": 54674,
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-cdp-only-offline.png",
+      "bytes": 54624,
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-cdp-only-runtime.json",
+      "bytes": 17769,
+      "sha256": "14bf692e83f8cecbd5d95c00b27d9f3cc634e64ad23133301a12bf2aa4277273"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-native-os-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-native-os-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-native-os-runtime.json",
+      "bytes": 23795,
+      "sha256": "98d8ed0416d7eab18ac9b3b561623161871d4876ad10aa8e0c10772b3c8d027d"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-only-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-only-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-only-runtime.json",
+      "bytes": 23398,
+      "sha256": "8fc7995671209c569b6b8384048c57db115fb5b8df66f346f0b94c741a3dddf6"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-retry-hosted-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-retry-hosted-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-retry-hosted-hosted-captions.png",
+      "bytes": 27969,
+      "sha256": "a781557eddd7da36588a15fc21676daedfe6ce7fee6cf30e2f1c1cc3fd5c8e08"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-retry-hosted-hosted-restored.png",
+      "bytes": 27107,
+      "sha256": "3bf21b46d7ab06b5b2aec70549d645021a3bddb8b3bb180f83e9dcf024cd4b3c"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-crash-retry-hosted-runtime.json",
+      "bytes": 36902,
+      "sha256": "4212d45575e584684a341f0fa86124c2fafd1e2c5eec01df75fc38c8d2702162"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-full-v3-captions.png",
+      "bytes": 54674,
+      "sha256": "03a1b8addd42a6c9ffc0868a3cd7ac3dadfd3aaba3d1f9bfea51b0ca3aa892a2"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-full-v3-crash.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-full-v3-offline.png",
+      "bytes": 54624,
+      "sha256": "a988472bf7f6cd6a7dd38c087d00578248a3196f0ea466b51fe163b885fc3c90"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-full-v3-runtime.json",
+      "bytes": 33083,
+      "sha256": "89bcb7c4c03de1b0035a6e8a845bba195008f6edce98d1928e8892bd087130c1"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-full-v3-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-no-crash-no-cdp-captions.png",
+      "bytes": 56187,
+      "sha256": "b0c3d8d5561b0bb33107857469f2af724138ad3e4c7b193266ad6b1b4bbbdc46"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-no-crash-no-cdp-runtime.json",
+      "bytes": 16330,
+      "sha256": "baf42f713d3a905a862452e61e0382c2a02ef1179887b783391b187f6aa2a84f"
+    },
+    {
+      "path": "proof/T17/v5/runtime/win32-no-crash-no-cdp-server.png",
+      "bytes": 56134,
+      "sha256": "d8619fcf357b5305566b8a7e4ccdae637f7b29afe109e3750f478201cc29458e"
+    },
+    {
+      "path": "proof/T17/v5/semantics-green.json",
+      "bytes": 93,
+      "sha256": "1bbc6e82cc2af2b1fb2ad2d9a2a80f44e558fe3ba5a72a6165a8589b76742558"
+    },
+    {
+      "path": "proof/T17/v5/semantics-red.json",
+      "bytes": 78,
+      "sha256": "077087c3590cbfa9b6ab5b5683b828fff267ea09af74ba623d823f8cdaf1cff6"
+    },
+    {
+      "path": "proof/T17/v5/test.json",
+      "bytes": 114,
+      "sha256": "3f180738c436b2867ca34c4776d113c3d0cb95ce66cf3129567e5397c4d05db7"
+    },
+    {
+      "path": "proof/T17/v5/tests.json",
+      "bytes": 113712,
+      "sha256": "fda01f6de7d0e5593294a124ef713e980ceeb55e00c8ca60ea992ede11b2befa"
+    },
+    {
+      "path": "proof/T17/v5/typecheck.json",
+      "bytes": 47,
+      "sha256": "cb0939b1ab64452105d41d4eb2e8d917c329a5414bd54ea165c10c5e3d390cb0"
+    },
+    {
+      "path": "proof/T17/v5/verified-lint.json",
+      "bytes": 42,
+      "sha256": "26dcff3c188432781e0b0a1c42bb1886eba14cdf8a82fb0d5cc16231271df0e2"
+    },
+    {
+      "path": "proof/T17/v5/verified-negative-controls.json",
+      "bytes": 83,
+      "sha256": "f767348626e5b2836077ec13077481a8eb92453952847a2efbdd3a5e3ae0dbb9"
+    },
+    {
+      "path": "proof/T17/v5/verified-runtime.json",
+      "bytes": 136,
+      "sha256": "993cfec7dbdb889c4e9827c514b1cda4502cdd68910d3ee40669c46d1f0ad3a9"
+    },
+    {
+      "path": "proof/T17/v5/verified-test.json",
+      "bytes": 42,
+      "sha256": "2b4d1ac1bb54675b50f2378488f9853cf7928917ee1cfbba0a6fc0599f46e69c"
+    },
+    {
+      "path": "proof/T17/v5/verified-typecheck.json",
+      "bytes": 47,
+      "sha256": "cb0939b1ab64452105d41d4eb2e8d917c329a5414bd54ea165c10c5e3d390cb0"
+    },
+    {
+      "path": "proof/T17/v5/workflow-scope-audit.json",
+      "bytes": 18453,
+      "sha256": "308ae71eb9a8220ad37b237c2a6eb85b70a541431732b5d90b06cc7700c0adff"
+    },
+    {
+      "path": "proof/T17/verify-v5-evidence.mjs",
+      "bytes": 7504,
+      "sha256": "b1fe677fcd5d5012d365128d9b2fe6848cbfe0f98bbf79c4ba4e369209356dfc"
+    }
+  ]
+}

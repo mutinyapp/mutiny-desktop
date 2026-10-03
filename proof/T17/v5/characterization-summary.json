@@ -1,0 +1,1601 @@
+{
+  "port": 49206,
+  "emittedSHA256": "33aba3c676f65b56a45ffcc3dde2a16c75846636717ca280087940f00c0ed712",
+  "scenarioCount": 14,
+  "passCount": 6,
+  "knownGapCount": 6,
+  "failCount": 2,
+  "captionAttemptCount": 64,
+  "tupleOrder": [
+    "hosted",
+    "offline",
+    "self",
+    "sameContents",
+    "sameFrame",
+    "detached"
+  ],
+  "results": [
+    {
+      "mode": "darwin",
+      "scenario": "no-crash-no-cdp",
+      "result": "PASS",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "darwin",
+      "scenario": "crash-only",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        }
+      ]
+    },
+    {
+      "mode": "darwin",
+      "scenario": "cdp-only",
+      "result": "PASS",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "darwin",
+      "scenario": "full-v3",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": false,
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 7,
+            "routingId": 4
+          }
+        },
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": true,
+          "current": {
+            "id": 1,
+            "detached": true,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 9,
+            "routingId": 1
+          }
+        }
+      ],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        }
+      ]
+    },
+    {
+      "mode": "darwin",
+      "scenario": "crash-retry-hosted",
+      "result": "FAIL",
+      "exit": 1,
+      "hardFailures": [
+        "crash-retry-hosted: Retry button did not recover configured HTTP 200 app (automatic retry paused)"
+      ],
+      "characterization": {
+        "manualRetry": {
+          "worked": false,
+          "elapsed": 1147,
+          "hitsBefore": 1,
+          "hitsAfter": 1,
+          "requests": [],
+          "automaticRetryPaused": true,
+          "intents": [
+            {
+              "action": "Retry",
+              "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+              "defaultPrevented": true,
+              "hosted": false,
+              "offline": false,
+              "self": false,
+              "sameContents": true,
+              "sameFrame": true,
+              "eventFrameSame": true,
+              "isMainFrame": true,
+              "detached": true,
+              "current": {
+                "id": 1,
+                "detached": true,
+                "destroyed": false,
+                "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+                "processId": 5,
+                "routingId": 1
+              }
+            }
+          ]
+        },
+        "hostedRestoration": {
+          "mechanism": "automatic retry after show",
+          "url": "http://127.0.0.1:49206/app?configured=1",
+          "frame": {
+            "id": 1,
+            "detached": true,
+            "destroyed": false,
+            "url": "http://127.0.0.1:49206/app?configured=1",
+            "processId": 6,
+            "routingId": 4
+          }
+        },
+        "hostedCaptionsAuthorized": true,
+        "stopBeforeReadyUpdate": false
+      },
+      "retryIntents": [
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": true,
+          "current": {
+            "id": 1,
+            "detached": true,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        }
+      ],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "darwin",
+      "scenario": "crash-native-os",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {
+        "nativeOS": {
+          "minimize": true,
+          "restore": true,
+          "close": true,
+          "closed": true,
+          "events": [
+            "minimize",
+            "restore",
+            "close",
+            "closed"
+          ],
+          "ipcUnchanged": true,
+          "authorization": "not applicable: native main-process path, no renderer authority"
+        }
+      },
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        }
+      ]
+    },
+    {
+      "mode": "darwin",
+      "scenario": "no-crash-retry-hosted",
+      "result": "PASS",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {
+        "manualRetry": {
+          "worked": true,
+          "elapsed": 1155,
+          "hitsBefore": 1,
+          "hitsAfter": 2,
+          "requests": [
+            "http://127.0.0.1:49206/app?configured=1"
+          ],
+          "automaticRetryPaused": true,
+          "intents": [
+            {
+              "action": "Retry",
+              "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+              "defaultPrevented": true,
+              "hosted": false,
+              "offline": true,
+              "self": true,
+              "sameContents": true,
+              "sameFrame": true,
+              "eventFrameSame": true,
+              "isMainFrame": true,
+              "detached": false,
+              "current": {
+                "id": 1,
+                "detached": false,
+                "destroyed": false,
+                "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+                "processId": 5,
+                "routingId": 4
+              }
+            }
+          ]
+        },
+        "hostedRestoration": {
+          "mechanism": "manual Retry",
+          "url": "http://127.0.0.1:49206/app?configured=1",
+          "frame": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "http://127.0.0.1:49206/app?configured=1",
+            "processId": 6,
+            "routingId": 4
+          }
+        },
+        "hostedCaptionsAuthorized": true,
+        "stopBeforeReadyUpdate": false
+      },
+      "retryIntents": [
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": false,
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 4
+          }
+        }
+      ],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "no-crash-no-cdp",
+      "result": "PASS",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-only",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "cdp-only",
+      "result": "PASS",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "full-v3",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {},
+      "retryIntents": [
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": false,
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 7,
+            "routingId": 4
+          }
+        },
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": true,
+          "current": {
+            "id": 1,
+            "detached": true,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 9,
+            "routingId": 1
+          }
+        }
+      ],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-retry-hosted",
+      "result": "FAIL",
+      "exit": 1,
+      "hardFailures": [
+        "crash-retry-hosted: Retry button did not recover configured HTTP 200 app (automatic retry paused)"
+      ],
+      "characterization": {
+        "manualRetry": {
+          "worked": false,
+          "elapsed": 1150,
+          "hitsBefore": 1,
+          "hitsAfter": 1,
+          "requests": [],
+          "automaticRetryPaused": true,
+          "intents": [
+            {
+              "action": "Retry",
+              "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+              "defaultPrevented": true,
+              "hosted": false,
+              "offline": false,
+              "self": false,
+              "sameContents": true,
+              "sameFrame": true,
+              "eventFrameSame": true,
+              "isMainFrame": true,
+              "detached": true,
+              "current": {
+                "id": 1,
+                "detached": true,
+                "destroyed": false,
+                "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+                "processId": 5,
+                "routingId": 1
+              }
+            }
+          ]
+        },
+        "hostedRestoration": {
+          "mechanism": "automatic retry after show",
+          "url": "http://127.0.0.1:49206/app?configured=1",
+          "frame": {
+            "id": 1,
+            "detached": true,
+            "destroyed": false,
+            "url": "http://127.0.0.1:49206/app?configured=1",
+            "processId": 6,
+            "routingId": 4
+          }
+        },
+        "hostedCaptionsAuthorized": true,
+        "stopBeforeReadyUpdate": false
+      },
+      "retryIntents": [
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": false,
+          "self": false,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": true,
+          "current": {
+            "id": 1,
+            "detached": true,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 1
+          }
+        }
+      ],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-native-os",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {
+        "nativeOS": {
+          "minimize": true,
+          "restore": true,
+          "close": true,
+          "closed": true,
+          "events": [
+            "minimize",
+            "restore",
+            "close",
+            "closed"
+          ],
+          "ipcUnchanged": true,
+          "authorization": "not applicable: native main-process path, no renderer authority"
+        }
+      },
+      "retryIntents": [],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "maximise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "minimise",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        },
+        {
+          "action": "close",
+          "document": "offline",
+          "delivered": true,
+          "tuple": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "native": false,
+          "nativeEvents": []
+        }
+      ]
+    },
+    {
+      "mode": "win32",
+      "scenario": "no-crash-retry-hosted",
+      "result": "PASS",
+      "exit": 0,
+      "hardFailures": [],
+      "characterization": {
+        "manualRetry": {
+          "worked": true,
+          "elapsed": 1152,
+          "hitsBefore": 1,
+          "hitsAfter": 2,
+          "requests": [
+            "http://127.0.0.1:49206/app?configured=1"
+          ],
+          "automaticRetryPaused": true,
+          "intents": [
+            {
+              "action": "Retry",
+              "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+              "defaultPrevented": true,
+              "hosted": false,
+              "offline": true,
+              "self": true,
+              "sameContents": true,
+              "sameFrame": true,
+              "eventFrameSame": true,
+              "isMainFrame": true,
+              "detached": false,
+              "current": {
+                "id": 1,
+                "detached": false,
+                "destroyed": false,
+                "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+                "processId": 5,
+                "routingId": 4
+              }
+            }
+          ]
+        },
+        "hostedRestoration": {
+          "mechanism": "manual Retry",
+          "url": "http://127.0.0.1:49206/app?configured=1",
+          "frame": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "http://127.0.0.1:49206/app?configured=1",
+            "processId": 6,
+            "routingId": 4
+          }
+        },
+        "hostedCaptionsAuthorized": true,
+        "stopBeforeReadyUpdate": false
+      },
+      "retryIntents": [
+        {
+          "action": "Retry",
+          "destination": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server&retry=1",
+          "defaultPrevented": true,
+          "hosted": false,
+          "offline": true,
+          "self": true,
+          "sameContents": true,
+          "sameFrame": true,
+          "eventFrameSame": true,
+          "isMainFrame": true,
+          "detached": false,
+          "current": {
+            "id": 1,
+            "detached": false,
+            "destroyed": false,
+            "url": "file:///Users/friday/.hermes/profiles/friday/cache/scratch/T17-real-electron-KWGyKq/.vite/build/offline.html?error=server",
+            "processId": 5,
+            "routingId": 4
+          }
+        }
+      ],
+      "actions": [
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "maximize"
+          ]
+        },
+        {
+          "action": "maximise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "unmaximize"
+          ]
+        },
+        {
+          "action": "minimise",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "minimize"
+          ]
+        },
+        {
+          "action": "close",
+          "document": "hosted-restored",
+          "delivered": true,
+          "tuple": [
+            true,
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "native": true,
+          "nativeEvents": [
+            "close",
+            "closed"
+          ]
+        }
+      ]
+    }
+  ]
+}

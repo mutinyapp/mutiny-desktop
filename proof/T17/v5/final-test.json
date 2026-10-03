@@ -1,0 +1,4 @@
+{
+  "command": "pnpm test --reporter=default --reporter=json --outputFile=proof/T17/v5/final-tests.json",
+  "exit": 0
+}
