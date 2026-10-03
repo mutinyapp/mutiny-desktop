@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "python3",
+    "proof/T17/v6/verify.py"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+  "environment": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+    "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+    "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+  },
+  "overrides": {},
+  "exit": 0,
+  "started": 1791000824.589262,
+  "elapsedSeconds": 0.33806610107421875,
+  "logSHA256": "baac4c952ff23e183b06d227d3df83242f5a35fed26261aa39cfd96855240bb0"
+}

@@ -1,0 +1,701 @@
+diff --git a/assets/desktop/offline/offline.html b/assets/desktop/offline/offline.html
+new file mode 100644
+index 0000000..ead532f
+--- /dev/null
++++ b/assets/desktop/offline/offline.html
+@@ -0,0 +1,67 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1">
++  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; font-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
++  <title>Mutiny — Connection interrupted</title>
++  <style>
++    :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #23202f; color: #fffdfa; }
++    * { box-sizing: border-box; }
++    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
++    .chrome { height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding-left: 16px; -webkit-app-region: drag; }
++    body.mac .chrome { padding-left: 92px; }
++    .chrome span { font-size: 13px; font-weight: 600; color: #aaa5b5; }
++    #captions { display: flex; }
++    #captions[hidden] { display: none; }
++    button { font: inherit; cursor: pointer; -webkit-app-region: no-drag; border: 0; transition: background-color 100ms; }
++    #captions button { width: 48px; height: 44px; color: #fffdfa; background: transparent; font-size: 19px; }
++    #captions button:hover { background: #3b3845; }
++    #captions #close:hover { background: #d33d4b; }
++    button:focus-visible { outline: 2px solid #a899ff; outline-offset: -3px; }
++    main { flex: 1; margin: 0 8px 8px; padding: 28px 24px; background: #171522; border-radius: 16px; display: grid; place-items: center; }
++    .message { max-width: 460px; width: 100%; text-align: center; }
++    .wordmark { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 36px; }
++    .class { display: inline-block; border: 1px solid #4a4657; border-radius: 999px; padding: 6px 14px; color: #a899ff; font-size: 13px; }
++    h1 { font-size: 26px; line-height: 1.25; margin: 18px 0 12px; }
++    p { color: #aaa5b5; font-size: 15px; line-height: 1.6; margin: 0; }
++    #retry { display: block; margin: 24px auto 18px; min-height: 44px; min-width: 120px; border-radius: 8px; padding: 10px 24px; background: #7657ff; color: #ffffff; font-weight: 600; }
++    #retry:hover { background: #7657ff; }
++    .note { font-size: 12px; }
++    @media (max-height: 480px) { .wordmark { font-size: 28px; margin-bottom: 12px; } main { padding: 16px; } h1 { font-size: 20px; margin: 12px 0 8px; } #retry { margin: 12px auto; } }
++    @media (prefers-reduced-motion: reduce) { button { transition: none; } }
++  </style>
++</head>
++<body>
++  <header class="chrome"><span>Mutiny</span><nav id="captions" aria-label="Window controls" hidden><button id="minimise" aria-label="Minimise window">−</button><button id="maximise" aria-label="Maximise or restore window">□</button><button id="close" aria-label="Close window">×</button></nav></header>
++  <main><section class="message" aria-labelledby="heading"><div class="wordmark" aria-label="Mutiny">mutiny</div><div id="error-class" class="class">Server</div><h1 id="heading">Connection interrupted</h1><p id="description">Mutiny couldn’t load. Please try again.</p><button id="retry">Retry</button><p class="note">We’ll retry automatically while this window is visible.</p></section></main>
++  <script>
++    const messages = {
++      offline: ["Offline", "You appear to be offline. Check your connection, then try again."],
++      dns: ["DNS", "We couldn’t find your Mutiny server. Check your connection, then try again."],
++      tls: ["TLS", "We couldn’t establish a secure connection to your Mutiny server."],
++      server: ["Server", "Mutiny couldn’t load. The server may be unavailable. Please try again."]
++    };
++    const error = new URL(location.href).searchParams.get("error");
++    const message = Object.hasOwn(messages, error) ? messages[error] : messages.server;
++    document.getElementById("error-class").textContent = message[0];
++    document.getElementById("description").textContent = message[1];
++    document.body.classList.toggle("mac", window.native?.platform === "darwin");
++    const captions = document.getElementById("captions");
++    // Reuse only the existing caption methods. No new preload or IPC bridge.
++    for (const action of ["minimise", "maximise", "close"]) {
++      document.getElementById(action).addEventListener("click", () => window.native?.[action]());
++    }
++    function chrome() {
++      const config = window.desktopConfig?.get();
++      captions.hidden = window.native?.platform === "darwin" || config?.customFrame === false;
++      if (!config) requestAnimationFrame(chrome);
++    }
++    if (["win32", "linux"].includes(window.native?.platform)) chrome();
++    document.getElementById("retry").addEventListener("click", () => {
++      // A same-file navigation intent is intercepted, never loaded. Main owns target.
++      location.href = location.href + "&retry=1";
++    });
++  </script>
++</body>
++</html>
+diff --git a/src/main.ts b/src/main.ts
+index 91f93b7..d5d4740 100644
+--- a/src/main.ts
++++ b/src/main.ts
+@@ -28,6 +28,7 @@ import {
+ import { initTray } from "./native/tray";
+ import { BUILD_URL, createMainWindow, mainWindow } from "./native/window";
+ import { registerWindowControlHandlers } from "./native/windowControls";
++import { isOfflineCaptionIpc } from "./native/offlineRecovery";
+ 
+ // Squirrel-specific logic
+ // create/remove shortcuts on Windows when installing / uninstalling
+@@ -165,7 +166,9 @@ if (acquiredLock) {
+       protocolUrls.rendererReady(window),
+     );
+ 
+-    registerWindowControlHandlers(ipcMain, () => mainWindow, (event) => isTrustedIpc(event, mainWindow, BUILD_URL));
++    registerWindowControlHandlers(ipcMain, () => mainWindow, (event) =>
++      isTrustedIpc(event, mainWindow, BUILD_URL) || isOfflineCaptionIpc(event, mainWindow),
++    );
+     initBadges();
+     initTray();
+     initDiscordRpc();
+diff --git a/src/native/offlinePolicy.ts b/src/native/offlinePolicy.ts
+new file mode 100644
+index 0000000..4f21704
+--- /dev/null
++++ b/src/native/offlinePolicy.ts
+@@ -0,0 +1,16 @@
++export type OfflineErrorClass = "offline" | "dns" | "tls" | "server";
++
++export function shouldShowOffline(code: number, mainFrame: boolean): boolean {
++  return mainFrame === true && code < 0 && code !== -3;
++}
++
++export function offlineErrorClass(code: number): OfflineErrorClass {
++  if ([-21, -106, -109].includes(code)) return "offline";
++  if ([-105, -137, -801, -802, -803, -804, -805, -806].includes(code)) return "dns";
++  if ((code <= -200 && code >= -299) || [-107, -110, -112, -113, -117, -122].includes(code)) return "tls";
++  return "server";
++}
++
++export function retryDelay(attempt: number): number {
++  return [5000, 15000, 30000, 60000][Math.min(Math.max(0, attempt), 3)];
++}
+diff --git a/src/native/offlineRecovery.ts b/src/native/offlineRecovery.ts
+new file mode 100644
+index 0000000..d41981e
+--- /dev/null
++++ b/src/native/offlineRecovery.ts
+@@ -0,0 +1,145 @@
++import { pathToFileURL } from "node:url";
++import type { BrowserWindow } from "electron";
++import { offlineErrorClass, retryDelay, shouldShowOffline } from "./offlinePolicy";
++import type { OfflineErrorClass } from "./offlinePolicy";
++import { hasConfiguredOrigin } from "./rendererTrust";
++import type { RendererWindow } from "./rendererTrust";
++
++// Authority is created only by the main process requesting its emitted file.
++// Do not share this exception with any general renderer/permission policy.
++const documents = new WeakMap<RendererWindow, string>();
++export function isOfflineCaptionIpc(
++  event: { sender: unknown; senderFrame: unknown }, window: RendererWindow | undefined,
++): boolean {
++  try {
++    if (!window || window.isDestroyed() || window.webContents.isDestroyed()) return false;
++    const frame = window.webContents.mainFrame as { url: string; detached?: boolean };
++    const owned = documents.get(window);
++    return !!owned && event.sender === window.webContents && event.senderFrame === frame &&
++      !frame.detached && frame.url === owned;
++  } catch { return false; }
++}
++
++/** Install before the first remote load; the file path and retry URL are main-owned. */
++export function installOfflineRecovery(window: BrowserWindow, configured: URL, file: string): () => void {
++  const contents = window.webContents;
++  const target = configured.href;
++  const bundled = pathToFileURL(file).href;
++  let active = false;
++  let loadingOffline = false;
++  let inFlight = false;
++  let disposed = false;
++  let attempt = 0;
++  let remaining = 5000;
++  let due = 0;
++  let timer: ReturnType<typeof setTimeout> | undefined;
++  let generation = 0;
++
++  const alive = () => !disposed && !window.isDestroyed() && !contents.isDestroyed();
++  const visible = () => alive() && window.isVisible() && !window.isMinimized();
++  const clearTimer = () => {
++    if (timer !== undefined) clearTimeout(timer);
++    timer = undefined;
++  };
++  const retry = () => {
++    if (!alive() || !active || inFlight) return;
++    clearTimer();
++    documents.delete(window);
++    inFlight = true;
++    loadingOffline = false;
++    attempt++;
++    // Never read a navigation target from a renderer message or URL.
++    void Promise.resolve(window.loadURL(target)).catch(() => {
++      // did-fail-load handles the exact main-frame failure, including -3.
++    });
++  };
++  const schedule = () => {
++    if (!visible() || !active || inFlight || loadingOffline || timer !== undefined) return;
++    due = Date.now() + remaining;
++    timer = setTimeout(() => {
++      timer = undefined;
++      if (visible()) retry();
++    }, remaining);
++  };
++  const pause = () => {
++    if (timer !== undefined) remaining = Math.max(0, due - Date.now());
++    clearTimer();
++  };
++  const show = (error: OfflineErrorClass) => {
++    if (!alive()) return;
++    const url = `${bundled}?error=${error}`;
++    if (loadingOffline) return;
++    clearTimer();
++    active = true;
++    inFlight = false;
++    loadingOffline = true;
++    remaining = retryDelay(attempt);
++    documents.set(window, url);
++    const load = ++generation;
++    void Promise.resolve(window.loadURL(url)).catch(error => {
++      if (alive() && generation === load) {
++        loadingOffline = false;
++        documents.delete(window);
++        console.error("[mutiny] Bundled offline document failed to load", error);
++      }
++    });
++  };
++  const fail = (_event: Electron.Event, code: number, _description: string, url: string, mainFrame: boolean) => {
++    if (shouldShowOffline(code, mainFrame) && hasConfiguredOrigin(url, configured)) show(offlineErrorClass(code));
++  };
++  const crash = () => show("server");
++  const navigated = (_event: Electron.Event, url: string, responseCode: number) => {
++    if (responseCode >= 400 && hasConfiguredOrigin(url, configured)) show("server");
++  };
++  const finished = () => {
++    if (!alive()) return;
++    const url = contents.mainFrame.url;
++    if (url === documents.get(window)) {
++      loadingOffline = false;
++      schedule();
++    } else if (!loadingOffline && hasConfiguredOrigin(url, configured)) {
++      clearTimer();
++      documents.delete(window);
++      active = false;
++      inFlight = false;
++      attempt = 0;
++      remaining = 5000;
++    }
++  };
++  const navigate = (event: Electron.Event & { frame?: unknown; initiator?: unknown; isMainFrame?: boolean }, url: string) => {
++    if (!active) return;
++    // The offline document receives no arbitrary renderer navigation authority.
++    event.preventDefault();
++    const frame = contents.mainFrame;
++    if (event.isMainFrame === true && event.frame === frame && event.initiator === frame &&
++      isOfflineCaptionIpc({ sender: contents, senderFrame: frame }, window) &&
++      url === `${documents.get(window)}&retry=1`) retry();
++  };
++  const dispose = () => {
++    disposed = true;
++    generation++;
++    clearTimer();
++    documents.delete(window);
++    contents.removeListener("did-fail-load", fail);
++    contents.removeListener("render-process-gone", crash);
++    contents.removeListener("did-navigate", navigated);
++    contents.removeListener("did-finish-load", finished);
++    contents.removeListener("will-navigate", navigate);
++    window.removeListener("hide", pause);
++    window.removeListener("minimize", pause);
++    window.removeListener("show", schedule);
++    window.removeListener("restore", schedule);
++    window.removeListener("closed", dispose);
++  };
++  contents.on("did-fail-load", fail);
++  contents.on("render-process-gone", crash);
++  contents.on("did-navigate", navigated);
++  contents.on("did-finish-load", finished);
++  contents.on("will-navigate", navigate);
++  window.on("hide", pause);
++  window.on("minimize", pause);
++  window.on("show", schedule);
++  window.on("restore", schedule);
++  window.once("closed", dispose);
++  return dispose;
++}
+diff --git a/src/native/window.ts b/src/native/window.ts
+index f1a6bc0..79d8cfd 100644
+--- a/src/native/window.ts
++++ b/src/native/window.ts
+@@ -8,6 +8,7 @@ import type { NativeCapabilities } from "../world/capabilities";
+ import { config } from "./config";
+ import { buildContextMenuTemplate } from "./contextMenuPolicy";
+ import { isTrustedIpc } from "./rendererTrust";
++import { installOfflineRecovery } from "./offlineRecovery";
+ import { shouldRestoreMaximised } from "./startup";
+ import { updateTrayMenu } from "./tray";
+ import { mainWindowOptions } from "./windowOptions";
+@@ -28,6 +29,7 @@ export const BUILD_URL = new URL(
+ // internal window state
+ let shouldQuit = false;
+ let capabilitiesHandlerRegistered = false;
++let disposeOfflineRecovery: (() => void) | undefined;
+ 
+ function capabilitiesSnapshot(window: BrowserWindow, customFrame: boolean): NativeCapabilities {
+   return {
+@@ -122,8 +124,12 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
+     mainWindow.maximize();
+   }
+ 
+-  // load the entrypoint
+-  mainWindow.loadURL(BUILD_URL.toString());
++  // Install recovery before loading so even the first failure has local controls.
++  disposeOfflineRecovery?.();
++  disposeOfflineRecovery = installOfflineRecovery(mainWindow, BUILD_URL, join(__dirname, "offline.html"));
++  void Promise.resolve(mainWindow.loadURL(BUILD_URL.toString())).catch(() => {
++    // Recovery handles main-frame failures; cancelled (-3) loads are ignored.
++  });
+ 
+   mainWindow.webContents.on(
+     "did-fail-load",
+diff --git a/tests/mainSecurity.test.ts b/tests/mainSecurity.test.ts
+index 9955224..387fcdd 100644
+--- a/tests/mainSecurity.test.ts
++++ b/tests/mainSecurity.test.ts
+@@ -167,3 +167,25 @@ describe("production main native authority", () => {
+     expect(f.dialog).toHaveBeenCalledOnce();
+   });
+ });
++
++describe("offline caption exception never grants production privileges", () => {
++  const offline = "file:///isolated-test/.vite/build/offline.html?error=dns";
++  it.each(["media", "mediaKeySystem", "display-capture", "notifications", "geolocation", "clipboard-read"])("denies offline %s requests and checks", permission => {
++    f.frame.url = offline;
++    const cb = vi.fn();
++    f.permissions.get("request")(f.wc, permission, cb, {isMainFrame:true, requestingUrl:offline});
++    expect(cb).toHaveBeenCalledWith(false);
++    expect(f.permissions.get("check")(f.wc, permission, "null", {isMainFrame:true, requestingUrl:offline})).toBe(false);
++    expect(f.permissions.get("check")(null, permission, f.buildUrl.origin, {isMainFrame:false, embeddingOrigin:f.buildUrl.origin})).toBe(false);
++  });
++  it("denies offline audio-file dialogs", async () => {
++    f.frame.url = offline;
++    await expect(f.handlers.get("dialog:openAudioFile")({sender:f.wc,senderFrame:f.frame})).rejects.toThrow();
++    expect(f.dialog).not.toHaveBeenCalled();
++  });
++  it("denies offline display picking", async () => {
++    f.frame.url = offline; const cb = vi.fn();
++    await f.permissions.get("display")({frame:f.frame,securityOrigin:"null"},cb);
++    expect(cb).toHaveBeenCalledWith({}); expect(f.picker).not.toHaveBeenCalled();
++  });
++});
+diff --git a/tests/nativeIpcSecurity.test.ts b/tests/nativeIpcSecurity.test.ts
+index 6682a48..179da28 100644
+--- a/tests/nativeIpcSecurity.test.ts
++++ b/tests/nativeIpcSecurity.test.ts
+@@ -44,6 +44,7 @@ function listener(map: Map<string, (...args: unknown[]) => unknown>, name: strin
+ const originalPrototype = Object.getPrototypeOf(config);
+ beforeEach(() => {
+   vi.restoreAllMocks(); vi.clearAllMocks();
++  fake.frame.url = "https://app.mutinyapp.gg/channels";
+   Object.setPrototypeOf(config, originalPrototype);
+   for (const key of Object.keys(config)) Reflect.deleteProperty(config, key);
+ });
+@@ -74,6 +75,18 @@ describe("config IPC boundary", () => {
+     expect(fake.set).toHaveBeenCalledWith("minimiseToTray", false);
+   });
+ });
++describe("offline page has no config or autostart authority", () => {
++  it("rejects a valid config mutation from the bundled file", () => {
++    fake.frame.url = "file:///isolated-test/.vite/build/offline.html?error=dns";
++    listener(fake.on, "config")(trusted(), { minimiseToTray: false });
++    expect(fake.set).not.toHaveBeenCalled();
++  });
++  it.each(["autostart:get", "autostart:set"])("rejects bundled %s", async channel => {
++    fake.frame.url = "file:///isolated-test/.vite/build/offline.html?error=dns";
++    await expect(listener(fake.handle, channel)(trusted(), true)).rejects.toThrow();
++    expect(fake.setLoginItemSettings).not.toHaveBeenCalled(); expect(fake.disable).not.toHaveBeenCalled();
++  });
++});
+ describe("autostart IPC boundary", () => {
+   it.each(["autostart:get", "autostart:set"])("rejects untrusted %s", async (channel) => {
+     await expect(listener(fake.handle, channel)({ sender: {}, senderFrame: fake.frame }, true)).rejects.toThrow();
+diff --git a/tests/offlineCaptionRequirements.test.ts b/tests/offlineCaptionRequirements.test.ts
+new file mode 100644
+index 0000000..9b67a57
+--- /dev/null
++++ b/tests/offlineCaptionRequirements.test.ts
+@@ -0,0 +1,63 @@
++import { describe, expect, it, vi } from "vitest";
++
++import { isTrustedIpc } from "../src/native/rendererTrust";
++import { EventEmitter } from "node:events";
++import { installOfflineRecovery, isOfflineCaptionIpc } from "../src/native/offlineRecovery";
++import { registerWindowControlHandlers } from "../src/native/windowControls";
++
++const configured = new URL("https://app.mutinyapp.gg");
++
++function fixture(url: string) {
++  const frame = { url };
++  const contents = Object.assign(new EventEmitter(), { mainFrame: frame, isDestroyed: () => false });
++  const window = Object.assign(new EventEmitter(), {
++    webContents: contents,
++    isDestroyed: () => false,
++    minimize: vi.fn(),
++    maximize: vi.fn(),
++    unmaximize: vi.fn(),
++    close: vi.fn(),
++    isMaximized: () => false,
++    isVisible: () => false, isMinimized: () => false,
++    loadURL: (value: string) => { frame.url = value; return Promise.resolve(); },
++  });
++  installOfflineRecovery(window as unknown as Electron.BrowserWindow, configured, "/isolated-test/.vite/build/offline.html");
++  if (url.startsWith("file:")) contents.emit("did-fail-load", {}, -105, "DNS", configured.href, true);
++  const listeners = new Map<string, (event: Electron.IpcMainEvent) => void>();
++  const ipc = {
++    on: (channel: string, listener: (event: Electron.IpcMainEvent) => void) => {
++      listeners.set(channel, listener);
++    },
++  };
++  registerWindowControlHandlers(ipc, () => window, (event) =>
++    isTrustedIpc(event, window, configured) || isOfflineCaptionIpc(event, window),
++  );
++  const event = { sender: contents, senderFrame: frame } as unknown as Electron.IpcMainEvent;
++  return { window, event, listeners };
++}
++
++// Original preserved RED requirements now exercised with the exact approved exception.
++describe("T17 existing caption-control trust boundary", () => {
++  it.each([
++    ["minimise", "minimize"],
++    ["maximise", "maximize"],
++    ["close", "close"],
++  ] as const)("T17 requires bundled file controls for %s", (channel, method) => {
++    const { window, event, listeners } = fixture(
++      "file:///isolated-test/.vite/build/offline.html",
++    );
++    listeners.get(channel)?.(event);
++    expect(window[method]).toHaveBeenCalledOnce();
++  });
++
++  it.each([
++    ["minimise", "minimize"],
++    ["maximise", "maximize"],
++    ["close", "close"],
++  ] as const)("allows configured main renderer for %s", (channel, method) => {
++    const { window, event, listeners } = fixture(configured.toString());
++    expect(isTrustedIpc(event, window, configured)).toBe(true);
++    listeners.get(channel)?.(event);
++    expect(window[method]).toHaveBeenCalledOnce();
++  });
++});
+diff --git a/tests/offlineEmission.test.mjs b/tests/offlineEmission.test.mjs
+new file mode 100644
+index 0000000..7f18dda
+--- /dev/null
++++ b/tests/offlineEmission.test.mjs
+@@ -0,0 +1,23 @@
++import { mkdtempSync, readFileSync, rmSync } from "node:fs";
++import { createRequire } from "node:module";
++import { dirname, join, resolve } from "node:path";
++import { tmpdir } from "node:os";
++import { build, loadConfigFromFile } from "vite";
++import { describe, expect, it } from "vitest";
++const require = createRequire(import.meta.url);
++const root = resolve(dirname(new URL(import.meta.url).pathname), "..");
++const { getConfig } = require(join(dirname(require.resolve("@electron-forge/plugin-vite/package.json")), "dist/config/vite.main.config.js"));
++describe("bundled offline emission through the real main config", () => {
++  it("emits the authored HTML byte-identically at .vite/build/offline.html", async () => {
++    const dir = mkdtempSync(join(tmpdir(), "T17-unit-emission-"));
++    try {
++      const user = await loadConfigFromFile({command:"build",mode:"production"},join(root,"vite.main.config.ts"));
++      const config = getConfig({root,mode:"production",command:"build",forgeConfig:{renderer:[]},forgeConfigSelf:{entry:"proof/T17/asset-emission-probe-entry.mjs",target:"main"}},user.config);
++      const out = join(dir,".vite/build");
++      const result = await build({...config,configFile:false,logLevel:"silent",build:{...config.build,outDir:out}});
++      expect(readFileSync(join(out,"offline.html"))).toEqual(readFileSync(join(root,"assets/desktop/offline/offline.html")));
++      const outputs = Array.isArray(result) ? result.flatMap(r=>r.output) : result.output;
++      expect(outputs.filter(o=>o.type==="asset"&&o.fileName.endsWith(".html")).map(o=>o.fileName)).toEqual(["offline.html"]);
++    } finally { rmSync(dir,{recursive:true,force:true}); }
++  });
++});
+diff --git a/tests/offlinePolicy.test.ts b/tests/offlinePolicy.test.ts
+new file mode 100644
+index 0000000..16cd15a
+--- /dev/null
++++ b/tests/offlinePolicy.test.ts
+@@ -0,0 +1,9 @@
++import { describe, expect, it } from "vitest";
++import { offlineErrorClass, retryDelay, shouldShowOffline } from "../src/native/offlinePolicy";
++describe("offline failure policy", () => {
++  it.each([-2, -105, -106, -107, -200, -324])("shows main frame error %s", code => expect(shouldShowOffline(code, true)).toBe(true));
++  it.each([-3, 0])("ignores cancellation/success %s", code => expect(shouldShowOffline(code, true)).toBe(false));
++  it.each([-2, -105, -106, -200])("ignores subframe failure %s", code => expect(shouldShowOffline(code, false)).toBe(false));
++  it.each([[-106,"offline"],[-105,"dns"],[-137,"dns"],[-107,"tls"],[-200,"tls"],[-202,"tls"],[-299,"tls"],[-2,"server"],[-324,"server"]] as const)("classifies %s as %s", (code, label) => expect(offlineErrorClass(code)).toBe(label));
++  it.each([[0,5000],[1,15000],[2,30000],[3,60000],[4,60000],[100,60000]])("backoff attempt %s is %s ms", (attempt, delay) => expect(retryDelay(attempt)).toBe(delay));
++});
+diff --git a/tests/offlineRecovery.test.ts b/tests/offlineRecovery.test.ts
+new file mode 100644
+index 0000000..4723f55
+--- /dev/null
++++ b/tests/offlineRecovery.test.ts
+@@ -0,0 +1,98 @@
++import { EventEmitter } from "node:events";
++import { pathToFileURL } from "node:url";
++import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
++import { installOfflineRecovery, isOfflineCaptionIpc } from "../src/native/offlineRecovery";
++import { isTrustedContents, isTrustedIpc, hasConfiguredOrigin } from "../src/native/rendererTrust";
++import { registerWindowControlHandlers } from "../src/native/windowControls";
++const target = new URL("https://selfhost.example:8443/base?fixed=1");
++const file = "/isolated-test/.vite/build/offline.html";
++const local = (error = "dns") => `${pathToFileURL(file).href}?error=${error}`;
++class Contents extends EventEmitter {
++  mainFrame = { url: target.href, detached: false };
++  destroyed = false;
++  isDestroyed() { return this.destroyed; }
++}
++class Window extends EventEmitter {
++  webContents = new Contents(); visible = true; minimized = false; destroyed = false;
++  isVisible() { return this.visible; } isMinimized() { return this.minimized; } isDestroyed() { return this.destroyed; }
++  loadURL = vi.fn(async (url: string) => { this.webContents.mainFrame.url = url; if (url.startsWith("file:")) this.webContents.emit("did-finish-load"); });
++  minimize = vi.fn(); maximize = vi.fn(); unmaximize = vi.fn(); close = vi.fn(); isMaximized() { return false; }
++}
++let window: Window;
++let dispose: () => void;
++function event(owner = window, frame = owner.webContents.mainFrame) { return { sender: owner.webContents, senderFrame: frame } as unknown as Electron.IpcMainEvent; }
++function fail(code = -105, url = target.href, main = true) { window.webContents.emit("did-fail-load", {}, code, "failure", url, main); }
++async function flush() { await Promise.resolve(); await Promise.resolve(); }
++beforeEach(() => { vi.useFakeTimers(); window = new Window(); dispose = installOfflineRecovery(window as unknown as Electron.BrowserWindow, target, file); });
++afterEach(() => { dispose(); vi.useRealTimers(); });
++describe("real offline recovery wiring", () => {
++  it("loads the exact main-owned bundled file on main-frame failure", () => { fail(); expect(window.loadURL).toHaveBeenCalledWith(local()); });
++  it.each([[-3,true],[-105,false]] as const)("ignores %s main=%s", (code, main) => { fail(code,target.href,main); expect(window.loadURL).not.toHaveBeenCalled(); });
++  it("does not recurse after the bundled file itself fails", () => { fail(); window.loadURL.mockClear(); fail(-6,local()); expect(window.loadURL).not.toHaveBeenCalled(); });
++  it("refuses a failed foreign document", () => { fail(-105,"https://attacker.example/"); expect(window.loadURL).not.toHaveBeenCalled(); });
++  it("shows server recovery on a real renderer crash", () => { window.webContents.emit("render-process-gone",{}, {reason:"crashed"}); expect(window.loadURL).toHaveBeenCalledWith(local("server")); });
++  it.each([400,404,500,503])("handles HTTP %s server failures", code => { window.webContents.emit("did-navigate",{}, target.href, code); expect(window.loadURL).toHaveBeenCalledWith(local("server")); });
++  it("does not schedule or reload a successfully loaded app on reconnect/show/restore", () => { window.webContents.emit("did-finish-load"); window.emit("show"); window.emit("restore"); vi.advanceTimersByTime(200000); expect(window.loadURL).not.toHaveBeenCalled(); });
++  it("retries the configured URL only, at 5/15/30/60/60 seconds", async () => {
++    fail(); await flush();
++    for (const delay of [5000,15000,30000,60000,60000]) {
++      window.loadURL.mockClear(); await vi.advanceTimersByTimeAsync(delay-1); expect(window.loadURL).not.toHaveBeenCalled();
++      await vi.advanceTimersByTimeAsync(1); expect(window.loadURL).toHaveBeenCalledOnce(); expect(window.loadURL).toHaveBeenCalledWith(target.href);
++      fail(); await flush();
++    }
++  });
++  it.each(["hide","minimize"])("pauses while %s and resumes remaining delay", async mode => {
++    fail(); await flush(); await vi.advanceTimersByTimeAsync(2000);
++    if (mode === "hide") window.visible = false; else window.minimized = true;
++    window.emit(mode); window.loadURL.mockClear(); await vi.advanceTimersByTimeAsync(100000); expect(window.loadURL).not.toHaveBeenCalled();
++    window.visible = true; window.minimized = false; window.emit(mode === "hide" ? "show" : "restore");
++    await vi.advanceTimersByTimeAsync(2999); expect(window.loadURL).not.toHaveBeenCalled();
++    await vi.advanceTimersByTimeAsync(1); expect(window.loadURL).toHaveBeenCalledOnce(); expect(window.loadURL).toHaveBeenCalledWith(target.href);
++  });
++  it("never auto-retries an initially hidden failure", async () => { window.visible = false; fail(); await flush(); window.loadURL.mockClear(); await vi.advanceTimersByTimeAsync(60000); expect(window.loadURL).not.toHaveBeenCalled(); window.visible = true; window.emit("show"); await vi.advanceTimersByTimeAsync(5000); expect(window.loadURL).toHaveBeenCalledOnce(); expect(window.loadURL).toHaveBeenCalledWith(target.href); });
++  it("resets backoff and revokes file authority after recovery", async () => { fail(); await flush(); await vi.advanceTimersByTimeAsync(5000); expect(isOfflineCaptionIpc(event(),window)).toBe(false); fail(); await flush(); window.webContents.mainFrame.url = target.href; window.webContents.emit("did-finish-load"); window.loadURL.mockClear(); await vi.advanceTimersByTimeAsync(60000); expect(window.loadURL).not.toHaveBeenCalled(); fail(); await flush(); window.loadURL.mockClear(); await vi.advanceTimersByTimeAsync(5000); expect(window.loadURL).toHaveBeenCalledOnce(); expect(window.loadURL).toHaveBeenCalledWith(target.href); });
++  it("binds manual Retry to main config and prevents renderer navigation", async () => { fail(); await flush(); const e = {preventDefault:vi.fn(), frame:window.webContents.mainFrame, initiator:window.webContents.mainFrame, isMainFrame:true}; window.loadURL.mockClear(); window.webContents.emit("will-navigate",e,`${local()}&retry=1`); expect(e.preventDefault).toHaveBeenCalledOnce(); expect(window.loadURL).toHaveBeenCalledOnce(); expect(window.loadURL).toHaveBeenCalledWith(target.href); expect(isOfflineCaptionIpc(event(),window)).toBe(false); });
++  it.each(["https://attacker.example/", "file:///else.html", `${local()}&retry=2`, `${local()}&retry=1&target=https://attacker.example/`])("never navigates to renderer-supplied %s", async url => { fail(); await flush(); window.loadURL.mockClear(); const e = {preventDefault:vi.fn(), frame:window.webContents.mainFrame, initiator:window.webContents.mainFrame, isMainFrame:true}; window.webContents.emit("will-navigate",e,url); expect(e.preventDefault).toHaveBeenCalledOnce(); expect(window.loadURL).not.toHaveBeenCalled(); });
++  it("refuses subframe-initiated Retry", async () => { fail(); await flush(); window.loadURL.mockClear(); window.webContents.emit("will-navigate",{preventDefault:vi.fn(), frame:window.webContents.mainFrame, initiator:{url:local()}, isMainFrame:true},`${local()}&retry=1`); expect(window.loadURL).not.toHaveBeenCalled(); });
++  it("cleans timers, authority, and every owned listener on close", async () => { fail(); await flush(); window.emit("closed"); window.loadURL.mockClear(); expect(isOfflineCaptionIpc(event(),window)).toBe(false); expect(vi.getTimerCount()).toBe(0); fail(); window.webContents.emit("render-process-gone",{}); window.emit("show"); await vi.advanceTimersByTimeAsync(100000); expect(window.loadURL).not.toHaveBeenCalled(); expect(window.webContents.listenerCount("will-navigate")).toBe(0); });
++});
++describe("exact offline caption authority", () => {
++  it.each(["minimise","maximise","close"])("allows %s once only for the active exact file", channel => { fail(); const listeners = new Map<string,(e: Electron.IpcMainEvent)=>void>(); registerWindowControlHandlers({on:(name,fn)=>listeners.set(name,fn)},()=>window,e=>isTrustedIpc(e,window,target)||isOfflineCaptionIpc(e,window)); listeners.get(channel)(event()); expect(window[channel === "minimise" ? "minimize" : channel === "maximise" ? "maximize" : "close"]).toHaveBeenCalledOnce(); });
++  it("does not authorize the exact file without main-owned activation", () => { window.webContents.mainFrame.url = local(); expect(isOfflineCaptionIpc(event(),window)).toBe(false); });
++  it.each(["file:///isolated-test/.vite/build/else.html", "file:///isolated-test/.vite/build/offline.html.bak", `${local()}#x`, `${local()}&extra=1`, local("arbitrary"), local("tls"), local().replace("offline.html","OFFLINE.html"), local().replace("offline","%6fffline"), local().replace("dns","%64ns"), "null", "data:text/html,offline", "about:blank"])("rejects URL variant %s", url => { fail(); window.webContents.mainFrame.url = url; expect(isOfflineCaptionIpc(event(),window)).toBe(false); });
++  it.each(["other contents","subframe","destroyed window","destroyed contents","detached frame","missing window"])("rejects %s", mode => { fail(); const e = { ...event() }; if(mode === "other contents") e.sender = {} as Electron.WebContents; if(mode === "subframe") e.senderFrame = {url:local()} as Electron.WebFrameMain; if(mode === "destroyed window") window.destroyed=true; if(mode === "destroyed contents") window.webContents.destroyed=true; if(mode === "detached frame") window.webContents.mainFrame.detached=true; expect(isOfflineCaptionIpc(e,mode === "missing window" ? undefined : window)).toBe(false); });
++  it("authorizes a newly resolved current frame after a crash replaced the old frame", () => {
++    fail();
++    const stale = event();
++    const oldFrame = window.webContents.mainFrame;
++    oldFrame.detached = true;
++    window.webContents.mainFrame = {url:local("server"),detached:false};
++    window.webContents.emit("render-process-gone",{}, {reason:"crashed"});
++    expect(isOfflineCaptionIpc(event(),window)).toBe(true);
++    expect(isOfflineCaptionIpc(stale,window)).toBe(false);
++  });
++  it("refuses a stale attached frame with the identical owned file URL", () => {
++    fail();
++    const stale = event();
++    window.webContents.mainFrame = {url:local(),detached:false};
++    expect(isOfflineCaptionIpc(stale,window)).toBe(false);
++    expect(isOfflineCaptionIpc(event(),window)).toBe(true);
++  });
++  it("does not bypass a sticky detached flag even when current identity and URL match", () => {
++    fail();
++    window.webContents.mainFrame.detached = true;
++    window.webContents.emit("render-process-gone",{}, {reason:"crashed"});
++    expect(window.webContents.mainFrame.url).toBe(local("server"));
++    expect(isOfflineCaptionIpc(event(),window)).toBe(false);
++  });
++  it("refuses the previous owner after another window activates the same bundled file", () => {
++    fail();
++    const current = new Window();
++    const disposeCurrent = installOfflineRecovery(current as unknown as Electron.BrowserWindow,target,file);
++    current.webContents.emit("did-fail-load",{},-105,"failure",target.href,true);
++    expect(isOfflineCaptionIpc(event(),current)).toBe(false);
++    expect(isOfflineCaptionIpc(event(current),current)).toBe(true);
++    disposeCurrent();
++  });
++  it("never changes general IPC, contents, or configured-origin trust", () => { fail(); expect(isOfflineCaptionIpc(event(),window)).toBe(true); expect(isTrustedIpc(event(),window,target)).toBe(false); expect(isTrustedContents(window.webContents,window,target)).toBe(false); expect(hasConfiguredOrigin(local(),target)).toBe(false); });
++});
+diff --git a/tests/offlineScope.test.ts b/tests/offlineScope.test.ts
+new file mode 100644
+index 0000000..f43d47c
+--- /dev/null
++++ b/tests/offlineScope.test.ts
+@@ -0,0 +1,25 @@
++import { readFileSync } from "node:fs";
++import { join } from "node:path";
++import { describe, expect, it, vi } from "vitest";
++import { registerBadgeHandler } from "../src/native/badgesRegistration";
++import { isTrustedIpc } from "../src/native/rendererTrust";
++const source = readFileSync(join(__dirname, "../src/main.ts"), "utf8");
++describe("offline exact production scope", () => {
++  it("wires the exception only to the existing caption registration", () => {
++    expect(source.match(/isOfflineCaptionIpc\(event, mainWindow\)/g)).toHaveLength(1);
++    expect(source).toContain("isTrustedIpc(event, mainWindow, BUILD_URL) || isOfflineCaptionIpc(event, mainWindow)");
++  });
++  it("does not grant offline badge authority", () => {
++    const contents = {mainFrame:{url:"file:///isolated-test/.vite/build/offline.html?error=dns"},isDestroyed:()=>false};
++    const window = {webContents:contents,isDestroyed:()=>false};
++    const setBadge = vi.fn(); let handler: (event: Electron.IpcMainEvent, count: number)=>void;
++    registerBadgeHandler({on:(_name, fn)=>{handler=fn;}},setBadge,e=>isTrustedIpc(e,window,new URL("https://app.mutinyapp.gg")));
++    handler({sender:contents,senderFrame:contents.mainFrame} as unknown as Electron.IpcMainEvent,3);
++    expect(setBadge).not.toHaveBeenCalled();
++  });
++  it("adds no broad IPC or protocol bridge to the offline asset", () => {
++    const html = readFileSync(join(__dirname, "../assets/desktop/offline/offline.html"),"utf8");
++    expect(html).not.toMatch(/ipcRenderer|invoke\(|fetch\(|https?:|mutiny:|getAutostart|setAutostart|setBadgeCount|openAudioFile|desktopConfig\.set/);
++    expect(html).toContain("location.href = location.href + \"&retry=1\"");
++  });
++});
+diff --git a/tests/offlineTrustBoundary.test.ts b/tests/offlineTrustBoundary.test.ts
+new file mode 100644
+index 0000000..c524ebf
+--- /dev/null
++++ b/tests/offlineTrustBoundary.test.ts
+@@ -0,0 +1,59 @@
++import { describe, expect, it, vi } from "vitest";
++
++import { isTrustedIpc } from "../src/native/rendererTrust";
++import { registerWindowControlHandlers } from "../src/native/windowControls";
++
++const configured = new URL("https://app.mutinyapp.gg");
++
++function fixture(url: string) {
++  const frame = { url };
++  const contents = { mainFrame: frame, isDestroyed: () => false };
++  const window = {
++    webContents: contents,
++    isDestroyed: () => false,
++    minimize: vi.fn(),
++    maximize: vi.fn(),
++    unmaximize: vi.fn(),
++    close: vi.fn(),
++    isMaximized: () => false,
++  };
++  const listeners = new Map<string, (event: Electron.IpcMainEvent) => void>();
++  const ipc = {
++    on: (channel: string, listener: (event: Electron.IpcMainEvent) => void) => {
++      listeners.set(channel, listener);
++    },
++  };
++  registerWindowControlHandlers(ipc, () => window, (event) =>
++    isTrustedIpc(event, window, configured),
++  );
++  const event = { sender: contents, senderFrame: frame } as unknown as Electron.IpcMainEvent;
++  return { window, event, listeners };
++}
++
++// Characterization of the frozen boundary, not offline-recovery acceptance.
++// This documents why T17 needs explicit approval for the proposed narrow delta.
++describe("T17 existing caption-control trust boundary", () => {
++  it.each([
++    ["minimise", "minimize"],
++    ["maximise", "maximize"],
++    ["close", "close"],
++  ] as const)("rejects bundled file renderer for %s", (channel, method) => {
++    const { window, event, listeners } = fixture(
++      "file:///isolated-test/.vite/build/offline.html",
++    );
++    expect(isTrustedIpc(event, window, configured)).toBe(false);
++    listeners.get(channel)?.(event);
++    expect(window[method]).not.toHaveBeenCalled();
++  });
++
++  it.each([
++    ["minimise", "minimize"],
++    ["maximise", "maximize"],
++    ["close", "close"],
++  ] as const)("allows configured main renderer for %s", (channel, method) => {
++    const { window, event, listeners } = fixture(configured.toString());
++    expect(isTrustedIpc(event, window, configured)).toBe(true);
++    listeners.get(channel)?.(event);
++    expect(window[method]).toHaveBeenCalledOnce();
++  });
++});
+diff --git a/vite.main.config.ts b/vite.main.config.ts
+index fbf7eda..96bfbd0 100644
+--- a/vite.main.config.ts
++++ b/vite.main.config.ts
+@@ -1,4 +1,16 @@
++import { readFileSync } from "node:fs";
++import { join } from "node:path";
+ import { defineConfig } from "vite";
+ 
+-// https://vitejs.dev/config
+-export default defineConfig({});
++export default defineConfig({
++  plugins: [{
++    name: "mutiny-bundled-offline-document",
++    buildStart() {
++      this.emitFile({
++        type: "asset",
++        fileName: "offline.html",
++        source: readFileSync(join(__dirname, "assets/desktop/offline/offline.html")),
++      });
++    },
++  }],
++});

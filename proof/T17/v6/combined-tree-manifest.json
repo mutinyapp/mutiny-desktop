@@ -1,0 +1,2890 @@
+{
+  "tree": "302c6804e2baf28da27ce82a6610d6be504e61b8",
+  "entries": {
+    ".eslintrc.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "70b3cb657637c01fd16f73208eb6e1d6b2499419"
+    },
+    ".github/workflows/build.yml": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f3869e059d5c0ab29417762527817702d3ed85f2"
+    },
+    ".github/workflows/desktop-candidate.yml": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f5433f631de457b77302c3eac0d44b4e94352eb7"
+    },
+    ".github/workflows/release.yml": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "246187f7389e5fd4efeb70c79b662e7db2590e01"
+    },
+    ".gitignore": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cc2f44be63f1de3cf5bfdec8b15e530347f936f3"
+    },
+    ".prettierrc": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b72a10b8a653e3d47a9aeb2a14aaf7b75494c3a9"
+    },
+    ".release-please-manifest.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b98221755cd3d639e830b169cfaec255f2223e5a"
+    },
+    ".vscode/settings.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "35d980e5d4880bb056b425fefa5f0c71533f8c25"
+    },
+    "CHANGELOG.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "241f2f679788e052f20c227aaff8a4bc6a61db7a"
+    },
+    "DESKTOP_POLISH_SUMMARY.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b831318fa2589ffd0ad3b38b9249342cf1bcf5e8"
+    },
+    "LICENSE": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "594933dd102cf440f43c0f7feb6091c035f79c94"
+    },
+    "README.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a235a2f28a518b0fa00d14b89e3e03774c6ea578"
+    },
+    "assets/desktop/icon-source.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "088076cf7142a323a46d6ca3aedc6c0556ff2744"
+    },
+    "assets/desktop/icon.icns": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7e85d1b7cae78ad4184a5b34ddd7333c6a9b4c30"
+    },
+    "assets/desktop/icon.ico": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d7561efe32195b0cf5825f01519c98dffe5e289a"
+    },
+    "assets/desktop/icon.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "26f9a0199a19fff41af35ca4a769aa491218b5af"
+    },
+    "assets/desktop/offline/offline.html": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ead532f0bf56078f61bb6f4e56faa8ec88660de6"
+    },
+    "default.nix": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f343ef1285bb905e09169fd9a74d778a5b33bda7"
+    },
+    "docs/macos-signing-release.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "25ddf2abe990f213975ba8b90e2dc77be15e495b"
+    },
+    "entitlements.mac.gpu.plist": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4efe1ce508f85dfff5294b2862cb58e9c9abf8c3"
+    },
+    "entitlements.mac.helper.plist": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4efe1ce508f85dfff5294b2862cb58e9c9abf8c3"
+    },
+    "entitlements.mac.plist": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "449dd125d46ff61e9b9b0e071a7c0ec3ef154dc8"
+    },
+    "entitlements.mac.plugin.plist": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7cd9df032bd084539852bd6efc2e4fab894728b0"
+    },
+    "entitlements.mac.renderer.plist": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4efe1ce508f85dfff5294b2862cb58e9c9abf8c3"
+    },
+    "forge.config.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "71dadd85dc252ad752d722e2be52450ca6f36930"
+    },
+    "forge.env.d.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9700e0ae19be802234517f850d7db55d21aa95c9"
+    },
+    "index.html": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f656cf728fe883201af29a7d5425f77fc9888f17"
+    },
+    "package-lock.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "110c0d2bd91a5b61eb54defa84a9c5d711cf56b7"
+    },
+    "package.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "413d4a34adee5d95d9543bd85bb9b6e21843bf5a"
+    },
+    "pnpm-lock.yaml": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4f631a725efbe180df6576995ecb9fcfe3698263"
+    },
+    "pnpm-workspace.yaml": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9db349ebbea1c85eeb43a38740035c6b896cc4ff"
+    },
+    "proof/E44/PR-BODY.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "65eb011eecc9b178b38d07e2a8c1639ecb16c672"
+    },
+    "proof/E44/README.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cbdad095fb4db80e46c9e6dfc7fa1790e130a71b"
+    },
+    "proof/E44/RESULTS.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cefca5fcab8966d3a1982cab0c979e53041bd1db"
+    },
+    "proof/E44/clipboard.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b32d04a04f496f98575f189601aba43aa4eb258"
+    },
+    "proof/E44/diagnose-fixture-parent.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "65b45ba417daadad9242e653eb064d0800e608e5"
+    },
+    "proof/E44/electron-frame-lifecycle-entry.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9aa29a87238d5ec75248b323ce2f1084ddfd5bce"
+    },
+    "proof/E44/fixture-environment.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fc34f676dc76ca3fe87e95a82f2e7f719e1482e7"
+    },
+    "proof/E44/offline.html": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0c0d2e7ae9a927befb4886fd0c331c9be5601f07"
+    },
+    "proof/E44/receipts/G-D1-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "351348649a287448a3d27d7541cf4216e572aaa4"
+    },
+    "proof/E44/receipts/G-D1-final.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "93ccd5c4f6906cef545baae559fc40773a5d5364"
+    },
+    "proof/E44/receipts/G-D1.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "5cbbde4403cb2f4539148cd6dfff047565152b1d"
+    },
+    "proof/E44/receipts/G-D1.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "93ccd5c4f6906cef545baae559fc40773a5d5364"
+    },
+    "proof/E44/receipts/G-D2-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bde09e302a48656c9faf42a3c8c787bcc3520e6b"
+    },
+    "proof/E44/receipts/G-D2-final.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bfaa5713de3b2183ac46fba6d81cdda6ec714fad"
+    },
+    "proof/E44/receipts/G-D2.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "96466340d00cecad12588bea67bec8bbdfbdcc47"
+    },
+    "proof/E44/receipts/G-D2.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cdd5454dab3758fa8d0d376a76c664ef3908ba09"
+    },
+    "proof/E44/receipts/G-D3-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6dfe8d72fc4e90b773b5c6132683fdd99b7569da"
+    },
+    "proof/E44/receipts/G-D3-final.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "df545d7747b5c0961fd1a81da1fa65e468dbdabd"
+    },
+    "proof/E44/receipts/G-D3-fixed.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fadf0926245b8629db17ca6b8af977f57397e9da"
+    },
+    "proof/E44/receipts/G-D3-fixed.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "df545d7747b5c0961fd1a81da1fa65e468dbdabd"
+    },
+    "proof/E44/receipts/G-D3.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "31995e258427abf66fb3d22e572a4b7dfce3df5c"
+    },
+    "proof/E44/receipts/G-D3.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e98caa6a6052a714cf934e4be8ebf196b72b88fc"
+    },
+    "proof/E44/receipts/acceptance.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bde0888c772ea41fee69a599c9753d94f5947751"
+    },
+    "proof/E44/receipts/acceptance.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cefca5fcab8966d3a1982cab0c979e53041bd1db"
+    },
+    "proof/E44/receipts/baseline-all.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4957d7c346853fa8b67631052c62793c6fbd8cde"
+    },
+    "proof/E44/receipts/baseline-all.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b281d0607427179be3398fedb0ba1b8194058062"
+    },
+    "proof/E44/receipts/baseline-commonjs-signing.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f72dd6acfe12e2860e7cb732b6ab5952f79891d4"
+    },
+    "proof/E44/receipts/baseline-commonjs-signing.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c0d08206227cf0e9184317dc0f5d4caea5a5cf09"
+    },
+    "proof/E44/receipts/baseline-commonjs-tests.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "43650af3fa78cd7d21ee007507617487726ff7b5"
+    },
+    "proof/E44/receipts/baseline-diagnosis.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "811f00d39b8b2d614e42875b45b77f3807f60bd6"
+    },
+    "proof/E44/receipts/baseline-npm-ci-dry.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "01e6162119b82eac148fff5168ebb4c09a454a85"
+    },
+    "proof/E44/receipts/baseline-npm-ci-dry.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e9572604e5596be749a8c1de6c622d74dad5c133"
+    },
+    "proof/E44/receipts/baseline-tests.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "efd18009149cbfa154555d3d574f42a97b426441"
+    },
+    "proof/E44/receipts/candidate-tests-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1f086b54993a5bbe042a581ea3c63b974f3c9512"
+    },
+    "proof/E44/receipts/candidate-tests.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "37fc6085be9995470eb2db9d7e9a5d13f8ca67dc"
+    },
+    "proof/E44/receipts/clipboard-green.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "36a332bbc5355645f648a266677b8fc455356799"
+    },
+    "proof/E44/receipts/clipboard-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3860c8b6c4a6bddaf75113e3f10b866c5d550dc3"
+    },
+    "proof/E44/receipts/clipboard-real-promise-green.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "82408137c12633c46951fe881197be7242efbbcc"
+    },
+    "proof/E44/receipts/clipboard-real-promise-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "675b0bcaf82b72a0668355c48db688f41f0c369a"
+    },
+    "proof/E44/receipts/clipboard-real-promise-red.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c47c5f31c8e8f9844894ffa13a7be435ab8a8f9f"
+    },
+    "proof/E44/receipts/clipboard-real-promise-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4385bac780dc15ace1daad7d60ac71aaded7a259"
+    },
+    "proof/E44/receipts/clipboard-red.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "be4d48a5eeda82ce9bc5c926f5708b3bfc65c759"
+    },
+    "proof/E44/receipts/clipboard-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b6e6943b82d50543850b01d1bae039900fcaebbf"
+    },
+    "proof/E44/receipts/engine-deferred.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "74b9e4d659a9b4cafea172539b3c6ba26ec59643"
+    },
+    "proof/E44/receipts/engine-sync.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b4aec4eb3a6c68b70dc16a28a537479b2fbc2b45"
+    },
+    "proof/E44/receipts/fixture-env.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a4d1d7af19fa83e120e250c21b56a46e1a87da72"
+    },
+    "proof/E44/receipts/fixture-env.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9a976b122eea2d626798314b124a43cb6a13b1ac"
+    },
+    "proof/E44/receipts/fixture-parent.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bb09a029632f8c17fa0f94363c4b2f5e15a392c9"
+    },
+    "proof/E44/receipts/fixture-parent.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "030c5c355973001c41d6f04d01ab7843b27ab763"
+    },
+    "proof/E44/receipts/frozen-install.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ae394ca5f42afd004b0cfd2d7b34b7fdf59358e6"
+    },
+    "proof/E44/receipts/frozen-install.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "93557da1d8e5abab072fadab22dd342d0e136fc9"
+    },
+    "proof/E44/receipts/lock-scope-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a385268c417b4e0ed14b4ba1a7816e7244cf8e92"
+    },
+    "proof/E44/receipts/lock-scope-final.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "74de915a5eb36e88b714bd22de8b9414bf358bc9"
+    },
+    "proof/E44/receipts/lock-scope.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "74de915a5eb36e88b714bd22de8b9414bf358bc9"
+    },
+    "proof/E44/receipts/lock-scope.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9d2efbd2d46c5a657f12a886a801aa585aa67133"
+    },
+    "proof/E44/receipts/native-deferred.stderr.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "proof/E44/receipts/native-deferred.stdout.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f67a23937f8347b374b3c680d38f6947f82e11dc"
+    },
+    "proof/E44/receipts/native-probe-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1e2436c300cc497c3d3884c85f89aad4fce076e7"
+    },
+    "proof/E44/receipts/native-probe-final.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8dcb688b146cb72ede2fe489829efc21292aa646"
+    },
+    "proof/E44/receipts/native-probe.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "244a0a4c89d7da52bf3d6243478d9e5c4c78a457"
+    },
+    "proof/E44/receipts/native-probe.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2051082318b4edf273cb06b9371d94267a2e18cb"
+    },
+    "proof/E44/receipts/native-runs.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "01b1f854222cbf0667e147857460f50dc2d6a696"
+    },
+    "proof/E44/receipts/native-sync.stderr.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "proof/E44/receipts/native-sync.stdout.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ff830fef1a4c828b7a500b0cac4cef4fd4e1d621"
+    },
+    "proof/E44/receipts/npm-ABI.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b768b0e9c96317a747be0ffa51fc6c24b7995d06"
+    },
+    "proof/E44/receipts/npm-ABI.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d84113e22c978ae3eed80dcb38ee3f2e6e7d2bcc"
+    },
+    "proof/E44/receipts/npm-ci-legacy-peer.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e40a22b2531f9654f9a4adc35a0972522ce070c3"
+    },
+    "proof/E44/receipts/npm-ci-legacy-peer.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3d05612dc83975bf04e7f92b7112171ef54cc019"
+    },
+    "proof/E44/receipts/npm-ci.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8ddf2a2ac3810db3ba3c40319e463ec2c1d74b23"
+    },
+    "proof/E44/receipts/npm-ci.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8c5441d93fb2a74befba51bf66f2a51d7ec4a178"
+    },
+    "proof/E44/receipts/npm10-ci.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7bc0dc34f8ba65d68967556032ab85d201bbe0df"
+    },
+    "proof/E44/receipts/npm10-ci.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "201fc513359e8aa0e8dba4ccbe1e124db1bb1abb"
+    },
+    "proof/E44/receipts/npm10-identity.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b1ddcadef0815cef97a313f3590f7b862504e51d"
+    },
+    "proof/E44/receipts/npm10-identity.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ff9c2e1b20577ed0e56df8fca1712278a740c4e6"
+    },
+    "proof/E44/receipts/unsigned-forge.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "941e2804de36b789a38161f7dec9fe120cf0fd41"
+    },
+    "proof/E44/receipts/unsigned-forge.stderr.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "proof/E44/receipts/unsigned-forge.stdout.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f7aa785711785a2ee150eccdba80f1e47da4b708"
+    },
+    "proof/E44/receipts/unsigned-package-final.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "479d5ea440408164258e4067db69b91a9b9775ab"
+    },
+    "proof/E44/receipts/unsigned-package-final.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "88fa6f0116ab37c5a2c5501da314bfade5704fe3"
+    },
+    "proof/E44/receipts/unsigned-package-fixed.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e1eba235e0d178257c99db45f6d9879156a8df19"
+    },
+    "proof/E44/receipts/unsigned-package-fixed.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b84dc814d3fe3d96f8677d5b6f2ec289e1792e4"
+    },
+    "proof/E44/receipts/unsigned-package.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2d25e27092a27396cdf504f74747db7cba53d66c"
+    },
+    "proof/E44/receipts/unsigned-package.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "34528fc706c05428bb5a3343567a792c27ee58dc"
+    },
+    "proof/E44/receipts/workflow-preflight.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e5afa7aa69002a41db0b3431a542523cae0fe5d4"
+    },
+    "proof/E44/run-command.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ce4e6d06dbaff28f68c0afd9e4e728c9e1ec9f51"
+    },
+    "proof/E44/run-native-probe.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ebbaf537603220d0bf992363a9ced2d1ac307d70"
+    },
+    "proof/E44/run-unsigned-package.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "213a9e25d5e9f6de6e8c174660c70b5ff9e80d0c"
+    },
+    "proof/E44/sources/abi-first-version.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3a46da11e54fdccfaa31a5ab917517177382279b"
+    },
+    "proof/E44/sources/authoritative-excerpts.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e4b9ead9a68b1292938b1b644188d22d7c54ac1b"
+    },
+    "proof/E44/sources/electron-44.5.1.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7a979591840622edd7f534476db986ef0222f8c8"
+    },
+    "proof/E44/sources/node-abi-3.94.0.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "89fadb9f72358cd1871ea9151dc2c8c244af7ea3"
+    },
+    "proof/E44/sources/node-abi-3.95.0.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f1c22e098e4ddd472fad20afe826eba2595eadbb"
+    },
+    "proof/E44/sources/node-abi-3.96.0.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d8201b60f6e4ce8d45d00925b099cdfefaace164"
+    },
+    "proof/E44/sources/node-abi-4.35.0.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "594015b6a6e47a928f01e0bb04cba11ebe507547"
+    },
+    "proof/E44/verify-lock-scope.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "36752d44ca5e7013645d31447112aeea461151f1"
+    },
+    "proof/E44/verify-result.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "af9dea07a893593fcd49444041161d65c1b9746f"
+    },
+    "proof/T17/CONTRACT-DELTA.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ee2b342694228f18bfa8a6f6b0779f001f4696ed"
+    },
+    "proof/T17/PR-BODY.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "091350c1359ae6c162b25bda0bda833a4256f423"
+    },
+    "proof/T17/asset-emission-probe-entry.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ccbbd3352c9090e961780cd353373ba13b8f944c"
+    },
+    "proof/T17/asset-emission-probe.html": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2013c7048b93e21430e4c94d8406c6234cef2c06"
+    },
+    "proof/T17/baseline-gates.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e79c6e082ff6487abf401dae42c47105f6b8c944"
+    },
+    "proof/T17/baseline-lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "59c2b3f86e71e38bb404fb5eb72148699d94adcf"
+    },
+    "proof/T17/baseline-test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "da86f03b6e532a4a7fd3f3604e4d0fe02451c283"
+    },
+    "proof/T17/baseline-typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9bc5a5909a8b2e581aaebae4648fa4bd1c2e19ac"
+    },
+    "proof/T17/candidate-gates.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e79c6e082ff6487abf401dae42c47105f6b8c944"
+    },
+    "proof/T17/candidate-lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "59c2b3f86e71e38bb404fb5eb72148699d94adcf"
+    },
+    "proof/T17/candidate-test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f1e728133b192e64746dadcc85cfb3b4f39731e6"
+    },
+    "proof/T17/candidate-typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9bc5a5909a8b2e581aaebae4648fa4bd1c2e19ac"
+    },
+    "proof/T17/check-asset-emission.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cbff3d3e68521111ee05c39b525618110ae91789"
+    },
+    "proof/T17/check-emission-mutations.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "030a14dd2e4589580128316262dc5365eafea0f0"
+    },
+    "proof/T17/check-runtime-negative-controls.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4edebcbdde423beec8786b59745df68239c01dc1"
+    },
+    "proof/T17/darwin-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/darwin-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/darwin-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4531b6600c19a8e940c0f805e334b25d6c7161d7"
+    },
+    "proof/T17/darwin-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/electron-frame-lifecycle-entry.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "be91c871a672390c4825c512c605849fd6af5fd2"
+    },
+    "proof/T17/electron-runtime-entry.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "24d3c75ad9141a327bc2dcf32c3da203e229901c"
+    },
+    "proof/T17/red-caption-requirement.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b0e8b4dbf2ffe968262b4cc73e27144adcdabb9e"
+    },
+    "proof/T17/red-caption-requirement.test.ts.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b349cfa1cdb3ee2366361fff4a386e9ec75e68e7"
+    },
+    "proof/T17/run-electron-runtime.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "69b9fbf7519636e51380c5cc4dae6c5532378e78"
+    },
+    "proof/T17/runtime-result.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e352247f3dcef5bcf8752fa5e9edbfee2509ed07"
+    },
+    "proof/T17/runtime-result.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "62c318e8059ed707616e17810fff03d652d9e3e2"
+    },
+    "proof/T17/v2-CONTRACT-DELTA.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "32921a04d875127640caa80b1ce8f78f40b56c06"
+    },
+    "proof/T17/v2-asset-emission.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fa3275567ab133f241cdac290853935de2f556c9"
+    },
+    "proof/T17/v2-asset-emission.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e3f16dac99d5c12a39ff850cee4bc7edba0dc099"
+    },
+    "proof/T17/v2-gates.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "18ef2d80098cefa54e819f1ae71bf6d00bb82405"
+    },
+    "proof/T17/v2-install.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "79677a59d37bf51c9749ff15f12646a59fb19829"
+    },
+    "proof/T17/v2-lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "53c84016f5098657c9b845b1690ff2a93e56f8bf"
+    },
+    "proof/T17/v2-main-inventory.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "76c3caa91fc42a5c2f0b846388a6eec161a3674a"
+    },
+    "proof/T17/v2-test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3507ef88c57e5cef47e51fe2beb3fcca8403c010"
+    },
+    "proof/T17/v2-typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fc7d2789383d0b74e1656136a1d822c24d47f5ff"
+    },
+    "proof/T17/v2-workflow-audit.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bcdd7cac3747c4c4a2e8b4b911861c8f203e0576"
+    },
+    "proof/T17/v3-PR-BODY.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0121f669b72acabc17722f977027d3b928349cab"
+    },
+    "proof/T17/v3-RUNTIME-BLOCKER.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "5e5a52546a47a1d8baa33b3045c7b80a0184d620"
+    },
+    "proof/T17/v3-behavior-red-corrected.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "70e0a3ba873f1a95f04b42544e251ef0a17a862f"
+    },
+    "proof/T17/v3-behavior-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a1933f07c4af7b17ce429c31e0dc9ccd444eae4c"
+    },
+    "proof/T17/v3-caption-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e08fb508e60dd0f62c33504b63174c51ebe7e427"
+    },
+    "proof/T17/v3-caption-runtime-diagnostic.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8b965e5cc5c1d9e32a43c9b8579a7a3791a9e4b4"
+    },
+    "proof/T17/v3-emission-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4e5ec29aea82aa7a61a0dc6da9755773b9380ae3"
+    },
+    "proof/T17/v3-emission-mutations.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fb47180aaca11357e3e35f9bb01db3309f448ccb"
+    },
+    "proof/T17/v3-emission-mutations.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a1678b6275528a120b644d52b711025dc670992d"
+    },
+    "proof/T17/v3-emission-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0d06627f48ab24d3e6406e4de19cd7f66a6cebe6"
+    },
+    "proof/T17/v3-exact-frame-diagnostic.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "93b7ef1f42e44950c7444fbb1e8436e0bad5f061"
+    },
+    "proof/T17/v3-feature-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d395b65e97d45ef999d30d051b8565056d381b95"
+    },
+    "proof/T17/v3-gates.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7ced0c53a5fe818cb5a56f05b04fb2b208213647"
+    },
+    "proof/T17/v3-install.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e73ea0e647e02c00e583e9eb509a24bfc90edd01"
+    },
+    "proof/T17/v3-lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "59c2b3f86e71e38bb404fb5eb72148699d94adcf"
+    },
+    "proof/T17/v3-main-inventory.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a856b98363ad1cc62efff03b188cf8333e401b19"
+    },
+    "proof/T17/v3-negative-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0334bb8468dc861d7dad1ba0a835e4bcad737edd"
+    },
+    "proof/T17/v3-preflight.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fbf26524b043a93100d440f672f9bd212695dc90"
+    },
+    "proof/T17/v3-runtime-cdp.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ae5e49ffc5aa3b5268b36852228bb1bedaf158db"
+    },
+    "proof/T17/v3-runtime-diagnostic.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3a745dfd0b97c6266f78a42fb4600b8edf620469"
+    },
+    "proof/T17/v3-runtime-setup-second.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7b9fdd74b74beadf8312189f88ade99eff871cc1"
+    },
+    "proof/T17/v3-runtime.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "333973f3e44cfd2baf85876122e14075649796da"
+    },
+    "proof/T17/v3-test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "71711826e5b024cd8ee8ca18ddb71c3cb08d0477"
+    },
+    "proof/T17/v3-typecheck-initial.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9bc5a5909a8b2e581aaebae4648fa4bd1c2e19ac"
+    },
+    "proof/T17/v3-typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9bc5a5909a8b2e581aaebae4648fa4bd1c2e19ac"
+    },
+    "proof/T17/v3-workflow-scope-audit.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "df46d27f261db1abfdf7cb8862c3e40b1919f25f"
+    },
+    "proof/T17/v4-CONTRACT-DELTA.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b9913c288c4873e6dbc6d068fc1c7aa86f579510"
+    },
+    "proof/T17/v4-PR-BODY.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ddb931b521743236440f017bcdbedb931597912a"
+    },
+    "proof/T17/v4/changed-files.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c518a03b4db5bee69ec630d6d4ad46dd841f7e6f"
+    },
+    "proof/T17/v4/electron-authoritative-sources.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "5fe07dd3b6de028c38ac8ad3ce8141742de69fd2"
+    },
+    "proof/T17/v4/emission-controls.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fb47180aaca11357e3e35f9bb01db3309f448ccb"
+    },
+    "proof/T17/v4/emission.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3e96c93afa923a162759069a937486ad2890ae38"
+    },
+    "proof/T17/v4/emission.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a1678b6275528a120b644d52b711025dc670992d"
+    },
+    "proof/T17/v4/engine-deferred.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "40001a76b8ff7c57223de32a49f2afb1f9a228b3"
+    },
+    "proof/T17/v4/engine-deferred.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ea1cd51abd5d212cf496731fc91e70355f566a15"
+    },
+    "proof/T17/v4/engine-sync.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d2f26f69048d51a9c11d1a6cac9f6ed0a01da6d4"
+    },
+    "proof/T17/v4/engine-sync.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8ce264c0c0bf3c20fda6b26bda46efadb9d8277f"
+    },
+    "proof/T17/v4/initial-isolation.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "48d4c59ce621444c25b20dfdeae4e008f1057151"
+    },
+    "proof/T17/v4/initial-isolation/darwin-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/initial-isolation/darwin-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/initial-isolation/darwin-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "54eae1559d9573e5e3c0ddb02a52ca98849611d9"
+    },
+    "proof/T17/v4/initial-isolation/darwin-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/initial-isolation/darwin-crash-only-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3d5d706be771c59928f9a200bb80cffde7353c3e"
+    },
+    "proof/T17/v4/initial-isolation/darwin-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "97b22cd4a819cab181705f79a9ef2a4ca808015f"
+    },
+    "proof/T17/v4/initial-isolation/darwin-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/initial-isolation/darwin-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/initial-isolation/darwin-full-v3-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3d5d706be771c59928f9a200bb80cffde7353c3e"
+    },
+    "proof/T17/v4/initial-isolation/darwin-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2c5abc0f56c90c9deda26fb869ca1cfdc40efced"
+    },
+    "proof/T17/v4/initial-isolation/darwin-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/initial-isolation/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/initial-isolation/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b826cf0091bacc0406723ba01c987e281a802815"
+    },
+    "proof/T17/v4/initial-isolation/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d2a77a536166471ff4e8a5a89ec24b5d6261526c"
+    },
+    "proof/T17/v4/isolation.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "59cb1ce791d1caf907302c560ac0dffb85423f20"
+    },
+    "proof/T17/v4/lint.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8d9c7b002f308cd6770c13a3489202d4b81fd8a5"
+    },
+    "proof/T17/v4/lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "59c2b3f86e71e38bb404fb5eb72148699d94adcf"
+    },
+    "proof/T17/v4/resource-release.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "22103db78491c41ea3184bf708a96c722be4536f"
+    },
+    "proof/T17/v4/run-gate.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8a604da45d5e6cd9e4c11490dc02914f5ee4fa51"
+    },
+    "proof/T17/v4/runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0ed0bd980624cfe9c62e4afb180aaad112706ebd"
+    },
+    "proof/T17/v4/runtime.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "12c389cd532496ebb956a09944b3a71c45b51204"
+    },
+    "proof/T17/v4/runtime/darwin-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/runtime/darwin-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/runtime/darwin-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "592b35cdba112cb7ed1a8392ebb82b59e60ba062"
+    },
+    "proof/T17/v4/runtime/darwin-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/runtime/darwin-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/runtime/darwin-crash-only-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3210ef80c5ea1dcd7046f267ae8d01b0b6276820"
+    },
+    "proof/T17/v4/runtime/darwin-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "01aa16160e2e485f80b007c3a99a2f123b17bedb"
+    },
+    "proof/T17/v4/runtime/darwin-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/runtime/darwin-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/runtime/darwin-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v4/runtime/darwin-full-v3-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3210ef80c5ea1dcd7046f267ae8d01b0b6276820"
+    },
+    "proof/T17/v4/runtime/darwin-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4b5c5269f10981f113a1b6151c4281d49c2dd998"
+    },
+    "proof/T17/v4/runtime/darwin-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/runtime/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/runtime/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cc0a2ce5f4cb91e653ae53dc5fc56d56b5c1ec12"
+    },
+    "proof/T17/v4/runtime/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v4/runtime/engine-deferred.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "80e6248c19f8a90a53c181dccdd01d4e63781fba"
+    },
+    "proof/T17/v4/runtime/engine-sync.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "180dfc0fd883be20cab0f71abb30db57bb3c6255"
+    },
+    "proof/T17/v4/runtime/win32-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v4/runtime/win32-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v4/runtime/win32-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ff0dd1545275db30902a5033507fb69d87839d2b"
+    },
+    "proof/T17/v4/runtime/win32-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v4/runtime/win32-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v4/runtime/win32-crash-only-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3210ef80c5ea1dcd7046f267ae8d01b0b6276820"
+    },
+    "proof/T17/v4/runtime/win32-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "01aa16160e2e485f80b007c3a99a2f123b17bedb"
+    },
+    "proof/T17/v4/runtime/win32-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v4/runtime/win32-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v4/runtime/win32-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v4/runtime/win32-full-v3-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3210ef80c5ea1dcd7046f267ae8d01b0b6276820"
+    },
+    "proof/T17/v4/runtime/win32-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bc862a3cfdae1c84c8793f4ab3b82f97a1220912"
+    },
+    "proof/T17/v4/runtime/win32-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v4/runtime/win32-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v4/runtime/win32-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8d5dd2504a6d5eeaae9e97d54769d72650660609"
+    },
+    "proof/T17/v4/runtime/win32-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v4/test.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8a5fdab4b354040692653ed3f9da0d58e411a1ff"
+    },
+    "proof/T17/v4/test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4455c53db59948e7002fb3fd5a3213627e9ac243"
+    },
+    "proof/T17/v4/typecheck.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1c8b9592bc6cad4ee508fbdb3d5490f74d97892c"
+    },
+    "proof/T17/v4/typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9bc5a5909a8b2e581aaebae4648fa4bd1c2e19ac"
+    },
+    "proof/T17/v4/workflow-scope-audit.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b60c6913f0bfe8098180f11248a26010368f4b29"
+    },
+    "proof/T17/v5-CONTRACT-DELTA.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "43a23561a435159a7f1e47453cdeda18f721ac24"
+    },
+    "proof/T17/v5/changed-files.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f2d2456c3528930a9626174a2247e084c990bffd"
+    },
+    "proof/T17/v5/characterization-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1d6a5f34a268de17a2cc8f18d65b5f93d07aed38"
+    },
+    "proof/T17/v5/emission-controls.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fb47180aaca11357e3e35f9bb01db3309f448ccb"
+    },
+    "proof/T17/v5/emission.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e80aebd549c48301e27810e1d62c570200660ad1"
+    },
+    "proof/T17/v5/emission.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f773e890c6d5fc8bea723aa87d66e63a58047403"
+    },
+    "proof/T17/v5/evidence-verification.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "980825f4bbaa9db392e25858675e9db1df98bb6c"
+    },
+    "proof/T17/v5/evidence-verification.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "69edb8c1b74234d7d2009c91021ecb3d6aa7df10"
+    },
+    "proof/T17/v5/final-lint.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "22c65b9ee24917c914c6aff40c941f6058f4de71"
+    },
+    "proof/T17/v5/final-lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "53c84016f5098657c9b845b1690ff2a93e56f8bf"
+    },
+    "proof/T17/v5/final-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6e3275b0dff08a2bf9a91748ea37ccca323b9473"
+    },
+    "proof/T17/v5/final-runtime.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "17c7e97d731f5dc2c908c9704f3b7d73b854df2b"
+    },
+    "proof/T17/v5/final-test.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b6055b667b938a3dfb4b9ad8667fb84f043d53ed"
+    },
+    "proof/T17/v5/final-test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4bac7317fda45ca30a5cdc8c31d692b8baa164ff"
+    },
+    "proof/T17/v5/final-tests.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "544a44925548509fc2d06da958c5d923dbdec0d8"
+    },
+    "proof/T17/v5/final-typecheck.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f93992d7109da26804287f2ff98447d8ee8995a1"
+    },
+    "proof/T17/v5/final-typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fc7d2789383d0b74e1656136a1d822c24d47f5ff"
+    },
+    "proof/T17/v5/lint.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "22c65b9ee24917c914c6aff40c941f6058f4de71"
+    },
+    "proof/T17/v5/lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "575e502aeb5180534aba9545d14c07003a7b6740"
+    },
+    "proof/T17/v5/negative-controls/fallback-clean.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7097a5efc5264819f5c908e1feb0f8981272de81"
+    },
+    "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "25904bc4282cf1b46aa54e620fd13d04eec7b45f"
+    },
+    "proof/T17/v5/negative-controls/fallback-clean/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/fallback-clean/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0af083bb69be032897ef59f4473f5c0a9de40180"
+    },
+    "proof/T17/v5/negative-controls/fallback-mutant.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0e8826f6d81dba6968e5d9d82af846321c128bf3"
+    },
+    "proof/T17/v5/negative-controls/fallback-mutant/darwin-no-crash-no-cdp-runtime-failure.txt": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "599c41f2ce6fdb52561007effe262a5c0e16e0c9"
+    },
+    "proof/T17/v5/negative-controls/fallback-mutant/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cafb295ce277e34e9c4a3bf9f6f13af68fdc62f2"
+    },
+    "proof/T17/v5/negative-controls/fallback-mutant/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7de9e19ac939d309d6bd9bf08573ee080e1d0704"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-clean.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "daf9386cf280d148e589eb729a1cdc8f5c9578ec"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b4568d3324b38f04fe48511ae42440b97e22eb1a"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-clean/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-clean/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bad6123cec7911cf533925bad1e2eb125bf86155"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-mutant.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "680deb711b80cbe8f27ee0d8c2826effb73a533b"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9c34bebcc660b5476a673a315cde8764a6351738"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-mutant/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/no-crash-captions-mutant/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b3b6294738f7104ff546362c12d03ee058c942a9"
+    },
+    "proof/T17/v5/negative-controls/results.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "03c428071aecc7dd7896c4ba8b3cd9d1578714d1"
+    },
+    "proof/T17/v5/negative-controls/retry-clean.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e295c057aa89ffdb84ca55f408fb528f6cc19edd"
+    },
+    "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9785ecb6e319fa1b003b7ccb4bcbf4e2c0a5a676"
+    },
+    "proof/T17/v5/negative-controls/retry-clean/darwin-no-crash-retry-hosted-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/retry-clean/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "937dafb23b260478e1a9f1669bbeeef61b7725fa"
+    },
+    "proof/T17/v5/negative-controls/retry-mutant.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bd0b0800908564302b8578a0c91584cd69326ec7"
+    },
+    "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8b3cfd02d66c32e83857217e2c34e2096d2066c2"
+    },
+    "proof/T17/v5/negative-controls/retry-mutant/darwin-no-crash-retry-hosted-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/negative-controls/retry-mutant/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "94dc2a289aeac076d2f888c003df7b78eb3683a2"
+    },
+    "proof/T17/v5/preflight.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a5d1ddf9dd140a04d25ee5332d20a8636b4c76c2"
+    },
+    "proof/T17/v5/resource-release.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f09b4d16a9a888091ce2f6f840e66cf136bbf589"
+    },
+    "proof/T17/v5/runtime-final/darwin-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-final/darwin-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-final/darwin-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8eb40e95447c03f77cbbe69874b2e7083e3810f6"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-native-os-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-native-os-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-native-os-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "23549ec39471614d7b2ddcbd148ba733c81d5f40"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2ac51f553e69db89461a72dbe6ccde9f44cfb2a6"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-final/darwin-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "474b95d03a49b6cefd20262099171c83e55fe3e5"
+    },
+    "proof/T17/v5/runtime-final/darwin-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-final/darwin-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-final/darwin-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d47117423981cc2862d46de921281b3030058cf5"
+    },
+    "proof/T17/v5/runtime-final/darwin-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "412bc6c9cd8bd184393062861d3513f5c7afe907"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "5598e7f08f276fdab4d9c4114fbe3428e97d4710"
+    },
+    "proof/T17/v5/runtime-final/darwin-no-crash-retry-hosted-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-final/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ee0345a5d99c325dbf3fba2d1ec27c915a56fb2c"
+    },
+    "proof/T17/v5/runtime-final/win32-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v5/runtime-final/win32-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v5/runtime-final/win32-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "31c9dae213dbd3ae01818d78e711633c920aade5"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-native-os-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-native-os-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-native-os-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b5a0e39e96ba56d78bd4ecea70905c228a3ad99b"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "13800abdd04651d7ec637ffc406eb8b168675cc1"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-retry-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-retry-hosted-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "49baa4b5ef84cc1dffac7d9828b1499478ed087f"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-final/win32-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b2774dfc5489f1fcf8df4b78d24394e5b390f08a"
+    },
+    "proof/T17/v5/runtime-final/win32-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v5/runtime-final/win32-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-final/win32-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v5/runtime-final/win32-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2820a3f6a09c960cc01c59727e18f35bedc3a3fa"
+    },
+    "proof/T17/v5/runtime-final/win32-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "64596da3e4966dcee771caa2fe9d598178637cd4"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "49baa4b5ef84cc1dffac7d9828b1499478ed087f"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ae736c67d80fa808b8cd399f4ce49d93edc6a803"
+    },
+    "proof/T17/v5/runtime-final/win32-no-crash-retry-hosted-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-negative-controls.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b323a47ee65b2991ff326392cc53016a562a529c"
+    },
+    "proof/T17/v5/runtime-negative-controls.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2d6c5691f51a05303c419af23d105ad4b34697fa"
+    },
+    "proof/T17/v5/runtime-verified/darwin-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-verified/darwin-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-verified/darwin-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b1310b35fa305a834f25973911399b7a09544ae7"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-native-os-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-native-os-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-native-os-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "be86cf5463d0c07896ec0a4535b92b89e402910c"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "744e2df29358b9bd887208a522284eb0d7b4ccc3"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-verified/darwin-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e49b743890101ab6dd49cffded4e6c4e25a842b6"
+    },
+    "proof/T17/v5/runtime-verified/darwin-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-verified/darwin-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime-verified/darwin-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c0f03af796ae8c8eb25e1f69c4327fb88a7c4944"
+    },
+    "proof/T17/v5/runtime-verified/darwin-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c0144a8c59753d20c65bade500adfdc0ad685e8d"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "658f36d9314f668ded5ce77818b1616dd7dbfe69"
+    },
+    "proof/T17/v5/runtime-verified/darwin-no-crash-retry-hosted-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime-verified/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ae948ec5d098e658134e7485e59f9f0500e9c6cf"
+    },
+    "proof/T17/v5/runtime-verified/win32-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v5/runtime-verified/win32-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v5/runtime-verified/win32-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ab0b5a09073a4157df0f13178ec8f9ee30a078ab"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-native-os-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-native-os-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-native-os-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f1a51d2f923d9e691e07670142f761a3b0939d57"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2861d4da1066bd7a4c9f630ce028a8c7b9c8e6a0"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "49baa4b5ef84cc1dffac7d9828b1499478ed087f"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-verified/win32-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f770960cdc454098bbca9e302e7a62c7eb117234"
+    },
+    "proof/T17/v5/runtime-verified/win32-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v5/runtime-verified/win32-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-verified/win32-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v5/runtime-verified/win32-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bd8ffe2ae61419f6e8454c85f4f608c66f27d69e"
+    },
+    "proof/T17/v5/runtime-verified/win32-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e91bd8be9e2e6cbdab33d160119dc753817e3fcd"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "49baa4b5ef84cc1dffac7d9828b1499478ed087f"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b5ce80cd39f8769b0d762a76de244cf62ddaa2a8"
+    },
+    "proof/T17/v5/runtime-verified/win32-no-crash-retry-hosted-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "055c4eb5ceefbb13cb73949ac0bcda15ab41f166"
+    },
+    "proof/T17/v5/runtime.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "35ef83523fae253dfb23adc417caa483039ccf41"
+    },
+    "proof/T17/v5/runtime/darwin-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime/darwin-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime/darwin-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d047cb78eb5051b42d5398ff11f02e23f1e19ae8"
+    },
+    "proof/T17/v5/runtime/darwin-crash-native-os-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-crash-native-os-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-crash-native-os-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "09b36309a9e0ccf3f0af0d4c4804876e2dfc3ae2"
+    },
+    "proof/T17/v5/runtime/darwin-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f83d18960af78f014cdd63b4db99b790b4c869b9"
+    },
+    "proof/T17/v5/runtime/darwin-crash-retry-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-crash-retry-hosted-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime/darwin-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime/darwin-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "17f9f034e91897dafb956408deda893a13553a5c"
+    },
+    "proof/T17/v5/runtime/darwin-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime/darwin-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bf607816bde4c5a407c146ba28f9ca5377869421"
+    },
+    "proof/T17/v5/runtime/darwin-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "963adc5901747653b9b71afeb2cd6bf010284131"
+    },
+    "proof/T17/v5/runtime/darwin-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/darwin-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "3e43f875d82f65d017d8f82d81dba4ea91801295"
+    },
+    "proof/T17/v5/runtime/darwin-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "10f41e4a736e38132c896b34d3bde5fcc1cde0af"
+    },
+    "proof/T17/v5/runtime/isolation-summary.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ecf83982070402b609eb265ffbffa68a172e02fb"
+    },
+    "proof/T17/v5/runtime/win32-cdp-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v5/runtime/win32-cdp-only-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v5/runtime/win32-cdp-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0acebcfe5df1823209eef202edd4b7be1ff2bd61"
+    },
+    "proof/T17/v5/runtime/win32-crash-native-os-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime/win32-crash-native-os-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime/win32-crash-native-os-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1d4a1e1213f7ed7361e1a0f60e5a40c9c2f4f0b7"
+    },
+    "proof/T17/v5/runtime/win32-crash-only-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime/win32-crash-only-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime/win32-crash-only-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c3d44e8b3c29097f2cd292117c3846251f32fa3c"
+    },
+    "proof/T17/v5/runtime/win32-crash-retry-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime/win32-crash-retry-hosted-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime/win32-crash-retry-hosted-hosted-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "49baa4b5ef84cc1dffac7d9828b1499478ed087f"
+    },
+    "proof/T17/v5/runtime/win32-crash-retry-hosted-hosted-restored.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad5311ef16cee8039e16d41fbc3b486e2a17ed0d"
+    },
+    "proof/T17/v5/runtime/win32-crash-retry-hosted-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cdf501361a98c94bf087853a5a70c9b747d46223"
+    },
+    "proof/T17/v5/runtime/win32-full-v3-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "95ca38c9938ec5faf38d8d0221acde5cd944336b"
+    },
+    "proof/T17/v5/runtime/win32-full-v3-crash.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime/win32-full-v3-offline.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "99ef76de60b79e5ec85c2e29e2e9addc57761ff4"
+    },
+    "proof/T17/v5/runtime/win32-full-v3-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "de3a157f99ac0f60f3a7497532f2451de192ee71"
+    },
+    "proof/T17/v5/runtime/win32-full-v3-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/runtime/win32-no-crash-no-cdp-captions.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "347fd05b7d5692149aec50d7cb1090458d3485df"
+    },
+    "proof/T17/v5/runtime/win32-no-crash-no-cdp-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b87c76bc324ef2c6bc32e721eb35a2faf9fcb9f4"
+    },
+    "proof/T17/v5/runtime/win32-no-crash-no-cdp-server.png": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6b9a57e4524b22671d0999d625b6c643d9e0e8a4"
+    },
+    "proof/T17/v5/semantics-green.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "23e7e1f99f63aed32a34b5cf3e01de3d1c825b66"
+    },
+    "proof/T17/v5/semantics-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8c3f6e50908100d3961f0a798c11606cd32f554e"
+    },
+    "proof/T17/v5/semantics-red.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b8df68099db9f393a02842052d4362534c6e1c28"
+    },
+    "proof/T17/v5/semantics-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "90d6b1618eade5c1ee76404215263165cd7bd5ca"
+    },
+    "proof/T17/v5/test.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c22da6f88edc93ce91f992e99200dac661c86458"
+    },
+    "proof/T17/v5/test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ca397b6fb640bbf4f70f2a1fbf8e11ed6701099c"
+    },
+    "proof/T17/v5/tests.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4e045c7a06f55b250d2f94892116a64967b61042"
+    },
+    "proof/T17/v5/typecheck.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f93992d7109da26804287f2ff98447d8ee8995a1"
+    },
+    "proof/T17/v5/typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fc7d2789383d0b74e1656136a1d822c24d47f5ff"
+    },
+    "proof/T17/v5/verified-lint.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "22c65b9ee24917c914c6aff40c941f6058f4de71"
+    },
+    "proof/T17/v5/verified-lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "53c84016f5098657c9b845b1690ff2a93e56f8bf"
+    },
+    "proof/T17/v5/verified-negative-controls.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b323a47ee65b2991ff326392cc53016a562a529c"
+    },
+    "proof/T17/v5/verified-negative-controls.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e231a8b8efa157517e200b33fc5510196e1d8538"
+    },
+    "proof/T17/v5/verified-runtime.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "5b6d6c1650c1920afa56378ba7ac248bd4bd049d"
+    },
+    "proof/T17/v5/verified-runtime.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "39425c60cb66f2f5ead85bb23ee5845bf55ba4da"
+    },
+    "proof/T17/v5/verified-test.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c1f3840f84acb20ef2139606259cb32beecd62d5"
+    },
+    "proof/T17/v5/verified-test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1bf90c6ece26b15f4932275e84331ecf4a06c36f"
+    },
+    "proof/T17/v5/verified-typecheck.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f93992d7109da26804287f2ff98447d8ee8995a1"
+    },
+    "proof/T17/v5/verified-typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fc7d2789383d0b74e1656136a1d822c24d47f5ff"
+    },
+    "proof/T17/v5/workflow-scope-audit.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2af81753302e2c67a92825dbc8dbb75032881834"
+    },
+    "proof/T17/v6/classifier-v44.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "da4eaccc52cb020e62b2e7fee0329fba2fbb1977"
+    },
+    "proof/T17/verify-v5-evidence.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e2175d280ab606fd633583cf825026c9b6dc2f74"
+    },
+    "proof/T18/README.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "56426f85de0aa2c7c23882d63d4790b1c3919dec"
+    },
+    "proof/T18/lint.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0ab6ce8dc7413e10156508dfccf22ef3d889f472"
+    },
+    "proof/T18/tdd-green.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ea0ab6c7e349d45cb9db9099ef26a0d0abbd197e"
+    },
+    "proof/T18/tdd-red-corrected.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "73f908fcab16436138ea6448c3b1d8886375b5d8"
+    },
+    "proof/T18/tdd-red.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "48065c09e1a5d590a6cf709bf623732fe9fcb0c1"
+    },
+    "proof/T18/test.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "733dccea532a6c257a8930d5a7cbe703c86f3d79"
+    },
+    "proof/T18/typecheck.log": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9d8ca3cf049a2a4acf0ce486a205b89314933d58"
+    },
+    "release-please-config.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "716a3a9b1b4d20d30b30e0339b0baef89695a6a1"
+    },
+    "scripts/generate-desktop-icons.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e2924d9e2d942ad9d41748cd2a2a056fc3d0860d"
+    },
+    "scripts/macos-notarize.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8bdae5dea6bc358f7d820374928b2968c7e9e62d"
+    },
+    "scripts/macos-sign.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e5110566df22a4182e13ac63cd1a0f9a6bcdc07f"
+    },
+    "scripts/macos-signing-verification.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "081bda1b16d3e8f9adfb98ed0552814451243ae7"
+    },
+    "scripts/stage-desktop-candidate.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d8a0715afee6ac0c4cb8d6483e6b6adb1458d117"
+    },
+    "scripts/streamdeck/README.md": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9066d033778b287d2e63cfebff79494ac53480dc"
+    },
+    "scripts/streamdeck/mutiny-control.ps1": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7fdbb780084dde3dca86a14c25bae654a8952587"
+    },
+    "src/assets.d.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "43a6203e6935a6cddb70d26cdfb3d7f112384f82"
+    },
+    "src/config.d.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "5d66ced1ea46058b11c76aa068b0c5413c02e5ea"
+    },
+    "src/index.css": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9bfd0b15943c6b6c9b5f2a361eefa2ac1b8bb03a"
+    },
+    "src/main.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d5d47405d229b02d588a53e2f13b85cdcc46463a"
+    },
+    "src/native/autoLaunch.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f87a20b1db0a6fe8260ea1a5fc512e370391958b"
+    },
+    "src/native/badgePolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "98cd9de59397881aeb4c8ef12b64b38d90ec7b19"
+    },
+    "src/native/badges.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b8013ed349db2f1588c72988666e4d9474ff92db"
+    },
+    "src/native/badgesRegistration.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "52a540c289fae95a57f4fffb752aef240c99c925"
+    },
+    "src/native/config.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d68462c69ac57787d41f5c3b6d01ae84996daca6"
+    },
+    "src/native/configIpcPolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7ef4fa45c1b42e3e330568152df99dd66b68b0ca"
+    },
+    "src/native/configSchema.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ea620e2f7f99b073745776016dfa3a963d5591e7"
+    },
+    "src/native/contentSecurityPolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "186c33ef948c25a814eb388a8716d782d06ea1fb"
+    },
+    "src/native/contextMenuPolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c5dc07e32f3c86180f6a47d38f916ea491507b5e"
+    },
+    "src/native/controlPolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ac710d9ff182b08070f07b7eacd339fe5a5131f9"
+    },
+    "src/native/controlServer.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "71e5efa731faa02146b99090042393352e12e6b5"
+    },
+    "src/native/discordRpc.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ea73eb0547c83f5904597f1955efc7d74c7e1f46"
+    },
+    "src/native/displayMedia.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c29332a486141286ad8e0a0b31a679d4d0c4736a"
+    },
+    "src/native/notificationPolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "77833f8674da7e16e09142f3210caf8052a0924c"
+    },
+    "src/native/offlinePolicy.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4f21704b13762da8d8b0b3111df7e33dfce3bb58"
+    },
+    "src/native/offlineRecovery.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d41981eab4c0356a4c385329fc28c2d7e1cc70f2"
+    },
+    "src/native/rendererTrust.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "8a2c2883b14d1402f5a9c11ac99d21f7a0b816a6"
+    },
+    "src/native/screenPicker.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "295a5259c473482c8ea380474bb133b55cfd9923"
+    },
+    "src/native/screenPickerResult.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6ecc5a3aecbe060b4217d20123750135f2148579"
+    },
+    "src/native/startup.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1796cf1f6d3f32728ab0a27d60e43b6a66d4c4cd"
+    },
+    "src/native/tray.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "1262d6ce9c7f1a3f9dacf40d0e71e40f712560bd"
+    },
+    "src/native/voiceControl.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "57127a74684b7fc2dbddb6bb59431ea3d04230cd"
+    },
+    "src/native/window.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "79d8cfd02fe78e3d77014d66b8eb4d3ad5fde499"
+    },
+    "src/native/windowControls.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "857a58171f23ae768eaf31b73b11e3c7eb9e5e13"
+    },
+    "src/native/windowOptions.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d6b63090f304383c83cc65393c8a9e2ed82b537f"
+    },
+    "src/pickerPreload.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c6a88897bd9f62c2f018baf3ed5fcc7ea6c1062f"
+    },
+    "src/preload.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "b0d980a9e187af3f01ccbcfa30648b0fa86201e1"
+    },
+    "src/renderer.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "08b05f662f592902e145fd9046fd094cb0ae4e50"
+    },
+    "src/world/capabilities.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ad6e592ebaf1edd26f08a4b6e99e556a1cb3bc6a"
+    },
+    "src/world/config.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "a8b44607a0cfedf769e3a6619560af1b68003047"
+    },
+    "src/world/window.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "2c7e51c4dd6fb331f9cf8d1071285e226798a640"
+    },
+    "strings.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "tests/badgePolicy.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "dfd8751c5a6cb0bfa85e359f730ac87705d148bb"
+    },
+    "tests/badges.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cd94ecf5008fd198768c8161f8545f938e4ccea6"
+    },
+    "tests/buildWorkflow.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4c0acfa680a63706e3073ce996d83abaf31c0ee1"
+    },
+    "tests/candidateStaging.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "cfc72a5a4d4a52d57fb3380a74c6161f18efa62b"
+    },
+    "tests/configSchema.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d65d2684d255e097ab3fa418d1154d370cacb25a"
+    },
+    "tests/contentSecurityPolicy.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0b03bd24d30ab7c909355131fb0f12a54f19015d"
+    },
+    "tests/contextMenuPolicy.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "55129fdecf87ae0de6d815316bfe1c72cad4006c"
+    },
+    "tests/controlPolicy.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "d2d767dfa90e1a012d258465dd82880ba5ceb1c9"
+    },
+    "tests/controlServer.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7e38d20379cfa6bc690d1a665136028b3e36f855"
+    },
+    "tests/desktopReleaseContract.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4161520da3d0cb323780358a1e5efa3df995e937"
+    },
+    "tests/displayMedia.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9b510b756770ed9cd091e6e12a3befc7ddf0fb57"
+    },
+    "tests/macosSigningContract.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "bc8281ce208a7cfb346490736991c2db06d0f44f"
+    },
+    "tests/mainSecurity.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "387fcdd947433fd7ee58da5516726a204a430537"
+    },
+    "tests/mutationGuards.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "13442cbd61744e68300097e78896a428bc7aa975"
+    },
+    "tests/nativeIpcSecurity.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "179da2823f9389b1f292ae4fb6dda42d49fb413e"
+    },
+    "tests/offlineCaptionRequirements.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "9b67a57b292697be2ce52c95c23499f44627da62"
+    },
+    "tests/offlineEmission.test.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "7f18ddaf5c263139c28f8695b21f13d2076d212b"
+    },
+    "tests/offlinePolicy.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "16cd15a2934bdc4122a2b684b127ad7cf297ccfc"
+    },
+    "tests/offlineRecovery.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4723f558abc5dffdbf8edbac24a7f7138903ec4a"
+    },
+    "tests/offlineScope.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "f43d47cb87fd973f5f28601c63dbde3b597fdb2a"
+    },
+    "tests/offlineTrustBoundary.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "c524ebfd17c1576c4f4e24ade60a1a51017757a2"
+    },
+    "tests/preloadCapabilities.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4d00e8d36c12b80ad93ae10c0fd95a21bcec1dcd"
+    },
+    "tests/screenPicker.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "db22e527dfaed73d14997b7870c9b507da577bc8"
+    },
+    "tests/startup.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "532924237a19da1ce6bcb8ba58c228dcd695d60b"
+    },
+    "tests/streamdeckScript.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "6c29bab67bc7374d4f41da2d569bde71038365b5"
+    },
+    "tests/voiceControl.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4f28e4745426a07cb0adee981652913975cc0aa9"
+    },
+    "tests/windowCapabilities.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "ce87b0944dabe0c350e1cce0bbfd66f1b8d42e50"
+    },
+    "tests/windowControls.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "4c2ab33fb63f364c5fd40900d28a835bdbf583f0"
+    },
+    "tests/windowOptions.test.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "0cebbfd601ea7045cf33f97044ceda8ffbbcd1f3"
+    },
+    "tsconfig.json": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "74434b2a5d43032e19fd5fdc3f28a6c7d6fcb204"
+    },
+    "vite.main.config.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "96bfbd0dd5ab4b5ddc686f375d0009f507acefd4"
+    },
+    "vite.preload.config.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fbf7eda449de29589cab208e921970b8980e5d8a"
+    },
+    "vite.renderer.config.ts": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "fbf7eda449de29589cab208e921970b8980e5d8a"
+    },
+    "vitest.config.mjs": {
+      "mode": "100644",
+      "kind": "blob",
+      "object": "26358796b36153cc6a0ac22adc5b6c7436911161"
+    }
+  }
+}

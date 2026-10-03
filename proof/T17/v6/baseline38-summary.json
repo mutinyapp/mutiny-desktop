@@ -1,0 +1,47 @@
+{
+  "aggregateExit": 1,
+  "rows": [
+    {
+      "mode": "darwin",
+      "scenario": "crash-native-os",
+      "electron": "38.1.2",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "knownGapCount": 4
+    },
+    {
+      "mode": "darwin",
+      "scenario": "crash-retry-hosted",
+      "electron": "38.1.2",
+      "result": "FAIL",
+      "exit": 1,
+      "hardFailures": [
+        "crash-retry-hosted: Retry button did not recover configured HTTP 200 app (automatic retry paused)"
+      ],
+      "knownGapCount": 4
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-native-os",
+      "electron": "38.1.2",
+      "result": "KNOWN-GAP",
+      "exit": 0,
+      "hardFailures": [],
+      "knownGapCount": 4
+    },
+    {
+      "mode": "win32",
+      "scenario": "crash-retry-hosted",
+      "electron": "38.1.2",
+      "result": "FAIL",
+      "exit": 1,
+      "hardFailures": [
+        "crash-retry-hosted: Retry button did not recover configured HTTP 200 app (automatic retry paused)"
+      ],
+      "knownGapCount": 4
+    }
+  ],
+  "productFixedOn38": false,
+  "note": "Retained diagnostic only; post-crash manual Retry remains a hard failure. Native OS methods work; exact offline caption refusal remains38-only diagnostic KNOWN-GAP. No38 recovery acceptance."
+}

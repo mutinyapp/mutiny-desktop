@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "node",
+    "proof/T17/check-runtime-negative-controls.mjs"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+  "environment": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+    "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+    "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+  },
+  "overrides": {
+    "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+    "T17_NEGATIVE_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/negative-controls"
+  },
+  "exit": 0,
+  "started": 1791000294.160924,
+  "elapsedSeconds": 67.10048508644104,
+  "logSHA256": "d8c9b38bde81e8426b14e24f318f9609809813e129392e580133ac1e87a66fc1"
+}

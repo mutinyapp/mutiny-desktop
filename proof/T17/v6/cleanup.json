@@ -1,0 +1,47 @@
+{
+  "completedAt": "2026-10-03T04:15:47.155344+00:00",
+  "scratchRoot": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6",
+  "rootRemoved": true,
+  "removedFileCount": 42950,
+  "ownedProcessesBefore": [],
+  "ownedProcessCountAfter": 0,
+  "processesKilled": 0,
+  "portsBindBefore": [
+    49270,
+    49271,
+    49272,
+    49273,
+    49274,
+    49275,
+    49276,
+    49277,
+    49278,
+    49279
+  ],
+  "portsBindAfter": [
+    49270,
+    49271,
+    49272,
+    49273,
+    49274,
+    49275,
+    49276,
+    49277,
+    49278,
+    49279
+  ],
+  "productSourceRecheckedBeforeDisposal": true,
+  "writerIgnoredCacheCleanup": [
+    {
+      "path": "/Users/friday/Projects/mutiny-rebuild/wt/T17/node_modules/.vite/vitest/results.json",
+      "bytes": 203,
+      "SHA256": "95574c456009dfdaa11b10030067b6e8350b9ae12aeb1c56eb0994cdcf4d0840",
+      "reason": "Initial focused classifier RED/GREEN ran in writer tree and generated ignored Vitest cache. Final matched classifier rerun uses combined scratch. Task-created cache removed, no product file affected."
+    }
+  ],
+  "remainingOwnedUserDataBuildCacheDirectories": [],
+  "installedMutinyTouched": false,
+  "productMainLaunched": false,
+  "productionSigningNotarizationReleasePerformed": false,
+  "branchIntegrationPerformed": false
+}

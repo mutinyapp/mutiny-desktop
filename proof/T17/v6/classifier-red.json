@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "proof/T17/v6/classifier-v44.test.mjs"
+  ],
+  "cwd": "/Users/friday/Projects/mutiny-rebuild/wt/T17",
+  "environment": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+    "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+    "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+  },
+  "overrides": {},
+  "exit": 1,
+  "started": 1790999823.1318588,
+  "elapsedSeconds": 2.0567009449005127,
+  "logSHA256": "ec7feaf4aa4b1843de9caf196594cd0e0f004f17cb03b4e9bd12c81fe5fe615a"
+}

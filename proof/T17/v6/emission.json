@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "node",
+    "proof/T17/check-emission-mutations.mjs"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+  "environment": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+    "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+    "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+  },
+  "overrides": {
+    "T17_EMISSION_RECEIPT": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/emission-controls.json"
+  },
+  "exit": 0,
+  "started": 1791000270.2990441,
+  "elapsedSeconds": 0.4133026599884033,
+  "logSHA256": "812f49b8b69ae47a5eda8f77afe38d904a529f62bdbc3f25aee7a23b2f3d6396"
+}

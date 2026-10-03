@@ -1,0 +1,439 @@
+diff --git a/forge.config.ts b/forge.config.ts
+index 7a83aae..71dadd8 100644
+--- a/forge.config.ts
++++ b/forge.config.ts
+@@ -155,6 +155,8 @@ const config: ForgeConfig = {
+         "Mutiny needs camera access for video calls.",
+       NSScreenCaptureUsageDescription:
+         "Mutiny needs screen access for screen sharing.",
++      NSAudioCaptureUsageDescription:
++        "Mutiny needs system audio access for screen sharing.",
+       CFBundleURLTypes: [
+         {
+           CFBundleURLName: "Mutiny Protocol",
+diff --git a/package-lock.json b/package-lock.json
+index f6ea522..110c0d2 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -35,7 +35,7 @@
+         "@types/electron-squirrel-startup": "^1.0.2",
+         "@typescript-eslint/eslint-plugin": "^5.62.0",
+         "@typescript-eslint/parser": "^5.62.0",
+-        "electron": "38.1.2",
++        "electron": "44.5.1",
+         "eslint": "^8.57.1",
+         "eslint-plugin-import": "^2.32.0",
+         "json-schema-typed": "^8.0.1",
+@@ -620,6 +620,16 @@
+         "node": ">= 14.17.5"
+       }
+     },
++    "node_modules/@electron-internal/extract-zip": {
++      "version": "1.0.5",
++      "resolved": "https://registry.npmjs.org/@electron-internal/extract-zip/-/extract-zip-1.0.5.tgz",
++      "integrity": "sha512-+bqFCP98pLI0Tt0XQo1TmlXtwjWchISndDOxCkEcIuUgXWpBnLyRI+2DU+mesvnMMX6L1XDqYNA0lXNDHd/yiA==",
++      "dev": true,
++      "license": "BSD-2-Clause",
++      "engines": {
++        "node": ">=22.12.0"
++      }
++    },
+     "node_modules/@electron/asar": {
+       "version": "3.4.1",
+       "resolved": "https://registry.npmjs.org/@electron/asar/-/asar-3.4.1.tgz",
+@@ -5059,22 +5069,22 @@
+       "license": "MIT"
+     },
+     "node_modules/electron": {
+-      "version": "38.1.2",
+-      "resolved": "https://registry.npmjs.org/electron/-/electron-38.1.2.tgz",
+-      "integrity": "sha512-WXUcN3W8h8NTTZViA3KNX0rV2YBU0X0mEUM3ubupXTDY4QtIN7tmiqYVOKSKpR2LckTmBWGuEeY4D6xVoffwKQ==",
++      "version": "44.5.1",
++      "resolved": "https://registry.npmjs.org/electron/-/electron-44.5.1.tgz",
++      "integrity": "sha512-lx7AYoFIiyvEvgvpyWO9kOC60xtNPpiPZAth6Fmg9NutzpCAMLwpUlaBY2EXfZyIgUdzEmLMj9KvK0Vrokl1yQ==",
+       "dev": true,
+-      "hasInstallScript": true,
+       "license": "MIT",
+       "dependencies": {
+-        "@electron/get": "^2.0.0",
+-        "@types/node": "^22.7.7",
+-        "extract-zip": "^2.0.1"
++        "@electron-internal/extract-zip": "^1.0.1",
++        "@electron/get": "^5.0.0",
++        "@types/node": "^24.9.0"
+       },
+       "bin": {
+-        "electron": "cli.js"
++        "electron": "cli.js",
++        "install-electron": "install.js"
+       },
+       "engines": {
+-        "node": ">= 12.20.55"
++        "node": ">= 22.12.0"
+       }
+     },
+     "node_modules/electron-installer-common": {
+@@ -5569,71 +5579,55 @@
+       }
+     },
+     "node_modules/electron/node_modules/@electron/get": {
+-      "version": "2.0.3",
+-      "resolved": "https://registry.npmjs.org/@electron/get/-/get-2.0.3.tgz",
+-      "integrity": "sha512-Qkzpg2s9GnVV2I2BjRksUi43U5e6+zaQMcjoJy0C+C5oxaKl+fmckGDQFtRpZpZV0NQekuZZ+tGz7EA9TVnQtQ==",
++      "version": "5.1.0",
++      "resolved": "https://registry.npmjs.org/@electron/get/-/get-5.1.0.tgz",
++      "integrity": "sha512-3kSBtG8ObcTVfXanm5vVJ6UnBLEVmVsRk1M+vGqCuMBV+XLCbJYuWQful+yIy0GQDsSlK0kHEriEHn7SPk4EnA==",
+       "dev": true,
+       "license": "MIT",
+       "dependencies": {
+         "debug": "^4.1.1",
+-        "env-paths": "^2.2.0",
+-        "fs-extra": "^8.1.0",
+-        "got": "^11.8.5",
++        "env-paths": "^3.0.0",
++        "graceful-fs": "^4.2.11",
+         "progress": "^2.0.3",
+-        "semver": "^6.2.0",
++        "semver": "^7.6.3",
+         "sumchecker": "^3.0.1"
+       },
+       "engines": {
+-        "node": ">=12"
++        "node": ">=22.12.0"
+       },
+       "optionalDependencies": {
+-        "global-agent": "^3.0.0"
++        "undici": "^7.24.4"
+       }
+     },
+-    "node_modules/electron/node_modules/fs-extra": {
+-      "version": "8.1.0",
+-      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz",
+-      "integrity": "sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==",
++    "node_modules/electron/node_modules/@types/node": {
++      "version": "24.19.1",
++      "resolved": "https://registry.npmjs.org/@types/node/-/node-24.19.1.tgz",
++      "integrity": "sha512-aS3/DG0oM05K0RIXXP+hKjinGG5IgSSVGzswZxW3O0sS3pH4/fycXundUC9XsszgKCk4gHXylTEK6hyFxVxnoQ==",
+       "dev": true,
+       "license": "MIT",
+       "dependencies": {
+-        "graceful-fs": "^4.2.0",
+-        "jsonfile": "^4.0.0",
+-        "universalify": "^0.1.0"
+-      },
+-      "engines": {
+-        "node": ">=6 <7 || >=8"
++        "undici-types": ">=7.24.0 <7.24.7"
+       }
+     },
+-    "node_modules/electron/node_modules/jsonfile": {
+-      "version": "4.0.0",
+-      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz",
+-      "integrity": "sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==",
++    "node_modules/electron/node_modules/env-paths": {
++      "version": "3.0.0",
++      "resolved": "https://registry.npmjs.org/env-paths/-/env-paths-3.0.0.tgz",
++      "integrity": "sha512-dtJUTepzMW3Lm/NPxRf3wP4642UWhjL2sQxc+ym2YMj1m/H2zDNQOlezafzkHwn6sMstjHTwG6iQQsctDW/b1A==",
+       "dev": true,
+       "license": "MIT",
+-      "optionalDependencies": {
+-        "graceful-fs": "^4.1.6"
+-      }
+-    },
+-    "node_modules/electron/node_modules/semver": {
+-      "version": "6.3.1",
+-      "resolved": "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz",
+-      "integrity": "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==",
+-      "dev": true,
+-      "license": "ISC",
+-      "bin": {
+-        "semver": "bin/semver.js"
++      "engines": {
++        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
++      },
++      "funding": {
++        "url": "https://github.com/sponsors/sindresorhus"
+       }
+     },
+-    "node_modules/electron/node_modules/universalify": {
+-      "version": "0.1.2",
+-      "resolved": "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz",
+-      "integrity": "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==",
++    "node_modules/electron/node_modules/undici-types": {
++      "version": "7.24.6",
++      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-7.24.6.tgz",
++      "integrity": "sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==",
+       "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">= 4.0.0"
+-      }
++      "license": "MIT"
+     },
+     "node_modules/emoji-regex": {
+       "version": "8.0.0",
+@@ -9095,9 +9089,9 @@
+       "license": "MIT"
+     },
+     "node_modules/node-abi": {
+-      "version": "3.89.0",
+-      "resolved": "https://registry.npmjs.org/node-abi/-/node-abi-3.89.0.tgz",
+-      "integrity": "sha512-6u9UwL0HlAl21+agMN3YAMXcKByMqwGx+pq+P76vii5f7hTPtKDp08/H9py6DY+cfDw7kQNTGEj/rly3IgbNQA==",
++      "version": "3.94.0",
++      "resolved": "https://registry.npmjs.org/node-abi/-/node-abi-3.94.0.tgz",
++      "integrity": "sha512-W5ZNO5KRPB5TkYmGVD9F6YqhsglXJzE6etpbmT+f6EQElhiX/UTG551cnsRGvLG3fyZEg9HwaDmNmj5nwJ4z9g==",
+       "license": "MIT",
+       "dependencies": {
+         "semver": "^7.3.5"
+@@ -11646,6 +11640,17 @@
+         "url": "https://github.com/sponsors/ljharb"
+       }
+     },
++    "node_modules/undici": {
++      "version": "7.30.0",
++      "resolved": "https://registry.npmjs.org/undici/-/undici-7.30.0.tgz",
++      "integrity": "sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==",
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "engines": {
++        "node": ">=20.18.1"
++      }
++    },
+     "node_modules/undici-types": {
+       "version": "6.21.0",
+       "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz",
+diff --git a/package.json b/package.json
+index fe386c7..413d4a3 100644
+--- a/package.json
++++ b/package.json
+@@ -42,7 +42,7 @@
+     "@types/electron-squirrel-startup": "^1.0.2",
+     "@typescript-eslint/eslint-plugin": "^5.62.0",
+     "@typescript-eslint/parser": "^5.62.0",
+-    "electron": "38.1.2",
++    "electron": "44.5.1",
+     "eslint": "^8.57.1",
+     "eslint-plugin-import": "^2.32.0",
+     "json-schema-typed": "^8.0.1",
+diff --git a/pnpm-lock.yaml b/pnpm-lock.yaml
+index 073baa1..4f631a7 100644
+--- a/pnpm-lock.yaml
++++ b/pnpm-lock.yaml
+@@ -85,8 +85,8 @@ importers:
+         specifier: ^5.62.0
+         version: 5.62.0(eslint@8.57.1)(typescript@5.9.3)
+       electron:
+-        specifier: 38.1.2
+-        version: 38.1.2
++        specifier: 44.5.1
++        version: 44.5.1
+       eslint:
+         specifier: ^8.57.1
+         version: 8.57.1
+@@ -242,6 +242,10 @@ packages:
+     resolution: {integrity: sha512-7itsjW1WJQADg7Ly61ggI5CCRt+QDVx3HOZC1w69jMUtnipKyPRCbvTBf1oplsNqbIzZxceXdfex6W53YNehvA==}
+     engines: {node: '>= 14.17.5'}
+ 
++  '@electron-internal/extract-zip@1.0.5':
++    resolution: {integrity: sha512-+bqFCP98pLI0Tt0XQo1TmlXtwjWchISndDOxCkEcIuUgXWpBnLyRI+2DU+mesvnMMX6L1XDqYNA0lXNDHd/yiA==}
++    engines: {node: '>=22.12.0'}
++
+   '@electron/asar@3.4.1':
+     resolution: {integrity: sha512-i4/rNPRS84t0vSRa2HorerGRXWyF4vThfHesw0dmcWHp+cspK743UanA0suA5Q5y8kzY2y6YKrvbIUn69BCAiA==}
+     engines: {node: '>=10.12.0'}
+@@ -251,14 +255,14 @@ packages:
+     resolution: {integrity: sha512-zx0EIq78WlY/lBb1uXlziZmDZI4ubcCXIMJ4uGjXzZW0nS19TjSPeXPAjzzTmKQlJUZm0SbmZhPKP7tuQ1SsEw==}
+     hasBin: true
+ 
+-  '@electron/get@2.0.3':
+-    resolution: {integrity: sha512-Qkzpg2s9GnVV2I2BjRksUi43U5e6+zaQMcjoJy0C+C5oxaKl+fmckGDQFtRpZpZV0NQekuZZ+tGz7EA9TVnQtQ==}
+-    engines: {node: '>=12'}
+-
+   '@electron/get@3.1.0':
+     resolution: {integrity: sha512-F+nKc0xW+kVbBRhFzaMgPy3KwmuNTYX1fx6+FxxoSnNgwYX6LD7AKBTWkU0MQ6IBoe7dz069CNkR673sPAgkCQ==}
+     engines: {node: '>=14'}
+ 
++  '@electron/get@5.1.0':
++    resolution: {integrity: sha512-3kSBtG8ObcTVfXanm5vVJ6UnBLEVmVsRk1M+vGqCuMBV+XLCbJYuWQful+yIy0GQDsSlK0kHEriEHn7SPk4EnA==}
++    engines: {node: '>=22.12.0'}
++
+   '@electron/node-gyp@https://codeload.github.com/electron/node-gyp/tar.gz/06b29aafb7708acef8b3669835c8a7857ebc92d2':
+     resolution: {tarball: https://codeload.github.com/electron/node-gyp/tar.gz/06b29aafb7708acef8b3669835c8a7857ebc92d2}
+     version: 10.2.0-electron.1
+@@ -836,6 +840,9 @@ packages:
+   '@types/node@22.18.6':
+     resolution: {integrity: sha512-r8uszLPpeIWbNKtvWRt/DbVi5zbqZyj1PTmhRMqBMvDnaz1QpmSKujUtJLrqGZeoM8v72MfYggDceY4K1itzWQ==}
+ 
++  '@types/node@24.19.1':
++    resolution: {integrity: sha512-aS3/DG0oM05K0RIXXP+hKjinGG5IgSSVGzswZxW3O0sS3pH4/fycXundUC9XsszgKCk4gHXylTEK6hyFxVxnoQ==}
++
+   '@types/node@24.5.2':
+     resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
+ 
+@@ -1437,9 +1444,9 @@ packages:
+     resolution: {integrity: sha512-bO3y10YikuUwUuDUQRM4KfwNkKhnpVO7IPdbsrejwN9/AABJzzTQ4GeHwyzNSrVO+tEH3/Np255a3sVZpZDjvg==}
+     engines: {node: '>=8.0.0'}
+ 
+-  electron@38.1.2:
+-    resolution: {integrity: sha512-WXUcN3W8h8NTTZViA3KNX0rV2YBU0X0mEUM3ubupXTDY4QtIN7tmiqYVOKSKpR2LckTmBWGuEeY4D6xVoffwKQ==}
+-    engines: {node: '>= 12.20.55'}
++  electron@44.5.1:
++    resolution: {integrity: sha512-lx7AYoFIiyvEvgvpyWO9kOC60xtNPpiPZAth6Fmg9NutzpCAMLwpUlaBY2EXfZyIgUdzEmLMj9KvK0Vrokl1yQ==}
++    engines: {node: '>= 22.12.0'}
+     hasBin: true
+ 
+   emoji-regex@8.0.0:
+@@ -2353,8 +2360,8 @@ packages:
+   nice-try@1.0.5:
+     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
+ 
+-  node-abi@3.77.0:
+-    resolution: {integrity: sha512-DSmt0OEcLoK4i3NuscSbGjOf3bqiDEutejqENSplMSFA/gmB8mkED9G4pKWnPl7MDU4rSHebKPHeitpDfyH0cQ==}
++  node-abi@3.94.0:
++    resolution: {integrity: sha512-W5ZNO5KRPB5TkYmGVD9F6YqhsglXJzE6etpbmT+f6EQElhiX/UTG551cnsRGvLG3fyZEg9HwaDmNmj5nwJ4z9g==}
+     engines: {node: '>=10'}
+ 
+   node-addon-api@1.7.2:
+@@ -3099,6 +3106,13 @@ packages:
+   undici-types@7.12.0:
+     resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
+ 
++  undici-types@7.24.6:
++    resolution: {integrity: sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==}
++
++  undici@7.30.0:
++    resolution: {integrity: sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==}
++    engines: {node: '>=20.18.1'}
++
+   unique-filename@2.0.1:
+     resolution: {integrity: sha512-ODWHtkkdx3IAR+veKxFV+VBkUMcN+FaqzUUd7IZzt+0zhDZFPFxhlqwPF3YQvMHx1TD0tdgYl+kuPnJ8E6ql7A==}
+     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+@@ -3637,6 +3651,8 @@ snapshots:
+     dependencies:
+       chrome-trace-event: 1.0.4
+ 
++  '@electron-internal/extract-zip@1.0.5': {}
++
+   '@electron/asar@3.4.1':
+     dependencies:
+       commander: 5.1.0
+@@ -3649,7 +3665,7 @@ snapshots:
+       fs-extra: 9.1.0
+       minimist: 1.2.8
+ 
+-  '@electron/get@2.0.3':
++  '@electron/get@3.1.0':
+     dependencies:
+       debug: 4.4.3
+       env-paths: 2.2.1
+@@ -3663,17 +3679,16 @@ snapshots:
+     transitivePeerDependencies:
+       - supports-color
+ 
+-  '@electron/get@3.1.0':
++  '@electron/get@5.1.0':
+     dependencies:
+       debug: 4.4.3
+-      env-paths: 2.2.1
+-      fs-extra: 8.1.0
+-      got: 11.8.6
++      env-paths: 3.0.0
++      graceful-fs: 4.2.11
+       progress: 2.0.3
+-      semver: 6.3.1
++      semver: 7.7.2
+       sumchecker: 3.0.1
+     optionalDependencies:
+-      global-agent: 3.0.0
++      undici: 7.30.0
+     transitivePeerDependencies:
+       - supports-color
+ 
+@@ -3747,7 +3762,7 @@ snapshots:
+       detect-libc: 2.1.1
+       fs-extra: 10.1.0
+       got: 11.8.6
+-      node-abi: 3.77.0
++      node-abi: 3.94.0
+       node-api-version: 0.2.1
+       ora: 5.4.1
+       read-binary-file-arch: 1.0.6
+@@ -4272,6 +4287,10 @@ snapshots:
+     dependencies:
+       undici-types: 6.21.0
+ 
++  '@types/node@24.19.1':
++    dependencies:
++      undici-types: 7.24.6
++
+   '@types/node@24.5.2':
+     dependencies:
+       undici-types: 7.12.0
+@@ -4993,11 +5012,11 @@ snapshots:
+       - supports-color
+     optional: true
+ 
+-  electron@38.1.2:
++  electron@44.5.1:
+     dependencies:
+-      '@electron/get': 2.0.3
+-      '@types/node': 22.18.6
+-      extract-zip: 2.0.1
++      '@electron-internal/extract-zip': 1.0.5
++      '@electron/get': 5.1.0
++      '@types/node': 24.19.1
+     transitivePeerDependencies:
+       - supports-color
+ 
+@@ -6087,7 +6106,7 @@ snapshots:
+ 
+   nice-try@1.0.5: {}
+ 
+-  node-abi@3.77.0:
++  node-abi@3.94.0:
+     dependencies:
+       semver: 7.7.2
+ 
+@@ -6875,6 +6894,11 @@ snapshots:
+ 
+   undici-types@7.12.0: {}
+ 
++  undici-types@7.24.6: {}
++
++  undici@7.30.0:
++    optional: true
++
+   unique-filename@2.0.1:
+     dependencies:
+       unique-slug: 3.0.0
+diff --git a/src/native/window.ts b/src/native/window.ts
+index 562ed5c..79d8cfd 100644
+--- a/src/native/window.ts
++++ b/src/native/window.ts
+@@ -200,7 +200,9 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
+           );
+           break;
+         case "copyLink":
+-          clipboard.writeText(action.url);
++          void clipboard.writeText(action.url).catch((error) => {
++            console.error("Failed to copy link:", error);
++          });
+           break;
+         case "copyImage":
+           mainWindow.webContents.copyImageAt(action.x, action.y);
+diff --git a/tests/macosSigningContract.test.mjs b/tests/macosSigningContract.test.mjs
+index 34ccece..bc8281c 100644
+--- a/tests/macosSigningContract.test.mjs
++++ b/tests/macosSigningContract.test.mjs
+@@ -196,8 +196,8 @@ function signedFixture(overrides = {}) {
+ 
+ describe("macOS release contract", () => {
+   it("pins the resolved Electron release and stable bundle identifiers", () => {
+-    expect(packageJson.devDependencies.electron).toBe("38.1.2");
+-    expect(lockfile).toContain("electron@38.1.2:");
++    expect(packageJson.devDependencies.electron).toBe("44.5.1");
++    expect(lockfile).toContain("electron@44.5.1:");
+     expect(lockfile).toContain("'@electron/osx-sign@1.3.3':");
+     expect(configSource).toContain('appBundleId: "com.electron.mutiny"');
+     expect(configSource).toContain('helperBundleId: "com.electron.mutiny.helper"');

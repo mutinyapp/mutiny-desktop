@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "node",
+    "proof/T17/run-electron-runtime.mjs"
+  ],
+  "cwd": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+  "environment": {
+    "TMPDIR": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp",
+    "XDG_CACHE_HOME": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache",
+    "npm_config_cache": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/npm",
+    "ELECTRON_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/electron",
+    "NODE_COMPILE_CACHE": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/cache/node",
+    "T17_SCRATCH": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/tmp"
+  },
+  "overrides": {
+    "T17_ELECTRON": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+    "T17_PORT": "49272",
+    "T17_ENGINE_PROBE": "sync",
+    "T17_PROOF": "/Users/friday/Projects/mutiny-rebuild/wt/T17/proof/T17/v6/native-sync"
+  },
+  "exit": 0,
+  "started": 1791000694.862807,
+  "elapsedSeconds": 1.069601058959961,
+  "logSHA256": "d889327217d79bb210c2157a8e836b983b169d72c10884b89edb92d60b53a8e6"
+}

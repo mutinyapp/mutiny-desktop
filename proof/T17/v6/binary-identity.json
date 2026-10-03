@@ -1,0 +1,16 @@
+{
+  "binaryPath": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/runtime/dist/Electron.app/Contents/MacOS/Electron",
+  "binarySHA256": "4f6d94fde33d2381b77bae166127ccde7a83f6ee8c84e34a3ca5e5a9a4ad74ce",
+  "stockArchiveVersion": "44.5.1",
+  "hostArchitecture": "x86_64",
+  "OS": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.3\nBuildVersion:\t\t24G419",
+  "node": "v22.23.3",
+  "pnpm": "10.18.1",
+  "packageManagerMeasuredIn": "/Users/friday/.hermes/profiles/friday/cache/scratch/T17-v6/combined",
+  "actualRuntimeIdentities": [
+    [
+      "44.5.1",
+      "149"
+    ]
+  ]
+}
