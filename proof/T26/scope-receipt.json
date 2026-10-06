@@ -1,0 +1,46 @@
+{
+  "baseline": "75ac011dd6dbe482ed58359d1d3274fe609e9b65",
+  "branch": "rebuild/T26-native-tokens-picker",
+  "protectedFiles": {
+    "src/native/rendererTrust.ts": {
+      "baseline": "69b53f58c05c06826969d95aa3fae196f47510a2b8ec91f5f0058681b4b08e90",
+      "candidate": "69b53f58c05c06826969d95aa3fae196f47510a2b8ec91f5f0058681b4b08e90"
+    },
+    "src/native/configIpcPolicy.ts": {
+      "baseline": "b4be9a4aa0513cb91bbedba07907d5772dcf7e2a83d8c146a7adbbf685cc7eec",
+      "candidate": "b4be9a4aa0513cb91bbedba07907d5772dcf7e2a83d8c146a7adbbf685cc7eec"
+    },
+    "src/native/offlineRecovery.ts": {
+      "baseline": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7",
+      "candidate": "3dd8e809115fbe87b7d60ddd2252477f378e225f146fae62fb439827e27fa2f7"
+    },
+    "src/native/displayMedia.ts": {
+      "baseline": "ec19d11c099997b96ac7cc3f26efc2468eb7b804563eacc5e31bce184b7c6276",
+      "candidate": "ec19d11c099997b96ac7cc3f26efc2468eb7b804563eacc5e31bce184b7c6276"
+    },
+    "src/native/screenPickerResult.ts": {
+      "baseline": "6c4682ed49409e869697c30b069da42dd1c782210609a5a2328b6a4ad3a55e6d",
+      "candidate": "6c4682ed49409e869697c30b069da42dd1c782210609a5a2328b6a4ad3a55e6d"
+    },
+    "src/main.ts": {
+      "baseline": "02409b2b7fcf3c560585910a65589f5dc43983f3bbc747ad2d63a892e956f2cf",
+      "candidate": "02409b2b7fcf3c560585910a65589f5dc43983f3bbc747ad2d63a892e956f2cf"
+    }
+  },
+  "upstreamByteParity": {
+    "native-tokens.ts": true,
+    "manifest.json": true
+  },
+  "tests": {
+    "baseline": 372,
+    "final": 429,
+    "added": 57
+  },
+  "listenerTeardown": {
+    "command": "lsof -nP -iTCP:49430-49439 -sTCP:LISTEN",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "",
+    "listeners": 0
+  }
+}

@@ -1,0 +1,878 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T26
+
+ ❯ tests/nativePickerSurface.test.ts (0 test)
+ ❯ tests/nativeTokens.test.ts (2 tests | 2 failed) 36ms
+   × pinned native token provenance > vendors the unchanged generated output and validates the manifest output hash 8ms
+     → expected false to be true // Object.is equality
+   × pinned native token provenance > offline HTML consumes local generated CSS variables without raw colour literals outside that block 27ms
+     → expected '<!doctype html>\n<html lang="en">\n<h…' to contain '/* BEGIN GENERATED MUTINY TOKENS */'
+ ❯ tests/configAppearance.test.ts (10 tests | 8 failed) 117ms
+   × dedicated native appearance persistence > defaults to dark without exposing appearance in the legacy config cache 59ms
+     → expected undefined to be 'dark' // Object.is equality
+   × dedicated native appearance persistence > persists light and recovers it when the native module is recreated 13ms
+     → expected "spy" to be called with arguments: [ 'appearance', 'light' ]
+
+Received: 
+
+
+
+Number of calls: 0
+
+   × dedicated native appearance persistence > fails back to dark for invalid stored appearance undefined 6ms
+     → expected undefined to be 'dark' // Object.is equality
+   × dedicated native appearance persistence > fails back to dark for invalid stored appearance null 5ms
+     → expected undefined to be 'dark' // Object.is equality
+   × dedicated native appearance persistence > fails back to dark for invalid stored appearance "system" 10ms
+     → expected undefined to be 'dark' // Object.is equality
+   × dedicated native appearance persistence > fails back to dark for invalid stored appearance 42 6ms
+     → expected undefined to be 'dark' // Object.is equality
+   × dedicated native appearance persistence > fails back to dark for invalid stored appearance {} 5ms
+     → expected undefined to be 'dark' // Object.is equality
+   × dedicated native appearance persistence > schema limits the dedicated stored value to the two modes 2ms
+     → expected undefined to deeply equal { type: 'string', …(1) }
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > can style only the exact bundled offline file without granting it appearance IPC
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into file:///other/offline.html
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into data:text/html,offline
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into https://app.mutinyapp.gg/
+[LOAD OK] Page finished loading
+
+ ❯ tests/windowCapabilities.test.ts (75 tests | 33 failed) 840ms
+   × capability handshake through the real main-window setup > answers before did-finish-load without reading or syncing the legacy renderer cache 106ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > is read-only and returns independent live snapshots on every request 17ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > reports actual frame true rather than the pending preference 9ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > reports actual frame false rather than the pending preference 10ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > installs exactly one handler and reads the replacement main window 11ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin http://localhost:8080/base 17ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin https://selfhost.example:8443/mutiny 18ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × capability handshake through the real main-window setup > allows a fresh trusted frame after a same-origin reload, not the replaced frame 10ms
+     → expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+   × appearance bridge through real main-window and preload modules > exposes the method that the capability snapshot advertises 11ms
+     → expected 'undefined' to be 'function' // Object.is equality
+   × appearance bridge through real main-window and preload modules > starts with the cached dark canvas 13ms
+     → expected '#191919' to be '#171522' // Object.is equality
+   × appearance bridge through real main-window and preload modules > starts with the cached light canvas 10ms
+     → expected '#191919' to be '#e7e4df' // Object.is equality
+   × appearance bridge through real main-window and preload modules > rejects subframe before persistence or repaint 12ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects stale frame before persistence or repaint 10ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects stale window before persistence or repaint 12ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects detached before persistence or repaint 12ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects destroyed window before persistence or repaint 10ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects destroyed contents before persistence or repaint 9ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects missing frame before persistence or repaint 12ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > rejects other contents before persistence or repaint 8ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > denies appearance authority to file:///bundled/offline.html?error=dns 9ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > denies appearance authority to data:text/html,offline 11ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > denies appearance authority to about:blank 13ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > denies appearance authority to https://evil.example/ 15ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > denies appearance authority to http://app.mutinyapp.gg/ 11ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > denies appearance authority to https://app.mutinyapp.gg:8443/ 10ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > registers one handler and accepts only the replacement owner after recreation 10ms
+     → expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+   × appearance bridge through real main-window and preload modules > accepts the explicit self-hosted origin but not the default host 17ms
+     → Missing appearance handler
+   × appearance bridge through real main-window and preload modules > can style only the exact bundled offline file without granting it appearance IPC 11ms
+     → expected "spy" to be called with arguments: [ StringContaining{…} ]
+
+Received: 
+
+
+
+Number of calls: 0
+
+   × capability change events from main-window state > emits the live snapshot once on maximize 15ms
+     → expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": true,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+   × capability change events from main-window state > emits the live snapshot once on unmaximize 11ms
+     → expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+   × capability change events from main-window state > emits the live snapshot once on enter-full-screen 10ms
+     → expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": true,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+   × capability change events from main-window state > emits the live snapshot once on leave-full-screen 7ms
+     → expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+   × capability change events from main-window state > emits the actual frame while a restart-dependent preference is pending 6ms
+     → expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/nativePickerSurface.test.ts [ tests/nativePickerSurface.test.ts ]
+ReferenceError: Cannot access '__vi_import_0__' before initialization
+ ❯ tests/nativePickerSurface.test.ts:2:88
+      1| import { EventEmitter } from "node:events";
+      2| import { runInNewContext } from "node:vm";
+      3| import { afterEach, beforeEach, describe, expect, it, vi } from "vites…
+       |                                             ^
+      4| import { PICKER_CANCEL_CHANNEL, PICKER_READY_CHANNEL, PICKER_SELECT_CH…
+      5| 
+ ❯ tests/nativePickerSurface.test.ts:2:36
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/44]⎯
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 43 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > defaults to dark without exposing appearance in the legacy config cache
+AssertionError: expected undefined to be 'dark' // Object.is equality
+
+- Expected: 
+"dark"
+
++ Received: 
+undefined
+
+ ❯ tests/configAppearance.test.ts:16:31
+     14|   it("defaults to dark without exposing appearance in the legacy confi…
+     15|     const { config } = await import("../src/native/config");
+     16|     expect(config.appearance).toBe("dark");
+       |                               ^
+     17|     config.sync();
+     18|     expect(f.send.mock.calls[0][1]).not.toHaveProperty("appearance");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/44]⎯
+
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > persists light and recovers it when the native module is recreated
+AssertionError: expected "spy" to be called with arguments: [ 'appearance', 'light' ]
+
+Received: 
+
+
+
+Number of calls: 0
+
+ ❯ tests/configAppearance.test.ts:23:19
+     21|     const { config } = await import("../src/native/config");
+     22|     config.appearance = "light";
+     23|     expect(f.set).toHaveBeenCalledWith("appearance", "light");
+       |                   ^
+     24|     expect(f.send).not.toHaveBeenCalled();
+     25|     vi.resetModules();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/44]⎯
+
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > fails back to dark for invalid stored appearance undefined
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > fails back to dark for invalid stored appearance null
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > fails back to dark for invalid stored appearance "system"
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > fails back to dark for invalid stored appearance 42
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > fails back to dark for invalid stored appearance {}
+AssertionError: expected undefined to be 'dark' // Object.is equality
+
+- Expected: 
+"dark"
+
++ Received: 
+undefined
+
+ ❯ tests/configAppearance.test.ts:30:70
+     28|   it.each([undefined, null, "system", 42, {}])("fails back to dark for…
+     29|     f.values.set("appearance", value);
+     30|     expect((await import("../src/native/config")).config.appearance).t…
+       |                                                                      ^
+     31|   });
+     32|   it.each(["light", "dark"])("refuses appearance %s through the genera…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/44]⎯
+
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > schema limits the dedicated stored value to the two modes
+AssertionError: expected undefined to deeply equal { type: 'string', …(1) }
+
+- Expected: 
+Object {
+  "enum": Array [
+    "dark",
+    "light",
+  ],
+  "type": "string",
+}
+
++ Received: 
+undefined
+
+ ❯ tests/configAppearance.test.ts:39:37
+     37|   it("schema limits the dedicated stored value to the two modes", asyn…
+     38|     const { configSchema } = await import("../src/native/configSchema"…
+     39|     expect(configSchema.appearance).toEqual({ type: "string", enum: ["…
+       |                                     ^
+     40|   });
+     41| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/44]⎯
+
+ FAIL  tests/nativeTokens.test.ts > pinned native token provenance > vendors the unchanged generated output and validates the manifest output hash
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/nativeTokens.test.ts:9:30
+      7|   it("vendors the unchanged generated output and validates the manifes…
+      8|     const file = join(root, "src/native/generated/native-tokens.ts");
+      9|     expect(existsSync(file)).toBe(true);
+       |                              ^
+     10|     const bytes = readFileSync(file);
+     11|     const manifest = JSON.parse(readFileSync(join(root, "src/native/ge…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/44]⎯
+
+ FAIL  tests/nativeTokens.test.ts > pinned native token provenance > offline HTML consumes local generated CSS variables without raw colour literals outside that block
+AssertionError: expected '<!doctype html>\n<html lang="en">\n<h…' to contain '/* BEGIN GENERATED MUTINY TOKENS */'
+
+- Expected
++ Received
+
+- /* BEGIN GENERATED MUTINY TOKENS */
++ <!doctype html>
++ <html lang="en">
++ <head>
++   <meta charset="utf-8">
++   <meta name="viewport" content="width=device-width, initial-scale=1">
++   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; font-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
++   <title>Mutiny — Connection interrupted</title>
++   <style>
++     :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #23202f; color: #fffdfa; }
++     * { box-sizing: border-box; }
++     body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
++     .chrome { height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding-left: 16px; -webkit-app-region: drag; }
++     body.mac .chrome { padding-left: 92px; }
++     .chrome span { font-size: 13px; font-weight: 600; color: #aaa5b5; }
++     #captions { display: flex; }
++     #captions[hidden] { display: none; }
++     button { font: inherit; cursor: pointer; -webkit-app-region: no-drag; border: 0; transition: background-color 100ms; }
++     #captions button { width: 48px; height: 44px; color: #fffdfa; background: transparent; font-size: 19px; }
++     #captions button:hover { background: #3b3845; }
++     #captions #close:hover { background: #d33d4b; }
++     button:focus-visible { outline: 2px solid #a899ff; outline-offset: -3px; }
++     main { flex: 1; margin: 0 8px 8px; padding: 28px 24px; background: #171522; border-radius: 16px; display: grid; place-items: center; }
++     .message { max-width: 460px; width: 100%; text-align: center; }
++     .wordmark { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 36px; }
++     .class { display: inline-block; border: 1px solid #4a4657; border-radius: 999px; padding: 6px 14px; color: #a899ff; font-size: 13px; }
++     h1 { font-size: 26px; line-height: 1.25; margin: 18px 0 12px; }
++     p { color: #aaa5b5; font-size: 15px; line-height: 1.6; margin: 0; }
++     #retry { display: block; margin: 24px auto 18px; min-height: 44px; min-width: 120px; border-radius: 8px; padding: 10px 24px; background: #7657ff; color: #ffffff; font-weight: 600; }
++     #retry:hover { background: #7657ff; }
++     .note { font-size: 12px; }
++     @media (max-height: 480px) { .wordmark { font-size: 28px; margin-bottom: 12px; } main { padding: 16px; } h1 { font-size: 20px; margin: 12px 0 8px; } #retry { margin: 12px auto; } }
++     @media (prefers-reduced-motion: reduce) { button { transition: none; } }
++   </style>
++ </head>
++ <body>
++   <header class="chrome"><span>Mutiny</span><nav id="captions" aria-label="Window controls" hidden><button id="minimise" aria-label="Minimise window">−</button><button id="maximise" aria-label="Maximise or restore window">□</button><button id="close" aria-label="Close window">×</button></nav></header>
++   <main><section class="message" aria-labelledby="heading"><div class="wordmark" aria-label="Mutiny">mutiny</div><div id="error-class" class="class">Server</div><h1 id="heading">Connection interrupted</h1><p id="description">Mutiny couldn’t load. Please try again.</p><button id="retry">Retry</button><p class="note">We’ll retry automatically while this window is visible.</p></section></main>
++   <script>
++     const messages = {
++       offline: ["Offline", "You appear to be offline. Check your connection, then try again."],
++       dns: ["DNS", "We couldn’t find your Mutiny server. Check your connection, then try again."],
++       tls: ["TLS", "We couldn’t establish a secure connection to your Mutiny server."],
++       server: ["Server", "Mutiny couldn’t load. The server may be unavailable. Please try again."]
++     };
++     const error = new URL(location.href).searchParams.get("error");
++     const message = Object.hasOwn(messages, error) ? messages[error] : messages.server;
++     document.getElementById("error-class").textContent = message[0];
++     document.getElementById("description").textContent = message[1];
++     document.body.classList.toggle("mac", window.native?.platform === "darwin");
++     const captions = document.getElementById("captions");
++     // Reuse only the existing caption methods. No new preload or IPC bridge.
++     for (const action of ["minimise", "maximise", "close"]) {
++       document.getElementById(action).addEventListener("click", () => window.native?.[action]());
++     }
++     function chrome() {
++       const config = window.desktopConfig?.get();
++       captions.hidden = window.native?.platform === "darwin" || config?.customFrame === false;
++       if (!config) requestAnimationFrame(chrome);
++     }
++     if (["win32", "linux"].includes(window.native?.platform)) chrome();
++     document.getElementById("retry").addEventListener("click", () => {
++       // A same-file navigation intent is intercepted, never loaded. Main owns target.
++       location.href = location.href + "&retry=1";
++     });
++   </script>
++ </body>
++ </html>
++
+
+ ❯ tests/nativeTokens.test.ts:19:18
+     17|   it("offline HTML consumes local generated CSS variables without raw …
+     18|     const html = readFileSync(join(root, "assets/desktop/offline/offli…
+     19|     expect(html).toContain("/* BEGIN GENERATED MUTINY TOKENS */");
+       |                  ^
+     20|     expect(html).toContain("--mutiny-surface-canvas: #171522");
+     21|     expect(html).toContain("--mutiny-surface-canvas: #e7e4df");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > answers before did-finish-load without reading or syncing the legacy renderer cache
+AssertionError: expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+
+- Expected
++ Received
+
+  Object {
+-   "appearanceBridge": true,
++   "appearanceBridge": false,
+    "customFrame": true,
+    "fullscreen": false,
+    "maximized": false,
+    "platform": "darwin",
+    "version": 1,
+  }
+
+ ❯ tests/windowCapabilities.test.ts:102:20
+    100| describe("capability handshake through the real main-window setup", ()…
+    101|   it("answers before did-finish-load without reading or syncing the le…
+    102|     expect(read()).toEqual(snapshot());
+       |                    ^
+    103|     expect(f.config.sync).not.toHaveBeenCalled();
+    104|     expect(window.webContents.send).not.toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > is read-only and returns independent live snapshots on every request
+AssertionError: expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+
+- Expected
++ Received
+
+  Object {
+-   "appearanceBridge": true,
++   "appearanceBridge": false,
+    "customFrame": true,
+    "fullscreen": true,
+    "maximized": true,
+    "platform": "darwin",
+    "version": 1,
+  }
+
+ ❯ tests/windowCapabilities.test.ts:110:20
+    108|     const first = read();
+    109|     window.maximized = true; window.fullscreen = true;
+    110|     expect(read()).toEqual({ ...snapshot(), maximized: true, fullscree…
+       |                    ^
+    111|     expect(first).toEqual(snapshot());
+    112|     expect(f.config).toEqual(before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > reports actual frame true rather than the pending preference
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > reports actual frame false rather than the pending preference
+AssertionError: expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+
+- Expected
++ Received
+
+  Object {
+-   "appearanceBridge": true,
++   "appearanceBridge": false,
+    "customFrame": true,
+    "fullscreen": false,
+    "maximized": false,
+    "platform": "darwin",
+    "version": 1,
+  }
+
+ ❯ tests/windowCapabilities.test.ts:119:20
+    117|     window = f.windows.at(-1);
+    118|     f.config.customFrame = !actual;
+    119|     expect(read()).toEqual(snapshot(actual));
+       |                    ^
+    120|   });
+    121|   it("installs exactly one handler and reads the replacement main wind…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > installs exactly one handler and reads the replacement main window
+AssertionError: expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+
+- Expected
++ Received
+
+  Object {
+-   "appearanceBridge": true,
++   "appearanceBridge": false,
+    "customFrame": false,
+    "fullscreen": false,
+    "maximized": true,
+    "platform": "darwin",
+    "version": 1,
+  }
+
+ ❯ tests/windowCapabilities.test.ts:127:20
+    125|     window = f.windows.at(-1);
+    126|     window.maximized = true;
+    127|     expect(read()).toEqual({ ...snapshot(false), maximized: true });
+       |                    ^
+    128|     expect(f.handle.mock.calls.filter(([name]) => name === "native:get…
+    129|     expect(() => read(trusted(old))).toThrow(/Untrusted/);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin http://localhost:8080/base
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > accepts only the explicitly configured self-hosted origin https://selfhost.example:8443/mutiny
+AssertionError: expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+
+- Expected
++ Received
+
+  Object {
+-   "appearanceBridge": true,
++   "appearanceBridge": false,
+    "customFrame": true,
+    "fullscreen": false,
+    "maximized": false,
+    "platform": "darwin",
+    "version": 1,
+  }
+
+ ❯ tests/windowCapabilities.test.ts:157:22
+    155|       f.handlers.clear();
+    156|       await create(configured);
+    157|       expect(read()).toEqual(snapshot());
+       |                      ^
+    158|       window.webContents.mainFrame.url = "https://app.mutinyapp.gg/cha…
+    159|       expect(() => read()).toThrow(/Untrusted/);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability handshake through the real main-window setup > allows a fresh trusted frame after a same-origin reload, not the replaced frame
+AssertionError: expected { Object (version, platform, ...) } to deeply equal { Object (version, platform, ...) }
+
+- Expected
++ Received
+
+  Object {
+-   "appearanceBridge": true,
++   "appearanceBridge": false,
+    "customFrame": true,
+    "fullscreen": false,
+    "maximized": false,
+    "platform": "darwin",
+    "version": 1,
+  }
+
+ ❯ tests/windowCapabilities.test.ts:172:20
+    170|     window.webContents.mainFrame = new TestFrame();
+    171|     window.webContents.mainFrame.url = `${f.configured}/auth`;
+    172|     expect(read()).toEqual(snapshot());
+       |                    ^
+    173|     expect(() => read(trusted(window, old))).toThrow(/Untrusted/);
+    174|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > exposes the method that the capability snapshot advertises
+AssertionError: expected 'undefined' to be 'function' // Object.is equality
+
+Expected: "function"
+Received: "undefined"
+
+ ❯ tests/windowCapabilities.test.ts:185:41
+    183|   it("exposes the method that the capability snapshot advertises", asy…
+    184|     const bridge = f.exposed.get("native") as { setAppearance(value: "…
+    185|     expect(typeof bridge.setAppearance).toBe("function");
+       |                                         ^
+    186|     expect(read()).toMatchObject({ appearanceBridge: true });
+    187|     await bridge.setAppearance("light");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > starts with the cached dark canvas
+AssertionError: expected '#191919' to be '#171522' // Object.is equality
+
+Expected: "#171522"
+Received: "#191919"
+
+ ❯ tests/windowCapabilities.test.ts:196:54
+    194|     f.config.appearance = appearance;
+    195|     native.createMainWindow();
+    196|     expect(f.windows.at(-1).options.backgroundColor).toBe(appearance =…
+       |                                                      ^
+    197|   });
+    198|   it.each([undefined, null, "system", "LIGHT", "", 0, false, {}, [], {…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > starts with the cached light canvas
+AssertionError: expected '#191919' to be '#e7e4df' // Object.is equality
+
+Expected: "#e7e4df"
+Received: "#191919"
+
+ ❯ tests/windowCapabilities.test.ts:196:54
+    194|     f.config.appearance = appearance;
+    195|     native.createMainWindow();
+    196|     expect(f.windows.at(-1).options.backgroundColor).toBe(appearance =…
+       |                                                      ^
+    197|   });
+    198|   it.each([undefined, null, "system", "LIGHT", "", 0, false, {}, [], {…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects subframe before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects stale frame before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects stale window before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects detached before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects destroyed window before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects destroyed contents before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects missing frame before persistence or repaint
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > rejects other contents before persistence or repaint
+AssertionError: expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+
+- Expected: 
+/Untrusted/
+
++ Received: 
+"Missing appearance handler"
+
+ ❯ tests/windowCapabilities.test.ts:216:41
+    214|       if (target === "missing frame") event = { ...event, senderFrame:…
+    215|       if (target === "other contents") event = { ...event, sender: {} …
+    216|       expect(() => set("light", event)).toThrow(/Untrusted/);
+       |                                         ^
+    217|       expect(f.config.appearance).toBe("dark");
+    218|       for (const owner of f.windows) expect(owner.setBackgroundColor).…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > denies appearance authority to file:///bundled/offline.html?error=dns
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > denies appearance authority to data:text/html,offline
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > denies appearance authority to about:blank
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > denies appearance authority to https://evil.example/
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > denies appearance authority to http://app.mutinyapp.gg/
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > denies appearance authority to https://app.mutinyapp.gg:8443/
+AssertionError: expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+
+- Expected: 
+/Untrusted/
+
++ Received: 
+"Missing appearance handler"
+
+ ❯ tests/windowCapabilities.test.ts:224:34
+    222|     "denies appearance authority to %s", url => {
+    223|       window.webContents.mainFrame.url = url;
+    224|       expect(() => set("light")).toThrow(/Untrusted/);
+       |                                  ^
+    225|       expect(f.config.appearance).toBe("dark");
+    226|       expect(window.setBackgroundColor).not.toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > registers one handler and accepts only the replacement owner after recreation
+AssertionError: expected [Function] to throw error matching /Untrusted/ but got 'Missing appearance handler'
+
+- Expected: 
+/Untrusted/
+
++ Received: 
+"Missing appearance handler"
+
+ ❯ tests/windowCapabilities.test.ts:232:46
+    230|     const old = window;
+    231|     native.createMainWindow(); window = f.windows.at(-1);
+    232|     expect(() => set("light", trusted(old))).toThrow(/Untrusted/);
+       |                                              ^
+    233|     set("light");
+    234|     expect(window.setBackgroundColor).toHaveBeenCalledWith("#e7e4df");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > accepts the explicit self-hosted origin but not the default host
+Error: Missing appearance handler
+ ❯ set tests/windowCapabilities.test.ts:180:25
+    178|   function set(value: unknown, event = trusted()) {
+    179|     const handler = f.handlers.get("native:setAppearance");
+    180|     if (!handler) throw new Error("Missing appearance handler");
+       |                         ^
+    181|     return handler(event, value);
+    182|   }
+ ❯ tests/windowCapabilities.test.ts:239:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > can style only the exact bundled offline file without granting it appearance IPC
+AssertionError: expected "spy" to be called with arguments: [ StringContaining{…} ]
+
+Received: 
+
+
+
+Number of calls: 0
+
+ ❯ tests/windowCapabilities.test.ts:249:42
+    247|     window.webContents.mainFrame.url = pathToFileURL(join(__dirname, "…
+    248|     window.webContents.emit("did-finish-load");
+    249|     expect(window.webContents.insertCSS).toHaveBeenCalledWith(expect.s…
+       |                                          ^
+    250|     expect(() => set("dark")).toThrow(/Untrusted/);
+    251|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on maximize
+AssertionError: expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": true,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+ ❯ tests/windowCapabilities.test.ts:269:47
+    267|     window.emit(event);
+    268|     expect(window.webContents.mainFrame.send).toHaveBeenCalledOnce();
+    269|     expect(window.webContents.mainFrame.send).toHaveBeenCalledWith(
+       |                                               ^
+    270|       "native:capabilitiesChanged", { ...snapshot(), maximized, fullsc…
+    271|     );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on unmaximize
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on leave-full-screen
+AssertionError: expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+ ❯ tests/windowCapabilities.test.ts:269:47
+    267|     window.emit(event);
+    268|     expect(window.webContents.mainFrame.send).toHaveBeenCalledOnce();
+    269|     expect(window.webContents.mainFrame.send).toHaveBeenCalledWith(
+       |                                               ^
+    270|       "native:capabilitiesChanged", { ...snapshot(), maximized, fullsc…
+    271|     );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the live snapshot once on enter-full-screen
+AssertionError: expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": true,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+ ❯ tests/windowCapabilities.test.ts:269:47
+    267|     window.emit(event);
+    268|     expect(window.webContents.mainFrame.send).toHaveBeenCalledOnce();
+    269|     expect(window.webContents.mainFrame.send).toHaveBeenCalledWith(
+       |                                               ^
+    270|       "native:capabilitiesChanged", { ...snapshot(), maximized, fullsc…
+    271|     );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/44]⎯
+
+ FAIL  tests/windowCapabilities.test.ts > capability change events from main-window state > emits the actual frame while a restart-dependent preference is pending
+AssertionError: expected "spy" to be called with arguments: [ 'native:capabilitiesChanged', …(1) ]
+
+Received: 
+
+  1st spy call:
+
+  Array [
+    "native:capabilitiesChanged",
+    Object {
+-     "appearanceBridge": true,
++     "appearanceBridge": false,
+      "customFrame": true,
+      "fullscreen": false,
+      "maximized": false,
+      "platform": "darwin",
+      "version": 1,
+    },
+  ]
+
+
+Number of calls: 1
+
+ ❯ tests/windowCapabilities.test.ts:316:47
+    314|     f.config.customFrame = false;
+    315|     window.emit("enter-full-screen");
+    316|     expect(window.webContents.mainFrame.send).toHaveBeenCalledWith("na…
+       |                                               ^
+    317|   });
+    318| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/44]⎯
+
+ Test Files  4 failed (4)
+      Tests  43 failed | 44 passed (87)
+   Start at  15:53:29
+   Duration  1.54s (transform 453ms, setup 0ms, collect 547ms, tests 993ms, environment 18ms, prepare 665ms)
+

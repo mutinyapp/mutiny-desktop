@@ -1,0 +1,163 @@
+{
+  "baseline": false,
+  "port": 49430,
+  "states": [
+    {
+      "surface": "picker",
+      "mode": "dark",
+      "viewport": {
+        "width": 680,
+        "height": 520
+      },
+      "metrics": {
+        "viewport": [
+          680,
+          520
+        ],
+        "overflow": false,
+        "radius": "12px",
+        "canvas": "rgb(23, 21, 34)",
+        "focus": "#a899ff",
+        "share": {
+          "x": 583.296875,
+          "y": 456,
+          "width": 76.703125,
+          "height": 44,
+          "top": 456,
+          "right": 660,
+          "bottom": 500,
+          "left": 583.296875
+        }
+      },
+      "screenshot": "picker-dark-680.png"
+    },
+    {
+      "surface": "picker",
+      "mode": "dark",
+      "viewport": {
+        "width": 520,
+        "height": 400
+      },
+      "metrics": {
+        "viewport": [
+          520,
+          400
+        ],
+        "overflow": false,
+        "radius": "12px",
+        "canvas": "rgb(23, 21, 34)",
+        "focus": "#a899ff",
+        "share": {
+          "x": 423.296875,
+          "y": 336,
+          "width": 76.703125,
+          "height": 44,
+          "top": 336,
+          "right": 500,
+          "bottom": 380,
+          "left": 423.296875
+        }
+      },
+      "screenshot": "picker-dark-520.png"
+    },
+    {
+      "surface": "offline",
+      "mode": "dark",
+      "viewport": {
+        "width": 800,
+        "height": 600
+      },
+      "metrics": {
+        "canvas": "rgb(23, 21, 34)",
+        "text": "rgb(255, 253, 250)"
+      },
+      "screenshot": "offline-dark.png"
+    },
+    {
+      "surface": "picker",
+      "mode": "light",
+      "viewport": {
+        "width": 680,
+        "height": 520
+      },
+      "metrics": {
+        "viewport": [
+          680,
+          520
+        ],
+        "overflow": false,
+        "radius": "12px",
+        "canvas": "rgb(231, 228, 223)",
+        "focus": "#5438df",
+        "share": {
+          "x": 583.296875,
+          "y": 456,
+          "width": 76.703125,
+          "height": 44,
+          "top": 456,
+          "right": 660,
+          "bottom": 500,
+          "left": 583.296875
+        }
+      },
+      "screenshot": "picker-light-680.png"
+    },
+    {
+      "surface": "picker",
+      "mode": "light",
+      "viewport": {
+        "width": 520,
+        "height": 400
+      },
+      "metrics": {
+        "viewport": [
+          520,
+          400
+        ],
+        "overflow": false,
+        "radius": "12px",
+        "canvas": "rgb(231, 228, 223)",
+        "focus": "#5438df",
+        "share": {
+          "x": 423.296875,
+          "y": 336,
+          "width": 76.703125,
+          "height": 44,
+          "top": 336,
+          "right": 500,
+          "bottom": 380,
+          "left": 423.296875
+        }
+      },
+      "screenshot": "picker-light-520.png"
+    },
+    {
+      "surface": "offline",
+      "mode": "light",
+      "viewport": {
+        "width": 800,
+        "height": 600
+      },
+      "metrics": {
+        "canvas": "rgb(231, 228, 223)",
+        "text": "rgb(23, 21, 34)"
+      },
+      "screenshot": "offline-light.png"
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:49430/?mode=dark",
+    "http://127.0.0.1:49430/?mode=dark",
+    "http://127.0.0.1:49430/?mode=dark&one",
+    "http://127.0.0.1:49430/?mode=dark&many",
+    "http://127.0.0.1:49430/offline?error=dns",
+    "http://127.0.0.1:49430/?mode=light",
+    "http://127.0.0.1:49430/?mode=light",
+    "http://127.0.0.1:49430/?mode=light&one",
+    "http://127.0.0.1:49430/?mode=light&many",
+    "http://127.0.0.1:49430/offline?error=dns"
+  ],
+  "console": [],
+  "pageErrors": [],
+  "failures": []
+}

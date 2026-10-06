@@ -1,0 +1,60 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T26
+
+ ❯ tests/tokenSync.test.mjs (4 tests | 4 failed) 23ms
+   × native-token sync drift gate > has an offline-capable check command for the pinned unchanged outputs 17ms
+     → expected false to be true // Object.is equality
+   × native-token sync drift gate > rejects drift in native-tokens.ts without repairing it 2ms
+     → expected false to be true // Object.is equality
+   × native-token sync drift gate > rejects drift in manifest.json without repairing it 1ms
+     → expected false to be true // Object.is equality
+   × native-token sync drift gate > rejects drift in offline.html without repairing it 1ms
+     → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/tokenSync.test.mjs > native-token sync drift gate > has an offline-capable check command for the pinned unchanged outputs
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/tokenSync.test.mjs:10:32
+      8|   it("has an offline-capable check command for the pinned unchanged ou…
+      9|     const script = join(root, "scripts/sync-tokens.mjs");
+     10|     expect(existsSync(script)).toBe(true);
+       |                                ^
+     11|     const result = spawnSync(process.execPath, [script, "--check"], { …
+     12|     expect(result.status, result.stdout + result.stderr).toBe(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/tokenSync.test.mjs > native-token sync drift gate > rejects drift in native-tokens.ts without repairing it
+ FAIL  tests/tokenSync.test.mjs > native-token sync drift gate > rejects drift in manifest.json without repairing it
+ FAIL  tests/tokenSync.test.mjs > native-token sync drift gate > rejects drift in offline.html without repairing it
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/tokenSync.test.mjs:16:32
+     14|   it.each(["native-tokens.ts", "manifest.json", "offline.html"])("reje…
+     15|     const script = join(root, "scripts/sync-tokens.mjs");
+     16|     expect(existsSync(script)).toBe(true);
+       |                                ^
+     17|     const dir = mkdtempSync(join(tmpdir(), "T26-token-drift-"));
+     18|     try {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ Test Files  1 failed (1)
+      Tests  4 failed (4)
+   Start at  15:54:31
+   Duration  1.05s (transform 75ms, setup 0ms, collect 87ms, tests 23ms, environment 0ms, prepare 312ms)
+

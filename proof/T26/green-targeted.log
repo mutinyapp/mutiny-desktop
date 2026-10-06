@@ -1,0 +1,70 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T26
+
+ ❯ tests/nativePickerSurface.test.ts (0 test)
+ ✓ tests/nativeTokens.test.ts (2 tests) 8ms
+ ❯ tests/configAppearance.test.ts (10 tests | 1 failed) 196ms
+   × dedicated native appearance persistence > defaults to dark without exposing appearance in the legacy config cache 126ms
+     → [vitest] No "mainWindowCustomFrame" export is defined on the "../src/native/window" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+
+ ✓ tests/tokenSync.test.mjs (4 tests) 622ms
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > can style only the exact bundled offline file without granting it appearance IPC
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into file:///other/offline.html
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into data:text/html,offline
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into https://app.mutinyapp.gg/
+[LOAD OK] Page finished loading
+
+ ✓ tests/windowCapabilities.test.ts (75 tests) 943ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/nativePickerSurface.test.ts [ tests/nativePickerSurface.test.ts ]
+ReferenceError: Cannot access '__vi_import_0__' before initialization
+ ❯ tests/nativePickerSurface.test.ts:2:88
+      1| import { EventEmitter } from "node:events";
+      2| import { runInNewContext } from "node:vm";
+      3| import { afterEach, beforeEach, describe, expect, it, vi } from "vites…
+       |                                             ^
+      4| import { PICKER_CANCEL_CHANNEL, PICKER_READY_CHANNEL, PICKER_SELECT_CH…
+      5| 
+ ❯ tests/nativePickerSurface.test.ts:2:36
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/configAppearance.test.ts > dedicated native appearance persistence > defaults to dark without exposing appearance in the legacy config cache
+Error: [vitest] No "mainWindowCustomFrame" export is defined on the "../src/native/window" mock. Did you forget to return it from "vi.mock"?
+If you need to partially mock a module, you can use "importOriginal" helper inside:
+
+vi.mock(import("../src/native/window"), async (importOriginal) => {
+  const actual = await importOriginal()
+  return {
+    ...actual,
+    // your mocked methods
+  }
+})
+
+ ❯ Config.sync src/native/config.ts:39:9
+     37|         process.platform,
+     38|         this.customFrame,
+     39|         mainWindowCustomFrame,
+       |         ^
+     40|       ),
+     41|       minimiseToTray: this.minimiseToTray,
+ ❯ tests/configAppearance.test.ts:17:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  2 failed | 3 passed (5)
+      Tests  1 failed | 90 passed (91)
+   Start at  15:58:38
+   Duration  1.91s (transform 571ms, setup 0ms, collect 458ms, tests 1.77s, environment 1ms, prepare 1.48s)
+

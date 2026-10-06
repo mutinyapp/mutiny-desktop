@@ -1,7 +1,7 @@
 import { ipcMain } from "electron";
 import Store from "electron-store";
 
-import { configDefaults, configSchema } from "./configSchema";
+import { configDefaults, configSchema, type NativeAppearance } from "./configSchema";
 
 import { destroyDiscordRpc, initDiscordRpc } from "./discordRpc";
 import { BUILD_URL, mainWindow, mainWindowCustomFrame } from "./window";
@@ -18,6 +18,17 @@ const store = new Store({
  * Shim for `electron-store` because typings are broken
  */
 class Config {
+  // Native-only persistence: deliberately absent from renderer config sync/allowlist.
+  get appearance(): NativeAppearance {
+    const value = (store as never as { get(k: string): unknown }).get("appearance");
+    return value === "light" ? "light" : "dark";
+  }
+
+  set appearance(value: NativeAppearance) {
+    if (value !== "dark" && value !== "light") throw new Error("Invalid appearance");
+    (store as never as { set(k: string, value: NativeAppearance): void }).set("appearance", value);
+  }
+
   sync() {
     if (!mainWindow || mainWindow.isDestroyed()) return;
     mainWindow.webContents.send("config", {

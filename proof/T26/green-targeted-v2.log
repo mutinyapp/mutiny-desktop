@@ -1,0 +1,26 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T26
+
+ ✓ tests/nativeTokens.test.ts (2 tests) 39ms
+ ✓ tests/nativePickerSurface.test.ts (8 tests) 75ms
+ ✓ tests/configAppearance.test.ts (10 tests) 202ms
+ ✓ tests/tokenSync.test.mjs (4 tests) 636ms
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > can style only the exact bundled offline file without granting it appearance IPC
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into file:///other/offline.html
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into data:text/html,offline
+[LOAD OK] Page finished loading
+
+stdout | tests/windowCapabilities.test.ts > appearance bridge through real main-window and preload modules > does not inject offline styling into https://app.mutinyapp.gg/
+[LOAD OK] Page finished loading
+
+ ✓ tests/windowCapabilities.test.ts (75 tests) 1049ms
+
+ Test Files  5 passed (5)
+      Tests  99 passed (99)
+   Start at  16:01:14
+   Duration  1.92s (transform 545ms, setup 0ms, collect 861ms, tests 2.00s, environment 1ms, prepare 1.33s)
+

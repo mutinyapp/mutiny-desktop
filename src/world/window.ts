@@ -21,6 +21,9 @@ contextBridge.exposeInMainWorld("native", {
   isDesktop: true,
   platform: process.platform,
 
+  setAppearance: (appearance: "dark" | "light"): Promise<void> =>
+    ipcRenderer.invoke("native:setAppearance", appearance),
+
   getCapabilities: (): Promise<NativeCapabilities> =>
     ipcRenderer.invoke("native:getCapabilities"),
   onCapabilitiesChanged: (callback: (capabilities: NativeCapabilities) => void) => {

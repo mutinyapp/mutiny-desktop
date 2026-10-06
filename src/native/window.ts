@@ -1,4 +1,5 @@
 import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 
 import { BrowserWindow, Menu, app, clipboard, ipcMain, nativeImage } from "electron";
 
@@ -6,6 +7,8 @@ import windowIconAsset from "../../assets/desktop/icon.png?asset";
 
 import type { NativeCapabilities } from "../world/capabilities";
 import { config } from "./config";
+import { color } from "./generated/native-tokens";
+import { nativeSurfaceCSS } from "./generated/surfaceTokens";
 import { buildContextMenuTemplate } from "./contextMenuPolicy";
 import { isTrustedIpc } from "./rendererTrust";
 import { installOfflineRecovery } from "./offlineRecovery";
@@ -29,6 +32,7 @@ export const BUILD_URL = new URL(
 // internal window state
 let shouldQuit = false;
 let capabilitiesHandlerRegistered = false;
+let appearanceHandlerRegistered = false;
 let disposeOfflineRecovery: (() => void) | undefined;
 
 function capabilitiesSnapshot(window: BrowserWindow, customFrame: boolean): NativeCapabilities {
@@ -38,8 +42,7 @@ function capabilitiesSnapshot(window: BrowserWindow, customFrame: boolean): Nati
     customFrame,
     maximized: window.isMaximized(),
     fullscreen: window.isFullScreen(),
-    // No appearance bridge is implemented in this shell yet.
-    appearanceBridge: false,
+    appearanceBridge: appearanceHandlerRegistered,
   };
 }
 
@@ -61,7 +64,7 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
     ...mainWindowOptions(process.platform, mainWindowCustomFrame),
     width: 1280,
     height: 720,
-    backgroundColor: "#191919",
+    backgroundColor: color("surface.canvas", config.appearance),
     icon: windowIcon,
     webPreferences: {
       // relative to `.vite/build`
@@ -82,6 +85,18 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
       return capabilitiesSnapshot(mainWindow, mainWindowCustomFrame);
     });
     capabilitiesHandlerRegistered = true;
+  }
+
+  if (!appearanceHandlerRegistered) {
+    ipcMain.handle("native:setAppearance", (event, appearance: unknown): void => {
+      if (!isTrustedIpc(event, mainWindow, BUILD_URL) || event.senderFrame.detached) {
+        throw new Error("Untrusted appearance caller");
+      }
+      if (appearance !== "dark" && appearance !== "light") throw new Error("Invalid appearance");
+      config.appearance = appearance;
+      mainWindow.setBackgroundColor(color("surface.canvas", appearance));
+    });
+    appearanceHandlerRegistered = true;
   }
 
   // Capture this window's actual chrome, never a restart-pending preference.
@@ -183,8 +198,21 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
     }
   });
 
-  // send the config
-  mainWindow.webContents.on("did-finish-load", () => config.sync());
+  // Offline styling is a main-owned presentation push, not a file-page IPC grant.
+  // Match only this build's bundled path; the caption-only exception stays unchanged.
+  window.webContents.on("did-finish-load", () => {
+    config.sync();
+    try {
+      const frame = window.webContents.mainFrame;
+      const url = new URL(frame.url);
+      url.search = ""; url.hash = "";
+      if (window !== mainWindow || window.isDestroyed() || window.webContents.isDestroyed() || frame.detached ||
+        url.href !== pathToFileURL(join(__dirname, "offline.html")).href) return;
+      void window.webContents.insertCSS(nativeSurfaceCSS(config.appearance)).catch(() => {
+        // A disposed document retains the safe generated dark fallback.
+      });
+    } catch { /* No styling for unavailable/non-bundled documents. */ }
+  });
 
   // context menu: registering this listener replaces Chromium's default menu,
   // so clipboard/link/image/spelling items are built by contextMenuPolicy.

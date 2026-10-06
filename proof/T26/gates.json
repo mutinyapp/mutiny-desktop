@@ -1,0 +1,47 @@
+{
+  "head": "75ac011dd6dbe482ed58359d1d3274fe609e9b65",
+  "baselineTests": 372,
+  "expectedTests": 429,
+  "gates": [
+    {
+      "command": "node scripts/sync-tokens.mjs --check",
+      "exit": 0,
+      "log": "token-check.log"
+    },
+    {
+      "command": "pnpm typecheck",
+      "exit": 0,
+      "log": "typecheck.log"
+    },
+    {
+      "command": "pnpm test",
+      "exit": 0,
+      "log": "test.log",
+      "tests": 429,
+      "files": 36
+    },
+    {
+      "command": "pnpm lint",
+      "exit": 0,
+      "log": "lint.log"
+    }
+  ],
+  "sourceHashes": {
+    "assets/desktop/offline/offline.html": "d72012ad9453ff95880d34b464db079be819f846fb21a0e54a004fe3b3fd02ba",
+    "scripts/sync-tokens.mjs": "843d66a298605d8241754ad4d4bfcc1a78e2e04fc095d50301a680795d8ea760",
+    "src/native/config.ts": "942c6004f05efe395a433bb4c0a7875ebc7e3174191b448b1b4393b4f8f9dd16",
+    "src/native/configSchema.ts": "e71f0d21dd95327b0b33dd6c7192245c19e892db3e396d49a1e9087910a7b4c3",
+    "src/native/window.ts": "8072b16915cb073b2f1979ba427fc436e0609b2c328528b134292c2b40c74f3e",
+    "src/native/screenPicker.ts": "cd2789ddbde783edb9fdaab56e820afdbefec5f6f61560230d2ab6dcb9336e97",
+    "src/world/window.ts": "3e0f3371e2530966ec6245e377e60b38a0e6d7dbbfe91c2b96eddfe202716652",
+    "src/native/generated/native-tokens.ts": "9b9ea1381d75b9730f0cb8fc43089fb8d550a3df4a603839e63ca42699dc4f42",
+    "src/native/generated/manifest.json": "765a90246378666f582cbba00605d44f5b344df6d6f3749be3e86fd29c3258fc",
+    "src/native/generated/surfaceTokens.ts": "3732b8ca6508a62782934fb72ccef253f30f5a7a35d8c28fe27f985c184f58b1",
+    "tests/windowCapabilities.test.ts": "3e77fa0407ae294ee48006197efc3a5c76c8fc4b1b9811be03e5f407e9f3f9ae",
+    "tests/configAppearance.test.ts": "bdae354eceb6f42ede18a61b85aae4cd2ba9d3eb77f3b586d1ca37cc31bfe40a",
+    "tests/nativePickerSurface.test.ts": "f3e80c6355c409129970a059c0589fd592a9f530efbe85534dae22a3946863ea",
+    "tests/nativeTokens.test.ts": "4b2167786cd2f8dbffb902dbca965dc14c276929343924301a67bd3e15c08491",
+    "tests/tokenSync.test.mjs": "76f11e935c5cfb5a25abe9527207e17b9dceb730446bdb63f398060abc969e32"
+  },
+  "worktreeStatus": " M assets/desktop/offline/offline.html\n M src/native/config.ts\n M src/native/configSchema.ts\n M src/native/screenPicker.ts\n M src/native/window.ts\n M src/world/window.ts\n M tests/windowCapabilities.test.ts\n?? proof/T26/\n?? scripts/sync-tokens.mjs\n?? src/native/generated/\n?? tests/configAppearance.test.ts\n?? tests/nativePickerSurface.test.ts\n?? tests/nativeTokens.test.ts\n?? tests/tokenSync.test.mjs\n"
+}

@@ -1,0 +1,162 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T26
+
+ ❯ tests/nativeTokens.test.ts (2 tests | 1 failed) 38ms
+   × pinned native token provenance > offline HTML consumes local generated CSS variables without raw colour literals outside that block 32ms
+     → expected '<!doctype html>\n<html lang="en">\n<h…' to contain 'border-radius: var(--mutiny-radius-co…'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/nativeTokens.test.ts > pinned native token provenance > offline HTML consumes local generated CSS variables without raw colour literals outside that block
+AssertionError: expected '<!doctype html>\n<html lang="en">\n<h…' to contain 'border-radius: var(--mutiny-radius-co…'
+
+- Expected
++ Received
+
+- border-radius: var(--mutiny-radius-contentComfortable)
++ <!doctype html>
++ <html lang="en">
++ <head>
++   <meta charset="utf-8">
++   <meta name="viewport" content="width=device-width, initial-scale=1">
++   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; font-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
++   <title>Mutiny — Connection interrupted</title>
++   <style>
++     /* BEGIN GENERATED MUTINY TOKENS */
++     :root { color-scheme: dark;
++     --mutiny-accent-focus: #a899ff;
++     --mutiny-accent-signal: #c8ff4d;
++     --mutiny-accent-solid: #7657ff;
++     --mutiny-accent-text: #a899ff;
++     --mutiny-border-input: #4a4657;
++     --mutiny-border-strong: #8f8a9c;
++     --mutiny-status-busy: #d33d4b;
++     --mutiny-status-dangerSolid: #d33d4b;
++     --mutiny-status-dangerText: #ff8f99;
++     --mutiny-status-idle: #f4c35f;
++     --mutiny-status-offline: #8a8597;
++     --mutiny-status-online: #3fd68a;
++     --mutiny-status-success: #3fd68a;
++     --mutiny-status-unread: #d33d4b;
++     --mutiny-status-warningText: #f4c35f;
++     --mutiny-surface-canvas: #171522;
++     --mutiny-surface-card: #322f3d;
++     --mutiny-surface-chrome: #23202f;
++     --mutiny-surface-control: #34303f;
++     --mutiny-surface-mention: #3a3456;
++     --mutiny-surface-panel: #2c2937;
++     --mutiny-surface-raised: #3b3845;
++     --mutiny-surface-selected: #322a54;
++     --mutiny-text-onAccent: #ffffff;
++     --mutiny-text-onDanger: #ffffff;
++     --mutiny-text-onSignal: #171522;
++     --mutiny-text-primary: #fffdfa;
++     --mutiny-text-secondary: #aaa5b5;
++     }
++     :root[data-appearance="light"] { color-scheme: light;
++     --mutiny-accent-focus: #5438df;
++     --mutiny-accent-signal: #c8ff4d;
++     --mutiny-accent-solid: #7657ff;
++     --mutiny-accent-text: #5438df;
++     --mutiny-border-input: #cfc9be;
++     --mutiny-border-strong: #6b6578;
++     --mutiny-status-busy: #c8283a;
++     --mutiny-status-dangerSolid: #c8283a;
++     --mutiny-status-dangerText: #b42335;
++     --mutiny-status-idle: #b07a00;
++     --mutiny-status-offline: #7d778a;
++     --mutiny-status-online: #1d7a4c;
++     --mutiny-status-success: #1d7a4c;
++     --mutiny-status-unread: #c8283a;
++     --mutiny-status-warningText: #8a5a00;
++     --mutiny-surface-canvas: #e7e4df;
++     --mutiny-surface-card: #fffdfa;
++     --mutiny-surface-chrome: #f4f1ea;
++     --mutiny-surface-control: #e6e1d8;
++     --mutiny-surface-mention: #ece6fb;
++     --mutiny-surface-panel: #f8f6f0;
++     --mutiny-surface-raised: #ffffff;
++     --mutiny-surface-selected: #e5dfed;
++     --mutiny-text-onAccent: #ffffff;
++     --mutiny-text-onDanger: #ffffff;
++     --mutiny-text-onSignal: #171522;
++     --mutiny-text-primary: #171522;
++     --mutiny-text-secondary: #5c5668;
++     }
++     /* END GENERATED MUTINY TOKENS */
++     :root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--mutiny-surface-chrome); color: var(--mutiny-text-primary); }
++     * { box-sizing: border-box; }
++     body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
++     .chrome { height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding-left: 16px; -webkit-app-region: drag; }
++     body.mac .chrome { padding-left: 92px; }
++     .chrome span { font-size: 13px; font-weight: 600; color: var(--mutiny-text-secondary); }
++     #captions { display: flex; }
++     #captions[hidden] { display: none; }
++     button { font: inherit; cursor: pointer; -webkit-app-region: no-drag; border: 0; transition: background-color 100ms; }
++     #captions button { width: 48px; height: 44px; color: var(--mutiny-text-primary); background: transparent; font-size: 19px; }
++     #captions button:hover { background: var(--mutiny-surface-raised); }
++     #captions #close:hover { background: var(--mutiny-status-dangerSolid); }
++     button:focus-visible { outline: 2px solid var(--mutiny-accent-focus); outline-offset: -3px; }
++     main { flex: 1; margin: 0 8px 8px; padding: 28px 24px; background: var(--mutiny-surface-canvas); border-radius: 16px; display: grid; place-items: center; }
++     .message { max-width: 460px; width: 100%; text-align: center; }
++     .wordmark { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 36px; }
++     .class { display: inline-block; border: 1px solid var(--mutiny-border-input); border-radius: 999px; padding: 6px 14px; color: var(--mutiny-accent-focus); font-size: 13px; }
++     h1 { font-size: 26px; line-height: 1.25; margin: 18px 0 12px; }
++     p { color: var(--mutiny-text-secondary); font-size: 15px; line-height: 1.6; margin: 0; }
++     #retry { display: block; margin: 24px auto 18px; min-height: 44px; min-width: 120px; border-radius: 8px; padding: 10px 24px; background: var(--mutiny-accent-solid); color: var(--mutiny-text-onAccent); font-weight: 600; }
++     #retry:hover { background: var(--mutiny-accent-solid); }
++     .note { font-size: 12px; }
++     @media (max-height: 480px) { .wordmark { font-size: 28px; margin-bottom: 12px; } main { padding: 16px; } h1 { font-size: 20px; margin: 12px 0 8px; } #retry { margin: 12px auto; } }
++     @media (prefers-reduced-motion: reduce) { button { transition: none; } }
++   </style>
++ </head>
++ <body>
++   <header class="chrome"><span>Mutiny</span><nav id="captions" aria-label="Window controls" hidden><button id="minimise" aria-label="Minimise window">−</button><button id="maximise" aria-label="Maximise or restore window">□</button><button id="close" aria-label="Close window">×</button></nav></header>
++   <main><section class="message" aria-labelledby="heading"><div class="wordmark" aria-label="Mutiny">mutiny</div><div id="error-class" class="class">Server</div><h1 id="heading">Connection interrupted</h1><p id="description">Mutiny couldn’t load. Please try again.</p><button id="retry">Retry</button><p class="note">We’ll retry automatically while this window is visible.</p></section></main>
++   <script>
++     const messages = {
++       offline: ["Offline", "You appear to be offline. Check your connection, then try again."],
++       dns: ["DNS", "We couldn’t find your Mutiny server. Check your connection, then try again."],
++       tls: ["TLS", "We couldn’t establish a secure connection to your Mutiny server."],
++       server: ["Server", "Mutiny couldn’t load. The server may be unavailable. Please try again."]
++     };
++     const error = new URL(location.href).searchParams.get("error");
++     const message = Object.hasOwn(messages, error) ? messages[error] : messages.server;
++     document.getElementById("error-class").textContent = message[0];
++     document.getElementById("description").textContent = message[1];
++     document.body.classList.toggle("mac", window.native?.platform === "darwin");
++     const captions = document.getElementById("captions");
++     // Reuse only the existing caption methods. No new preload or IPC bridge.
++     for (const action of ["minimise", "maximise", "close"]) {
++       document.getElementById(action).addEventListener("click", () => window.native?.[action]());
++     }
++     function chrome() {
++       const config = window.desktopConfig?.get();
++       captions.hidden = window.native?.platform === "darwin" || config?.customFrame === false;
++       if (!config) requestAnimationFrame(chrome);
++     }
++     if (["win32", "linux"].includes(window.native?.platform)) chrome();
++     document.getElementById("retry").addEventListener("click", () => {
++       // A same-file navigation intent is intercepted, never loaded. Main owns target.
++       location.href = location.href + "&retry=1";
++     });
++   </script>
++ </body>
++ </html>
++
+
+ ❯ tests/nativeTokens.test.ts:23:18
+     21|     expect(html).toContain("--mutiny-surface-canvas: #e7e4df");
+     22|     expect(html).toContain("background: var(--mutiny-surface-canvas)");
+     23|     expect(html).toContain("border-radius: var(--mutiny-radius-content…
+       |                  ^
+     24|     expect(html).toContain("transition: background-color var(--mutiny-…
+     25|     expect(html).toContain("height: var(--mutiny-platform-titlebarHeig…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  16:07:34
+   Duration  532ms (transform 49ms, setup 0ms, collect 62ms, tests 38ms, environment 0ms, prepare 131ms)
+

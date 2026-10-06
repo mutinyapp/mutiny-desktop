@@ -1,0 +1,85 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/T26
+
+ ❯ tests/nativePickerSurface.test.ts (8 tests | 4 failed) 59ms
+   × real fallback picker workflow > always asks even for one source and resolves only after explicit Share 9ms
+     → expected undefined to be defined
+   × real fallback picker workflow > keyboard focus selects a source and Enter confirms it 8ms
+     → expected "spy" to be called with arguments: [ 'window:2:0' ]
+
+Received: 
+
+
+
+Number of calls: 0
+
+   × real fallback picker workflow > uses generated dark colours, radii and sandboxed minimum geometry 10ms
+     → expected { width: 680, height: 520, …(8) } to match object { minWidth: 520, minHeight: 400, …(2) }
+(8 matching properties omitted from actual)
+   × real fallback picker workflow > uses generated light colours, radii and sandboxed minimum geometry 4ms
+     → expected { width: 680, height: 520, …(8) } to match object { minWidth: 520, minHeight: 400, …(2) }
+(8 matching properties omitted from actual)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/nativePickerSurface.test.ts > real fallback picker workflow > always asks even for one source and resolves only after explicit Share
+AssertionError: expected undefined to be defined
+ ❯ tests/nativePickerSurface.test.ts:68:20
+     66|   it("always asks even for one source and resolves only after explicit…
+     67|     const { pending, picker } = await open();
+     68|     expect(picker).toBeDefined();
+       |                    ^
+     69|     if (!picker) return;
+     70|     const done = vi.fn(); void pending.then(done);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/nativePickerSurface.test.ts > real fallback picker workflow > keyboard focus selects a source and Enter confirms it
+AssertionError: expected "spy" to be called with arguments: [ 'window:2:0' ]
+
+Received: 
+
+
+
+Number of calls: 0
+
+ ❯ tests/nativePickerSurface.test.ts:90:29
+     88|     expect(c.bridge.select).not.toHaveBeenCalled();
+     89|     c.sources[1].fire("keydown", { key: "Enter", preventDefault: vi.fn…
+     90|     expect(c.bridge.select).toHaveBeenCalledWith("window:2:0");
+       |                             ^
+     91|     f.ipc.emit(PICKER_CANCEL_CHANNEL, { sender: picker.webContents });…
+     92|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/nativePickerSurface.test.ts > real fallback picker workflow > uses generated dark colours, radii and sandboxed minimum geometry
+ FAIL  tests/nativePickerSurface.test.ts > real fallback picker workflow > uses generated light colours, radii and sandboxed minimum geometry
+AssertionError: expected { width: 680, height: 520, …(8) } to match object { minWidth: 520, minHeight: 400, …(2) }
+(8 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  Object {
+-   "backgroundColor": "#171522",
+-   "minHeight": 400,
+-   "minWidth": 520,
++   "backgroundColor": "#1a1a1a",
+    "webPreferences": Object {
+      "contextIsolation": true,
+      "nodeIntegration": false,
+      "sandbox": true,
+    },
+  }
+
+ ❯ tests/nativePickerSurface.test.ts:104:28
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 4 passed (8)
+   Start at  16:00:34
+   Duration  1.38s (transform 234ms, setup 0ms, collect 199ms, tests 59ms, environment 0ms, prepare 427ms)
+
