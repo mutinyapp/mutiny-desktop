@@ -1,0 +1,33 @@
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { cpSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
+import { spawnSync } from "node:child_process";
+const root = resolve(import.meta.dirname, "../..");
+const hash = file => createHash("sha256").update(readFileSync(file)).digest("hex");
+const source = join(root, "src/native/window.ts");
+const before = hash(source);
+const dir = mkdtempSync(join(tmpdir(), "T26-appearance-mutation-"));
+try {
+  for (const name of ["src", "tests", "assets", "package.json", "vitest.config.mjs", "tsconfig.json", "vite.main.config.ts"]) cpSync(join(root, name), join(dir, name), { recursive: true });
+  symlinkSync(join(root, "node_modules"), join(dir, "node_modules"), "dir");
+  const target = join(dir, "src/native/window.ts");
+  const original = readFileSync(target, "utf8");
+  const guard = 'if (!isTrustedIpc(event, mainWindow, BUILD_URL) || event.senderFrame.detached) {\n        throw new Error("Untrusted appearance caller");\n      }';
+  assert.equal(original.split(guard).length, 2, "appearance guard must be replaced exactly once");
+  writeFileSync(target, original.replace(guard, "// PLANTED TEST MUTATION: all appearance callers bypass authorization."));
+  const log = join(root, "proof/T26/mutation-authorization.log");
+  const result = spawnSync("pnpm", ["exec", "vitest", "run", "tests/windowCapabilities.test.ts", "--reporter=json", `--outputFile=${join(root, "proof/T26/mutation-authorization.json")}`], { cwd: dir, encoding: "utf8", timeout: 120000, maxBuffer: 1024 * 1024 });
+  writeFileSync(log, (result.stdout || "") + (result.stderr || ""));
+  assert.equal(result.status, 1, "planted authorization bypass must go RED");
+  const report = JSON.parse(readFileSync(join(root, "proof/T26/mutation-authorization.json"), "utf8"));
+  const failed = report.testResults.flatMap(suite => suite.assertionResults.filter(test => test.status === "failed").map(test => test.fullName));
+  assert(failed.some(name => name.includes("rejects subframe before persistence")));
+  assert(failed.some(name => name.includes("rejects detached before persistence")));
+  assert(failed.some(name => name.includes("denies appearance authority to file:")));
+  assert.equal(hash(source), before, "candidate source changed during mutation run");
+  const receipt = { mutation: "remove only native:setAppearance configured-origin/current-main-frame/detached authorization", exit: result.status, tests: report.numTotalTests, passed: report.numPassedTests, failed: report.numFailedTests, namedFailures: failed, sourceHashBefore: before, sourceHashAfter: hash(source) };
+  writeFileSync(join(root, "proof/T26/mutation-receipt.json"), JSON.stringify(receipt, null, 2) + "\n");
+  console.log(`Authorization mutation killed: ${receipt.failed}/${receipt.tests} named tests failed; candidate source unchanged`);
+} finally { rmSync(dir, { recursive: true, force: true }); }

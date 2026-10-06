@@ -1,6 +1,9 @@
 import { type JSONSchema } from "json-schema-typed";
 
+export type NativeAppearance = "dark" | "light";
+
 export const configSchema = {
+  appearance: { type: "string", enum: ["dark", "light"] } as JSONSchema.String,
   firstLaunch: { type: "boolean" } as JSONSchema.Boolean,
   customFrame: { type: "boolean" } as JSONSchema.Boolean,
   minimiseToTray: { type: "boolean" } as JSONSchema.Boolean,
@@ -16,7 +19,8 @@ export const configSchema = {
   } as JSONSchema.Object,
 };
 
-export const configDefaults: DesktopConfig = {
+export const configDefaults: DesktopConfig & { appearance: NativeAppearance } = {
+  appearance: "dark",
   firstLaunch: true,
   customFrame: true,
   minimiseToTray: true,

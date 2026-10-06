@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "sourceSha256": "0949aa935047b1999d1016e5af5330abbba8d5a426040eac5d1cbaec228fd3bc",
+  "contrastPairsSha256": "93a257a13128ba32caca7cb2b8bb7c9ab45a612d3e547f12100aab182084b1c1",
+  "generator": "style-dictionary",
+  "generatorVersion": "5.5.5",
+  "generatorSha256": "4b8115dda2fd536aa4334636159a1d6ecd8d3a8071620c3a6d7c066b879ec472",
+  "pipeline": {
+    "package.json": "8ea64f865abfe5e83efd6beb6dc20766bc7a5dfd9eedde1309a2f9ae3610a2a9",
+    "scripts/cli.mjs": "80c0951540f0279c88c8cdd883300dcecb598e7f1493f465699ce8f95118fec3",
+    "scripts/contrast.mjs": "c91c6771368d80a9dda4171c969f1514496dd39faa23f1b0f56d58b6dc11b38c",
+    "scripts/generate.mjs": "4b8115dda2fd536aa4334636159a1d6ecd8d3a8071620c3a6d7c066b879ec472"
+  },
+  "outputs": {
+    "MutinyTokens.swift": "6519aa44e8e8834b792a0afa7b5f6060747399e4de18c286e063d507a67b4687",
+    "mutiny.css": "f4df1fa0854ed6a0b1763113d3fb891f82c7fada917d6fb3073223236b6798ab",
+    "native-tokens.ts": "9b9ea1381d75b9730f0cb8fc43089fb8d550a3df4a603839e63ca42699dc4f42",
+    "panda-tokens.ts": "cbf585c2f01696e070b561bbbb92f79bb51d559871b64b5182b501114e490793"
+  }
+}

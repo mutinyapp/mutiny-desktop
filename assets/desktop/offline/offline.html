@@ -6,27 +6,109 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'none'; font-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
   <title>Mutiny — Connection interrupted</title>
   <style>
-    :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #23202f; color: #fffdfa; }
+    /* BEGIN GENERATED MUTINY TOKENS */
+    :root { color-scheme: dark;
+    --mutiny-motion-hover: 100ms;
+    --mutiny-platform-autoCompactBelowWidth: 1100px;
+    --mutiny-platform-macTrafficLightInset: 76px;
+    --mutiny-platform-mobileDrawerBelowWidth: 768px;
+    --mutiny-platform-titlebarHeight: 44px;
+    --mutiny-platform-touchTargetMin: 44px;
+    --mutiny-platform-winCaptionButtonWidth: 48px;
+    --mutiny-radius-contentComfortable: 16px;
+    --mutiny-radius-contentCompact: 12px;
+    --mutiny-radius-panel: 12px;
+    --mutiny-radius-pill: 999px;
+    --mutiny-radius-sm: 8px;
+    --mutiny-radius-xs: 4px;
+    --mutiny-space-1: 4px;
+    --mutiny-space-2: 8px;
+    --mutiny-space-3: 12px;
+    --mutiny-space-4: 16px;
+    --mutiny-space-5: 20px;
+    --mutiny-space-6: 24px;
+    --mutiny-space-8: 32px;
+    --mutiny-accent-focus: #a899ff;
+    --mutiny-accent-signal: #c8ff4d;
+    --mutiny-accent-solid: #7657ff;
+    --mutiny-accent-text: #a899ff;
+    --mutiny-border-input: #4a4657;
+    --mutiny-border-strong: #8f8a9c;
+    --mutiny-status-busy: #d33d4b;
+    --mutiny-status-dangerSolid: #d33d4b;
+    --mutiny-status-dangerText: #ff8f99;
+    --mutiny-status-idle: #f4c35f;
+    --mutiny-status-offline: #8a8597;
+    --mutiny-status-online: #3fd68a;
+    --mutiny-status-success: #3fd68a;
+    --mutiny-status-unread: #d33d4b;
+    --mutiny-status-warningText: #f4c35f;
+    --mutiny-surface-canvas: #171522;
+    --mutiny-surface-card: #322f3d;
+    --mutiny-surface-chrome: #23202f;
+    --mutiny-surface-control: #34303f;
+    --mutiny-surface-mention: #3a3456;
+    --mutiny-surface-panel: #2c2937;
+    --mutiny-surface-raised: #3b3845;
+    --mutiny-surface-selected: #322a54;
+    --mutiny-text-onAccent: #ffffff;
+    --mutiny-text-onDanger: #ffffff;
+    --mutiny-text-onSignal: #171522;
+    --mutiny-text-primary: #fffdfa;
+    --mutiny-text-secondary: #aaa5b5;
+    }
+    :root[data-appearance="light"] { color-scheme: light;
+    --mutiny-accent-focus: #5438df;
+    --mutiny-accent-signal: #c8ff4d;
+    --mutiny-accent-solid: #7657ff;
+    --mutiny-accent-text: #5438df;
+    --mutiny-border-input: #cfc9be;
+    --mutiny-border-strong: #6b6578;
+    --mutiny-status-busy: #c8283a;
+    --mutiny-status-dangerSolid: #c8283a;
+    --mutiny-status-dangerText: #b42335;
+    --mutiny-status-idle: #b07a00;
+    --mutiny-status-offline: #7d778a;
+    --mutiny-status-online: #1d7a4c;
+    --mutiny-status-success: #1d7a4c;
+    --mutiny-status-unread: #c8283a;
+    --mutiny-status-warningText: #8a5a00;
+    --mutiny-surface-canvas: #e7e4df;
+    --mutiny-surface-card: #fffdfa;
+    --mutiny-surface-chrome: #f4f1ea;
+    --mutiny-surface-control: #e6e1d8;
+    --mutiny-surface-mention: #ece6fb;
+    --mutiny-surface-panel: #f8f6f0;
+    --mutiny-surface-raised: #ffffff;
+    --mutiny-surface-selected: #e5dfed;
+    --mutiny-text-onAccent: #ffffff;
+    --mutiny-text-onDanger: #ffffff;
+    --mutiny-text-onSignal: #171522;
+    --mutiny-text-primary: #171522;
+    --mutiny-text-secondary: #5c5668;
+    }
+    /* END GENERATED MUTINY TOKENS */
+    :root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--mutiny-surface-chrome); color: var(--mutiny-text-primary); }
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
-    .chrome { height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding-left: 16px; -webkit-app-region: drag; }
-    body.mac .chrome { padding-left: 92px; }
-    .chrome span { font-size: 13px; font-weight: 600; color: #aaa5b5; }
+    .chrome { height: var(--mutiny-platform-titlebarHeight); flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding-left: var(--mutiny-space-4); -webkit-app-region: drag; }
+    body.mac .chrome { padding-left: calc(var(--mutiny-platform-macTrafficLightInset) + var(--mutiny-space-4)); }
+    .chrome span { font-size: 13px; font-weight: 600; color: var(--mutiny-text-secondary); }
     #captions { display: flex; }
     #captions[hidden] { display: none; }
-    button { font: inherit; cursor: pointer; -webkit-app-region: no-drag; border: 0; transition: background-color 100ms; }
-    #captions button { width: 48px; height: 44px; color: #fffdfa; background: transparent; font-size: 19px; }
-    #captions button:hover { background: #3b3845; }
-    #captions #close:hover { background: #d33d4b; }
-    button:focus-visible { outline: 2px solid #a899ff; outline-offset: -3px; }
-    main { flex: 1; margin: 0 8px 8px; padding: 28px 24px; background: #171522; border-radius: 16px; display: grid; place-items: center; }
+    button { font: inherit; cursor: pointer; -webkit-app-region: no-drag; border: 0; transition: background-color var(--mutiny-motion-hover); }
+    #captions button { width: var(--mutiny-platform-winCaptionButtonWidth); height: var(--mutiny-platform-titlebarHeight); color: var(--mutiny-text-primary); background: transparent; font-size: 19px; }
+    #captions button:hover { background: var(--mutiny-surface-raised); }
+    #captions #close:hover { background: var(--mutiny-status-dangerSolid); }
+    button:focus-visible { outline: 2px solid var(--mutiny-accent-focus); outline-offset: -3px; }
+    main { flex: 1; margin: 0 8px 8px; padding: 28px 24px; background: var(--mutiny-surface-canvas); border-radius: var(--mutiny-radius-contentComfortable); display: grid; place-items: center; }
     .message { max-width: 460px; width: 100%; text-align: center; }
     .wordmark { font-size: 38px; font-weight: 800; letter-spacing: -1.5px; margin: 0 0 36px; }
-    .class { display: inline-block; border: 1px solid #4a4657; border-radius: 999px; padding: 6px 14px; color: #a899ff; font-size: 13px; }
+    .class { display: inline-block; border: 1px solid var(--mutiny-border-input); border-radius: var(--mutiny-radius-pill); padding: 6px 14px; color: var(--mutiny-accent-focus); font-size: 13px; }
     h1 { font-size: 26px; line-height: 1.25; margin: 18px 0 12px; }
-    p { color: #aaa5b5; font-size: 15px; line-height: 1.6; margin: 0; }
-    #retry { display: block; margin: 24px auto 18px; min-height: 44px; min-width: 120px; border-radius: 8px; padding: 10px 24px; background: #7657ff; color: #ffffff; font-weight: 600; }
-    #retry:hover { background: #7657ff; }
+    p { color: var(--mutiny-text-secondary); font-size: 15px; line-height: 1.6; margin: 0; }
+    #retry { display: block; margin: 24px auto 18px; min-height: var(--mutiny-platform-touchTargetMin); min-width: 120px; border-radius: var(--mutiny-radius-sm); padding: 10px 24px; background: var(--mutiny-accent-solid); color: var(--mutiny-text-onAccent); font-weight: 600; }
+    #retry:hover { background: var(--mutiny-accent-solid); }
     .note { font-size: 12px; }
     @media (max-height: 480px) { .wordmark { font-size: 28px; margin-bottom: 12px; } main { padding: 16px; } h1 { font-size: 20px; margin: 12px 0 8px; } #retry { margin: 12px auto; } }
     @media (prefers-reduced-motion: reduce) { button { transition: none; } }

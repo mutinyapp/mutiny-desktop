@@ -1,0 +1,28 @@
+{
+  "mutation": "remove only native:setAppearance configured-origin/current-main-frame/detached authorization",
+  "exit": 1,
+  "tests": 75,
+  "passed": 58,
+  "failed": 17,
+  "namedFailures": [
+    "appearance bridge through real main-window and preload modules rejects subframe before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects stale frame before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects stale window before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects detached before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects destroyed window before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects destroyed contents before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects missing frame before persistence or repaint",
+    "appearance bridge through real main-window and preload modules rejects other contents before persistence or repaint",
+    "appearance bridge through real main-window and preload modules denies appearance authority to file:///bundled/offline.html?error=dns",
+    "appearance bridge through real main-window and preload modules denies appearance authority to data:text/html,offline",
+    "appearance bridge through real main-window and preload modules denies appearance authority to about:blank",
+    "appearance bridge through real main-window and preload modules denies appearance authority to https://evil.example/",
+    "appearance bridge through real main-window and preload modules denies appearance authority to http://app.mutinyapp.gg/",
+    "appearance bridge through real main-window and preload modules denies appearance authority to https://app.mutinyapp.gg:8443/",
+    "appearance bridge through real main-window and preload modules registers one handler and accepts only the replacement owner after recreation",
+    "appearance bridge through real main-window and preload modules accepts the explicit self-hosted origin but not the default host",
+    "appearance bridge through real main-window and preload modules can style only the exact bundled offline file without granting it appearance IPC"
+  ],
+  "sourceHashBefore": "8072b16915cb073b2f1979ba427fc436e0609b2c328528b134292c2b40c74f3e",
+  "sourceHashAfter": "8072b16915cb073b2f1979ba427fc436e0609b2c328528b134292c2b40c74f3e"
+}

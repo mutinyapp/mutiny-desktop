@@ -1,0 +1,11 @@
+
+> mutiny-desktop@1.2.7 lint /Users/friday/Projects/mutiny-rebuild/wt/T26
+> eslint --ext .ts,.tsx .
+
+
+/Users/friday/Projects/mutiny-rebuild/wt/T26/tests/nativePickerSurface.test.ts
+  109:62  error  Unnecessary escape character: \"  no-useless-escape
+
+✖ 1 problem (1 error, 0 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.
