@@ -36,15 +36,27 @@ vi.mock("electron", () => ({
     },
   },
   Tray: class {
-    setContextMenu() {}
-    setToolTip() {}
-    setImage() {}
-    on() {}
+    setContextMenu() {
+      /* Synthetic OS boundary: no menu installation. */
+    }
+    setToolTip() {
+      /* Synthetic OS boundary: no tooltip installation. */
+    }
+    setImage() {
+      /* Synthetic OS boundary: no tray image mutation. */
+    }
+    on() {
+      /* Synthetic OS boundary: no OS event registration. */
+    }
   },
   nativeImage: {
     createFromDataURL: () => ({
-      setTemplateImage() {},
-      addRepresentation() {},
+      setTemplateImage() {
+        /* Synthetic image boundary: no template mutation. */
+      },
+      addRepresentation() {
+        /* Synthetic image boundary: no image encoding. */
+      },
     }),
   },
   dialog: { showMessageBox: vi.fn() },
