@@ -5,7 +5,11 @@ class TestWindow extends EventEmitter {
   webContents = new EventEmitter();
   setMenu = vi.fn(); loadURL = vi.fn();
 }
-vi.mock("electron", () => ({ BrowserWindow: TestWindow, clipboard: { writeText: f.writeText }, Menu: { buildFromTemplate: (template: Electron.MenuItemConstructorOptions[]) => { f.template = template; return { popup: vi.fn() }; } }, ipcMain: { handle: vi.fn() }, app: { on: vi.fn(), commandLine: { hasSwitch: () => false } }, nativeImage: { createFromDataURL: vi.fn() } }));
+vi.mock("electron", () => ({ screen: {
+  getAllDisplays: () => [{ id: 1, workArea: { x: 0, y: 0, width: 1920, height: 1080 } }],
+  getPrimaryDisplay: () => ({ id: 1, workArea: { x: 0, y: 0, width: 1920, height: 1080 } }),
+  getDisplayMatching: () => ({ id: 1, workArea: { x: 0, y: 0, width: 1920, height: 1080 } }),
+}, BrowserWindow: TestWindow, clipboard: { writeText: f.writeText }, Menu: { buildFromTemplate: (template: Electron.MenuItemConstructorOptions[]) => { f.template = template; return { popup: vi.fn() }; } }, ipcMain: { handle: vi.fn() }, app: { on: vi.fn(), commandLine: { hasSwitch: () => false } }, nativeImage: { createFromDataURL: vi.fn() } }));
 vi.mock("../../src/native/config", () => ({ config: f.config }));
 vi.mock("../../src/native/tray", () => ({ updateTrayMenu: vi.fn() }));
 vi.mock("../../assets/desktop/icon.png?asset", () => ({ default: "data:image/png;base64," }));

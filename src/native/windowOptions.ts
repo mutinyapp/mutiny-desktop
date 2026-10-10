@@ -50,8 +50,8 @@ export function mainWindowOptions(
   }
 
   return {
-    minWidth: 300,
-    minHeight: 300,
+    minWidth: 940,
+    minHeight: 560,
     frame: !customFrame,
   };
 }

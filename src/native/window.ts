@@ -1,7 +1,7 @@
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
-import { BrowserWindow, Menu, app, clipboard, ipcMain, nativeImage } from "electron";
+import { BrowserWindow, Menu, app, clipboard, ipcMain, nativeImage, screen } from "electron";
 
 import windowIconAsset from "../../assets/desktop/icon.png?asset";
 
@@ -15,6 +15,8 @@ import { installOfflineRecovery } from "./offlineRecovery";
 import { shouldRestoreMaximised } from "./startup";
 import { updateTrayMenu } from "./tray";
 import { mainWindowOptions } from "./windowOptions";
+import { isWindowBounds, restoreWindowBounds } from "./windowBounds";
+import { windowZoomAction } from "./windowZoom";
 
 // global reference to main window
 export let mainWindow: BrowserWindow;
@@ -58,12 +60,15 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
   // chrome is fixed for the window's lifetime; the renderer mirrors this
   mainWindowCustomFrame = config.customFrame;
 
+  const chrome = mainWindowOptions(process.platform, mainWindowCustomFrame);
+  const restored = restoreWindowBounds(config.windowState, screen.getAllDisplays(), screen.getPrimaryDisplay(),
+    { width: chrome.minWidth, height: chrome.minHeight });
+
   // create the window
   mainWindow = new BrowserWindow({
     show: !options.startMinimised,
-    ...mainWindowOptions(process.platform, mainWindowCustomFrame),
-    width: 1280,
-    height: 720,
+    ...chrome,
+    ...restored.normalBounds,
     backgroundColor: color("surface.canvas", config.appearance),
     icon: windowIcon,
     webPreferences: {
@@ -171,31 +176,45 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
   mainWindow.on("show", updateTrayMenu);
   mainWindow.on("hide", updateTrayMenu);
 
-  // keep track of window state
-  function generateState() {
-    config.windowState = {
-      isMaximised: mainWindow.isMaximized(),
-    };
-  }
-
-  mainWindow.on("maximize", generateState);
-  mainWindow.on("unmaximize", generateState);
-
-  // rebind zoom controls to be more sensible
-  mainWindow.webContents.on("before-input-event", (event, input) => {
-    if (input.control && input.key === "=") {
-      // zoom in (+)
-      event.preventDefault();
-      mainWindow.webContents.setZoomLevel(
-        mainWindow.webContents.getZoomLevel() + 1,
-      );
-    } else if (input.control && input.key === "-") {
-      // zoom out (-)
-      event.preventDefault();
-      mainWindow.webContents.setZoomLevel(
-        mainWindow.webContents.getZoomLevel() - 1,
-      );
+  // A fullscreen/maximized rectangle is never a normal restore rectangle.
+  // Capture the owner, not the mutable global, so stale windows cannot persist.
+  let normal = restored;
+  const persistState = (refreshNormal: boolean) => {
+    if (window !== mainWindow || window.isDestroyed()) return;
+    if (refreshNormal || (!window.isMaximized() && !window.isFullScreen())) {
+      const bounds = window.getNormalBounds();
+      if (isWindowBounds(bounds)) normal = { normalBounds: bounds, displayId: screen.getDisplayMatching(bounds).id };
     }
+    config.windowState = { ...normal, isMaximised: window.isMaximized() };
+  };
+  const generateState = () => persistState(false);
+  // macOS resize/move events can precede the maximize/fullscreen flag. At the
+  // completed transition Electron's normal bounds are authoritative again.
+  const generateTransitionState = () => persistState(true);
+  window.on("move", generateState);
+  window.on("resize", generateState);
+  window.on("maximize", generateTransitionState);
+  window.on("unmaximize", generateTransitionState);
+  window.on("enter-full-screen", generateTransitionState);
+  window.on("leave-full-screen", generateTransitionState);
+
+  // BrowserWindow.webContents cannot be dereferenced after native destruction.
+  const contents = window.webContents;
+  const zoom = (event: Electron.Event, input: Electron.Input) => {
+    const action = windowZoomAction(process.platform, input);
+    if (!action || window !== mainWindow || window.isDestroyed()) return;
+    event.preventDefault();
+    contents.setZoomLevel(action === "reset" ? 0 : contents.getZoomLevel() + (action === "in" ? 1 : -1));
+  };
+  contents.on("before-input-event", zoom);
+  window.once("closed", () => {
+    window.removeListener("move", generateState);
+    window.removeListener("resize", generateState);
+    window.removeListener("maximize", generateTransitionState);
+    window.removeListener("unmaximize", generateTransitionState);
+    window.removeListener("enter-full-screen", generateTransitionState);
+    window.removeListener("leave-full-screen", generateTransitionState);
+    contents.removeListener("before-input-event", zoom);
   });
 
   // Offline styling is a main-owned presentation push, not a file-page IPC grant.

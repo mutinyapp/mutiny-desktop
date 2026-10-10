@@ -8,5 +8,7 @@ declare type DesktopConfig = {
   discordRpc: boolean;
   windowState: {
     isMaximised: boolean;
+    normalBounds?: { x: number; y: number; width: number; height: number };
+    displayId?: number;
   };
 };
