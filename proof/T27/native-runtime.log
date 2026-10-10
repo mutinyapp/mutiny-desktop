@@ -1,0 +1,2 @@
+TypeError: Cannot read properties of undefined (reading 'map')
+    at /Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/native-probe.cjs:46:68

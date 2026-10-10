@@ -1,0 +1,173 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+vite v5.4.20 building for production...
+transforming...
+[plugin:vite:resolve] [plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/window.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/window.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/startup.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:url" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/offlineRecovery.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron-store/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron-store/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "timers" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/client.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:util" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:crypto" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:assert" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/node_modules/env-paths/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:os" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/node_modules/env-paths/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/node_modules/env-paths/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:fs" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:util" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:os" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/constants.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/constants.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:path" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/utils/temp.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] [plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/constants.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+✓ 420 modules transformed.
+x Build failed in 1.25s
+node_modules/stubborn-fs/dist/index.js (3:9): "promisify" is not exported by "__vite-browser-external", imported by "node_modules/stubborn-fs/dist/index.js".
+file: /Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/index.js:3:9
+
+1: /* IMPORT */
+2: import fs from 'node:fs';
+3: import { promisify } from 'node:util';
+            ^
+4: import { attemptifyAsync, attemptifySync } from './attemptify.js';
+5: import { NOOP } from './constants.js';
+
+    at getRollupError (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at Module.error (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:16938:16)
+    at Module.traceVariable (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:17390:29)
+    at ModuleScope.findVariable (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:15060:39)
+    at Identifier.bind (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:5413:40)
+    at CallExpression.bind (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:2804:23)
+    at CallExpression.bind (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:12108:15)
+    at CallExpression.bind (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:2800:28)
+    at CallExpression.bind (file:///Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/rollup/dist/es/shared/node-entry.js:12108:15) {
+  binding: 'promisify',
+  code: 'MISSING_EXPORT',
+  exporter: '__vite-browser-external',
+  id: '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/index.js',
+  url: 'https://rollupjs.org/troubleshooting/#error-name-is-not-exported-by-module',
+  pos: 48,
+  loc: {
+    column: 9,
+    file: '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/index.js',
+    line: 3
+  },
+  frame: '1: /* IMPORT */\n' +
+    "2: import fs from 'node:fs';\n" +
+    "3: import { promisify } from 'node:util';\n" +
+    '            ^\n' +
+    "4: import { attemptifyAsync, attemptifySync } from './attemptify.js';\n" +
+    "5: import { NOOP } from './constants.js';",
+  watchFiles: [
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/tray.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/package.json',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/window.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/trayPolicy.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/config.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/generated/surfaceTokens.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/contextMenuPolicy.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/rendererTrust.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/generated/native-tokens.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/offlineRecovery.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/windowOptions.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/startup.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/discordRpc.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/configSchema.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/configIpcPolicy.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/src/native/offlinePolicy.ts',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/electron-store/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/dist/source/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/util.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/client.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/constants.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/events/events.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/conf/node_modules/env-paths/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/dot-prop/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/debounce-fn/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/transports/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/node-fetch/browser.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv-formats/dist/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/2020.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/uint8array-extras/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/transports/ipc.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/discord-rpc/src/transports/websocket.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/internal/constants.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/internal/identifiers.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/classes/semver.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/parse.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/internal/re.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/valid.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/inc.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/diff.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/clean.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/patch.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/major.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/compare.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/prerelease.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/minor.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/rcompare.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/compare-build.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/sort.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/rsort.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/gt.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/lt.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/eq.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/compare-loose.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/neq.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/gte.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/lte.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/coerce.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/classes/comparator.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/cmp.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/min-satisfying.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/to-comparators.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/classes/range.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/functions/satisfies.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/max-satisfying.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/min-version.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/valid.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/intersects.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/outside.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/ltr.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/gtr.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/subset.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/ranges/simplify.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv-formats/dist/formats.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv-formats/dist/limit.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/compile/codegen/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/vocabularies/draft2020.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/core.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/vocabularies/discriminator/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/compile/validate/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/compile/ref_error.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/runtime/validation_error.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/refs/json-schema-2020-12/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/mimic-function/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/stubborn-fs/dist/index.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/constants.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/utils/lang.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/utils/scheduler.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/atomically/dist/utils/temp.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/internal/debug.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/internal/parse-options.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/semver/internal/lrucache.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/compile/codegen/code.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/ajv.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/compile/codegen/scope.js',
+    '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/node_modules/ajv/dist/vocabularies/core/index.js',
+    ... 85 more items
+  ],
+  [Symbol(augmented)]: true
+}

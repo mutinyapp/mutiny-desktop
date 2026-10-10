@@ -1,0 +1,42 @@
+test_colour_32 (__main__.TrayAssets) ... ERROR
+test_template_16 (__main__.TrayAssets) ... ERROR
+test_template_32 (__main__.TrayAssets) ... ERROR
+
+======================================================================
+ERROR: test_colour_32 (__main__.TrayAssets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/tests/trayT27Assets.py", line 30, in test_colour_32
+    image = Image.open(ASSETS / 'trayColour.png')
+  File "/Users/friday/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3513, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/assets/desktop/trayColour.png'
+
+======================================================================
+ERROR: test_template_16 (__main__.TrayAssets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/tests/trayT27Assets.py", line 11, in test_template_16
+    self.assert_template('trayTemplate.png', 16)
+  File "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/tests/trayT27Assets.py", line 17, in assert_template
+    image = Image.open(ASSETS / name)
+  File "/Users/friday/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3513, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/assets/desktop/trayTemplate.png'
+
+======================================================================
+ERROR: test_template_32 (__main__.TrayAssets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/tests/trayT27Assets.py", line 14, in test_template_32
+    self.assert_template('trayTemplate@2x.png', 32)
+  File "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/tests/trayT27Assets.py", line 17, in assert_template
+    image = Image.open(ASSETS / name)
+  File "/Users/friday/Library/Python/3.9/lib/python/site-packages/PIL/Image.py", line 3513, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/assets/desktop/trayTemplate@2x.png'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+FAILED (errors=3)

@@ -1,0 +1,10 @@
+
+ RUN  v2.1.9 /Users/friday/Projects/mutiny-rebuild/wt/F1009-T27
+
+ ✓ tests/trayT27.test.ts (12 tests) 309ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  23:24:54
+   Duration  1.56s (transform 666ms, setup 0ms, collect 496ms, tests 309ms, environment 1ms, prepare 332ms)
+

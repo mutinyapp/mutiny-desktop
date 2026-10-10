@@ -1,0 +1,12 @@
+{
+  "name": "candidate-lint-first",
+  "command": [
+    "pnpm",
+    "lint"
+  ],
+  "exit_code": 0,
+  "started_at": "2026-10-10T03:25:01.341468+00:00",
+  "ended_at": "2026-10-10T03:25:09.542014+00:00",
+  "elapsed_seconds": 8.201,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/candidate-lint-first.log"
+}
