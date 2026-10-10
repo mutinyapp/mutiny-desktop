@@ -5,8 +5,9 @@ import trayTemplateAsset from "../../assets/desktop/trayTemplate.png?asset";
 import trayTemplate2xAsset from "../../assets/desktop/trayTemplate@2x.png?asset";
 import { version } from "../../package.json";
 
+import { isTrustedIpc } from "./rendererTrust";
 import { trayIconPolicy, trayMenuTemplate } from "./trayPolicy";
-import { mainWindow, quitApp } from "./window";
+import { BUILD_URL, mainWindow, quitApp } from "./window";
 
 let tray: Tray = null;
 
@@ -37,18 +38,56 @@ export function initTray() {
   tray.on("click", showMutiny);
 }
 
+function openSettings() {
+  // Resolve ownership at action time, not when the tray menu was created.
+  const window = mainWindow;
+  try {
+    if (!window || window.isDestroyed()) return;
+    if (window.isMinimized()) window.restore();
+    window.show();
+    window.focus();
+    const contents = window.webContents;
+    const frame = contents.mainFrame;
+    if (
+      frame.detached ||
+      frame.parent ||
+      !isTrustedIpc(
+        { sender: contents, senderFrame: frame },
+        mainWindow,
+        BUILD_URL,
+      )
+    )
+      return;
+    if (
+      window !== mainWindow ||
+      contents !== window.webContents ||
+      frame !== contents.mainFrame ||
+      frame.detached
+    )
+      return;
+    frame.send("protocol-url", "mutiny://settings");
+  } catch {
+    // Navigation/teardown may replace or detach the captured frame. Fail closed.
+  }
+}
+
 export function updateTrayMenu() {
-  tray.setContextMenu(Menu.buildFromTemplate(trayMenuTemplate(version, {
-    show: showMutiny,
-    about: () => {
-      void dialog.showMessageBox(mainWindow, {
-        type: "info",
-        title: "About Mutiny",
-        message: "Mutiny",
-        detail: `Version ${version}`,
-        buttons: ["OK"],
-      });
-    },
-    quit: quitApp,
-  })));
+  tray.setContextMenu(
+    Menu.buildFromTemplate(
+      trayMenuTemplate(version, {
+        show: showMutiny,
+        settings: openSettings,
+        about: () => {
+          void dialog.showMessageBox(mainWindow, {
+            type: "info",
+            title: "About Mutiny",
+            message: "Mutiny",
+            detail: `Version ${version}`,
+            buttons: ["OK"],
+          });
+        },
+        quit: quitApp,
+      }),
+    ),
+  );
 }
