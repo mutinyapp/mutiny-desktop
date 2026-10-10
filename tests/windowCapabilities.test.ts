@@ -40,6 +40,7 @@ class TestWindow extends EventEmitter {
   isDestroyed() { return this.destroyed; }
   isMaximized() { return this.maximized; }
   isFullScreen() { return this.fullscreen; }
+  getNormalBounds() { return { x: this.options.x, y: this.options.y, width: this.options.width, height: this.options.height }; }
   setMenu = vi.fn();
   setBackgroundColor = vi.fn();
   maximize() { this.maximized = true; this.emit("maximize"); }
@@ -47,6 +48,11 @@ class TestWindow extends EventEmitter {
 }
 vi.mock("electron", () => ({
   BrowserWindow: TestWindow,
+  screen: {
+    getAllDisplays: () => [{ id: 1, workArea: { x: 0, y: 0, width: 1920, height: 1080 } }],
+    getPrimaryDisplay: () => ({ id: 1, workArea: { x: 0, y: 0, width: 1920, height: 1080 } }),
+    getDisplayMatching: () => ({ id: 1 }),
+  },
   contextBridge: { exposeInMainWorld: (name: string, bridge: unknown) => f.exposed.set(name, bridge) },
   ipcRenderer: { on: vi.fn(), send: vi.fn(), invoke: (name: string, value: unknown) =>
     Promise.resolve().then(() => f.handlers.get(name)?.(trusted(), value)) },

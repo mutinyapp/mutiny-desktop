@@ -15,6 +15,10 @@ export const configSchema = {
     type: "object",
     properties: {
       isMaximised: { type: "boolean" } as JSONSchema.Boolean,
+      // Validate geometry at the native restore boundary, not during Store
+      // construction: malformed/stale optional geometry must not prevent launch.
+      normalBounds: {} as JSONSchema,
+      displayId: {} as JSONSchema,
     },
   } as JSONSchema.Object,
 };
