@@ -1,0 +1,13 @@
+{
+  "name": "final-assets",
+  "command": [
+    "python3",
+    "tests/trayT27Assets.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_at": "2026-10-10T03:31:45.167097+00:00",
+  "ended_at": "2026-10-10T03:31:46.717292+00:00",
+  "elapsed_seconds": 1.55,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/final-assets.log"
+}

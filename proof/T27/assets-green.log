@@ -1,0 +1,8 @@
+test_colour_32 (__main__.TrayAssets) ... ok
+test_template_16 (__main__.TrayAssets) ... ok
+test_template_32 (__main__.TrayAssets) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.021s
+
+OK

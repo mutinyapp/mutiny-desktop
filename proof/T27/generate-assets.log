@@ -1,0 +1,56 @@
+{
+  "source": "assets/desktop/icon.png",
+  "source_sha256": "0a1c2f4f6d463276ecdb217bb0e00f92f2202971deec74a724a31a13ef6d70fd",
+  "method": "max(R,G,B)>60 threshold to alpha; actual pixel-derived mark only; content bbox crop; Lanczos downsample; transparent padding",
+  "threshold": 60,
+  "bbox": [
+    75,
+    100,
+    437,
+    412
+  ],
+  "outputs": {
+    "trayTemplate.png": {
+      "dimensions": [
+        16,
+        16
+      ],
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 116,
+      "visible_pixels": 140,
+      "rgb_colour_count": 1,
+      "sha256": "0146b2ceda3fde88a012b70ac7aa838da639e32e089d72b559fb5e3195348d15",
+      "bytes": 353
+    },
+    "trayTemplate@2x.png": {
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 550,
+      "visible_pixels": 474,
+      "rgb_colour_count": 1,
+      "sha256": "7320a423285b429082556c5d4475895e5570f14cae5a5433b43b2ea936b71dab",
+      "bytes": 914
+    },
+    "trayColour.png": {
+      "dimensions": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 550,
+      "visible_pixels": 474,
+      "rgb_colour_count": 363,
+      "sha256": "5262e8791764cddf28ea61ed33b95fb426fc06710b6b4d2dabd1e34a83839cde",
+      "bytes": 2025
+    }
+  }
+}
