@@ -1,0 +1,25 @@
+{
+  "platform": "darwin",
+  "electron": "44.5.1",
+  "packaged": false,
+  "checks": [
+    "unpackaged repository Electron only",
+    "real mac template 16 logical pixels",
+    "real representations 1x and 2x",
+    "real template flag and nonempty image"
+  ],
+  "external_requests": [],
+  "image": {
+    "size": {
+      "width": 16,
+      "height": 16
+    },
+    "scaleFactors": [
+      1,
+      2
+    ],
+    "template": true,
+    "empty": false
+  },
+  "error": "TypeError: Cannot read properties of undefined (reading 'map')"
+}

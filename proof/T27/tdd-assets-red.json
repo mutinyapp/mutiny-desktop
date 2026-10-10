@@ -1,0 +1,13 @@
+{
+  "name": "tdd-assets-red",
+  "command": [
+    "python3",
+    "tests/trayT27Assets.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "started_at": "2026-10-10T03:23:56.345542+00:00",
+  "ended_at": "2026-10-10T03:23:56.618605+00:00",
+  "elapsed_seconds": 0.273,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/tdd-assets-red.log"
+}

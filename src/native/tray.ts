@@ -1,25 +1,32 @@
-import { Menu, Tray, nativeImage } from "electron";
+import { Menu, Tray, dialog, nativeImage } from "electron";
 
-import trayIconAsset from "../../assets/desktop/icon.png?asset";
+import trayColourAsset from "../../assets/desktop/trayColour.png?asset";
+import trayTemplateAsset from "../../assets/desktop/trayTemplate.png?asset";
+import trayTemplate2xAsset from "../../assets/desktop/trayTemplate@2x.png?asset";
 import { version } from "../../package.json";
 
+import { trayIconPolicy, trayMenuTemplate } from "./trayPolicy";
 import { mainWindow, quitApp } from "./window";
 
-// internal tray state
 let tray: Tray = null;
 
-// Create and resize tray icon for macOS
 function createTrayIcon() {
-  const image = nativeImage.createFromDataURL(trayIconAsset);
-  const resized = image.resize({ width: 20, height: 20 });
-
-  // Mark as template image so it adapts to dark/light mode
-  resized.setTemplateImage(true);
-
-  return resized;
+  const policy = trayIconPolicy(process.platform);
+  const image = nativeImage.createFromDataURL(
+    policy.asset === "template" ? trayTemplateAsset : trayColourAsset,
+  );
+  if (policy.template) {
+    image.addRepresentation({ scaleFactor: 2, dataURL: trayTemplate2xAsset });
+  }
+  image.setTemplateImage(policy.template);
+  return image;
 }
 
-// trayIcon.setTemplateImage(true);
+function showMutiny() {
+  if (mainWindow.isMinimized()) mainWindow.restore();
+  mainWindow.show();
+  mainWindow.focus();
+}
 
 export function initTray() {
   const trayIcon = createTrayIcon();
@@ -27,44 +34,21 @@ export function initTray() {
   updateTrayMenu();
   tray.setToolTip("Mutiny for Desktop");
   tray.setImage(trayIcon);
-  tray.on("click", () => {
-    mainWindow.show();
-    mainWindow.focus();
-  });
+  tray.on("click", showMutiny);
 }
 
 export function updateTrayMenu() {
-  tray.setContextMenu(
-    Menu.buildFromTemplate([
-      { label: "Mutiny for Desktop", type: "normal", enabled: false },
-      {
-        label: "Version",
-        type: "submenu",
-        submenu: Menu.buildFromTemplate([
-          {
-            label: version,
-            type: "normal",
-            enabled: false,
-          },
-        ]),
-      },
-      { type: "separator" },
-      {
-        label: mainWindow.isVisible() ? "Hide App" : "Show App",
-        type: "normal",
-        click() {
-          if (mainWindow.isVisible()) {
-            mainWindow.hide();
-          } else {
-            mainWindow.show();
-          }
-        },
-      },
-      {
-        label: "Quit App",
-        type: "normal",
-        click: quitApp,
-      },
-    ]),
-  );
+  tray.setContextMenu(Menu.buildFromTemplate(trayMenuTemplate(version, {
+    show: showMutiny,
+    about: () => {
+      void dialog.showMessageBox(mainWindow, {
+        type: "info",
+        title: "About Mutiny",
+        message: "Mutiny",
+        detail: `Version ${version}`,
+        buttons: ["OK"],
+      });
+    },
+    quit: quitApp,
+  })));
 }

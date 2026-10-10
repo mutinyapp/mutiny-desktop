@@ -1,0 +1,12 @@
+{
+  "name": "generate-assets",
+  "command": [
+    "python3",
+    "proof/T27/generate-assets.py"
+  ],
+  "exit_code": 0,
+  "started_at": "2026-10-10T03:23:56.720666+00:00",
+  "ended_at": "2026-10-10T03:23:57.466215+00:00",
+  "elapsed_seconds": 0.746,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/generate-assets.log"
+}
