@@ -1,0 +1,355 @@
+{
+  "status": "blocked",
+  "task": "T27",
+  "session_id": "20261009_231735_f29f3e",
+  "tested_head": "87de49d5418f3856960d7e3d639989da1bc876eb",
+  "tested_tree": "eeabe8cfeaf34c27f15f042ab8ef9f781f99b174",
+  "source_frozen": true,
+  "input_sha256": {
+    "src/native/tray.ts": "eed68fe85cdaa78941c6971f38178fe098708dbb3cd17956dbe4e751a5f223cb",
+    "src/native/trayPolicy.ts": "9a42606c6ccb32a1ba6d3cabbe2ff26c43f74914196b20c6a9aaaf34cbab950f",
+    "assets/desktop/trayTemplate.png": "0146b2ceda3fde88a012b70ac7aa838da639e32e089d72b559fb5e3195348d15",
+    "assets/desktop/trayTemplate@2x.png": "7320a423285b429082556c5d4475895e5570f14cae5a5433b43b2ea936b71dab",
+    "assets/desktop/trayColour.png": "5262e8791764cddf28ea61ed33b95fb426fc06710b6b4d2dabd1e34a83839cde",
+    "tests/trayT27.test.ts": "1b97d098d4616ceb6914f6853923e490a678e44f8f76c70d4148635228ace329",
+    "tests/trayT27Assets.py": "58f1cd632c8b53f0f780754c4105639f0eaeb6800adc44ca5b44177d6e87297c"
+  },
+  "receipts": [
+    {
+      "name": "assets-green",
+      "command": [
+        "python3",
+        "tests/trayT27Assets.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:23:57.570156+00:00",
+      "ended_at": "2026-10-10T03:23:57.785088+00:00",
+      "elapsed_seconds": 0.215,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/assets-green.log",
+      "log_sha256": "a6ffcb2317bfa8fdaf771913bcd91129ecaed2142372497736e690de05069f24",
+      "total": 3
+    },
+    {
+      "name": "baseline-lint",
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:21:26.212285+00:00",
+      "ended_at": "2026-10-10T03:21:32.781441+00:00",
+      "elapsed_seconds": 6.569,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/baseline-lint.log",
+      "log_sha256": "77e35fc7b746c49ca6407134adb40b194c5ca4d349da64669d645ec0c8a125d1"
+    },
+    {
+      "name": "baseline-typecheck",
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:21:21.953634+00:00",
+      "ended_at": "2026-10-10T03:21:26.144986+00:00",
+      "elapsed_seconds": 4.191,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/baseline-typecheck.log",
+      "log_sha256": "66f41bda2ad2883715df92048380fb5a25938dc46372a97cb9b5993b30acc4c7"
+    },
+    {
+      "name": "baseline-unit",
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:20:01.571870+00:00",
+      "ended_at": "2026-10-10T03:21:21.873993+00:00",
+      "elapsed_seconds": 80.302,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/baseline-unit.log",
+      "log_sha256": "93a71797b8ca77f6da944067b9b0ec6427b8b6c0a98ba9891dd5ef18ba1aedb1",
+      "passed": 429
+    },
+    {
+      "name": "build-native-corrected",
+      "command": [
+        "node",
+        "proof/T27/build-native.cjs"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:27:28.163534+00:00",
+      "ended_at": "2026-10-10T03:27:28.615578+00:00",
+      "elapsed_seconds": 0.452,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/build-native-corrected.log",
+      "log_sha256": "57a4741428bf822589db9fee110db578a3f5f6d76e4f0345837a917a81048202"
+    },
+    {
+      "name": "build-native",
+      "command": [
+        "node",
+        "proof/T27/build-native.cjs"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-10-10T03:26:35.898652+00:00",
+      "ended_at": "2026-10-10T03:26:37.574330+00:00",
+      "elapsed_seconds": 1.676,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/build-native.log",
+      "log_sha256": "63df540ee9f201aeb288b4a27948887a5e0c4c5582f06b2d8d8af7a17eaa2df9"
+    },
+    {
+      "name": "candidate-lint-first",
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:25:01.341468+00:00",
+      "ended_at": "2026-10-10T03:25:09.542014+00:00",
+      "elapsed_seconds": 8.201,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/candidate-lint-first.log",
+      "log_sha256": "77e35fc7b746c49ca6407134adb40b194c5ca4d349da64669d645ec0c8a125d1"
+    },
+    {
+      "name": "candidate-typecheck-first",
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:24:56.087912+00:00",
+      "ended_at": "2026-10-10T03:25:01.274097+00:00",
+      "elapsed_seconds": 5.186,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/candidate-typecheck-first.log",
+      "log_sha256": "66f41bda2ad2883715df92048380fb5a25938dc46372a97cb9b5993b30acc4c7"
+    },
+    {
+      "name": "final-assets",
+      "command": [
+        "python3",
+        "tests/trayT27Assets.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:31:45.167097+00:00",
+      "ended_at": "2026-10-10T03:31:46.717292+00:00",
+      "elapsed_seconds": 1.55,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/final-assets.log",
+      "log_sha256": "b132cdbba4da4b1f011258a6dfd4ccee0f77659b1ef74951accc11fb6e3b9a24",
+      "total": 5
+    },
+    {
+      "name": "final-lint",
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:33:22.712242+00:00",
+      "ended_at": "2026-10-10T03:33:33.686301+00:00",
+      "elapsed_seconds": 10.974,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/final-lint.log",
+      "log_sha256": "77e35fc7b746c49ca6407134adb40b194c5ca4d349da64669d645ec0c8a125d1"
+    },
+    {
+      "name": "final-typecheck",
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:31:46.858987+00:00",
+      "ended_at": "2026-10-10T03:31:52.956643+00:00",
+      "elapsed_seconds": 6.098,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/final-typecheck.log",
+      "log_sha256": "66f41bda2ad2883715df92048380fb5a25938dc46372a97cb9b5993b30acc4c7"
+    },
+    {
+      "name": "final-unit",
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:31:53.037168+00:00",
+      "ended_at": "2026-10-10T03:33:22.555814+00:00",
+      "elapsed_seconds": 89.519,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/final-unit.log",
+      "log_sha256": "bd196a885d25e1896ec5e8015ea47f017029ea2e1cc5beb9c0cdf813812446bf",
+      "passed": 441
+    },
+    {
+      "name": "generate-assets",
+      "command": [
+        "python3",
+        "proof/T27/generate-assets.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:23:56.720666+00:00",
+      "ended_at": "2026-10-10T03:23:57.466215+00:00",
+      "elapsed_seconds": 0.746,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/generate-assets.log",
+      "log_sha256": "236743656d482e8577d74519755723cc676a599dc3c7c146681387ef7ef99a63"
+    },
+    {
+      "name": "native-runtime-corrected",
+      "command": [
+        "pnpm",
+        "exec",
+        "electron",
+        "proof/T27/native-probe.cjs"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:28:34.576075+00:00",
+      "ended_at": "2026-10-10T03:28:39.766156+00:00",
+      "elapsed_seconds": 5.19,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/native-runtime-corrected.log",
+      "log_sha256": "6ae743343587ab94737d3c7ada029604a66c0514fe101b317a951d5042377831"
+    },
+    {
+      "name": "native-runtime",
+      "command": [
+        "pnpm",
+        "exec",
+        "electron",
+        "proof/T27/native-probe.cjs"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-10-10T03:27:28.693285+00:00",
+      "ended_at": "2026-10-10T03:27:42.111845+00:00",
+      "elapsed_seconds": 13.419,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/native-runtime.log",
+      "log_sha256": "01a6e46b4f79a9365907995b357e105c5b37f42b42ce29a9e7f4b396bb1c31d1"
+    },
+    {
+      "name": "tdd-assets-red",
+      "command": [
+        "python3",
+        "tests/trayT27Assets.py",
+        "-v"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-10-10T03:23:56.345542+00:00",
+      "ended_at": "2026-10-10T03:23:56.618605+00:00",
+      "elapsed_seconds": 0.273,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/tdd-assets-red.log",
+      "log_sha256": "a0daf57123e08cde14f80600efc1242b269d69d8f3fb44bd0304deee3249f68e",
+      "total": 3
+    },
+    {
+      "name": "tdd-menu-green",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "tests/trayT27.test.ts"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-10T03:24:52.725257+00:00",
+      "ended_at": "2026-10-10T03:24:55.939157+00:00",
+      "elapsed_seconds": 3.214,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/tdd-menu-green.log",
+      "log_sha256": "a5400b653a9114d04fd9b627d68916e34c38f6598b50c0bc7a1017c36b6b01d2",
+      "passed": 12
+    },
+    {
+      "name": "tdd-menu-red",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "tests/trayT27.test.ts"
+      ],
+      "exit_code": 1,
+      "started_at": "2026-10-10T03:22:55.914260+00:00",
+      "ended_at": "2026-10-10T03:22:58.858311+00:00",
+      "elapsed_seconds": 2.944,
+      "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/tdd-menu-red.log",
+      "log_sha256": "57f2acf4719965b08b7d63919da33684a002ed95a1464a43e65c091bfbbf62da",
+      "total": 12,
+      "failed": 10
+    }
+  ],
+  "native_checks": 11,
+  "native": {
+    "platform": "darwin",
+    "electron": "44.5.1",
+    "packaged": false,
+    "checks": [
+      "unpackaged repository Electron only",
+      "real mac template 16 logical pixels",
+      "real representations 1x and 2x",
+      "real template flag and nonempty image",
+      "real native five-item menu",
+      "Settings remains disabled unresolved",
+      "real hidden Show calls show then focus",
+      "real window minimized before tray action",
+      "real tray event restores then shows then focuses",
+      "Quit uses scoped existing callback boundary",
+      "no external renderer requests"
+    ],
+    "external_requests": [],
+    "image": {
+      "size": {
+        "width": 16,
+        "height": 16
+      },
+      "scaleFactors": [
+        1,
+        2
+      ],
+      "template": true,
+      "empty": false
+    },
+    "menu": [
+      {
+        "label": "Show Mutiny",
+        "type": "normal",
+        "enabled": true
+      },
+      {
+        "label": "Settings",
+        "type": "normal",
+        "enabled": false
+      },
+      {
+        "label": "About (1.2.7)",
+        "type": "normal",
+        "enabled": true
+      },
+      {
+        "label": "",
+        "type": "separator",
+        "enabled": true
+      },
+      {
+        "label": "Quit",
+        "type": "normal",
+        "enabled": true
+      }
+    ],
+    "quit_calls": 1,
+    "limitations": [
+      "Tray click emitted programmatically, not a physical OS click",
+      "Fixture screenshot is BrowserWindow content, not OS tray/menu screenshot",
+      "About dialog wiring covered by units; dialog not opened in runtime",
+      "Windows/Linux policy and assets tested, native platform runtime not exercised",
+      "Settings not implemented; independent acceptance pending"
+    ]
+  },
+  "baseline_unit_count": 429,
+  "final_unit_count": 441,
+  "added_unit_count": 12,
+  "python_asset_count": 5,
+  "acceptance": "pending_independent_review",
+  "settings": "unresolved_scope_delta; disabled entry",
+  "deadline": {
+    "started_epoch": 1791602252,
+    "stop_initiating_epoch": 1791607052,
+    "hard_deadline_epoch": 1791607652,
+    "observed_epoch": 1791603315.975893,
+    "elapsed_seconds": 1064,
+    "within_budget": true
+  }
+}

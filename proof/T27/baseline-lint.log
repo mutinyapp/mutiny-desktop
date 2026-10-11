@@ -1,0 +1,4 @@
+
+> mutiny-desktop@1.2.7 lint /Users/friday/Projects/mutiny-rebuild/wt/F1009-T27
+> eslint --ext .ts,.tsx .
+

@@ -1,0 +1,13 @@
+{
+  "name": "assets-green",
+  "command": [
+    "python3",
+    "tests/trayT27Assets.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_at": "2026-10-10T03:23:57.570156+00:00",
+  "ended_at": "2026-10-10T03:23:57.785088+00:00",
+  "elapsed_seconds": 0.215,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/assets-green.log"
+}

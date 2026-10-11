@@ -1,0 +1,8 @@
+feat(tray): add platform icons and native actions
+
+T27 bounded partial: Settings remains disabled because the frozen web baseline
+has no protocol-url consumer. Preserve the exact scope delta and local evidence.
+No packaging, publication, trust change, installed-app launch, or independent GO.
+
+
+skip-checks: true

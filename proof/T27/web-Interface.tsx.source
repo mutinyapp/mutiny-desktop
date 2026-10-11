@@ -1,0 +1,181 @@
+import { JSX, Match, Switch, createEffect } from "solid-js";
+
+import { Server } from "mutiny.js";
+import { styled } from "styled-system/jsx";
+
+import { ChannelContextMenu, ServerContextMenu } from "@mutiny/app";
+import { MessageCache } from "@mutiny/app/interface/channels/text/MessageCache";
+import { Titlebar } from "@mutiny/app/interface/desktop/Titlebar";
+import { useClient, useClientLifecycle } from "@mutiny/client";
+import { State } from "@mutiny/client/Controller";
+import { NotificationsWorker } from "@mutiny/client/NotificationsWorker";
+import { useModals } from "@mutiny/modal";
+import {
+  deploymentHref,
+  toRouterPath,
+  useBeforeLeave,
+  useLocation,
+} from "@mutiny/routing";
+import { useState } from "@mutiny/state";
+import { LAYOUT_SECTIONS } from "@mutiny/state/stores/Layout";
+import { CircularProgress } from "@mutiny/ui";
+
+import { Sidebar } from "./interface/Sidebar";
+
+/**
+ * Application layout
+ */
+const Interface = (props: { children: JSX.Element }) => {
+  const state = useState();
+  const client = useClient();
+  const { openModal } = useModals();
+  const { isLoggedIn, lifecycle } = useClientLifecycle();
+  const location = useLocation();
+
+  useBeforeLeave((e) => {
+    if (!e.defaultPrevented) {
+      if (e.to === "/settings") {
+        e.preventDefault();
+        openModal({
+          type: "settings",
+          config: "user",
+        });
+      } else if (typeof e.to === "string") {
+        state.layout.setLastActivePath(e.to);
+      }
+    }
+  });
+
+  createEffect(() => {
+    if (!isLoggedIn()) {
+      state.layout.setNextPath(toRouterPath(location.pathname));
+      console.debug("WAITING... currently", lifecycle.state());
+
+      // A client-side <Navigate> updates the URL but can leave the current
+      // nested route mounted, producing an empty shell. Reload the public
+      // login route and preserve Vite's configured deployment base.
+      const loginUrl = new URL(
+        deploymentHref("/login"),
+        window.location.origin,
+      );
+      window.location.replace(loginUrl.href);
+    }
+  });
+
+  function isDisconnected() {
+    return [
+      State.Connecting,
+      State.Disconnected,
+      State.Reconnecting,
+      State.Offline,
+    ].includes(lifecycle.state());
+  }
+
+  return (
+    <MessageCache client={client()}>
+      <div
+        style={{
+          display: "flex",
+          "flex-direction": "column",
+          height: "100%",
+        }}
+      >
+        <Titlebar />
+        <Switch fallback={<CircularProgress />}>
+          <Match when={!isLoggedIn()}>
+            <CircularProgress />
+          </Match>
+          <Match when={lifecycle.loadedOnce()}>
+            <Layout
+              disconnected={isDisconnected()}
+              style={{ "flex-grow": 1, "min-height": 0 }}
+              onDragOver={(e) => {
+                if (e.dataTransfer) e.dataTransfer.dropEffect = "none";
+              }}
+              onDrop={(e) => e.preventDefault()}
+            >
+              <Sidebar
+                menuGenerator={(target) => ({
+                  contextMenu: () => {
+                    return (
+                      <>
+                        {target instanceof Server ? (
+                          <ServerContextMenu server={target} />
+                        ) : (
+                          <ChannelContextMenu channel={target} />
+                        )}
+                      </>
+                    );
+                  },
+                })}
+              />
+              <Content
+                sidebar={state.layout.getSectionState(
+                  LAYOUT_SECTIONS.PRIMARY_SIDEBAR,
+                  true,
+                )}
+              >
+                {props.children}
+              </Content>
+            </Layout>
+          </Match>
+        </Switch>
+
+        <NotificationsWorker />
+      </div>
+    </MessageCache>
+  );
+};
+
+/**
+ * Parent container
+ */
+const Layout = styled("div", {
+  base: {
+    display: "flex",
+    height: "100%",
+    minWidth: 0,
+    padding: "var(--gap-md)",
+    gap: "var(--gap-md)",
+  },
+  variants: {
+    disconnected: {
+      true: {
+        color: "var(--md-sys-color-on-primary-container)",
+        background: "var(--mutiny-selected-bg)",
+      },
+      false: {
+        color: "var(--md-sys-color-outline)",
+        background: "var(--mutiny-app-bg)",
+      },
+    },
+  },
+});
+
+/**
+ * Main content container
+ */
+const Content = styled("div", {
+  base: {
+    background: "var(--mutiny-panel-bg)",
+    border: "1px solid var(--mutiny-panel-border)",
+    boxShadow: "var(--mutiny-elevated-shadow)",
+
+    display: "flex",
+    width: "100%",
+    minWidth: 0,
+    overflow: "hidden",
+    borderRadius: "var(--borderRadius-xl)",
+  },
+  variants: {
+    sidebar: {
+      false: {
+        borderTopLeftRadius: "var(--borderRadius-xl)",
+        borderBottomLeftRadius: "var(--borderRadius-xl)",
+        overflow: "hidden",
+      },
+    },
+  },
+});
+
+export default Interface;

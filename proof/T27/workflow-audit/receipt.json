@@ -1,0 +1,15 @@
+{
+  "head": "405092bff4044f0ffd23b0fb06e909dc3535495c",
+  "paths": [
+    ".github/workflows/build.yml",
+    ".github/workflows/desktop-candidate.yml",
+    ".github/workflows/release.yml",
+    "package.json",
+    "forge.config.ts",
+    "scripts/stage-desktop-candidate.mjs",
+    "scripts/macos-sign.mjs",
+    "scripts/macos-signing-verification.mjs",
+    "scripts/macos-notarize.mjs"
+  ],
+  "all_match_local": true
+}

@@ -1,0 +1,20 @@
+{
+  "task": "T27",
+  "role": "implementation_worker",
+  "session_id": "20261009_231735_f29f3e",
+  "workspace": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27",
+  "branch": "rebuild/F1009-T27",
+  "starting_head": "405092bff4044f0ffd23b0fb06e909dc3535495c",
+  "workspace_validation": "git status clean; exact assigned branch/head; git worktree list shows only this worktree owning branch",
+  "sole_owner_evidence": "PARENT-LANES overriding overnight top-up and T27 LAUNCH.json match this session and workspace; no matching alternate worktree process or delegation manifest observed",
+  "launch_pid": 48500,
+  "route_requested": {"model": "gpt-6.1-sol", "provider": "openai-codex", "reasoning": "high"},
+  "runtime_attribution": "parent independently verifies; not self-certified",
+  "ports": {"first": 49700, "last": 49719, "preflight": "all free via loopback bind checks at start"},
+  "started_at": "2026-10-09T23:17:32-04:00",
+  "stop_initiating_at": "2026-10-10T00:37:32-04:00",
+  "hard_deadline": "2026-10-10T00:47:32-04:00",
+  "budget_seconds": 5400,
+  "product_scope": ["src/native/tray.ts", "src/native/trayPolicy.ts", "assets/desktop/tray*", "new task-specific tests", "proof/T27"],
+  "acceptance": "pending_independent_review"
+}

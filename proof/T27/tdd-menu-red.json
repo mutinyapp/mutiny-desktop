@@ -1,0 +1,15 @@
+{
+  "name": "tdd-menu-red",
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "tests/trayT27.test.ts"
+  ],
+  "exit_code": 1,
+  "started_at": "2026-10-10T03:22:55.914260+00:00",
+  "ended_at": "2026-10-10T03:22:58.858311+00:00",
+  "elapsed_seconds": 2.944,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/tdd-menu-red.log"
+}

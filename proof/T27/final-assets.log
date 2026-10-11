@@ -1,0 +1,10 @@
+test_app_icon_preserved (__main__.TrayAssets) ... ok
+test_colour_32 (__main__.TrayAssets) ... ok
+test_pixels_derived_from_original_mark (__main__.TrayAssets) ... ok
+test_template_16 (__main__.TrayAssets) ... ok
+test_template_32 (__main__.TrayAssets) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.540s
+
+OK

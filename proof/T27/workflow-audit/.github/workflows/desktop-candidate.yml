@@ -1,0 +1,53 @@
+name: Desktop candidate (nonpublishing QA)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate:
+    name: QA ${{ matrix.platform }}-${{ matrix.arch }} (not a release)
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-14
+            platform: darwin
+            arch: arm64
+          - os: windows-latest
+            platform: win32
+            arch: x64
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          persist-credentials: false
+      - name: Checkout assets submodule
+        run: git -c submodule."assets".update=checkout submodule update --init assets
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - name: Canonical make (Mac ad-hoc QA ONLY; Windows unsigned)
+        run: pnpm run make --platform=${{ matrix.platform }} --arch=${{ matrix.arch }}
+        env:
+          PLATFORM: ${{ matrix.platform }}
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+          MUTINY_MACOS_SIGNING_MODE: dev-ad-hoc
+      - name: Validate and stage all candidate assets
+        run: node scripts/stage-desktop-candidate.mjs out/make candidate ${{ matrix.platform }} ${{ matrix.arch }}
+      - name: Upload QA artifacts (never production release assets)
+        uses: actions/upload-artifact@v4
+        with:
+          name: QA-ONLY-${{ matrix.platform }}-${{ matrix.arch }}-${{ github.sha }}
+          path: candidate/*
+          if-no-files-found: error
+          retention-days: 5

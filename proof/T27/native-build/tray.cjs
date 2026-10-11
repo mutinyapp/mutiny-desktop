@@ -1,0 +1,66 @@
+"use strict";
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const { Menu, Tray, dialog, nativeImage } = globalThis.__T27Electron;
+const trayColourAsset = "data:image/png;base64,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";
+const trayTemplateAsset = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABKElEQVR42s3SSyvFYRAG8J/jkkQpSolCkWJ3Fi7ZsbHA0kewsrC3tOAjyGWpLCxObDikLBTlE4hCuZRLymXhcmzm1N+/ZMnU9E7zPDPzvPO+/DfLxNmMHJ7Cc5FLcn5sUIEDFPARXsBhYJnfpnfF1ELKn9GdVlEWZ2mQ4BWruMRI5NbRGJhEzUdJSkUpSrCDR+QjP4haDCWu9s1GE2rKsIaXaLAd8VqKM5ZssIA5tKEKWUzhAfcRZwNrxSwWi5LhE0eYRDvOMIELXKEDuxgPtSs4x3GxQQsacIIeNGE/7lyJZfQGbzP28YzT5BLrcBfxNDqxEUX98Q9mAq/Hrdg4VEfcF1PLMYyaIL5jD2+x1P2oeypOH8NW4tNcYwkDoWQeNwk8n36Fv7MvR41LGY3mGdcAAAAASUVORK5CYII=";
+const trayTemplate2xAsset = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADWUlEQVR42u3WSWheVRQH8N+XRKyt9SPGCaeqRKWgOEGs4EALZiPOC4eFi4qoRbtQxIWipSLiulKlTkgFERUtqFHE1FajqdhFs2ihalTq3Ma0GmPTZnDzf/B4+b422i5z4HLve++ec8895/8/5zErszJzacm8EKuwHXsztufdwsrew374vdiNqSZjD+473E60Zr69dNA4JkvPk3lXPN9R0f3fUsuYh58rB1UdKDv2a3QK/YOG9kDfp9CF4zBW0qlVHC3270MHFkW35VAcKAyfhZ8wmHcTGM48XlrX8F2idUYDR/+zA4VMYEMi8FtyOzdzG47K+nf8g41JxYzR3UwKI/058FWciXNzyCdYj75QcAHW4gh8XrFxyBR8MODqx3V5ty4Dro1Tv+CBmbKgrUK3MqfLDtRykxMzXsa72JW9a3EN2pvYrrKqwNFBwVfMxwRohXP7Mp+MU7LeW/r+F+pNbDUsMvAMlgTpfySPE4nAWJDdjs9wer51p0DNjwNvYyeexqYSjQtbnXg0KXy/6syXyeHjOKHkdRmoV+McvN6gDL+Fs7G4QfqkjqwIODc1ikB7HLgZSzGErTF+eYx14XxsC+r/zL6h4OJCHBs6nocfYvtGPI+TsCY1pa/qwFI8Eb53YRlOC5geCuCG8XDS0JqwD6cbDmI53ove8mBhGR7BQBrVBtyFd6rAeBZvoBdH4h5clPVqfIoL8HGi0YfRrOckShPB0QCuyOET+ArPxeHFuBV3VzHQiZ6koIjMkwldD1aGDR34MakZy5jCDhwfQK7Ehwn3UyU83IQPgqOG1FiAx5LHGl4JI1anxO7Ai/giN+rOvo9yo0W4E6fi6ESgnvROJl0rSthoWpY7chOlZtSDr7EFr+GqpGcOLk2ktuDb7O0s6c8PC6adVWtQgFpKVaot3a6Q+3FLUDwSMF6Jy7J3KP1iVaUijpdYN1mutLUGnJ2qNJCirc7NjW9LDtvzrbXEhIGwYLQE0MEZnDFN5iW/64LcUeyP4kj+C/8O33vxAt4s9Yb90RmLje5c4IByfVDbn1BWK91kjI7gG7wU6tUD0p0B6liTH9Zdsb0mZ01LQXs4fAMuCaXqUd6N77E5N14fJ8tST6legovz31BPivbEwc3pF71J26zMin8ByC4OfD/Fz4QAAAAASUVORK5CYII=";
+const version = "1.2.7";
+function trayIconPolicy(platform) {
+  return platform === "darwin" ? { asset: "template", size: 16, template: true, scaleFactors: [1, 2] } : { asset: "colour", size: 32, template: false, scaleFactors: [1] };
+}
+function trayMenuTemplate(version2, actions) {
+  return [
+    { label: "Show Mutiny", click: actions.show },
+    // The current web baseline has no protocol-url settings listener. Keep the
+    // requested entry visible, but do not pretend a no-op is an implemented action.
+    // See proof/T27/CONTRACT_DELTA_PROPOSAL.md for the exact scope blocker.
+    { label: "Settings", enabled: false },
+    { label: `About (${version2})`, click: actions.about },
+    { type: "separator" },
+    { label: "Quit", click: actions.quit }
+  ];
+}
+const mainWindow = globalThis.__T27Window;
+const quitApp = () => globalThis.__T27Quit();
+let tray = null;
+function createTrayIcon() {
+  const policy = trayIconPolicy(process.platform);
+  const image = nativeImage.createFromDataURL(
+    policy.asset === "template" ? trayTemplateAsset : trayColourAsset
+  );
+  if (policy.template) {
+    image.addRepresentation({ scaleFactor: 2, dataURL: trayTemplate2xAsset });
+  }
+  image.setTemplateImage(policy.template);
+  return image;
+}
+function showMutiny() {
+  if (mainWindow.isMinimized()) mainWindow.restore();
+  mainWindow.show();
+  mainWindow.focus();
+}
+function initTray() {
+  const trayIcon = createTrayIcon();
+  tray = new Tray(trayIcon);
+  updateTrayMenu();
+  tray.setToolTip("Mutiny for Desktop");
+  tray.setImage(trayIcon);
+  tray.on("click", showMutiny);
+}
+function updateTrayMenu() {
+  tray.setContextMenu(Menu.buildFromTemplate(trayMenuTemplate(version, {
+    show: showMutiny,
+    about: () => {
+      void dialog.showMessageBox(mainWindow, {
+        type: "info",
+        title: "About Mutiny",
+        message: "Mutiny",
+        detail: `Version ${version}`,
+        buttons: ["OK"]
+      });
+    },
+    quit: quitApp
+  })));
+}
+exports.initTray = initTray;
+exports.updateTrayMenu = updateTrayMenu;

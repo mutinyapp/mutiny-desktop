@@ -1,0 +1,12 @@
+{
+  "name": "build-native-corrected",
+  "command": [
+    "node",
+    "proof/T27/build-native.cjs"
+  ],
+  "exit_code": 0,
+  "started_at": "2026-10-10T03:27:28.163534+00:00",
+  "ended_at": "2026-10-10T03:27:28.615578+00:00",
+  "elapsed_seconds": 0.452,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/build-native-corrected.log"
+}

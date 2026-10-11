@@ -1,0 +1,8 @@
+test(tray): preserve bounded T27 execution evidence
+
+Record real 429-unit baseline, 441-unit final, five asset tests, and isolated
+native checks for frozen product 87de49d5418f3856960d7e3d639989da1bc876eb.
+Evidence-only commit; Settings remains unresolved and independent review pending.
+
+
+skip-checks: true

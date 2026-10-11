@@ -1,0 +1,12 @@
+{
+  "name": "candidate-typecheck-first",
+  "command": [
+    "pnpm",
+    "typecheck"
+  ],
+  "exit_code": 0,
+  "started_at": "2026-10-10T03:24:56.087912+00:00",
+  "ended_at": "2026-10-10T03:25:01.274097+00:00",
+  "elapsed_seconds": 5.186,
+  "log": "/Users/friday/Projects/mutiny-rebuild/wt/F1009-T27/proof/T27/candidate-typecheck-first.log"
+}
