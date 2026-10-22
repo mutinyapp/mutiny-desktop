@@ -11,6 +11,10 @@ on:
     paths:
       - "src/**"
       - "tests/**"
+      - "scripts/**"
+      - "vite.*.config.ts"
+      - "vitest.config.mjs"
+      - "pnpm-workspace.yaml"
       - "package.json"
       - "pnpm-lock.yaml"
       - "forge.config.ts"
@@ -19,10 +23,18 @@ on:
       - ".github/workflows/build.yml"
       - ".github/workflows/release.yml"
 
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Build App
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -52,7 +64,7 @@ jobs:
         run: pnpm typecheck
 
       - name: Unit tests
-        run: pnpm test
+        run: pnpm test --maxWorkers=2 --minWorkers=1
 
       - name: Build
         run: pnpm run package
