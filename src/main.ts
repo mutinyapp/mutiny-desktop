@@ -1,6 +1,6 @@
 import { updateElectronApp } from "update-electron-app";
 
-import { BrowserWindow, app, dialog, ipcMain, session, shell, systemPreferences } from "electron";
+import { app, dialog, ipcMain, session, shell, systemPreferences } from "electron";
 import started from "electron-squirrel-startup";
 
 import "./native/autoLaunch";
@@ -26,7 +26,7 @@ import {
   shouldStartMinimised,
 } from "./native/startup";
 import { initTray } from "./native/tray";
-import { BUILD_URL, createMainWindow, mainWindow } from "./native/window";
+import { BUILD_URL, createMainWindow, getMainWindow, mainWindow } from "./native/window";
 import { registerWindowControlHandlers } from "./native/windowControls";
 import { isOfflineCaptionIpc } from "./native/offlineRecovery";
 
@@ -47,6 +47,25 @@ const protocolUrls = new ProtocolUrlQueue();
 const acquiredLock = app.requestSingleInstanceLock();
 
 if (acquiredLock) {
+  // Every replacement gets the same protocol delivery hook as the first window.
+  const openMainWindow = (options?: Parameters<typeof createMainWindow>[0]) => {
+    const current = getMainWindow();
+    if (current) return current;
+    const window = createMainWindow(options);
+    window.webContents.once("did-finish-load", () => protocolUrls.rendererReady(window));
+    return window;
+  };
+
+  const showMainWindow = () => {
+    const window = getMainWindow();
+    if (window) {
+      window.show();
+      return window;
+    }
+    // Only macOS stays running without a main window.
+    if (process.platform === "darwin" && app.isReady()) return openMainWindow();
+  };
+
   // Register protocol handler for mutiny:// deep links
   if (process.defaultApp) {
     if (process.argv.length >= 2) {
@@ -60,10 +79,9 @@ if (acquiredLock) {
   app.on("open-url", (event, url) => {
     event.preventDefault();
     protocolUrls.enqueue(url);
-    if (mainWindow && !mainWindow.isDestroyed()) {
-      mainWindow.show();
-      mainWindow.focus();
-    }
+    const window = getMainWindow();
+    window?.show();
+    window?.focus();
   });
   for (const url of extractProtocolUrls(process.argv)) protocolUrls.enqueue(url);
 
@@ -156,21 +174,18 @@ if (acquiredLock) {
       process.argv,
       app.getLoginItemSettings().wasOpenedAtLogin,
     );
-    const window = createMainWindow({
+    openMainWindow({
       startMinimised: shouldStartMinimised(
         config.startMinimisedToTray,
         wasOpenedAtLogin,
       ),
     });
-    window.webContents.once("did-finish-load", () =>
-      protocolUrls.rendererReady(window),
-    );
 
     registerWindowControlHandlers(ipcMain, () => mainWindow, (event) =>
       isTrustedIpc(event, mainWindow, BUILD_URL) || isOfflineCaptionIpc(event, mainWindow),
     );
     initBadges();
-    initTray();
+    initTray(showMainWindow);
     initDiscordRpc();
     initControlServer();
 
@@ -183,10 +198,11 @@ if (acquiredLock) {
   // Focus the current window and deliver protocol argv from a second process.
   app.on("second-instance", (_event, argv) => {
     for (const url of extractProtocolUrls(argv)) protocolUrls.enqueue(url);
-    if (mainWindow && !mainWindow.isDestroyed()) {
-      mainWindow.show();
-      mainWindow.restore();
-      mainWindow.focus();
+    const window = getMainWindow();
+    if (window) {
+      window.show();
+      window.restore();
+      window.focus();
     }
   });
 
@@ -200,15 +216,7 @@ if (acquiredLock) {
   });
 
   app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      const window = createMainWindow();
-      window.webContents.once("did-finish-load", () =>
-        protocolUrls.rendererReady(window),
-      );
-    } else if (mainWindow && !mainWindow.isDestroyed()) {
-      mainWindow.show();
-      mainWindow.focus();
-    }
+    showMainWindow()?.focus();
   });
 
   // ensure URLs launch in external context

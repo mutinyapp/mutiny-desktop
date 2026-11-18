@@ -22,7 +22,12 @@ vi.mock("update-electron-app", () => ({ updateElectronApp: vi.fn() }));
 vi.mock("electron-squirrel-startup", () => ({ default: false }));
 vi.mock("../src/native/autoLaunch", () => ({}));
 vi.mock("../src/native/config", () => ({ config: { hardwareAcceleration: true } }));
-vi.mock("../src/native/window", () => ({ BUILD_URL: f.buildUrl, get mainWindow() { return f.hasOwner ? f.window : undefined; }, createMainWindow: () => f.window }));
+vi.mock("../src/native/window", () => ({
+  BUILD_URL: f.buildUrl,
+  get mainWindow() { return f.hasOwner ? f.window : undefined; },
+  getMainWindow: () => f.hasOwner && !f.window.isDestroyed() ? f.window : undefined,
+  createMainWindow: () => f.window,
+}));
 vi.mock("../src/native/screenPicker", () => ({ showScreenPicker: f.picker }));
 vi.mock("../src/native/badges", () => ({ initBadges: vi.fn() }));
 vi.mock("../src/native/controlServer", () => ({ initControlServer: vi.fn() }));

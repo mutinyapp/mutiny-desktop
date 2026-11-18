@@ -83,6 +83,10 @@ git -c submodule."assets".update=checkout submodule update --init assets
 
 > **Note:** Brand assets are required to build. Forks should provide their own.
 
+The desktop lifecycle regression test can run offline with Node.js 24 and no installed dependencies:
+`node --test tests/desktopLifecycle.node.mjs`. It runs the wrapper code with modeled Electron events;
+it does not replace native tray, Dock, or process-exit testing.
+
 ## Architecture
 
 Mutiny Desktop is an [Electron](https://www.electronjs.org/) wrapper around the [Mutiny web client](https://github.com/mutinyapp/mutiny-web), built with [Electron Forge](https://www.electronforge.io/).

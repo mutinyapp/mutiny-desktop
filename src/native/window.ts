@@ -19,7 +19,11 @@ import { isWindowBounds, restoreWindowBounds } from "./windowBounds";
 import { windowZoomAction } from "./windowZoom";
 
 // global reference to main window
-export let mainWindow: BrowserWindow;
+export let mainWindow: BrowserWindow | undefined;
+
+export function getMainWindow(): BrowserWindow | undefined {
+  return mainWindow && !mainWindow.isDestroyed() ? mainWindow : undefined;
+}
 
 // custom-frame setting the current main window was created with
 export let mainWindowCustomFrame: boolean | undefined;
@@ -32,7 +36,7 @@ export const BUILD_URL = new URL(
 );
 
 // internal window state
-let shouldQuit = false;
+let quitClose: { window: BrowserWindow; event: Electron.Event & { defaultPrevented?: boolean } } | undefined;
 let capabilitiesHandlerRegistered = false;
 let appearanceHandlerRegistered = false;
 let disposeOfflineRecovery: (() => void) | undefined;
@@ -165,10 +169,15 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
   });
 
   // minimise window to tray
-  mainWindow.on("close", (event) => {
-    if (!shouldQuit && config.minimiseToTray) {
+  window.on("close", (event) => {
+    if (quitClose?.window === window) {
+      const canceled = quitClose.event.defaultPrevented;
+      quitClose = undefined;
+      if (!canceled) return;
+    }
+    if (config.minimiseToTray) {
       event.preventDefault();
-      mainWindow.hide();
+      window.hide();
     }
   });
 
@@ -266,19 +275,26 @@ export function createMainWindow(options: { startMinimised?: boolean } = {}) {
     }
   });
 
-  // mainWindow.webContents.openDevTools();
-  return mainWindow;
+  window.once("closed", () => {
+    if (mainWindow !== window) return;
+    mainWindow = undefined;
+    mainWindowCustomFrame = undefined;
+    disposeOfflineRecovery = undefined;
+    updateTrayMenu();
+  });
+  updateTrayMenu();
+  return window;
 }
 
-/**
- * Quit the entire app
- */
-export function quitApp() {
-  shouldQuit = true;
-  mainWindow.close();
-}
-
-// Ensure global app quit works properly
-app.on("before-quit", () => {
-  shouldQuit = true;
+// Electron dispatches the window close during app.quit(), after before-quit.
+// Consume the bypass at that close (even if beforeunload later cancels it), or
+// expire it if the quit was canceled before reaching the window at all.
+app.on("before-quit", (event) => {
+  const window = getMainWindow();
+  if (!window) return;
+  const attempt = { window, event };
+  quitClose = attempt;
+  setImmediate(() => {
+    if (quitClose === attempt) quitClose = undefined;
+  });
 });
