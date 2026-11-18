@@ -2,10 +2,11 @@ import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join, resolve } from "node:path";
 import { tmpdir } from "node:os";
+import { fileURLToPath } from "node:url";
 import { build, loadConfigFromFile } from "vite";
 import { describe, expect, it } from "vitest";
 const require = createRequire(import.meta.url);
-const root = resolve(dirname(new URL(import.meta.url).pathname), "..");
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const { getConfig } = require(join(dirname(require.resolve("@electron-forge/plugin-vite/package.json")), "dist/config/vite.main.config.js"));
 describe("bundled offline emission through the real main config", () => {
   it("emits the authored HTML byte-identically at .vite/build/offline.html", async () => {

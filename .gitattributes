@@ -1,0 +1,4 @@
+# Keep the pinned token inputs and generated CSS block byte-identical on Windows.
+/src/native/generated/native-tokens.ts text eol=lf
+/src/native/generated/manifest.json text eol=lf
+/assets/desktop/offline/offline.html text eol=lf

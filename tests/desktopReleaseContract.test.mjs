@@ -27,7 +27,7 @@ describe("desktop release integration", () => {
     const workflow = read(".github/workflows/desktop-candidate.yml");
     expect(workflow).toContain("contents: read");
     expect(workflow).toContain("persist-credentials: false");
-    for (const text of ["macos-14", "windows-latest", "arch: arm64", "arch: x64", "pnpm lint", "pnpm typecheck", "pnpm test", "pnpm run make --platform=", "MUTINY_MACOS_SIGNING_MODE: dev-ad-hoc", "PLATFORM: ${{ matrix.platform }}", "node scripts/stage-desktop-candidate.mjs", "actions/upload-artifact@v4", "if-no-files-found: error"]) expect(workflow).toContain(text);
+    for (const text of ["macos-15", "windows-latest", "arch: arm64", "arch: x64", "pnpm lint", "pnpm typecheck", "pnpm test", "pnpm run make --platform=", "MUTINY_MACOS_SIGNING_MODE: dev-ad-hoc", "PLATFORM: ${{ matrix.platform }}", "node scripts/stage-desktop-candidate.mjs", "actions/upload-artifact@v4", "if-no-files-found: error"]) expect(workflow).toContain(text);
     expect(workflow).not.toMatch(/contents: write|secrets\.|action-gh-release|pnpm (?:run )?publish|notarize:mac|release-developer-id|--no-sandbox|--disable-web-security/);
   });
 });
